@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8845a44d-fae8-4b63-ad0e-b8b7726b8cb2">
+  <producedTypes>
+    <selectionType typeId="5ab13cbe-0a39-4b40-9636-746e9913e265" valueTypeId="fe7bdb49-9b18-49a6-9a38-e2de5c3c07dc"/>
+    <listType typeId="5883b5af-8082-43e3-b809-9f22030df090" valueTypeId="2799e422-c711-438c-b52a-9e2436b1cf4f"/>
+    <managerType typeId="2121c0ed-c8b6-4ebd-a749-81617fd727ed" valueTypeId="702e7509-22bc-42d9-b1f3-afd25b3d9f43"/>
+    <recordSetType typeId="e7b176b3-9605-4c06-9b3b-493f76b088b4" valueTypeId="39d7073e-6545-4fd1-bcdf-7c66f32e1d6e"/>
+    <recordKeyType typeId="2112c1dc-e2db-4a58-a3ac-35daa11c022c" valueTypeId="3052140d-7447-4d8c-8eaa-a83d8014f0c4"/>
+    <recordType typeId="dbcc6a70-7852-42db-a56d-180c3e8cb7c6" valueTypeId="3b6ae58c-93fe-4036-a4bb-a225b7bb8559"/>
+  </producedTypes>
+  <name>Оборудование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оборудование</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.Оборудование.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e7b15d38-f421-4092-930d-92ca99f77a35">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="f4bb4727-f699-45bf-b55d-f5511951f12a">
+    <name>ДатаВозврата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата возврата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="90aea8ef-c5b0-43eb-9253-6e3ca5ce1186">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f85b6b54-1e5a-4b06-8eee-f9d735f42c49">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="4071c2fe-f45b-44a7-91bd-98a7131e95a2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

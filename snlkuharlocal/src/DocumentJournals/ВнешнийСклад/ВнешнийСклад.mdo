@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0fc079fe-879a-4204-9ee0-96850748578b">
+  <producedTypes>
+    <selectionType typeId="ae57d760-221b-41a3-b02e-04f1d7f2181e" valueTypeId="4a3f6de5-cf78-40af-904a-0190bc98c5e9"/>
+    <listType typeId="527b6e58-fdbd-4afe-bc26-140b8213e418" valueTypeId="29aeadd1-adf6-4c13-ae54-4b2dcbff9834"/>
+    <managerType typeId="3e11f20d-de50-46ce-9402-ea4957f9770a" valueTypeId="728e26b1-5247-47f3-880b-d6f544927798"/>
+  </producedTypes>
+  <name>ВнешнийСклад</name>
+  <synonym>
+    <key>ru</key>
+    <value>Внешний склад</value>
+  </synonym>
+  <defaultForm>DocumentJournal.ВнешнийСклад.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.ЗаказПоставщику</registeredDocuments>
+  <registeredDocuments>Document.ПриходнаяНакладная</registeredDocuments>
+  <registeredDocuments>Document.КоррекцияРегистраПартии</registeredDocuments>
+  <columns uuid="e95a7d3c-4a4c-4334-bbf6-61cd412b90a7">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <references>Document.ЗаказПоставщику.Attribute.Контрагент</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Контрагент</references>
+  </columns>
+  <columns uuid="0d5d4562-74d0-4a8c-aa64-eb04831e5200">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <references>Document.ЗаказПоставщику.Attribute.Склад</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Контрагент</references>
+  </columns>
+  <forms uuid="0729e1e9-9fad-4b64-bc72-c6179c8b09d7">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4fd9846f-f867-46d2-9e7d-51d44ffdd574">
+  <producedTypes>
+    <objectType typeId="ead54f9d-efb9-4d05-8aec-eb1db2fa437c" valueTypeId="6c48de9c-c8bc-46c7-839e-fc47e7710b04"/>
+    <refType typeId="5dddb9ce-8f13-48a1-8516-d23adc811b69" valueTypeId="a897c7fe-f3a0-4ce3-ae45-61650894e23d"/>
+    <selectionType typeId="c2acfe4f-5234-4b5f-b5f1-69d910db01f2" valueTypeId="1c087af4-5f04-47cc-9568-c3fce536e253"/>
+    <listType typeId="a7f70b80-3bdf-4e4e-944a-ceeb47ef9061" valueTypeId="4d94a798-7eaa-40f0-9da2-0be40bcc95f1"/>
+    <managerType typeId="9dcc00b0-9490-488c-8cc0-bce682febf75" valueTypeId="2d26a972-c6f5-49d5-8770-ae294ca144bd"/>
+  </producedTypes>
+  <name>ВводЗадолжНаНачПоБрендам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ввод задолж на начало периода по брендам</value>
+  </synonym>
+  <comment>для отчета &quot;Доходность брендов&quot;</comment>
+  <inputByString>Document.ВводЗадолжНаНачПоБрендам.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ВводЗадолжНаНачПоБрендам.Form.ФормаДокумента</defaultObjectForm>
+  <posting>Deny</posting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="2babe7a9-4168-4bdf-9889-7c66d05e1b5a">
+    <name>ГруппаСправочникаБрендов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа справочника брендов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БрендыДляОтчета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="50f8a6b6-00d9-430c-8edb-60fbab6c1c2b">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="a34f7e8c-215a-480e-9351-09fbd9fab73b">
+    <producedTypes>
+      <objectType typeId="e4446a73-6b2e-44ec-9916-6569983e8897" valueTypeId="918ade1f-e16f-46f1-a2ab-afa4c968c28c"/>
+      <rowType typeId="8172a94f-5ff8-46a4-aeb1-ef7789c460fa" valueTypeId="d521869a-351a-42b2-b7f4-55cc2e22818f"/>
+    </producedTypes>
+    <name>Задолженность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задолженность</value>
+    </synonym>
+    <attributes uuid="7b27ff3a-f483-4f09-abf4-ff7fdf9b1de6">
+      <name>Бренд</name>
+      <synonym>
+        <key>ru</key>
+        <value>Бренд</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.БрендыДляОтчета</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1935cf3e-d276-465d-a10c-ede0bfbd1e32">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

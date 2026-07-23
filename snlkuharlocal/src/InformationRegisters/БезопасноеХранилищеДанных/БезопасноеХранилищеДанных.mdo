@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="35f98d26-9b3f-4921-8f9b-2f84d8b051d1">
+  <producedTypes>
+    <selectionType typeId="7b346f72-e107-47ab-aa4a-7fde7042b049" valueTypeId="f49e7aa6-bca5-4b73-9f5f-fbff13221321"/>
+    <listType typeId="c6a48ad6-07ca-4ece-a0f6-069d99f47ba5" valueTypeId="530df547-3ec7-4a5c-a9a2-6d195f17d964"/>
+    <managerType typeId="68ca774b-da75-4c4f-a236-9bfe7dc973bf" valueTypeId="71a0b5c8-72cd-4c0d-bf74-5981c85fbaa2"/>
+    <recordSetType typeId="e9b16654-fa7c-45c7-9ad2-c0738f951b8f" valueTypeId="dd8c2d0a-34c9-4058-978c-2c32d1b51c7a"/>
+    <recordKeyType typeId="15f481d2-2698-46ae-a353-9d582ea509d4" valueTypeId="e6832e4d-4c55-40b1-b3bf-56b0d43856f4"/>
+    <recordType typeId="c5b607fc-2a5e-466e-8d30-abdd7219fd72" valueTypeId="6c019d3d-e708-4bb2-a7ba-f617abab415a"/>
+    <recordManagerType typeId="c8d20705-1105-4290-955c-f9ca4c8dbc36" valueTypeId="bbd33725-8375-470b-adcf-c22ec8466c4e"/>
+  </producedTypes>
+  <name>БезопасноеХранилищеДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Безопасное хранилище данных</value>
+  </synonym>
+  <comment>// Ихсанов Д. А. 30.09.2025 https://yougile.collant.ru/team/ab6bad3a05c0/#ASU-2523</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b73ac5db-8b57-421a-8990-7e9e19637300">
+    <name>Данные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>256</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="55722dc5-5b72-4527-8afd-78abdca9b1a6">
+    <name>Ключ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлючиБезопасногоХранилищаДанных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ab80f1bf-6a99-42de-bd64-d2ec0cf1a225">
+    <name>ТипКлюча</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ключа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыКлючейБезопасногоХранилищаДанных</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

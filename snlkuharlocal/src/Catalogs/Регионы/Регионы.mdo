@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0700f424-1c8d-47b2-8272-9917a196224a">
+  <producedTypes>
+    <objectType typeId="5f6b80f5-fd2b-4057-a93a-bdf4e9ad33aa" valueTypeId="5158e641-7bb9-4e10-965c-1fe3bb49489f"/>
+    <refType typeId="9dc14726-3359-4a04-9258-718dc4b28d2e" valueTypeId="a3d4d965-fa3d-4c07-b3a7-60785399f9aa"/>
+    <selectionType typeId="08fb1f32-ce30-4e27-8329-d6cc3096e0d5" valueTypeId="b650e464-deca-4ba9-9f4e-e37d9b28c43d"/>
+    <listType typeId="fb6ecff9-2968-4fd9-89f6-b11cbdfc76b3" valueTypeId="d5d133d1-bab7-41a3-9d8f-235f8ee2353c"/>
+    <managerType typeId="c9161f25-a65c-451c-8f39-b76835f4db09" valueTypeId="b59f2431-1618-4384-bcab-1047504ba060"/>
+  </producedTypes>
+  <name>Регионы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регионы</value>
+  </synonym>
+  <inputByString>Catalog.Регионы.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Регионы.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Регионы.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.Регионы.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="d3a01795-116d-4aae-86fc-1d884a11f804">
+    <name>ЧисленностьНаселения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Численность населения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7b72afd3-df79-45e0-b435-be479eabf420">
+    <name>ТарифДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тариф доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТарифыДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dbd35be7-619b-4f00-902c-8b3f1a639dee">
+    <name>Округ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Округ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Округа</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="bd4d29e8-2e85-47a0-b686-ac90e715d78f">
+    <producedTypes>
+      <objectType typeId="88230270-3c7d-4f05-8fb4-376a8de00ea5" valueTypeId="856402c9-4ee2-4970-8b11-8fd1c6520869"/>
+      <rowType typeId="35d72bfa-b07f-4aeb-9897-9b342c249b2c" valueTypeId="aa47632c-b0e8-4371-9451-baedbbc40f95"/>
+    </producedTypes>
+    <name>СтоимостьДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость доставки</value>
+    </synonym>
+    <attributes uuid="bc719ecf-df2c-4f04-828b-a347275104ab">
+      <name>КоличествоКубов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество кубов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="89f425ba-f435-4034-bccd-353c5515c593">
+      <name>СтоимостьДоставки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость доставки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="483c0635-051c-47e1-96ab-9f84e1787a64">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4890cdeb-8a06-4173-a91e-192b1a217028">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

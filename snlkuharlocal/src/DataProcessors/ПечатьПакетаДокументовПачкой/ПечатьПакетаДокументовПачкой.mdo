@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e92f93ec-0e12-47ab-9e6d-e0718569e207">
+  <producedTypes>
+    <objectType typeId="925f3412-3357-4fbb-8e10-b740ec01b512" valueTypeId="f2bf7283-b392-4ca9-9a48-f785f02047ad"/>
+    <managerType typeId="861fc583-5579-44dd-97f4-6550e566b74b" valueTypeId="ad1040bb-1007-40fd-aaa4-f9cf8ed95651"/>
+  </producedTypes>
+  <name>ПечатьПакетаДокументовПачкой</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать пакета документов пачкой</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьПакетаДокументовПачкой.Form.Форма</defaultForm>
+  <attributes uuid="60b5283d-22f2-4f3c-93f3-36f0d6b7d96b">
+    <name>ТекДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0594c7a2-957e-4cdf-a7e2-24e3c64760fd">
+    <name>ДопПараметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп параметры</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3dd96fdd-45ff-432c-9040-439bac9feb90">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="70795ff7-9164-4fd7-a59f-9665fba8cea0">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5cf9e3b3-d8a1-4104-b0c8-5412d586dae5">
+    <name>ОтветственноеЛицоПриПечатиДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственное лицо при печати документов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="d24e4493-72b7-4567-861c-56eb7e8333b2">
+    <producedTypes>
+      <objectType typeId="0f34e256-ff6a-4719-bfd6-f1d4cf96241b" valueTypeId="2698cc91-0301-4f05-9b11-448551e5a808"/>
+      <rowType typeId="a0e183ef-dc38-444e-af6f-18b2d5533b14" valueTypeId="41b46c13-ec32-45b6-8a4b-5b282fb1400c"/>
+    </producedTypes>
+    <name>Накладные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладные</value>
+    </synonym>
+    <attributes uuid="91316091-1c63-4cda-ac52-16ff400cea67">
+      <name>Накладная</name>
+      <synonym>
+        <key>ru</key>
+        <value>Накладная</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e6e87167-8782-4a99-a5c5-65070bce943f">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="beabde2a-7f33-45af-a0c3-49b21a9bc6c2">
+      <name>Получатель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получатель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="69f549b5-28e4-4381-a8bf-976a6fef2746">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="26ac4ac9-a064-4a01-b8c8-27adadf89abc">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="7678ff40-134c-47ed-baf7-1175b332df9e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="febfc073-df0e-49db-9a65-d11d615b503e">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+  </templates>
+  <templates uuid="2f3b7f66-fb04-47da-b88c-1c0414b3a534">
+    <name>Торг12</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торг12</value>
+    </synonym>
+  </templates>
+  <templates uuid="f9385a6c-927b-42db-9ec7-d7e83afc603d">
+    <name>СФ</name>
+    <synonym>
+      <key>ru</key>
+      <value>СФ</value>
+    </synonym>
+  </templates>
+  <templates uuid="2f397794-cf50-4e51-bb03-9795dfcb5104">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+  </templates>
+  <templates uuid="898bf11c-4e72-4bec-a4c6-a5b66e705434">
+    <name>Торг13</name>
+    <synonym>
+      <key>ru</key>
+      <value>Торг13</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

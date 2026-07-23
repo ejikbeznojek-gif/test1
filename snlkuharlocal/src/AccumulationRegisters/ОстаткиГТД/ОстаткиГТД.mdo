@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6ca56f6-2490-4b30-b708-e1e412fe0e36">
+  <producedTypes>
+    <selectionType typeId="d04002ca-78ff-44e4-b8b2-2315081552eb" valueTypeId="fc3ed190-2622-4dca-b797-5f652ee9ee41"/>
+    <listType typeId="0df47a47-8dc6-42b0-b7c0-4ba33a56fa1b" valueTypeId="7af7ba58-abad-44b8-88f6-9f3a281355eb"/>
+    <managerType typeId="21a806ed-da09-4a7a-ab33-8896cf77e195" valueTypeId="8fff61d1-d28d-4f4b-b21e-38d10d06b8b6"/>
+    <recordSetType typeId="2d692dcb-62e8-4a79-82ec-4b9e4d8236ad" valueTypeId="7bb7d873-e53a-42d5-9949-71df9efaabce"/>
+    <recordKeyType typeId="f3508dc1-091c-444d-9113-2fde5c235058" valueTypeId="7e368012-6e4e-4e98-9c2f-93cac6a20ed7"/>
+    <recordType typeId="4108d465-d08b-4574-a611-929f4d7a9166" valueTypeId="c70a971a-3595-4683-9c1f-fd7dba5a5f00"/>
+  </producedTypes>
+  <name>ОстаткиГТД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки ГТД</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0d38b8c3-e1f7-412f-a296-9786ebcb8740">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="4d8e1fde-f989-41fe-a016-2acb3a7d7517">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="bb768a0a-8d03-4c8c-af1f-f837d1277978">
+    <name>ГТД</name>
+    <synonym>
+      <key>ru</key>
+      <value>ГТД</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГТД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a0558c3-71b5-4c3d-b467-c6df71b7d5bd">
+  <producedTypes>
+    <objectType typeId="8d46a37d-32ff-4c70-b97a-38871d05aa15" valueTypeId="4a69298e-bca1-452f-95a1-4fea99b26e0c"/>
+    <managerType typeId="990bd2b1-43a8-47ac-bce4-f9170b1d05d6" valueTypeId="74dd1468-13ac-42a7-9ef0-5b9446016b0c"/>
+  </producedTypes>
+  <name>ПечатьСпецификаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать спецификаций</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьСпецификаций.Form.Форма</defaultForm>
+  <attributes uuid="9ddf47b0-3b81-496b-9848-7c6fe6a9d3e7">
+    <name>Док</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтрактСПроизводителем</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1af91264-c1b9-4238-8c24-ed96c1c7db4c">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.ВводОстатковТМЦ</types>
+      <types>DocumentObject.Чек</types>
+      <types>DocumentObject.ОприходованиеТМЦ</types>
+      <types>DocumentObject.РасходнаяНакладная</types>
+      <types>DocumentObject.ЛистНабора</types>
+      <types>DocumentObject.Инвентаризация</types>
+      <types>DocumentObject.ВиртуальныйРезерв</types>
+      <types>DocumentObject.КонтрактСПроизводителем</types>
+      <types>DocumentObject.ПриходнаяНакладная</types>
+      <types>DocumentObject.Перемещение</types>
+      <types>DocumentObject.ЗаказПоставщику</types>
+      <types>DocumentObject.СписаниеТМЦ</types>
+      <types>DocumentObject.РекламационнаяНакладная</types>
+      <types>DocumentObject.ОтчетКассовойСмены</types>
+      <types>DocumentObject.ЛистПереукладки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9a14464b-43b0-4dbc-9379-b8180d882087">
+    <name>Режим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим</value>
+    </synonym>
+    <comment>Левый-Правый</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="50441566-a2f6-40b6-b0fb-62b004537506">
+    <name>ПечатьТК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Печать ТК</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d70c90a2-4006-4234-ac71-b64842804beb">
+    <name>СписокПропускаемыхСекций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список пропускаемых секций</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d72f390d-90c8-48f7-bf59-86de72345620">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="442ceacb-5bd9-4771-8841-9f29d23c7b98">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="aea1a537-32b6-4b7a-b987-a73ef19d378c">
+    <name>Спецификация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Спецификация</value>
+    </synonym>
+  </templates>
+  <templates uuid="d228960f-04ca-458e-a9a9-5ba90687328c">
+    <name>ПодборДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подбор документов</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

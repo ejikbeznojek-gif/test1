@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="850acc6d-d31f-4a5e-97ff-f9820c013a93">
+  <name>wsPallets</name>
+  <synonym>
+    <key>ru</key>
+    <value>Паллетирование</value>
+  </synonym>
+  <namespace>http://collant.ru/wsPallete</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data-composition-system/details</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data-composition-system/schema</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/enterprise/current-config</value>
+  </xdtoPackages>
+  <descriptorFileName>wsPallete.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="aff324d2-e8ac-4adc-b6ad-3326238c027b">
+    <name>officer</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудники</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>officer</procedureName>
+    <parameters uuid="bf354897-71df-4157-b218-b5cbaadab4dc">
+      <name>ИДУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИДУстройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="74a4d2f1-eae3-472e-9b53-77783c386dcf">
+    <name>data</name>
+    <synonym>
+      <key>ru</key>
+      <value>Data</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>data</procedureName>
+    <parameters uuid="d3cefa84-22fc-4613-beae-ada20eabe985">
+      <name>DateString</name>
+      <synonym>
+        <key>ru</key>
+        <value>Date string</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="24d04b4e-1165-4217-a3aa-ce46a4b4e817">
+      <name>КонтрагентУИД</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент УИД</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="111a805e-a5a9-4a86-b7a2-520176af40c7">
+      <name>filterData</name>
+      <synonym>
+        <key>ru</key>
+        <value>Filter data</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="55ea5be8-76b2-42dd-b43d-0cb123c102ab">
+      <name>barcode</name>
+      <synonym>
+        <key>ru</key>
+        <value>Barcode</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="d77c4e1d-f6d1-4ee2-8c1f-3376adb48bad">
+    <name>filter</name>
+    <synonym>
+      <key>ru</key>
+      <value>Filter</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>filter</procedureName>
+    <parameters uuid="e17bced6-a5c2-4d5d-8b9d-14e149f40f2c">
+      <name>DateString</name>
+      <synonym>
+        <key>ru</key>
+        <value>Date string</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="283e4822-3ffa-4a3f-aaf1-e2b77a6e5961">
+    <name>createdocuments</name>
+    <synonym>
+      <key>ru</key>
+      <value>Createdocuments</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>createdocuments</procedureName>
+    <parameters uuid="3e124719-6a63-4325-9e5f-1e0c0938c370">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9e874095-7ddc-4a3a-bed6-7d73f5e191dc">
+    <name>dataSheets</name>
+    <synonym>
+      <key>ru</key>
+      <value>Data sheets</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>dataSheets</procedureName>
+    <parameters uuid="93e4bb5e-e46e-4122-9219-decfae18e80f">
+      <name>DateString</name>
+      <synonym>
+        <key>ru</key>
+        <value>Date string</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="56899881-84b3-42cd-8b87-fd09f9afff2c">
+      <name>КонтрагентУИД</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент УИД</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="9e91769c-f309-4117-8c40-89806ff1d08f">
+      <name>filterData</name>
+      <synonym>
+        <key>ru</key>
+        <value>Filter data</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="e8237cb3-e005-40e5-8313-64107de44819">
+      <name>barcode</name>
+      <synonym>
+        <key>ru</key>
+        <value>Barcode</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="9673b687-058d-4656-b1b4-2e8dfc87ce18">
+    <name>filterSheets</name>
+    <synonym>
+      <key>ru</key>
+      <value>Filter sheets</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>filterSheets</procedureName>
+    <parameters uuid="9dc7253c-fb5c-42ac-8b34-4d6ade6bb04e">
+      <name>DateString</name>
+      <synonym>
+        <key>ru</key>
+        <value>Date string</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="d2f4b943-d983-4b8a-b990-473a65225b31">
+    <name>createSheets</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create sheets</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>createSheets</procedureName>
+    <parameters uuid="e11d0619-7e5a-4c0c-813e-f960de697a14">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="5774219e-fdf8-4a8e-906f-dcd0bb704715">
+    <name>dataZnb</name>
+    <synonym>
+      <key>ru</key>
+      <value>Data znb</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>dataZnb</procedureName>
+    <parameters uuid="e6ce6568-a105-4d51-b2ac-c86fa35c9988">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="ec8a8b56-3f9b-4478-ab94-e457a8ca39d9">
+    <name>createZnb</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create znb</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>createZnb</procedureName>
+    <parameters uuid="62c789be-e054-44ff-92c1-92fc997e6bae">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="55c4e879-c33d-49ab-bc52-33e513ea0cd8">
+    <name>filterINV</name>
+    <synonym>
+      <key>ru</key>
+      <value>Filter INV</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>filterINV</procedureName>
+  </operations>
+  <operations uuid="1f181b61-b8c1-400b-b56b-b7faf69da45e">
+    <name>dataINV</name>
+    <synonym>
+      <key>ru</key>
+      <value>Data INV</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>dataINV</procedureName>
+    <parameters uuid="dd411326-e05e-46a7-b32b-f702f285ad80">
+      <name>INVUID</name>
+      <synonym>
+        <key>ru</key>
+        <value>INVUID</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="ed4eaa8d-e8d8-4590-aae4-69dcedc25605">
+    <name>createINV</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create INV</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>createINV</procedureName>
+    <parameters uuid="3a068f01-3754-41e2-885e-b2ba58693cc3">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="e89309f4-3e4c-4a5e-a5d1-b3a596043af0">
+    <name>getNomenklaturaSNL</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get nomenklatura SNL</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>getNomenklaturaSNL</procedureName>
+    <parameters uuid="3e0999ed-7f5d-4abf-80fc-52d1492e4fd3">
+      <name>Spisok</name>
+      <synonym>
+        <key>ru</key>
+        <value>Spisok</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="d07292eb-3ca4-4d27-a59e-d0f4ac47dd5e">
+    <name>getBarcode</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get barcode</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>getBarcode</procedureName>
+    <parameters uuid="82957a89-6540-4dbd-b6cb-2bb07e17f432">
+      <name>ИДУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИДУстройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="15a3925e-c8e2-4c8a-ac8e-1bb001fa6c27">
+    <name>getShangesBarcodes</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get shanges barcodes</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>getShangesBarcodes</procedureName>
+    <parameters uuid="bd8539e0-df8c-4725-b108-69459454ea33">
+      <name>ИДУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИДУстройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="da29d0e5-a7ab-4a91-9528-0abd9f475922">
+      <name>ШК</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШК</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="eebf4beb-5aa7-44cd-97c1-475174b36d97">
+      <name>ТипШК</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип ШК</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="dcd1621f-0180-4343-84a4-6361cea21016">
+    <name>setShangesBarcodes</name>
+    <synonym>
+      <key>ru</key>
+      <value>Set shanges barcodes</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>setShangesBarcodes</procedureName>
+    <parameters uuid="9c3f2beb-0d52-4c5e-b9d5-0eec93aef459">
+      <name>СтруктураПараметров</name>
+      <synonym>
+        <key>ru</key>
+        <value>Структура параметров</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="ea05cfcd-ff5c-4b4d-8f1b-1ae742af1d4f">
+    <name>getTypesOfWork</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get types of work</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>getTypesOfWork</procedureName>
+    <parameters uuid="12f6b14e-0b48-4b3f-aa5d-2f33637e5aff">
+      <name>ИДУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИДУстройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="de3c6c4d-41bd-4f50-898b-d801ba01399b">
+    <name>getStorageAreas</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get storage areas</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>getStorageAreas</procedureName>
+    <parameters uuid="98136486-bd44-4aa5-aac8-32435ce796df">
+      <name>ИДУстройства</name>
+      <synonym>
+        <key>ru</key>
+        <value>ИДУстройства</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9ac1ae7a-5f69-4b57-b0f0-c04a7444269f">
+    <name>dataPNK</name>
+    <synonym>
+      <key>ru</key>
+      <value>Data PNK</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>dataPNK</procedureName>
+    <parameters uuid="42a9a01a-7451-4dbd-b618-fe76a8df7712">
+      <name>PNKUID</name>
+      <synonym>
+        <key>ru</key>
+        <value>PNKUID</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="dea9e371-4c86-491d-9f48-edd6dbabbe33">
+    <name>createPNK</name>
+    <synonym>
+      <key>ru</key>
+      <value>Create PNK</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>createPNK</procedureName>
+    <parameters uuid="a54d91a6-fd1a-447a-aec2-36e52d275a0d">
+      <name>Параметр1</name>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

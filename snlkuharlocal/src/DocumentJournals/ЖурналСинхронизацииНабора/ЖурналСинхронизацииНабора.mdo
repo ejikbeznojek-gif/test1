@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dfeefc5d-aff3-4a96-9ed0-e7d76f821c36">
+  <producedTypes>
+    <selectionType typeId="4a7c4a39-fc7f-411a-b276-6952d9f1a76b" valueTypeId="91d1fade-57cb-4507-9612-75491ab41aea"/>
+    <listType typeId="4a4facb7-0cc6-49da-af38-e874c006adf2" valueTypeId="5b253e4a-6751-4fcc-bc51-38ef418dc9ee"/>
+    <managerType typeId="147625c6-d231-4ca5-a98a-23b144a62f80" valueTypeId="d9c7709e-1430-4567-8dde-d95a960c6ee2"/>
+  </producedTypes>
+  <name>ЖурналСинхронизацииНабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Журнал синхронизации набора</value>
+  </synonym>
+  <defaultForm>DocumentJournal.ЖурналСинхронизацииНабора.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.РасходнаяНакладная</registeredDocuments>
+  <registeredDocuments>Document.ПриходнаяНакладная</registeredDocuments>
+  <registeredDocuments>Document.Перемещение</registeredDocuments>
+  <columns uuid="67959c07-3393-4647-a8fd-5bf9d2615584">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.Перемещение.Attribute.Склад</references>
+    <references>Document.РасходнаяНакладная.Attribute.Склад</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Склад</references>
+  </columns>
+  <columns uuid="7afaa35a-87a8-47f7-888b-0d9a4cdb8471">
+    <name>Получатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.Перемещение.Attribute.СкладПолучатель</references>
+    <references>Document.РасходнаяНакладная.Attribute.Контрагент</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Контрагент</references>
+  </columns>
+  <columns uuid="9cfe0e36-9e66-4c06-98ff-d5ccec38a3cf">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.СуммаДокумента</references>
+    <references>Document.РасходнаяНакладная.Attribute.СуммаДокумента</references>
+    <references>Document.ПриходнаяНакладная.Attribute.СуммаДокумента</references>
+  </columns>
+  <columns uuid="1179508f-f730-4c51-a30a-86e43d4e2c27">
+    <name>ИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИБ</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ИБ</references>
+    <references>Document.РасходнаяНакладная.Attribute.ИБ</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ИБ</references>
+  </columns>
+  <columns uuid="29a98a33-142a-4411-933b-18bf3331b40a">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <references>Document.ПриходнаяНакладная.Attribute.КодОперации</references>
+    <references>Document.РасходнаяНакладная.Attribute.КодОперации</references>
+  </columns>
+  <columns uuid="5e0c260b-e63a-458d-95fc-fa67e4c22f73">
+    <name>Отгружен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружен</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Отгружен</references>
+    <references>Document.РасходнаяНакладная.Attribute.Отгружен</references>
+  </columns>
+  <columns uuid="aa21ee3b-118f-41d7-b3be-336ca4b37461">
+    <name>ВидОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид оплаты</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.ВидОплаты</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ВидОплаты</references>
+  </columns>
+  <columns uuid="af297978-8080-47ae-a21d-b02baa6ea982">
+    <name>ДатаОтгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отгрузки</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ДатаОтгрузки</references>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаОтгрузки</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ДатаОтгрузки</references>
+  </columns>
+  <columns uuid="22067589-ee40-4a62-9f74-efa0f91ad9cd">
+    <name>СостояниеНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние накладной</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.СостояниеНакладной</references>
+    <references>Document.РасходнаяНакладная.Attribute.СостояниеНакладной</references>
+    <references>Document.ПриходнаяНакладная.Attribute.СостояниеНакладной</references>
+  </columns>
+  <columns uuid="35402a8e-7ccb-4c75-8c64-2b1c17ac2371">
+    <name>ГруппыТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группы товаров</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ГруппыТоваров</references>
+    <references>Document.РасходнаяНакладная.Attribute.ГруппыТоваров</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ГруппыТоваров</references>
+  </columns>
+  <columns uuid="a84f02c5-2694-4f6c-951e-87c3a1c1bce2">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Валюта</references>
+    <references>Document.РасходнаяНакладная.Attribute.Валюта</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Валюта</references>
+  </columns>
+  <columns uuid="3d2d3af2-a19d-423e-8f30-2aa88ab0bb39">
+    <name>ОбъемДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объем документа</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ОбъемДокумента</references>
+    <references>Document.РасходнаяНакладная.Attribute.ОбъемДокумента</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ОбъемДокумента</references>
+  </columns>
+  <columns uuid="50205152-ba21-4566-b5de-9710793941f8">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.СостояниеНакладной</references>
+    <references>Document.РасходнаяНакладная.Attribute.СостояниеНакладной</references>
+    <references>Document.ПриходнаяНакладная.Attribute.СостояниеНакладной</references>
+  </columns>
+  <columns uuid="e3b30f2a-4268-4df6-9b05-ef41e41f3ca9">
+    <name>Менеджер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Менеджер</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Менеджер</references>
+    <references>Document.РасходнаяНакладная.Attribute.Менеджер</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Менеджер</references>
+  </columns>
+  <columns uuid="4ccb3ba5-ec61-4e02-9f8e-d36c26c7bff0">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Комментарий</references>
+    <references>Document.РасходнаяНакладная.Attribute.Комментарий</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Комментарий</references>
+  </columns>
+  <columns uuid="f4414735-d26c-40aa-ba51-7e2f3b4a781f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Организация</references>
+    <references>Document.РасходнаяНакладная.Attribute.Организация</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Организация</references>
+  </columns>
+  <columns uuid="11eeb573-b38c-4562-8ec7-5d6290b1dca5">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Автор</references>
+    <references>Document.РасходнаяНакладная.Attribute.Автор</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Автор</references>
+  </columns>
+  <columns uuid="5eb84df4-cfe6-4f9e-a2a3-4c2111c56638">
+    <name>ПунктДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт доставки</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.Перемещение.Attribute.ПунктДоставки</references>
+    <references>Document.РасходнаяНакладная.Attribute.ПунктДоставки</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ПунктДоставки</references>
+  </columns>
+  <columns uuid="16525b82-aa6d-4eba-9e97-142f654098c5">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.КоличествоДокумента</references>
+    <references>Document.РасходнаяНакладная.Attribute.КоличествоДокумента</references>
+    <references>Document.ПриходнаяНакладная.Attribute.КоличествоДокумента</references>
+  </columns>
+  <columns uuid="877cbd4c-cd11-48a8-97a2-21334fe4edb2">
+    <name>НеСоответствуетЗаявке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не соответствует заявке</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.НеСоответствуетЗаявке</references>
+    <references>Document.РасходнаяНакладная.Attribute.НеСоответствуетЗаявке</references>
+    <references>Document.ПриходнаяНакладная.Attribute.НеСоответствуетЗаявке</references>
+  </columns>
+  <columns uuid="677e47cb-c289-44c8-ad4e-68b25dacd79f">
+    <name>СостояниеДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние документов</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.СостояниеДокументов</references>
+    <references>Document.ПриходнаяНакладная.Attribute.СостояниеДокументов</references>
+    <references>Document.Перемещение.Attribute.СостояниеДокументов</references>
+  </columns>
+  <columns uuid="5c3898fb-a238-4893-a3ae-99f98517cb61">
+    <name>ТипЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ТипЦен</references>
+    <references>Document.РасходнаяНакладная.Attribute.ТипЦен</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ТипЦен</references>
+  </columns>
+  <columns uuid="25cd640b-63a5-4dd7-b847-a6f9f69ea597">
+    <name>ЛевыйКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Левый контрагент</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.ЛевыйКонтрагент</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ЛевыйКонтрагент</references>
+  </columns>
+  <columns uuid="cf289ef9-d29c-4c33-b281-c9573eca5a5b">
+    <name>СостояниеНакладнойУПолучателя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние накладной у получателя</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.СостояниеНакладнойУПолучателя</references>
+  </columns>
+  <columns uuid="c359c319-164d-4426-bb8f-eb5a9c0418a0">
+    <name>ДатаПриемки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата приемки</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ДатаПриемки</references>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаПриемки</references>
+  </columns>
+  <columns uuid="52667718-d80c-4605-9fca-d34ac2c1af2c">
+    <name>Скидка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скидка</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Скидка</references>
+    <references>Document.РасходнаяНакладная.Attribute.Скидка</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Скидка</references>
+  </columns>
+  <columns uuid="9c1d1643-528a-4a07-9175-471b825fc288">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.Договор</references>
+    <references>Document.ПриходнаяНакладная.Attribute.Договор</references>
+  </columns>
+  <columns uuid="80d5aac2-dee4-4f25-9720-8d2ee19a04ad">
+    <name>ДатаВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата выгрузки</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ДатаВыгрузки</references>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаВыгрузки</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ДатаВыгрузки</references>
+  </columns>
+  <columns uuid="e1761117-53e6-4678-b334-4c2d70762ea4">
+    <name>ДопОбработка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп обработка</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.ДопОбработка</references>
+  </columns>
+  <columns uuid="88d8e6fb-55e6-4c00-9445-b0c972589c42">
+    <name>КонтрагентЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент заказа</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.Контрагент</references>
+  </columns>
+  <columns uuid="a6e75fd1-8e03-4947-a7fd-423237903e73">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <references>Document.ПриходнаяНакладная.Attribute.Подразделение</references>
+    <references>Document.РасходнаяНакладная.Attribute.Подразделение</references>
+  </columns>
+  <columns uuid="1c97cc05-3cd2-4013-8839-47756c21720a">
+    <name>СекторХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сектор хранения</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.СекторХранения</references>
+    <references>Document.ПриходнаяНакладная.Attribute.СекторХранения</references>
+    <references>Document.РасходнаяНакладная.Attribute.СекторХранения</references>
+  </columns>
+  <columns uuid="43f99154-8ecf-490e-bc0b-ec5cb0b47770">
+    <name>ДатаОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата оплаты</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаОплаты</references>
+    <references>Document.ПриходнаяНакладная.Attribute.ДатаОплаты</references>
+  </columns>
+  <columns uuid="e74c45df-5aa3-4e38-a361-43f7db0378fe">
+    <name>ДатаОтгрузкиНаТранзит</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отгрузки на транзит</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ДатаОтгрузкиНаТранзит</references>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаОтгрузкиНаТранзит</references>
+  </columns>
+  <columns uuid="0961c22e-a4f3-47cb-9479-d29af7f2fbb4">
+    <name>НомерЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер заказа</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.НомерЗаказа</references>
+    <references>Document.ПриходнаяНакладная.Attribute.НомерЗаказа</references>
+  </columns>
+  <columns uuid="982f69fb-d5e8-4a1a-bb30-023214324ba0">
+    <name>КМПЛ</name>
+    <synonym>
+      <key>ru</key>
+      <value>КМПЛ</value>
+    </synonym>
+    <references>Document.РасходнаяНакладная.Attribute.ОтгрузкаКомплектов</references>
+  </columns>
+  <columns uuid="1ee88478-a23b-4ffb-a872-17b36b0ac4e0">
+    <name>Корр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Корр</value>
+    </synonym>
+    <indexing>Index</indexing>
+    <references>Document.РасходнаяНакладная.Attribute.СостояниеКоррекции</references>
+  </columns>
+  <columns uuid="fb25e0c6-24bc-4240-a8ce-6d1b02fd77f0">
+    <name>ДатаГотовности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата готовности</value>
+    </synonym>
+    <references>Document.Перемещение.Attribute.ДатаГотовности</references>
+    <references>Document.РасходнаяНакладная.Attribute.ДатаГотовности</references>
+  </columns>
+  <forms uuid="2bded8c3-8e60-4b1e-8a64-82c413deec13">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ab51331b-444b-42a2-a3df-75da5c451f19">
+  <producedTypes>
+    <objectType typeId="0c36c94c-f93f-458c-b1a8-a565f340d227" valueTypeId="b6fd6574-1fb6-4252-bfc5-ae59dcfe4cd5"/>
+    <refType typeId="02809fee-4c30-4820-a6b7-0591b1cbd5dd" valueTypeId="6ad8b4be-4879-4249-8bda-0090968c0eb2"/>
+    <selectionType typeId="9a4d0096-b52c-4797-a2e8-005dff05b5f8" valueTypeId="b04339e2-8cdc-4d7b-a531-f24323cadb85"/>
+    <listType typeId="50d9c65d-3fe6-4677-af8d-b7fa6d7b9720" valueTypeId="8a321d2f-30a3-4185-84a7-e02f61460ed2"/>
+    <managerType typeId="7b04034c-ac7a-48a0-842a-8c80cf84b105" valueTypeId="bf40b651-2445-4c20-90e0-bcfd91b754e7"/>
+  </producedTypes>
+  <name>Инструкции</name>
+  <synonym>
+    <key>ru</key>
+    <value>Инструкции</value>
+  </synonym>
+  <inputByString>Catalog.Инструкции.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Инструкции.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>BothWays</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.Инструкции.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.Инструкции.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="28e72354-1a93-4476-b386-dcdcc799a660">
+    <name>Инструкция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инструкция</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="16cb7a4a-f3da-40ce-834a-91225528bb42">
+    <name>ИмяФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8a248a25-fbee-42a0-99a5-7193f211a9ec">
+    <name>ДатаДобавленияИнструкции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата добавления инструкции</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="034cd7b0-6411-4848-8150-7f53bcc7f9b1">
+    <producedTypes>
+      <objectType typeId="5dc0d1de-709c-4a17-9a51-5036f07e951f" valueTypeId="f1338e90-31ab-4216-98b7-bc3510b96f20"/>
+      <rowType typeId="25b2eb49-4e28-4abe-b9d9-18a4204888fb" valueTypeId="43575ce4-2204-46cc-9d3f-69f53b6480a8"/>
+    </producedTypes>
+    <name>ВзаимосвязанныеОбъекты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Взаимосвязанные объекты</value>
+    </synonym>
+    <attributes uuid="d43522f7-9342-4ccf-b2a9-e21c36a4abed">
+      <name>Объект</name>
+      <synonym>
+        <key>ru</key>
+        <value>Объект</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Инструкции</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="57e6b865-3bde-4fff-a715-64c315f8f47a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="630995bb-ea77-4576-b2d2-6816efcf28ab">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

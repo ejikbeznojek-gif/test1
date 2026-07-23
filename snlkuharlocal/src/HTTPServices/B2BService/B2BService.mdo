@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0fc30281-9947-4a49-9e1c-42bc2b553441">
+  <name>B2BService</name>
+  <synonym>
+    <key>ru</key>
+    <value>B2 b service</value>
+  </synonym>
+  <rootURL>B2BRoot</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="3cd45446-b39f-4082-955d-4c06e60cfea1">
+    <name>GetMethod</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get method</value>
+    </synonym>
+    <template>/GetData/{CommandName}/{ParamName}/{ParamValue}</template>
+    <methods uuid="b59d0b9b-3633-41a3-a513-66bed37c9145">
+      <name>GetData</name>
+      <synonym>
+        <key>ru</key>
+        <value>Get data</value>
+      </synonym>
+      <handler>GetData</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="30847299-abcd-4546-90ca-3d48e9c4d946">
+    <name>PostMethod</name>
+    <synonym>
+      <key>ru</key>
+      <value>Post method</value>
+    </synonym>
+    <template>/PostData</template>
+    <methods uuid="bd4d9f89-35b7-435e-9c23-46fd58ce89dc">
+      <name>PostData</name>
+      <synonym>
+        <key>ru</key>
+        <value>Post data</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>PostData</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="2c737c9f-b470-42b4-82a8-9b568ff2d312">
+    <name>UchastvuetVSkidke</name>
+    <synonym>
+      <key>ru</key>
+      <value>Uchastvuet v skidke</value>
+    </synonym>
+    <comment>участие контрагента в скидках, загрузка с сайта галки</comment>
+    <template>/UVSkidke</template>
+    <methods uuid="d864a914-43fd-494b-9b06-a6a35ad241b8">
+      <name>UVSkidke</name>
+      <synonym>
+        <key>ru</key>
+        <value>UVSkidke</value>
+      </synonym>
+      <comment>контрагент участвует в скидке</comment>
+      <httpMethod>POST</httpMethod>
+      <handler>UVSkidke</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="70a148d6-deac-4c55-8209-8e59886b1fe3">
+    <name>OrderUpdate</name>
+    <synonym>
+      <key>ru</key>
+      <value>Order update</value>
+    </synonym>
+    <template>/OrderUpdate</template>
+    <methods uuid="316b7673-14b4-4456-897e-1700caa18fef">
+      <name>Update</name>
+      <synonym>
+        <key>ru</key>
+        <value>Update</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>OrderUpdate</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

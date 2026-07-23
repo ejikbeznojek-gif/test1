@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e33a3727-0a66-454c-9ec7-dec7f1781e57">
+  <producedTypes>
+    <objectType typeId="0b963da4-7d6c-4dac-a9b7-55051fa0ee2f" valueTypeId="1d2c4d8a-0276-4441-b9a6-711b621e233e"/>
+    <managerType typeId="ccdeb405-f63e-4268-8a18-3d0847347dd4" valueTypeId="26d83da0-270a-4a70-bfb9-1318387b368e"/>
+  </producedTypes>
+  <name>ФормированиеИОбработкаЗаказовКМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формирование и обработка заказов КМ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ФормированиеИОбработкаЗаказовКМ.Form.ФормаУправляемая</defaultForm>
+  <attributes uuid="67aeb216-2f30-449a-9d3f-73212ae56fa4">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9bd9c374-de2e-4888-b801-2e71d7245065">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="ad173961-7205-4aae-8aa3-a0eedb62e5f5">
+    <producedTypes>
+      <objectType typeId="f350da44-379c-479a-93dd-e0edaf343dd0" valueTypeId="fa06564a-8a53-41f3-9f75-0587c7d22edf"/>
+      <rowType typeId="e7092d6d-6762-4025-9231-0286d932acc2" valueTypeId="1585bdbf-3976-42c4-b25c-a152b330d583"/>
+    </producedTypes>
+    <name>ЗаказыКМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказы КМ</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="e1b55ac8-ea5e-4158-8d65-9004f95b6615">
+      <name>ЗаказКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заказ КМ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="334b80c5-729d-476e-afed-5a54787f4588">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3c63b66e-149d-4213-8b03-473eb5820d2d">
+    <name>ФормаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

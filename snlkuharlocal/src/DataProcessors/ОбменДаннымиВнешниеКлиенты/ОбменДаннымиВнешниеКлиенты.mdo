@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f6ec4410-cd5d-4f72-bdaa-85cc31b94b14">
+  <producedTypes>
+    <objectType typeId="51b1049c-d46a-4127-ba35-f91ee3f724db" valueTypeId="0c576c9b-3158-4deb-a9d7-76ba59b10488"/>
+    <managerType typeId="34bba7eb-a97f-440b-b728-8ba9525671f1" valueTypeId="e4a1afc7-dd21-4a29-a9af-f3c817af66dc"/>
+  </producedTypes>
+  <name>ОбменДаннымиВнешниеКлиенты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными внешние клиенты</value>
+  </synonym>
+  <defaultForm>DataProcessor.ОбменДаннымиВнешниеКлиенты.Form.Форма</defaultForm>
+  <attributes uuid="0475d5e5-a8f4-44a9-ad05-03b802329b75">
+    <name>СерверFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fb0c54e3-2233-42a1-97f5-63ad81c62525">
+    <name>КаталогFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ceef21a5-a7cd-4e31-8022-d5c25e1de8c1">
+    <name>ПользовательFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="86694bc6-b3db-4b3e-98bb-f1e650116baa">
+    <name>ПарольFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fc39fb34-a60c-458e-bd3c-f7baf67d23dc">
+    <name>ВсеТовары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Все товары</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="96f2e800-78f6-4412-b973-6311863a1fb3">
+    <name>Узел</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.ВнешниеКлиенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="3c7f42df-e985-47fa-b73e-94c7a846f9b8">
+    <producedTypes>
+      <objectType typeId="bcb5c50d-ce05-4dc2-bd9e-bd7bdfd68baf" valueTypeId="41c9644b-c481-41b9-ba34-d1cd329b598f"/>
+      <rowType typeId="a810ca67-530b-47bd-9139-384a5d2f07e6" valueTypeId="f757dcf1-6010-45fb-a64e-3d0b5fe32a3f"/>
+    </producedTypes>
+    <name>Узлы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узлы</value>
+    </synonym>
+    <attributes uuid="6c36b7a5-492a-47a9-af10-4dafcf3d8528">
+      <name>Узел</name>
+      <synonym>
+        <key>ru</key>
+        <value>Узел</value>
+      </synonym>
+      <type>
+        <types>ExchangePlanRef.ВнешниеКлиенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="5db328f7-a734-40d5-abfd-1139a46a288c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="1572a881-716a-4494-ba8f-4ba3dbcc0943">
+    <name>ПравилаВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила выгрузки</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

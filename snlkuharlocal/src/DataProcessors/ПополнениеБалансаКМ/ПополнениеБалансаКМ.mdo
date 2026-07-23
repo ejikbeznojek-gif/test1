@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75cc9332-b85d-440c-a1b0-97d60b2c5caf">
+  <producedTypes>
+    <objectType typeId="de65156f-5c3b-4e80-b5a7-46110f43d33f" valueTypeId="254bf334-ab0f-4bfc-aa12-602dbacdafaa"/>
+    <managerType typeId="e2037f3d-1356-4b9b-bb20-53192eb746fd" valueTypeId="164cf60e-1e4a-4ae9-b7e3-1e23bead6df3"/>
+  </producedTypes>
+  <name>ПополнениеБалансаКМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пополнение баланса КМ</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПополнениеБалансаКМ.Form.Форма_АвтоРасчет</defaultForm>
+  <attributes uuid="e3cc9157-e678-46cd-9c30-349e71aca8ad">
+    <name>СписокСкладов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список складов</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b4a7d595-5c4c-46b7-9116-46441c23684a">
+    <name>Дата1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="27437d76-531f-488f-a6bf-330df90fa8ee">
+    <name>Дата2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2bbd3f2d-91b7-4229-8da2-43a2b7ec8a57">
+    <name>СписокПодразделений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список подразделений</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3fb41787-0567-480b-88e2-d891114be766">
+    <name>ТД_Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Т д результат</value>
+    </synonym>
+    <type>
+      <types>SpreadsheetDocument</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a099ef10-be9e-4a32-aeee-65a7520478cb">
+    <name>КН</name>
+    <synonym>
+      <key>ru</key>
+      <value>КН</value>
+    </synonym>
+    <type>
+      <types>DataCompositionSettingsComposer</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ce831e57-933c-4579-94d4-77573f189372">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="22e2767e-4607-4321-b76c-f4d708fb52e4">
+    <name>ОкруглятьДо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Округлять до</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d84f9411-c132-4cdb-8f73-28ab724d3ca1">
+    <name>МинЗапасПроцент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мин запас процент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Мин. запас в % от остатка</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e456d6a6-5e2a-4a5e-a08b-d95c463c4152">
+    <name>фРасчетПодОтгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет под отгрузки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="517f182e-858c-4075-a0df-97dd3c32c205">
+    <name>ПодразделениеНанесения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подр. нанесения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="599bdc16-a6b9-4c37-bc03-36c048850e17">
+    <producedTypes>
+      <objectType typeId="8e9a3489-274d-4d89-9a87-214f4f1c8669" valueTypeId="053c7236-84e1-4b5e-8bcc-122ae57ebb9f"/>
+      <rowType typeId="4d7a2c0a-6a9d-42a0-bd88-53024a0273fb" valueTypeId="5df89a55-b6c9-406b-9fa0-a7d4612db5c1"/>
+    </producedTypes>
+    <name>ДанныеРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные расчета</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="10fd4a0c-af7d-4f90-b930-d920698f3640">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="04ce9dae-0c90-4980-9d99-c640613063d3">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="0b6239cb-e1c7-4e93-95d2-ed77db54d6d9">
+    <name>Форма_АвтоРасчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма (Авто расчет)</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e1e56333-e24e-424c-ae84-1c080fe242b7">
+    <name>Форма_ВводСExcel</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма (Ввод данных с Excel)</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="d5871440-3d73-4197-9ea9-1541d2bd5231">
+    <name>СхемаРасчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема расчета</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="63bb74f5-d573-49aa-968f-44f3ea6330fd">
+    <name>Шаблон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон</value>
+    </synonym>
+  </templates>
+  <templates uuid="1c980fd8-831b-4512-b828-8e0f93e9f22c">
+    <name>Шаблон_Отладка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон отладка</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

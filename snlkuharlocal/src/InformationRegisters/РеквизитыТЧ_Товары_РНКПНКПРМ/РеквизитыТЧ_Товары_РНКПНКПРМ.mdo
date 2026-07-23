@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8ca130ab-8ad0-44dd-a7f2-a666ae7d2995">
+  <producedTypes>
+    <selectionType typeId="28a4e248-8f57-4151-a0f2-886f3d107b83" valueTypeId="497bedda-805c-4c40-9043-cf00b9a24e94"/>
+    <listType typeId="03a7f585-5597-4932-97fb-c360249b8637" valueTypeId="c0c9f04e-14af-4513-aa64-22e7333983ab"/>
+    <managerType typeId="93f57ea6-c127-4a84-88cf-ac0d16dfb28b" valueTypeId="b2f5baa4-1875-47af-b7cd-4c849309a96e"/>
+    <recordSetType typeId="9579b1e2-a7b0-48ca-bc1b-c033cb048e12" valueTypeId="699f845d-7085-4c1c-bf8c-6c85fee87216"/>
+    <recordKeyType typeId="c59d4dcb-3a21-4148-ad05-a8876ced1585" valueTypeId="afe066be-6ff3-49a9-8d8b-f8d11e8e4dfa"/>
+    <recordType typeId="b7ea868e-756f-45f2-910e-fe46d505d2de" valueTypeId="3e6c3993-0fcb-4cfb-9422-74b18e6aeeb8"/>
+    <recordManagerType typeId="c96a28c6-4258-4de8-a2bc-5bc036e04cb3" valueTypeId="9d3bb36e-1084-4d21-be35-866cc43e9c40"/>
+  </producedTypes>
+  <name>РеквизитыТЧ_Товары_РНКПНКПРМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реквизиты ТЧ Товары для РНК ПНК ПРМ</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0c8f8003-43f3-441f-8383-fc266c616048">
+    <name>ЗначениеРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение реквизита</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныНедопоставокПоСтрокам</types>
+      <types>EnumRef.ПричиныНедопоставокОбщие</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="297d0800-5425-47e9-8e54-3a4dccce0d60">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d876ebbc-a3a2-4e6c-a632-25c5308f09fa">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3c27c7df-3900-4b22-bf93-fdb6985d9808">
+    <name>ИмяРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

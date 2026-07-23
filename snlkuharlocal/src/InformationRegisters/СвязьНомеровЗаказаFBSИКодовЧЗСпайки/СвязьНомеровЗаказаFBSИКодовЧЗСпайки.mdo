@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="69c56744-5b40-433f-8545-dd3245e5d8af">
+  <producedTypes>
+    <selectionType typeId="5f033564-a383-4585-b18e-56802a93bf6b" valueTypeId="cd891b15-21b2-45f4-91ca-9a1fb5a43e4d"/>
+    <listType typeId="7c221556-a249-4f47-a8f9-893b0d38da51" valueTypeId="e8e445d2-401f-417e-b851-862c1c2697da"/>
+    <managerType typeId="1410a326-ab11-4b1f-89a4-fb0582677c86" valueTypeId="ea7f42b6-cc33-4c2a-969c-b6953dff8e62"/>
+    <recordSetType typeId="ad0a0ea9-f646-475b-994c-6af6e3009484" valueTypeId="6bdeb7fb-396c-41a3-be80-27d3420e6f64"/>
+    <recordKeyType typeId="ea066511-9199-4ab3-9a28-f30e23e0cb97" valueTypeId="b61d353d-e207-4f09-8157-69d059684730"/>
+    <recordType typeId="adcc9892-a1ca-4989-9552-74cc2ca2c839" valueTypeId="531d252d-f064-49c0-911e-c05391c46641"/>
+    <recordManagerType typeId="ddee63ae-5d61-4c26-b873-c224c982eb35" valueTypeId="c328e894-f0ad-412b-a31a-6724e6e8e2d1"/>
+  </producedTypes>
+  <name>СвязьНомеровЗаказаFBSИКодовЧЗСпайки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связь номеров заказа FBS и кодов ЧЗ спайки</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="f9cee607-aae7-4535-b106-16f7d232076b">
+    <name>КодСпайки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код спайки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f1b320b3-2988-4f6b-8dbf-a45691beba75">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="31a0116b-78b8-4dc8-ad37-d3263bde897f">
+    <name>НомерЗаказаFBS</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер заказа FBS</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

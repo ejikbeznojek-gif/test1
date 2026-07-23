@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="73a01f34-318a-4128-b1b1-cea950ab07d4">
+  <producedTypes>
+    <objectType typeId="5e1f1dff-11bc-4f73-878a-1eaeb1dad546" valueTypeId="655b8aa4-aee2-41c3-bde3-267735f5a29a"/>
+    <refType typeId="b6d01094-407e-4506-a7ec-cf32ffbd4148" valueTypeId="85780ad4-f52c-4e82-adb9-6e804b10e0d6"/>
+    <selectionType typeId="7130e0c9-b4b2-4141-91ab-db7925ead855" valueTypeId="2920815a-98c3-4180-aa37-c70dfac8e23c"/>
+    <listType typeId="2e2b91bc-6650-42de-b26c-3d865dca243c" valueTypeId="a1b60602-83e7-4abd-9a9a-14c6471527b3"/>
+    <managerType typeId="0c8d47de-34bd-45c9-b7c6-86b57011ef94" valueTypeId="bac03051-ee98-46ef-b565-47fea721a373"/>
+  </producedTypes>
+  <name>ШтрихКоды</name>
+  <synonym>
+    <key>ru</key>
+    <value>Штрих коды</value>
+  </synonym>
+  <inputByString>Catalog.ШтрихКоды.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ШтрихКоды.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Номенклатура</owners>
+  <codeLength>15</codeLength>
+  <descriptionLength>14</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.ШтрихКоды.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="2cfd86b5-f907-4acc-8b9e-e1b4a4a59e48">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d61021a2-9222-4725-8428-41feb2038fba">
+    <name>ВидШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыШК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d3e53101-8ed4-4434-8bae-24b7bc2211f7">
+    <name>ДатаМодификации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата модификации</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="066add8f-8b1a-43e3-ad8a-95ea6a6f52fd">
+    <name>ПричинаМодификации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина модификации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПричиныКорректировкиШК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="659a3f8c-1ff6-43bc-aa78-d590a2ed0e8b">
+    <name>Описание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="bb44979f-5a7e-45d7-a3a3-47e74e032908">
+    <name>ШтВКоробе</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шт в коробе</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fbf54570-f86e-40d1-9853-a79c1a84f4ac">
+    <name>ФорматШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ФорматыШК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="595ffe51-d8f2-47f5-84a4-eae53e5862e0">
+    <name>ЭтоКодGS1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это код GS1</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="27a2ff8b-a83b-4a9e-94fb-1edd98d8077d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

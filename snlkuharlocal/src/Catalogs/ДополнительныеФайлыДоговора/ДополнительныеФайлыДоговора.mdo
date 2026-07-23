@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec70021d-16c0-45c9-ab28-a7e38dca967a">
+  <producedTypes>
+    <objectType typeId="d75cfc62-bbdc-48ac-b0e0-e999c229b414" valueTypeId="ef99885b-3a8b-4f70-9979-47edab0058e7"/>
+    <refType typeId="81404f44-db00-439d-9ce6-7fd475c534e4" valueTypeId="fd79fbcf-326f-4462-b8aa-a0ffadbe41e4"/>
+    <selectionType typeId="7451f516-be3d-4527-952c-6dc15097dca5" valueTypeId="d6482872-8751-4b6f-b944-9ad91bd16445"/>
+    <listType typeId="f966e05a-fe72-49ab-9383-2482939551ef" valueTypeId="bdb1bfeb-621b-474f-88af-a3cf6871bc7f"/>
+    <managerType typeId="701e5db6-2389-41ed-a643-b2b8b4355f47" valueTypeId="b72622e4-0b5e-487c-b099-2bff115a705b"/>
+  </producedTypes>
+  <name>ДополнительныеФайлыДоговора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные файлы договора</value>
+  </synonym>
+  <inputByString>Catalog.ДополнительныеФайлыДоговора.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ДополнительныеФайлыДоговора.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="7ea05797-8b1d-48b7-868c-1645032583c8">
+      <name>ФизическиеЛица</name>
+      <description>Физические лица</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+      <isFolder>true</isFolder>
+    </items>
+    <items id="e19f60fd-f8d7-45bf-b198-bd4f2fa8cc74">
+      <name>ЮридическиеЛица</name>
+      <description>Юридические лица</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+      <isFolder>true</isFolder>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="71fc493b-4868-4fa2-aa90-fa6fb429c1f3">
+    <name>Обязательный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обязательный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="465b7453-628d-4493-bcf8-261d7021edc0">
+    <name>Аналог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДополнительныеФайлыДоговора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ad3d4ef0-89fd-45c9-b338-0630d6c64849">
+    <name>ПорядковыйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядковый номер</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

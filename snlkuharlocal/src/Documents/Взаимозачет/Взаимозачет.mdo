@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="945885a6-ccf3-4a10-ad60-de297e1d07be">
+  <producedTypes>
+    <objectType typeId="33fe0c95-b5fb-45a7-88dd-cd7c152d0d80" valueTypeId="5443d605-0ae4-4e42-987a-35314df94c7b"/>
+    <refType typeId="4a417777-beae-4be6-b1be-115caa4244e3" valueTypeId="c3ec5167-1016-478f-8eb4-55b68819d99b"/>
+    <selectionType typeId="a1e72a2b-54b8-4868-9af1-f964224f9fda" valueTypeId="1f42947b-d173-4b6f-9f3b-9043fafb92e5"/>
+    <listType typeId="8ba47054-7fd2-415e-b061-6a80fa83f056" valueTypeId="ad44513e-36a7-4a87-91a0-b1d542195c0a"/>
+    <managerType typeId="5b251503-87cb-4a96-b3d1-86f1fd9ca214" valueTypeId="854115c1-12d3-45df-8b2f-f5bbbe945e33"/>
+  </producedTypes>
+  <name>Взаимозачет</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВЗЧ</value>
+  </synonym>
+  <comment>Взаимозачет</comment>
+  <inputByString>Document.Взаимозачет.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ПриходнаяНакладная</basedOn>
+  <basedOn>Document.Претензия</basedOn>
+  <basedOn>Document.ЗаявкаНаОплату</basedOn>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Взаимозачет.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Взаимозачет.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыПоДокументамРасчетов</registerRecords>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <attributes uuid="5847b265-a32a-41c5-b173-de34ca6fe0ae">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="74ae83ec-4f43-4165-8314-e049291cbade">
+    <name>ИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИБ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИБ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="58a5ae87-922f-4fa4-8156-5c7445012680">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="128b5203-cbf1-48c7-a465-2faebcd1d974">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1761cfa3-3a6b-4754-80c1-94f1680e2823">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="841a0f61-4fff-49b4-900f-2c7e248af979">
+    <name>Курс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Курс</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>11</precision>
+        <scale>5</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b6059647-e6fa-480c-9658-708e53a6fda1">
+    <name>Контрагент_Дебитор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент дебитор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="01bd9a6a-1b4c-4143-a99f-6b3f5fe0b3e8">
+    <name>Договор_Дебитор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор дебитор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0adfc033-b33c-4b6f-9c58-4411c4599311">
+    <name>Контрагент_Кредитор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент кредитор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fc59a0fd-b44b-4863-b685-37d4dec13b7e">
+    <name>Договор_Кредитор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор кредитор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="b4970990-8626-4e7c-bccb-a3ff0c334808">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="118bb78e-3e2a-4a16-b785-13701f85efd1">
+    <name>ВидОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид оплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыОплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ce2ac0ab-74be-4f90-a3ef-ed07d12c1f7b">
+    <name>ДатаОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата оплаты</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ee23b4ea-febd-40b7-97e5-ec6ee2ac02c2">
+    <name>Докоснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Докоснование</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаОплату</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.Претензия</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="7d5bdd73-e9d1-497b-88c7-68c14bae4b7c">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="80fe7387-88c1-46e8-b72a-f3e5d074b0f3">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="96255664-146a-4c51-9d07-209db49d17bd">
+    <producedTypes>
+      <objectType typeId="13a55c54-53bc-4f89-9463-e959027ee534" valueTypeId="e13130a2-684c-441f-986a-1f534bebd8db"/>
+      <rowType typeId="d92ba91c-72c3-49ee-812d-24c727effeea" valueTypeId="f7e77a3f-7adf-45ff-849c-d1e5d893779e"/>
+    </producedTypes>
+    <name>Взаимозачеты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Взаимозачеты</value>
+    </synonym>
+    <attributes uuid="9fa2c1ca-ff6e-4943-90ed-fb626e445051">
+      <name>Контрагент_Дебитор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент дебитор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6d3a9e09-042c-49f9-8a4a-04dc425b84dc">
+      <name>Договор_Дебитор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор дебитор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Договоры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="df351bcf-985b-4fef-af5a-41e3ebe068f4">
+      <name>Контрагент_Кредитор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент кредитор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="26319dba-fa5d-4abf-aa89-7743e81d5a1a">
+      <name>Договор_Кредитор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор кредитор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Договоры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9538545c-9c1d-487d-a79a-ddfc4ef18699">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

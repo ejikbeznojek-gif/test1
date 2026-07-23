@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="43971b89-41e1-4297-97ac-bd3e6770aa83">
+  <producedTypes>
+    <selectionType typeId="6a9d1070-feab-46b2-bab3-280e14aeb0c0" valueTypeId="d0cfc264-7010-47f0-bc98-1e36a3e1b2a9"/>
+    <listType typeId="fc6b63d5-0428-4fed-b04a-813fdbb4f146" valueTypeId="8aead2af-a801-4691-a7b5-c13c652ccf05"/>
+    <managerType typeId="99ba2f4c-2e09-4d54-91cf-d2a97d12011d" valueTypeId="40327b2d-f686-4567-b9db-f3e535ec0f9e"/>
+    <recordSetType typeId="135eb47b-f17d-452c-b3d7-4a619b865611" valueTypeId="4b925cbd-8ef5-4423-a961-58e5e2d4078a"/>
+    <recordKeyType typeId="c880abde-5ccc-49c3-b0ac-5a4cab42764e" valueTypeId="13e9c936-75af-4c5e-89ed-6b2a52ce85b3"/>
+    <recordType typeId="95fbe7d4-6910-4671-86d7-aec55daca1f3" valueTypeId="7de1329f-a658-41e1-ade5-ad2181fe91be"/>
+    <recordManagerType typeId="ef5665ae-000e-4ee9-8aa8-e54c59dce1fc" valueTypeId="68138f48-0006-40b9-b78d-71d54fb45cbd"/>
+  </producedTypes>
+  <name>ЗаместителиРуководителей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заместители руководителей</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2a3db814-a0af-4c8c-b25d-63ddd5c456ea">
+    <name>Дата1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1c2d70eb-9cfb-43ab-a702-937d195381f2">
+    <name>Дата2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5ae2c1a0-fcc8-4e11-94f4-da8a2b5120a4">
+    <name>ОтгружатьСПросроченнойЗадолженностью</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружать с просроченной задолженностью</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6dea0825-5c85-48d6-b186-3a75744de2ea">
+    <name>ОтгружатьСПревышениемЛимита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружать с превышением лимита</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5d0d1348-34ef-43ae-9659-3633b3aa2f30">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="13a9c7e0-b53e-44c3-89ed-680641c3cdd8">
+    <name>руководитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Руководитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d5cdfb89-b7ba-4090-8236-847930629404">
+    <name>Заместитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заместитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="39e16cde-b29f-4325-ba92-c222d9f6275f">
+    <name>документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.УстановкаЗаместителейРуководителя</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

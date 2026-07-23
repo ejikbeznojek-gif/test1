@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="da66bf6d-5a62-4186-b6aa-b20896ebd5cc">
+  <producedTypes>
+    <objectType typeId="e22517d2-43fc-4617-b39c-72201a94e39d" valueTypeId="d85aa4a1-9c49-4034-abbe-79ba9b93ac50"/>
+    <managerType typeId="6acc2467-f72a-4f59-8836-92c1e327051a" valueTypeId="81566f11-1014-41a9-9773-4765427883de"/>
+  </producedTypes>
+  <name>ЗаполнениеТЧ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заполнение ТЧ</value>
+  </synonym>
+  <defaultForm>DataProcessor.ЗаполнениеТЧ.Form.ЗаполнениеПриходныхЦен</defaultForm>
+  <attributes uuid="01db71f9-0f1f-4dc2-b780-f1ef12af7f94">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.ВводОстатковТМЦ</types>
+      <types>DocumentObject.Чек</types>
+      <types>DocumentObject.УстановкаСкидок</types>
+      <types>DocumentObject.ОприходованиеТМЦ</types>
+      <types>DocumentObject.РасходнаяНакладная</types>
+      <types>DocumentObject.ЛистНабора</types>
+      <types>DocumentObject.Инвентаризация</types>
+      <types>DocumentObject.ПрайсЛист</types>
+      <types>DocumentObject.ДвиженияДенежныхСредств</types>
+      <types>DocumentObject.ВиртуальныйРезерв</types>
+      <types>DocumentObject.Взаимозачет</types>
+      <types>DocumentObject.ЗаявкаНаЗакупкуСтороннегоАссортиментаФранчайзинг</types>
+      <types>DocumentObject.Заказ</types>
+      <types>DocumentObject.КонтрактСПроизводителем</types>
+      <types>DocumentObject.РасходныйКассовыйОрдер</types>
+      <types>DocumentObject.ВводОстатковТоваровВПути</types>
+      <types>DocumentObject.УслугиСтороннихОрганизаций</types>
+      <types>DocumentObject.ВводОстатковДС</types>
+      <types>DocumentObject.Табель</types>
+      <types>DocumentObject.КорректировкаЦенВНакладной</types>
+      <types>DocumentObject.Комплектация</types>
+      <types>DocumentObject.Бюджет</types>
+      <types>DocumentObject.ПереводСредств</types>
+      <types>DocumentObject.Машина</types>
+      <types>DocumentObject.Переоценка</types>
+      <types>DocumentObject.ПланПродаж</types>
+      <types>DocumentObject.ПриходныйКассовыйОрдер</types>
+      <types>DocumentObject.ПриходнаяНакладная</types>
+      <types>DocumentObject.Перемещение</types>
+      <types>DocumentObject.ЗаявкаНаОтгрузку</types>
+      <types>DocumentObject.СчетФактура</types>
+      <types>DocumentObject.КорректировкаЗадолженности</types>
+      <types>DocumentObject.ПланПродажТЦ</types>
+      <types>DocumentObject.ЗаявкаНаПроизводство</types>
+      <types>DocumentObject.Матрица</types>
+      <types>DocumentObject.ЗаказПоставщику</types>
+      <types>DocumentObject.СписаниеТМЦ</types>
+      <types>DocumentObject.РекламационнаяНакладная</types>
+      <types>DocumentObject.УстановкаСкидокПоКонтрагентам</types>
+      <types>DocumentObject.Паллета</types>
+      <types>DocumentObject.ОтчетКассовойСмены</types>
+      <types>DocumentObject.ВводОстатковВзаиморасчетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="2e449273-9766-4b7f-83e0-1bc7597ee6e8">
+    <name>ЗаполнитьОстатками</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить остатками</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ba83ef85-dd40-4ce3-8fdb-0608d6b8c1d2">
+    <name>ЗагрузкаБланкаЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка бланка заказа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1f718b7f-f5f1-4d6c-b217-65c1613aa337">
+    <name>ЗагрузкаСТерминала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка с терминала</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="de074656-9c3a-458c-b1de-36913f98910c">
+    <name>ЗаполнитьПоЛН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по ЛН</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="72d00106-9788-41cf-8d77-ee05f9bd6fe3">
+    <name>ЗаполнитьПоНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по накладной</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="63f179b3-b9fa-4b7f-8253-ee97c655bd62">
+    <name>ЗакрытиеОКС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрытие ОКС</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bfd618ac-c2ec-4757-aef8-636285b8d6af">
+    <name>ОбнулениеОстатков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обнуление остатков</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="33b61042-d52c-44d3-b572-b8af657f9099">
+    <name>ЗаполнитьЗаявкуНаОтгрузку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить заявку на отгрузку</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b41f25c9-3785-4495-9af5-fb62a6689c5c">
+    <name>ЗаполнениеПриходныхЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнение приходных цен</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f8510908-0786-4692-8c57-2075753b9445">
+    <name>КопированиеЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Копирование цен</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="98365482-6c21-42f3-b263-06e66da7ec23">
+    <name>ЗаполнитьОстаткамиДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить остатками ДС</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e6d258c6-f1ce-45be-8f95-e43af4dcaa7c">
+    <name>ОбнулениеОстатковПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обнуление остатков пути</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="668a4030-b05c-4673-8586-09850da88631">
+    <name>РасчетПотребностиВТоварах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет потребности в товарах</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="65c5473b-66fc-4c29-8520-a74c10797b8c">
+    <name>РасчетКомплектующих</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет комплектующих</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="75db941a-79d2-405b-9f1c-4a633a27ab2d">
+    <name>РасчетКомплектующихКМПЦ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет комплектующих КМПЦ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bd66451b-5dcc-4931-bda6-58d16ee010a7">
+    <name>ЗакрытиеПродажиИМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрытие продажи ИМ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="64228c54-a7fc-4f85-8d09-323ce8e0f4d3">
+    <name>КоррекцияЗПС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция ЗПС</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="daadbbac-f072-4ecc-b0d1-714efbb2efb0">
+    <name>ОбновитьЦеныПосредника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обновить цены посредника</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8ac12135-50de-4104-b7c2-0f437cab81ce">
+    <name>ЗаполнитьПоКП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по КП</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ee678550-d665-4347-b8f6-7eb3298a3e06">
+    <name>ЗаполнитьПоКонтракту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по контракту</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4db25b8f-b2bd-43a4-b2fd-b85a00b06676">
+    <name>ОткорректироватьПартии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Откорректировать партии</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="84e835fc-b1eb-4b9c-af3e-382e32afbeae">
+    <name>РасчетКомплектующих2011</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет комплектующих 2011</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a337b08d-5ed5-4863-86f2-f241176277af">
+    <name>КоррекцияЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция цен</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0813ba2e-5baa-4fe6-91af-60f911a047c5">
+    <name>ЗаполнениеРеквизитовМатрицы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнение реквизитов матрицы</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b1839140-6914-43bb-b7cc-e513f3ccdb2b">
+    <name>ЗаполнениеЦенСебестоимостьюТранзитногоСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнение цен себестоимостью транзитного склада</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d633dd0e-8546-4e66-b201-3292fd4f6b34">
+    <name>ЗаполнитьПоОснованию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по основанию</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1eaaa8c3-8153-4f64-944a-9778e588cb47">
+    <name>ЗагрузкаСТерминалаВПаллету</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка с терминала в паллету</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ff284f6d-0a49-41e8-88b4-371291051d35">
+    <name>ПаллетноеХранение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Паллетное хранение</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bfb02350-7adb-4572-836d-5d08e7352201">
+    <name>ФормаИНВВЛН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ИНВВЛН</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="58431f66-536b-47a0-8d46-9d020620c113">
+    <name>ЗаполнитьКомлектующиеПоТоварам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить комлектующие по товарам</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="37e43f82-892e-4927-9b45-7f2397c8a93c">
+    <name>ЗаполнитьПоДокументу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по документу</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4b59c382-3588-4046-b151-3e5020446749">
+    <name>ЗаполнитьМаксОстатками</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить макс. остатками</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3f8f7f2f-33ae-43d7-8c8c-891ebfd4d3eb">
+    <name>ИзменениеЦенКЦННаПроцент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Изменение цен КЦН на процент</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ff3cd5b5-bfd2-4f1e-a437-5ddb032e3210">
+    <name>РаспределитьПоОплатамЧерезККМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Распределить по оплатам через ККМ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="370a5b93-ae88-4e5b-837c-be7c3f7bc97f">
+    <name>УстановкиСкидкиДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установки скидки ДС</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="81df50c1-7941-4fbc-a3a2-bfa664487d06">
+    <name>ЗаполнитьПоКаналуСбыта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по каналу сбыта</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a2398174-73a2-4e2f-bc27-6f9b064ef383">
+    <name>ЗаполнитьПланПоДнямНедели</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить план по дням недели</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fe838f29-37ed-4e06-ac26-759459866833">
+    <name>РасчетКомплектующихЛиповые</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет комплектующих липовые</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b678b2e6-6193-411c-b0b4-a7283c479622">
+    <name>ЗагрузкаАссортимента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Загрузка ассортимента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="013f820b-8137-407c-bd12-817079d5fa03">
+    <name>ЗаполнитьПоКПОтрицательнымиОстатками</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по КПОтрицательными остатками</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e6520bed-eac6-440e-8cb2-875e455b3729">
+    <name>ЗаполнитьПоДокументуСОтрицательнымиОстатками</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заполнить по документу с отрицательными остатками</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="a15d9229-e3eb-491b-8379-8f3741bd9e2c">
+    <name>РасчетПриходныхЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчет приходных цен</value>
+    </synonym>
+  </templates>
+  <templates uuid="6f93e19a-2c16-4b4c-9694-b4a726411471">
+    <name>ОшибкиВПриходныхЦенах</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибки в приходных ценах</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

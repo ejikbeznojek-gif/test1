@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="490b054e-73b5-4952-9dfb-270d9e5dedd5">
+  <producedTypes>
+    <selectionType typeId="677f8c70-8d8b-420f-b3e7-e7c2bc0d4380" valueTypeId="ee609006-a25c-441d-91ff-89af72fe2d4f"/>
+    <listType typeId="bd82e4f1-a0b4-43f7-9adf-54e6ac132873" valueTypeId="6e672fd5-fea5-47d8-b155-f4365ff6c674"/>
+    <managerType typeId="52803431-4ded-4010-9f21-02f2602fffd6" valueTypeId="9c0f4264-d891-4652-b5f6-5233eca50273"/>
+    <recordSetType typeId="c1a14af4-dc73-40c4-999a-aabbc9cf5a83" valueTypeId="a0ccb9db-8b7a-4288-b00a-fd7a32244f88"/>
+    <recordKeyType typeId="be2c0531-fe09-41c4-8f39-28e2f3ca7c94" valueTypeId="4553fc79-0555-4e35-8b46-d3745157704d"/>
+    <recordType typeId="e3995265-a304-4475-8108-96122f74d543" valueTypeId="cf036ecd-61c3-4f13-a8e0-dbdcf5e8f97d"/>
+    <recordManagerType typeId="6b81d971-a6cd-48f4-b213-7ebc336d72bc" valueTypeId="dc042eaf-9b32-4ed9-bca9-2bcc6546b63c"/>
+  </producedTypes>
+  <name>ОтветственныеЛицаОрганизации</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ответственные лица организации</value>
+  </synonym>
+  <comment>(Общ)</comment>
+  <defaultListForm>InformationRegister.ОтветственныеЛицаОрганизации.Form.ФормаСписка</defaultListForm>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="52ad1299-1d12-410e-abe3-d7c45266e9a9">
+    <name>ФизическоеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физическое лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a450d723-44c3-4864-9b03-adc3cf33a495">
+    <name>Должность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Должность</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="1d550cbd-2af0-4f73-a208-7f0319d45034">
+    <name>СтруктурнаяЕдиница</name>
+    <synonym>
+      <key>ru</key>
+      <value>Структурная единица</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6e37f07d-4fd3-47e1-9430-164bab793e6a">
+    <name>ОтветственноеЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственное лицо</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>EnumRef.ОтветственныеЛицаОрганизации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1a2b62a3-5687-411f-a2bc-eae8285c32ae">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

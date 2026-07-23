@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="69b5b879-d290-4633-ab47-2da82987927b">
+  <producedTypes>
+    <selectionType typeId="f8d49c8d-6f02-4c65-a177-38b7433372bd" valueTypeId="bf43b806-6e97-4631-871f-b3440c95ffe3"/>
+    <listType typeId="e0f8474b-65cb-41f0-8459-311f3ef62d9b" valueTypeId="aebbdbb1-539f-454f-b58e-c74a8dcdb4da"/>
+    <managerType typeId="6b58826e-5e6e-4913-bb1d-aef0653c901e" valueTypeId="cfaafa47-764a-4886-967a-da49f9b32210"/>
+    <recordSetType typeId="f77f1bea-65aa-4596-bd89-a42c861df8e8" valueTypeId="cbb78e3d-6322-4285-af1d-8dad4429d605"/>
+    <recordKeyType typeId="c89e4136-07d0-4527-8e2b-4e7718e1039a" valueTypeId="95233627-6111-4ab7-a4e0-c4eacc2466d7"/>
+    <recordType typeId="c336d8b3-c317-42f2-bf14-57b59736d808" valueTypeId="996c6075-fd3c-4c1e-8b3a-232df87906a0"/>
+    <recordManagerType typeId="86e681cd-1a4c-4c58-ae86-7d83d0ad8c4b" valueTypeId="f3671484-7a46-4038-94e7-7441279d7503"/>
+  </producedTypes>
+  <name>ТЗнаДОКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>ТЗ на ДО Контрагентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ТЗнаДОКонтрагентов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ТЗнаДОКонтрагентов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="ac4abc00-5285-401a-b84c-0c93287793f2">
+    <name>ИмяФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>300</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="74fa146a-93bb-4680-b427-a60c5d2f0b3c">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d62d8c4e-9d3f-4c4b-aabc-269fb903c7d7">
+    <name>ТипТЗнаДО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ТЗ на ДО</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипТЗнаДО</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="697bb35f-84d0-4e08-be76-18cea5cbc17b">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="68ff2267-978d-4041-b937-26309dcee69c">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

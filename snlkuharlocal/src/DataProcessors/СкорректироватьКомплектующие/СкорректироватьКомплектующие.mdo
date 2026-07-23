@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2ad4077c-a52e-4ffe-a7d4-9b56de5ea2dc">
+  <producedTypes>
+    <objectType typeId="95fff361-e2d8-4dbe-979c-ddd4ba6564fd" valueTypeId="ca6197a9-865f-476f-a48b-8f5adfcd8e9b"/>
+    <managerType typeId="04bc7bb6-d586-44d3-b6e4-809aaf448e73" valueTypeId="62067748-31d2-4ee1-9a25-66ae3d3d3fa0"/>
+  </producedTypes>
+  <name>СкорректироватьКомплектующие</name>
+  <synonym>
+    <key>ru</key>
+    <value>Скорректировать комплектующие</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.СкорректироватьКомплектующие.Form.Форма</defaultForm>
+  <attributes uuid="f79f31ee-1b95-423f-aa17-cd61d76cdecd">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаПроизводство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="81f9cdbd-2c05-4049-ab6c-ef92ff6e71c9">
+    <name>КП_фиктивный</name>
+    <synonym>
+      <key>ru</key>
+      <value>КП (фиктивный)</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтрактСПроизводителем</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9d267801-dcd9-4848-9aff-9b775ce890fc">
+    <name>ЗАП_фиктивный</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЗАП (фиктивный)</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаПроизводство</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="e359e67b-42fd-4b1a-9b3e-eabbb95acf8e">
+    <producedTypes>
+      <objectType typeId="645de70e-6359-4f51-9267-22f0d3bfed4a" valueTypeId="684244f0-34fc-4108-9eb7-9a89bf0925c4"/>
+      <rowType typeId="b2c35e8f-3e27-4a02-b781-8a231c232292" valueTypeId="8ed33780-4c43-4aee-be8c-21ec892c252a"/>
+    </producedTypes>
+    <name>Комплектующие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплектующие</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="37077379-31d0-4818-99f2-b55e9bb95925">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6742dc4d-2bc1-4cf7-9a89-5b7bf8b2aab9">
+      <name>Комплектующее</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комплектующее</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7812431b-3fcc-4cbf-b122-e5616012cc45">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="c6402aff-3b1c-464c-b2e3-fae1e07f70ff">
+    <producedTypes>
+      <objectType typeId="6310dcc1-9425-4225-be1c-6b93d8780dc9" valueTypeId="625dc83f-f539-4c4d-bb78-3b015d4785ad"/>
+      <rowType typeId="13d5885c-16e7-4898-8865-2405f3f720ec" valueTypeId="ebdee6ae-8ebb-40be-85a4-18b614b09c3d"/>
+    </producedTypes>
+    <name>КомплектующиеКП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплектующие КП</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b81fd44d-d720-44a4-a78a-5bf073214d8b">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="27ee78ba-8ad9-420d-9128-c018db5ad4d9">
+      <name>Комплектующее</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комплектующее</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0d7fdc2e-3487-4f11-b2d4-b886c6988924">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="d98fb9c1-656e-4eb3-963e-665f25dc8c2f">
+    <producedTypes>
+      <objectType typeId="3ccb0380-2c9e-4185-ae89-50221b7a7554" valueTypeId="4888d1e0-5f65-4431-862e-967bae7e0218"/>
+      <rowType typeId="ffec6aa5-4609-4452-94e1-5f512f333b5b" valueTypeId="e4f96a83-98a3-4b14-9676-b0f234e13e18"/>
+    </producedTypes>
+    <name>КомплектующиеЗАП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплектующие ЗАП</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b4f272f0-bbdd-419a-a9a2-ac540374ede8">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ccaf6a78-828b-4312-8dcc-da02c6960fa5">
+      <name>Комплектующее</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комплектующее</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="fedbccb7-6388-4d79-b1c0-aca750b669b8">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="927aaf5d-6801-4b73-9df2-b3f8d963a96e">
+    <producedTypes>
+      <objectType typeId="c7a0b0ba-9f6a-4d47-9419-d30a384be4be" valueTypeId="c68a532b-a6c8-4380-a52c-e556764ae984"/>
+      <rowType typeId="9e766f6b-6857-428c-8e27-fff1a2b7b9b3" valueTypeId="a5bc0e85-6695-4458-b006-8ba463a1245f"/>
+    </producedTypes>
+    <name>Расхождения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расхождения</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="ef755f95-7d64-466e-8f3a-364c0bf8643d">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="58143500-5e70-4ae1-bb1b-42e0e47cea4c">
+      <name>Комплектующее</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комплектующее</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b018636a-3933-458d-aa69-fa98165db84b">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <markNegatives>true</markNegatives>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5d2d82a7-9783-455e-a656-98579eca032d">
+      <name>Хватает</name>
+      <synonym>
+        <key>ru</key>
+        <value>Хватает</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="dd7114e0-ce8e-407c-9aec-4714b0a42e4c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b360d394-c897-4e33-9f9c-4670a3aadb99">
+  <producedTypes>
+    <selectionType typeId="8d5843ba-c770-44a1-bcd5-7dcd53718c85" valueTypeId="1d01c80d-aa22-4d57-b9f8-ef1eecd368b0"/>
+    <listType typeId="56b580bb-7337-4931-a0f5-202b7e5705fa" valueTypeId="114f17d1-8c58-44f5-99fa-d4aa8cc5b82a"/>
+    <managerType typeId="925a3851-aa2c-4929-ab7f-9f57798e8564" valueTypeId="3d1abcd6-c1ad-4b7a-88da-0172aef7f3bb"/>
+    <recordSetType typeId="13486240-74d3-4950-888d-25e8ac116449" valueTypeId="1854df1a-45b9-4a96-a880-877daffc1bc6"/>
+    <recordKeyType typeId="d162448f-6b49-4251-9ca0-6b47d1427547" valueTypeId="398d2bee-a67c-4e94-8fbe-0dbe1420aaf1"/>
+    <recordType typeId="50e29a07-6e9d-4873-aced-784d8cd861c8" valueTypeId="d9cee6dc-53c7-485e-a08d-c02d8ea4ec42"/>
+    <recordManagerType typeId="d78e1e16-c546-46c0-a5fc-a56e73ec1b9a" valueTypeId="2b58baa0-2025-4ef5-88a2-22eb7678a144"/>
+  </producedTypes>
+  <name>Мерчанты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Мерчанты</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="9a313d76-2f23-49f4-b39d-733f26800c99">
+    <name>Процент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="8621ff88-836a-47d6-8ee5-474f2d19598e">
+    <name>СтатьяДДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья ДДС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a80d3750-5597-42d4-98fb-7126d0cf6f4f">
+    <name>Мерчант</name>
+    <synonym>
+      <key>ru</key>
+      <value>Мерчант</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>60</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6dfc1fb6-7cb3-453a-9677-1a2c9985546b">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fb0cc46a-17af-43e0-914c-fbcecb4ef6df">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b81496df-f3cd-410f-b043-21d5cf444e17">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

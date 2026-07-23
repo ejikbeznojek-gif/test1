@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3831f0f5-44be-4b62-8c66-99343271afca">
+  <producedTypes>
+    <selectionType typeId="4fd59aa0-5485-4ccf-ba71-ce031792a207" valueTypeId="276f0732-a070-4044-b6ab-e5fafdd4e37e"/>
+    <listType typeId="4d60f3a9-7c72-418c-85d5-9207cad53935" valueTypeId="fde10bab-b158-4cd4-bcfe-ec9d0414e562"/>
+    <managerType typeId="81db15a0-30d0-45db-a5a5-4eb01d88ff63" valueTypeId="64ae1f8c-acca-47c6-9b87-a62e04258577"/>
+    <recordSetType typeId="07511539-1ef8-438a-be08-623f6b4958f0" valueTypeId="103c1f32-d50c-4001-952e-f90a6f70fb59"/>
+    <recordKeyType typeId="f6469ce5-57dc-4679-a926-4d9b15f0e62e" valueTypeId="ee5b6a4b-8108-499d-bfdf-149f90111acd"/>
+    <recordType typeId="4ebd5ebc-e845-45fa-8a9f-e713fdca6d6d" valueTypeId="1b29ab39-62ca-4caa-a73e-5c09ee3a4522"/>
+  </producedTypes>
+  <name>АдресноеХранениеОстатки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адресное хранение остатки</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b9568716-f5ac-43c1-bf5f-17ddfa0f5c78">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="ebbefb93-6b6f-49a2-a5f3-44dd762f027d">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийОстатки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="2f3d17c7-9630-47b6-b276-cf767c860085">
+    <name>ЗонаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗоныХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a8082a24-f8ee-44d6-bd89-5b2ff2434dbd">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

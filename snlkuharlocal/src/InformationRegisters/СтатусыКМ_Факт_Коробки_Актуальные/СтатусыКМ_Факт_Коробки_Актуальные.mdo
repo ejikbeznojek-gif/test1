@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e306ea12-a58b-4585-953f-d2af15d1cb7b">
+  <producedTypes>
+    <selectionType typeId="bf5e3198-1a6a-4f2a-b39d-94ed6cf549e3" valueTypeId="c7d82e3e-dcde-48ce-a730-4e6606d0d858"/>
+    <listType typeId="d1391015-a9fd-43dc-99a4-e134e69d5a4e" valueTypeId="97eb2652-2687-496d-add1-28313bcdceef"/>
+    <managerType typeId="0084c745-4aa3-47a1-96da-13af1deeb0f6" valueTypeId="4a0eb881-99b4-4cfa-adea-439e070e182b"/>
+    <recordSetType typeId="68afa6e3-23f0-4484-b199-db7ad43d2a00" valueTypeId="10c40f41-dcf2-4fc8-9aab-7fe286ed644b"/>
+    <recordKeyType typeId="e1b8c16d-bc7a-424f-932e-1e1ef707774e" valueTypeId="6760d7a8-9f5f-4ddd-8767-3fedbd095440"/>
+    <recordType typeId="d2c3f7c9-dd15-4cc5-9b4d-6251b4b64de6" valueTypeId="a1d21b43-abf4-48f8-9456-4103ff0136ce"/>
+    <recordManagerType typeId="99fdc2fe-5829-49a7-96a5-f2a085bbeb04" valueTypeId="0047103f-c720-4125-b1fa-f8dd6eb87bb8"/>
+  </producedTypes>
+  <name>СтатусыКМ_Факт_Коробки_Актуальные</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы КМ (Факт кор.) Актуальные</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СтатусыКМ_Факт_Коробки_Актуальные.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="23093e9e-c044-4434-91fb-c004d9904a4c">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыКодовМаркировкиФакт</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5c36e480-f64a-437f-92ac-81f359209f8e">
+    <name>Местонахождение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Местонахождение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>CatalogRef.Подразделения</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="70e08136-9bef-4e69-a63c-eaf3ea065142">
+    <name>ВПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>В пути</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="06c2d14a-1577-415e-b014-3ac96123f6cd">
+    <name>ДокУстановкиСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док установки статуса</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      <types>DocumentRef.ЛистМаркировки</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ</types>
+      <types>DocumentRef.ЛистНабора</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="b05a3e64-adee-45ba-9ba1-5bcd6fcc7a19">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4669eee5-501c-44d4-b278-f56357cf0847">
+    <name>СпособВводаВОборот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ ввода в оборот</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыВводаВОборотСУЗ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a3cc9c35-215e-4a80-8590-1bac9752bd1e">
+    <name>ШтрихКодУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код упаковки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="4ba13c3f-52f7-4933-978b-7c587896fa47">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="6e2e37b2-961b-4ebf-93ba-695262e2be6f">
+    <name>Перейти_СтатусыКМ_Факт_Коробки_Актуальные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы КМ (Факт кор.) Актуальные</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      <types>DocumentRef.ЛистМаркировки</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

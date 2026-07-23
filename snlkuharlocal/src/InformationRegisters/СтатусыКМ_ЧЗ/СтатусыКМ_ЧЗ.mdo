@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="67a044d6-450f-450b-9cf9-103ab3a30255">
+  <producedTypes>
+    <selectionType typeId="13c960a2-6a83-492e-95ec-7df638ba737b" valueTypeId="3feb0873-af0e-43fb-8bfa-84a52a9c7d91"/>
+    <listType typeId="9ecdc678-4690-42a9-9173-4fcad981ec66" valueTypeId="1b8ee88f-6eca-4cfc-b39a-313b99f612b8"/>
+    <managerType typeId="d51b87ab-b2bc-4c9e-8a0c-ad1399ff03bc" valueTypeId="d43ec8a0-e530-463b-8dbd-dfb70a257aa6"/>
+    <recordSetType typeId="69757253-58ab-4715-8fad-984e3799d544" valueTypeId="3743cbee-efd7-43d7-81fd-fb4180b92919"/>
+    <recordKeyType typeId="a4b4b8b4-ee0d-4190-84df-b8a491de45ae" valueTypeId="f8a9edbd-60c5-4b6c-81b4-0393a5c30b41"/>
+    <recordType typeId="35de8cf5-c702-4900-bec7-c699b2695ff8" valueTypeId="d08104ee-25b0-44ff-a0f3-1c5380b60f86"/>
+    <recordManagerType typeId="050b9faa-ecef-4cdc-ae33-315457e4a848" valueTypeId="cf403d24-3e87-43fc-90ab-b2f9f92b5293"/>
+  </producedTypes>
+  <name>СтатусыКМ_ЧЗ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы КМ (ЧЗ)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СтатусыКМ_ЧЗ.Form.ФормаСписка_Тонкая</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b97593f5-8ce6-4647-b865-7ade1064f8f9">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыКодовМаркировкиИСМП</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e25d1630-0a53-4a9a-b471-ce8ceb45c982">
+    <name>ШтрихКодУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код упаковки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="558cf9b5-e8e5-415c-a516-82ac644b7d5d">
+    <name>ФормаСписка_Тонкая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка (Тонкая)</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="3053bef4-3996-450a-b7e6-b816bb227ec9">
+    <name>Перейти_СтатусыКМ_ЧЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы КМ (ЧЗ)</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

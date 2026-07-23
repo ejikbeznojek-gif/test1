@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95c1bb6c-3422-4c63-a9ef-954c7359890e">
+  <producedTypes>
+    <objectType typeId="6e730b57-6ba6-4fa6-af4c-e70419f435c8" valueTypeId="1451f038-8381-4d68-a5a0-33f13ae6c4ed"/>
+    <refType typeId="0b7ad4c0-5aa0-4c14-ba29-af0d7ffb9f3e" valueTypeId="fc0a6e6b-6b88-46ca-b158-f11d9de6d66a"/>
+    <selectionType typeId="b2f46c23-de2a-4396-8891-11e94f207fca" valueTypeId="2899a1be-657f-4ee6-8bef-008674af3682"/>
+    <listType typeId="c2d95d0d-80e8-4b68-8aa2-f1572b7422e0" valueTypeId="a63f4965-971d-4bc4-90de-4fcaf36f11f0"/>
+    <managerType typeId="ae42947d-c5eb-4f58-9fda-39b9a5a98ef8" valueTypeId="07cc6dc3-5540-4500-b3bc-7228b4491012"/>
+  </producedTypes>
+  <name>ПоказателиОтчетов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели отчетов</value>
+  </synonym>
+  <inputByString>Catalog.ПоказателиОтчетов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПоказателиОтчетов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.ВидыОтчетов</owners>
+  <codeLength>2</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeSeries>WithinOwnerSubordination</codeSeries>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.ПоказателиОтчетов.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ПоказателиОтчетов.Form.ФормаСписка</defaultChoiceForm>
+  <attributes uuid="0c467d6b-cec8-49b8-9318-fff0a7c17df9">
+    <name>Знак</name>
+    <synonym>
+      <key>ru</key>
+      <value>Знак</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6f759eb0-166d-4ba4-b494-7f47412d98cd">
+    <name>ИмяПоляКомпоновки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя поля компоновки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="f225c549-e56c-4578-a568-cbb9ba103bd3">
+    <producedTypes>
+      <objectType typeId="db79dfb4-842b-4bf7-8031-c4bb9c2937b6" valueTypeId="8066d477-0da5-4800-9ba1-3158a0238f3b"/>
+      <rowType typeId="2a19bc2c-4a97-44ad-a280-fba3cf9576c1" valueTypeId="8e33fc9b-eeef-4af4-8a2c-4deb76db1880"/>
+    </producedTypes>
+    <name>Доступность_ПланФакт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступность план факт</value>
+    </synonym>
+    <attributes uuid="aeb4796f-1a94-411f-a7c0-a51f677aea40">
+      <name>ПланФакт</name>
+      <synonym>
+        <key>ru</key>
+        <value>План факт</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ПланФакт</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="f4e5c3e6-b7c6-4499-b115-51f509d15d69">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="775ed000-a6ff-4de2-b3b5-a81ac0b9ea8f">
+  <producedTypes>
+    <selectionType typeId="7c08488c-e320-4a07-8957-b896bdab9c78" valueTypeId="4e7e9549-2d62-450b-9ce0-7f3ca982f3df"/>
+    <listType typeId="13ffe13d-30eb-4ef8-a22c-1053aa198077" valueTypeId="9d804541-8f82-434c-91a7-b6b583756a9e"/>
+    <managerType typeId="235f3cdf-ff15-42f2-a646-d6c40ba85060" valueTypeId="31b8ada8-06f5-4a30-8edf-a58944f7ab45"/>
+    <recordSetType typeId="67a89a6d-afab-44fe-9556-e8a6dd6fd75f" valueTypeId="82eab8eb-de5c-4b88-ae0f-09ec34598777"/>
+    <recordKeyType typeId="b137bcd5-668b-45b4-b526-fb2d45e3cb8f" valueTypeId="990ed5a5-16d7-4f94-a3e4-8b76a2ff15d2"/>
+    <recordType typeId="0e65e7fe-def7-4d5b-8d55-021cfb2bc53d" valueTypeId="dcb11adc-1411-4eb5-9f0b-e8cf8ec875ce"/>
+    <recordManagerType typeId="0ed7e82d-5dda-4c97-9111-fa1acb38f22b" valueTypeId="6fa2212e-8acf-4e76-ad9f-f74fb444a0f8"/>
+  </producedTypes>
+  <name>ОтгруженныеРНКСПревышениемЛимитаИлиПросрЗадолж</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отгруженные РНК С Превышением лимита или проср задолженностью</value>
+  </synonym>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="4a2730df-da57-46ef-a8b5-f624f7031968">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a5ba5949-0d5c-4c76-8e5e-445fc1cd6623">
+    <name>Емайл</name>
+    <synonym>
+      <key>ru</key>
+      <value>Емайл</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="edc1d806-737c-416b-b3b0-d3eb3da18af6">
+    <name>ПисьмоОтправленоДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо отправлено дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7c8f03c2-93c8-47d6-b0a6-4f1380624c74">
+    <name>РНК</name>
+    <synonym>
+      <key>ru</key>
+      <value>РНК</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="eb827547-6e25-4983-85bf-0633b6bc87d9">
+    <name>Отгружен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружен</value>
+    </synonym>
+    <type>
+      <types>EnumRef.Отгружен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f377942f-4176-40ce-88ee-52620be57cda">
+    <name>ОтгрузкуРазрешил</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгрузку разрешил</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="55c237ea-6a29-461b-bc8f-787ba6710f4a">
+    <name>ОтгружатьСПросроченнойЗадолженностью</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружать с просроченной задолженностью</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e264ec1c-3979-44c9-a9c3-ee69cf56cd4c">
+    <name>ОтгружатьСПревышениемЛимита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отгружать с превышением лимита</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

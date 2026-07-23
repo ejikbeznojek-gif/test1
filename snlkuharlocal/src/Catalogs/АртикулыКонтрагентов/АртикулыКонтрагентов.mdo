@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fd9cd71f-93b2-486b-8fb2-98cabb6ed68b">
+  <producedTypes>
+    <objectType typeId="4e0d845d-0a65-4ada-bd5b-60793f069205" valueTypeId="33d4cd78-d8b7-4c0e-a3cc-fa607959f3f6"/>
+    <refType typeId="e655f46e-ee99-4388-a677-cd7566323b9c" valueTypeId="dd166334-b4de-4287-a381-d8bf77ca117b"/>
+    <selectionType typeId="f4ddd434-5ce8-468b-8325-09ba476bc0a2" valueTypeId="1fab1b39-9040-4cb8-87cb-34fe0b1350f7"/>
+    <listType typeId="42ec0a3e-73b1-4811-b4ef-3e0bd77a6dde" valueTypeId="e8ea361c-1e72-4832-9e87-e8b10992dde3"/>
+    <managerType typeId="aa61a2b6-abeb-437a-82d5-b010a40f74a0" valueTypeId="648656f3-1448-4dd6-9bbd-bf1c14a3b1f4"/>
+  </producedTypes>
+  <name>АртикулыКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Артикулы контрагентов</value>
+  </synonym>
+  <inputByString>Catalog.АртикулыКонтрагентов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.АртикулыКонтрагентов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Номенклатура</owners>
+  <subordinationUse>ToFoldersAndItems</subordinationUse>
+  <codeLength>10</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.АртикулыКонтрагентов.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="0450bb96-1c79-40d6-983c-99495066d68b">
+    <name>ТипАртикула</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип артикула</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыАтрикуловКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d016da6c-73db-4af5-a916-d251d5ea2d89">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f595aeca-d4ab-415b-91c3-2500888acce0">
+  <producedTypes>
+    <selectionType typeId="8f985f62-c90c-45d7-8708-89b5ad19d164" valueTypeId="6149826b-f815-4283-8b4e-7fcd2e8cfd2b"/>
+    <listType typeId="e0023e10-c6c8-43c4-9f29-ac5228b43530" valueTypeId="ff343d1c-08b0-4f66-9b40-b5a2c9672d91"/>
+    <managerType typeId="89d49cc0-a550-4bd4-aa03-c07c123422b1" valueTypeId="c3149549-a0e8-4a4c-953e-e54f1c42c3b5"/>
+    <recordSetType typeId="84d98389-ff9f-4a19-a81d-49db9e171aa0" valueTypeId="d929f6dd-d428-4d0f-a8e8-31a764acd057"/>
+    <recordKeyType typeId="a8753202-3703-4d94-80cf-7245417a4eb1" valueTypeId="11fca530-a90d-4e64-a9e9-9c0c287c324a"/>
+    <recordType typeId="b3adf22e-eac1-4215-ba11-1afaf29f0917" valueTypeId="5c9d511f-1641-47f6-9e98-e9ce5e7702ed"/>
+    <recordManagerType typeId="ec81b536-3edf-4baa-9a98-63a11fad0c0f" valueTypeId="5dea7f50-f4ff-468e-a705-220dd4362764"/>
+  </producedTypes>
+  <name>ЛогАвтоПечатиКодовЧЗПриСканировании</name>
+  <synonym>
+    <key>ru</key>
+    <value>Лог авто печати кодов ЧЗПри сканировании</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="24998d4b-deb4-4697-b16e-5f11144624dc">
+    <name>ДатаПечати</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата печати</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="cc0590a3-d17d-439e-914f-0d5290db8d12">
+    <name>КодЧЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код ЧЗ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="544eaf66-a841-473f-b1e5-07f4007f49d5">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.Перемещение</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="47823d11-918a-42df-a557-3d114f854280">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЛистМаркировки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

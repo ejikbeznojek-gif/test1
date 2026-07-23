@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4a529077-6f5c-444e-a5f0-4a75b2c06c73">
+  <producedTypes>
+    <objectType typeId="e8fbf98e-b3d6-4adc-8f59-ee8256b279e7" valueTypeId="cadeca9b-03d6-4b8f-a31b-c6a707d34249"/>
+    <refType typeId="985bf56e-6e38-488c-b996-8490a81dc72d" valueTypeId="b251bf8d-6bb6-44de-be10-95142d451227"/>
+    <selectionType typeId="a8e5f149-0692-4811-85f3-42168d18f12a" valueTypeId="fc6acef7-ea87-424d-b5d3-3977371e78cc"/>
+    <listType typeId="de82ec22-0038-43dd-8827-7c662841e629" valueTypeId="97ffb88e-8e40-4c18-8df9-1298948ce994"/>
+    <managerType typeId="12a2ad1a-85d9-4ee9-885c-d936910f67f8" valueTypeId="204dc931-02d1-4da3-b261-22ffcfc0568a"/>
+  </producedTypes>
+  <name>СрокДействияЭЦП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Срок действия ЭЦП</value>
+  </synonym>
+  <inputByString>Document.СрокДействияЭЦП.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.СрокДействияЭЦП.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.СрокДействияЭЦП.Form.ФормаСписка</defaultListForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="2dc5c09a-9d08-449a-9483-c71a24faa533">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="80a8ab2c-b4c4-44e9-8332-727a840a3fc7">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b43b2cf5-db7b-404e-963b-d2cbcf438799">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="f7ae1f51-02c6-46ac-827b-6cd270f2121c">
+    <producedTypes>
+      <objectType typeId="53d76607-a307-4a05-bff2-f0c0558efed6" valueTypeId="112de61a-6b43-4e05-81d0-d8a6ced80977"/>
+      <rowType typeId="50bdf7f6-647a-4f13-b0be-5afd963e95e6" valueTypeId="3b7666b9-27bd-4a1b-8255-2157d327afea"/>
+    </producedTypes>
+    <name>Сотрудники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудники</value>
+    </synonym>
+    <attributes uuid="8f95b31f-02ca-4f45-9437-e54790a56029">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8925ba2b-71fd-416e-a9bd-d41714df39f3">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="39131043-0561-469b-8c4a-a217491c6e04">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

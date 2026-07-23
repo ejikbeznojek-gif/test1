@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c0fdda03-b18e-4158-90b3-50ca55f2a6f4">
+  <producedTypes>
+    <selectionType typeId="bef823c2-7198-4e2a-acb3-46051a0661dc" valueTypeId="74e7ec33-499e-4a1c-9ef4-51c223f3bb8f"/>
+    <listType typeId="e22e814b-4865-47ea-bea0-ffb06a88751a" valueTypeId="2b6ca5b5-7173-498b-99c6-3b4203b14ed4"/>
+    <managerType typeId="c5e0d383-c0db-43dd-beb8-bd5a4b2fe138" valueTypeId="e9a76ae0-91c1-49b9-b420-726ebd5141a5"/>
+    <recordSetType typeId="dbaf0df1-d80c-4f84-939d-7b6f312cedbd" valueTypeId="3cc9966a-d82f-48a6-adf5-99837c163a73"/>
+    <recordKeyType typeId="e2ad2f71-bb95-4ac5-8e84-2af70e9bb498" valueTypeId="fa1cb599-6127-422d-9908-671a39a2123e"/>
+    <recordType typeId="8519b64d-5dfb-4efd-8003-121eeca979c8" valueTypeId="a42bca4d-fa6c-413f-a637-d9d4ffc53765"/>
+    <recordManagerType typeId="b2aaa5f0-ae5b-43c8-a3b5-62bf08a390e5" valueTypeId="e400b149-b54a-4151-9e4a-34a9489317c8"/>
+  </producedTypes>
+  <name>ОшибкиОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ошибки обмена (ФР)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ОшибкиОбмена.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ОшибкиОбмена.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a336e04b-cfd0-4777-908e-44137018731f">
+    <name>ДанныеПакета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные пакета</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <attributes uuid="bd3e095c-75f7-4b0e-9da6-8164ff632803">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cc02ab08-8c8e-4279-bc4b-3e7a13e0f7ed">
+    <name>Отправитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправитель</value>
+    </synonym>
+    <type>
+      <types>ExchangePlanRef.ФР_ОбменСФРК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8420d58c-0fff-4cfd-bda9-403d32c53e9b">
+    <name>ОписаниеОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>1000</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="64283e1b-bf70-4fcd-b993-810504693263">
+    <name>КлючЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ записи</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="05754a9f-53ba-4408-b43b-4a3bb5d9e8d1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5e3b27a6-d81e-4d50-a4a9-314ae6ad059d">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="0f1b169a-4cd1-4ea2-b13a-318f9b36a0bc">
+    <name>ПоказатьСписок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибки обмена</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e6039931-2e55-4744-bca1-cdd5699cea9f">
+  <producedTypes>
+    <selectionType typeId="b9ae85a5-784c-4b15-b98e-0e9156291735" valueTypeId="27321c1e-cffe-4316-ac9c-0779f5df2ea8"/>
+    <listType typeId="da405e6a-6e77-412e-b7e5-7ff484025a2f" valueTypeId="b510750c-06ee-462f-a7be-95c6c4a23c09"/>
+    <managerType typeId="c18c910f-5371-4e6c-9424-d56b3dca9ba2" valueTypeId="a8c6a7da-78e8-4425-abbb-6db8546c8b58"/>
+    <recordSetType typeId="c90d9d11-b0ca-4787-9399-139b86b1574e" valueTypeId="11f3ed26-b701-4a35-9831-163c28960fcf"/>
+    <recordKeyType typeId="bb075452-95b2-4fcf-b8a5-e22dc749bd17" valueTypeId="ea0c2525-6b16-4fc7-b9dc-1928aba7150f"/>
+    <recordType typeId="b7951a83-75bd-4715-8b71-2b8a79cb06cf" valueTypeId="442f3714-b726-4a2d-96e3-3c90cf08e465"/>
+    <recordManagerType typeId="f88f69c6-ba35-4846-9915-73040bd9ee71" valueTypeId="a592635b-cf92-4ebd-892d-18b81250de22"/>
+  </producedTypes>
+  <name>СостоянияПретензий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния претензий</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="868af421-85bf-4ace-ba2b-2e397dd8ee38">
+    <name>СостояниеПретензии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние претензии</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеПретензии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="e27c1fb6-4d20-48b8-988e-6560a8da38bb">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Претензия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e15d4425-b6fe-4fda-92d2-663fbcf37da9">
+    <name>ДокОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

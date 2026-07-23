@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e2d9d4ac-f58b-4d40-979c-f7200c23dafd">
+  <producedTypes>
+    <objectType typeId="d181cd58-9951-4b19-8fb8-de34f25048ae" valueTypeId="287267ee-aa92-4be9-8fa7-05c8966886ab"/>
+    <refType typeId="c8aa8e71-1f63-4ab1-9986-261e5eb1dd99" valueTypeId="c0e191b7-dd96-49f5-a9a4-ce2f00cab40b"/>
+    <selectionType typeId="d0035ee2-bc7b-4a4b-97ea-f373be10a68d" valueTypeId="e2fd5e02-7141-4a93-96ae-dc2b71526bd0"/>
+    <listType typeId="62851eab-033e-481b-b654-ec45c883c40c" valueTypeId="d48cf1c8-ee25-40ab-ba24-847cc1907562"/>
+    <managerType typeId="e5d153da-0150-468a-a9d7-1003e1dc2173" valueTypeId="529ca1f5-e499-4845-a83f-06fcf6b38123"/>
+  </producedTypes>
+  <name>СтоимостьХраненияНаПалетномСкладе</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стоимость хранения на палетном складе</value>
+  </synonym>
+  <inputByString>Document.СтоимостьХраненияНаПалетномСкладе.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.СтоимостьХраненияНаПалетномСкладе.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="0e4e6ec4-8d17-4328-9d36-409cb0bf971b">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6c704919-4cd7-4af6-a9d1-f4bb1752a5d5">
+    <name>СтоимостьХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стоимость хранения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="ecd9445c-07b5-41fe-843e-0ffb28a8647f">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="229e32a6-480d-4455-8f7c-b81da059e3e8">
+    <producedTypes>
+      <objectType typeId="af232f16-90a5-4735-b758-174b0342e492" valueTypeId="71329dd2-e0b7-4d3c-adc0-bad0aaaeb068"/>
+      <rowType typeId="e3b20062-1908-44f2-ae57-7f64d1e70a88" valueTypeId="6003123b-6bd2-44e7-8f3e-826ac70a0c36"/>
+    </producedTypes>
+    <name>Паллеты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Паллеты</value>
+    </synonym>
+    <attributes uuid="a67dea43-c0c7-48f8-921b-eeda0d392ce9">
+      <name>ЛН</name>
+      <synonym>
+        <key>ru</key>
+        <value>ЛН</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4b5e56ed-e593-4581-b949-35854f524857">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a9fc4821-5dbf-4f1b-8653-b4ba8351937f">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="00959ac6-a294-42db-bd41-83655c41b891">
+      <name>СтоимостьХранения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость хранения</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

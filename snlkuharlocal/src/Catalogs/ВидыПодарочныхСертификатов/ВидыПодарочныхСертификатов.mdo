@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9947a0cc-b8c3-4dc5-8dad-12ba36f3207b">
+  <producedTypes>
+    <objectType typeId="9e1a7dc1-593a-44fe-89c3-e7c8b0f372b2" valueTypeId="a76dac3d-afc7-49a9-b656-b1f049e8e298"/>
+    <refType typeId="fe726984-ff8c-41b6-8cff-9e61a9e39198" valueTypeId="d890d973-a634-4de9-90cb-bea1441b8bb3"/>
+    <selectionType typeId="a3217ead-42cf-4b3c-92e1-7dcfe00f7b60" valueTypeId="0afceada-9610-4b24-977d-41d01e5e3fa5"/>
+    <listType typeId="ba9962e7-a2ce-4b9c-ab29-a67f253b11d7" valueTypeId="2df09a50-6f2b-4812-bc6c-f0f193f46eca"/>
+    <managerType typeId="04b2c049-61c6-41ba-9b41-86675a31ed14" valueTypeId="795a94df-3d64-4f55-9202-e380df8337ca"/>
+  </producedTypes>
+  <name>ВидыПодарочныхСертификатов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды подарочных сертификатов</value>
+  </synonym>
+  <inputByString>Catalog.ВидыПодарочныхСертификатов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыПодарочныхСертификатов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="a0792ed1-cc9f-4004-9a55-b7dc6ed64c7d">
+      <name>ЕЕ</name>
+      <description>ЕЕ</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="177b660c-80b2-447d-bfa7-21f55c297848">
+      <name>ЕЕИзЧека</name>
+      <description>ЕЕ из чека</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+    </items>
+    <items id="a0633123-e1e9-4d98-aa27-312c89326714">
+      <name>ЕЕИзЧека2011</name>
+      <description>ЕЕ из чека (один на чек)</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
+    <items id="35e23097-c12e-4e7d-91de-22ce71ef0385">
+      <name>КупонНаСкидку</name>
+      <description>Купон на скидку</description>
+      <code xsi:type="core:StringValue">
+        <value>000000005</value>
+      </code>
+    </items>
+    <items id="a3c4f648-3449-496c-9a48-c89cf2c64e3f">
+      <name>Содексо</name>
+      <description>Содексо</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="da81c621-2a32-4fc7-baf8-3e6b2f06674e">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <comment>Контрагент плательщик</comment>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4d63d6c9-399c-4ddc-8c72-1e574de5fdc7">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="59ab9fb4-afe5-46d4-be9d-22367756541d">
+  <producedTypes>
+    <selectionType typeId="b5e80b53-1d44-4d9a-bae9-c6f1150182c4" valueTypeId="c96c5fba-4d25-48db-9212-37fc9fcff508"/>
+    <listType typeId="687284fa-d965-47c8-bc9b-2c8a77ad24bc" valueTypeId="432f3137-7c42-4f91-805f-bb4687a67ea4"/>
+    <managerType typeId="68579cb5-7d63-40b6-bfb9-6a6025eb917a" valueTypeId="3904bbfb-232a-4b60-91a8-0e45898729db"/>
+    <recordSetType typeId="b1646cab-b523-4248-8803-b2f034ef9893" valueTypeId="8fb33fc2-b3cf-409f-a22f-92c13cf42303"/>
+    <recordKeyType typeId="ab5697ff-fdb4-4b50-8a86-0200fa8b5bac" valueTypeId="41e34c88-01da-4ed8-91fa-c163d9cb33aa"/>
+    <recordType typeId="54bc58bf-459a-43ba-87dc-e7ba354f3e61" valueTypeId="74acb60a-009b-4256-8ebf-f767a7551d11"/>
+    <recordManagerType typeId="0c88a385-da99-4867-a597-cbc189d794b3" valueTypeId="7a98a17c-8a67-41e7-81a6-afc15db07e8b"/>
+  </producedTypes>
+  <name>ИсторияГТИННоменклатуры</name>
+  <synonym>
+    <key>ru</key>
+    <value>История ГТИН Номенклатуры</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="88755d38-5591-4dae-8ae4-9be29fff58f8">
+    <name>ГТИН</name>
+    <synonym>
+      <key>ru</key>
+      <value>GTIN</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>14</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <attributes uuid="ac59b473-34f5-4159-a713-a0034c2dbefd">
+    <name>ВидГТИН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид ГТИН</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыГТИН</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a15d2ba7-a273-4336-b34b-1641c5489452">
+    <name>СнятСПроизводства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Снят с производства</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="58df0878-846c-4714-9d7f-bbd4c2722896">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c113a977-5dd7-46ce-b041-3b5bfa2ce366">
+  <producedTypes>
+    <objectType typeId="66dccfca-073c-48ec-af0e-4320def0e7cd" valueTypeId="acf8fa44-25cc-486e-9394-f182d4f89e09"/>
+    <refType typeId="d1606bcd-d525-4871-aba7-4fc215a58bdf" valueTypeId="62333293-d659-451d-aad9-229639a67417"/>
+    <selectionType typeId="bdb6ec08-04f4-4bd3-bbe1-6b67bbc167dc" valueTypeId="fd4523fa-c795-4021-b7d3-177d8c5d1dc4"/>
+    <listType typeId="43774d76-c287-4245-a01e-9fb4af68e9cf" valueTypeId="cc624146-eed9-4089-bf9c-a2cb7e0c5ce1"/>
+    <managerType typeId="09124f94-1863-4576-b6a1-9f7ae998c822" valueTypeId="6569bd49-7497-42e8-b404-1a2347b01d2b"/>
+  </producedTypes>
+  <name>ПравилаПополненияСкладовМаркетплейсов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Правила пополнения складов маркетплейсов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПравилаПополненияСкладовМаркетплейсов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПравилаПополненияСкладовМаркетплейсов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ПравилаПополненияСкладовМаркетплейсов.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ПравилаПополненияСкладовМаркетплейсов.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="cedfe23d-df2b-48e3-965a-ec62ad46997f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5d09628f-54b5-44b5-9d4a-4a32991329cc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4dd6cb0a-64df-48f6-8eae-e544c3ed1f15">
+    <name>КатегорияМаркетПлейсы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория маркет плейсы</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КатегорииABC</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9bf5b532-3443-4ab9-878d-9f948341eb85">
+    <name>ДнейТоварногоЗапаса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дней товарного запаса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="20508461-dd5d-4815-b78f-ccf53e1e739a">
+    <name>ГруппироватьРегионы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группировать регионы</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="80a05d39-6d50-44b1-b2e9-fbbd005f8e30">
+    <producedTypes>
+      <objectType typeId="c35b0248-9c01-451e-a56d-f66a4b1d1a1b" valueTypeId="d3abaedf-0aa5-45be-9221-3cd3f6d715ad"/>
+      <rowType typeId="653fe564-bc7a-4e9e-8156-756b4b43cd97" valueTypeId="70b9ad5b-8159-4d4b-b400-cad5f230fe63"/>
+    </producedTypes>
+    <name>Регионы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регионы</value>
+    </synonym>
+    <attributes uuid="b2fe5a08-8040-4fbb-8949-a5ba88f8c770">
+      <name>Регион</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регион</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Регионы</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4cf12d74-d0a7-4b32-9ff4-7274b82e5c4a">
+      <name>ПроцентРаспределения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Процент распределения</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+          <scale>2</scale>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7713de80-8572-42dc-bb52-f7460ed11f39">
+      <name>ПризнакГруппыРегиона</name>
+      <synonym>
+        <key>ru</key>
+        <value>Признак группы региона</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="7515e5b7-8489-4b83-8b05-df1084eb2edd">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f1a4010d-a89c-495c-8b66-218235f71241">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

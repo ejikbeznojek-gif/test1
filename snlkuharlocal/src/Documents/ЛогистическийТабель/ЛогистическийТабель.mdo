@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97b37b53-48a3-42a1-ad4c-755f971a8a3f">
+  <producedTypes>
+    <objectType typeId="cdad19d6-0f4b-4656-9579-f06084c5c817" valueTypeId="e8967013-f8c0-4d5c-9881-812d26e9bb0d"/>
+    <refType typeId="785a94e1-2b71-4fde-8358-000c88a939dc" valueTypeId="81f6f368-48bb-4074-a993-f85682876b80"/>
+    <selectionType typeId="c10c5d6f-0993-40b2-be9b-ead82d69764f" valueTypeId="7fdfab94-b448-4de5-a5ff-cb024f31ee5c"/>
+    <listType typeId="dfc61227-5e85-4ac2-b8c1-f394883ec1fb" valueTypeId="b2ed59f2-22a9-4c52-9f41-9d94cdd5ff2b"/>
+    <managerType typeId="b3b8218d-1d6f-4902-a6fe-1ffa4e76d61d" valueTypeId="8766e4f3-87c6-4e8a-8d53-765b161315e2"/>
+  </producedTypes>
+  <name>ЛогистическийТабель</name>
+  <synonym>
+    <key>ru</key>
+    <value>Логистический табель</value>
+  </synonym>
+  <inputByString>Document.ЛогистическийТабель.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ЛогистическийТабель.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <forms uuid="12e75ba8-1f63-406d-9e00-916062b2c2b3">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="32ec961d-cbc4-485d-bdfe-fbcf47ef7143">
+    <producedTypes>
+      <objectType typeId="ad02b807-936c-470d-ba7c-43bb9378d5a2" valueTypeId="9331815c-5536-46a1-b893-f2a3189cb1c4"/>
+      <rowType typeId="8421b5da-16e6-4a94-b78e-13f81b2256fc" valueTypeId="8016d71c-67ba-49ca-86c3-e2baa59ddf2b"/>
+    </producedTypes>
+    <name>Данные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные</value>
+    </synonym>
+    <attributes uuid="6fecaf0b-9288-4750-b9ed-66f91c1ce184">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cb2b7eb1-3d11-4a06-acbc-321d82c6a60c">
+      <name>Дата</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0ea34389-98b5-4720-ad85-7802d53d5147">
+      <name>ПервичныйСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Первичный статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СостояниеТабеля</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4bb325ec-b05c-4dc6-8725-300675557530">
+      <name>ВторичныйСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вторичный статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ЛогистическиеСостоянияТабеля</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7ff36f73-d469-4a10-ba0a-021a6b95161d">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>250</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a4aad63b-aed5-478d-a683-6c8e1aff2f7d">
+      <name>ВторичныйСтатус2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вторичный статус2</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатусыЛогистическогоТабеля</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

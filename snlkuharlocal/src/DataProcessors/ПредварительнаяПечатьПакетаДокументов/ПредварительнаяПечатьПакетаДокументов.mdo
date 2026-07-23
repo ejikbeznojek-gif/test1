@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03123634-8d3f-42d8-878b-14dc6848a7f5">
+  <producedTypes>
+    <objectType typeId="6cbdb4f4-1eb8-457b-8672-00879f81bc4d" valueTypeId="8ac3e375-e850-41a6-8bec-fbeae958813d"/>
+    <managerType typeId="eeb56c38-5411-4e2d-b049-b6470e9bdc11" valueTypeId="b3950ebc-2310-4ffc-a8d1-bda3b96f55df"/>
+  </producedTypes>
+  <name>ПредварительнаяПечатьПакетаДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Предварительная печать пакета документов</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПредварительнаяПечатьПакетаДокументов.Form.Форма</defaultForm>
+  <attributes uuid="9d6784a8-93fd-442c-b628-4ec835603644">
+    <name>ТекДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="42d723ac-18e8-4524-b164-babc5db5956e">
+    <name>НаборФорм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Набор форм</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НаборыПечатныхФорм</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ce988ff8-b044-4c14-867b-d262fc240939">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="32b9e450-dd37-4d09-b42f-f67a33bd288c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

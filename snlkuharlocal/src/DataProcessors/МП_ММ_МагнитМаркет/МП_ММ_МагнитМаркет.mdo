@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="07f5cfc9-a202-4ad7-9d95-3b6219d7862e">
+  <producedTypes>
+    <objectType typeId="9f4c74e4-3f72-4e32-a86d-7386fab7c41e" valueTypeId="c76144f9-db41-4b8d-8e37-0ef80bcf702b"/>
+    <managerType typeId="f021684a-add4-4494-994c-f5f6a3e44cc7" valueTypeId="457d829f-056b-47ca-b7c3-b423cebcacfa"/>
+  </producedTypes>
+  <name>МП_ММ_МагнитМаркет</name>
+  <synonym>
+    <key>ru</key>
+    <value>(МП) Магнит маркет</value>
+  </synonym>
+  <attributes uuid="468c27f7-3b54-4dd0-8530-0bd38c4b7600">
+    <name>МаркетПлейс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маркет плейс</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИнетМагазины</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="b51959b5-c7df-458c-80f2-493d1fe3b3aa">
+    <producedTypes>
+      <objectType typeId="f62bd61d-757d-4dfb-bd81-3e61ff9c5f9e" valueTypeId="aa01f479-3b83-41ee-b0c9-7e9487be6403"/>
+      <rowType typeId="81200169-3aa6-416b-b8b8-5ab74bb5e353" valueTypeId="fce5edfc-4d7a-4496-bc55-3064557779c2"/>
+    </producedTypes>
+    <name>СписокЗаказов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список заказов</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c317ffd2-5ef0-4ae8-aab5-98f1e2ebf063">
+      <name>created_at</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата создания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e4d407f9-3246-4a7c-a862-409f58533e5a">
+      <name>order_id</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер заказа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="c4ee4c48-498f-481e-a7cc-e863e63b7e01">
+      <name>status</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус заказа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2f6e58e6-40df-4c1b-bae3-dc5e3995923e">
+      <name>cutoff_time</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата отсечки</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="936bbc31-2495-4533-9dfe-ff0928a8a51e">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1d1fb56e-0fae-47b9-8711-f093530fbaed">
+    <name>ФормаПараметровЗапроса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма параметров запроса</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="580237fc-4b49-4b6d-9eb0-0aaa8c25b411">
+    <name>ФормаПодробныйПросмотр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма подробный просмотр</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8e9aeec5-797a-479a-a28d-93541983bd23">
+    <name>ФормаРедактированиеДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма редактирование данных</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

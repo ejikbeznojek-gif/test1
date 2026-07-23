@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="45739c40-f258-475b-b243-298b79141015">
+  <producedTypes>
+    <objectType typeId="de100a1a-b8de-45be-a660-3e3168a79a6f" valueTypeId="f10967fd-8403-4aee-abda-049ad5fe729c"/>
+    <refType typeId="a22990a0-9110-4c63-ace9-62ca8f68e04a" valueTypeId="08c71f35-728b-4514-b747-2339a0e9624f"/>
+    <selectionType typeId="5e654e71-5e11-43b6-b807-75ccbe4caecf" valueTypeId="768a39d2-3853-40c0-a697-8141267978fd"/>
+    <listType typeId="af6bd4de-f04a-4d18-8bcf-be603e2076ca" valueTypeId="dcb4ea2d-0a92-4872-81c8-f29469d189a8"/>
+    <managerType typeId="16633261-78b6-4b64-965d-db1c4aa4412c" valueTypeId="9cf3be93-e282-476c-9362-4de5d469d67d"/>
+  </producedTypes>
+  <name>ГТД</name>
+  <synonym>
+    <key>ru</key>
+    <value>ГТД</value>
+  </synonym>
+  <inputByString>Catalog.ГТД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ГТД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.ИБ</owners>
+  <codeLength>7</codeLength>
+  <descriptionLength>27</descriptionLength>
+  <codeType>String</codeType>
+  <codeSeries>WithinSubordination</codeSeries>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.ГТД.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ГТД.Form.ФормаСписка</defaultChoiceForm>
+  <attributes uuid="47f14174-224a-4b54-ad80-2f21fb13671a">
+    <name>СтранаПроисхождения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страна происхождения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторСтранМира</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9aad3fe1-e9d4-475e-a606-554fabda8763">
+    <name>Примечание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>32</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6d9c12a5-c9a6-452f-b283-286ed1d89bd8">
+    <name>Импортер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Импортер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="75ed8112-6535-4818-b1aa-37cc48b5beb4">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

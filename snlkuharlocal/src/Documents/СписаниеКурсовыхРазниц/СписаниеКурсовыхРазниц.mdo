@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ca4116e3-5817-41da-8d3b-ddb9321545cc">
+  <producedTypes>
+    <objectType typeId="b053ded1-edad-4292-b8b1-d50ca804eede" valueTypeId="990d671a-1f44-40e6-a8de-8b887525ac5b"/>
+    <refType typeId="cccfe8e1-e018-4a54-9fb0-e01dcce010f0" valueTypeId="4b5a4000-f99a-4595-b7e4-294faccd0474"/>
+    <selectionType typeId="4269f13d-d212-4ade-aae8-16c88f96e793" valueTypeId="6ef4791e-799d-4e96-8d74-df5403ccf1c1"/>
+    <listType typeId="03cca60d-acb2-496d-9c8e-c0cdc245cb8a" valueTypeId="2216835a-618e-4fee-8839-747a9ca6dfb4"/>
+    <managerType typeId="7b08ecbe-48ca-4ca5-9691-0273e744cfd8" valueTypeId="63bc899b-fb47-4aa2-bb61-c9bc65e55a39"/>
+  </producedTypes>
+  <name>СписаниеКурсовыхРазниц</name>
+  <synonym>
+    <key>ru</key>
+    <value>Списание курсовых разниц</value>
+  </synonym>
+  <inputByString>Document.СписаниеКурсовыхРазниц.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.СписаниеКурсовыхРазниц.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.СписаниеКурсовыхРазниц.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ВзаиморасчетыПоДокументамРасчетов</registerRecords>
+  <registerRecords>AccumulationRegister.Затраты</registerRecords>
+  <registerRecords>AccumulationRegister.ДенежныеСредства</registerRecords>
+  <registerRecords>AccumulationRegister.Взаиморасчеты</registerRecords>
+  <attributes uuid="004248d0-e704-43b5-b3ee-49ba1291aae5">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="75b67e1c-a2c5-440b-8cd9-141572ddbeea">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="949f8f9b-5b7f-4f55-a12c-ba78f835d10d">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Document>

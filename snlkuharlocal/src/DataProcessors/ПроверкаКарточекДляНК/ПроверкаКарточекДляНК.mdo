@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a9c06dce-4592-454b-b8f5-9458a94df998">
+  <producedTypes>
+    <objectType typeId="7f2960f6-39d6-4e96-b019-7ce11d294e38" valueTypeId="e70eb932-813b-4a1d-9005-7a3168fcc246"/>
+    <managerType typeId="9f0dfb7c-d5bb-4264-ae06-9755ffcac9f7" valueTypeId="e8e20455-d328-4d07-a962-bdc8dc4f9862"/>
+  </producedTypes>
+  <name>ПроверкаКарточекДляНК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка карточек для НК</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПроверкаКарточекДляНК.Form.Форма</defaultForm>
+  <attributes uuid="f66e103b-1dbe-4066-bbc5-38ec0da2cf48">
+    <name>ТД_Результат</name>
+    <type>
+      <types>SpreadsheetDocument</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="ae6c1fc0-17de-47ac-b560-caa739dbf0b5">
+    <producedTypes>
+      <objectType typeId="6ae870bd-994e-4968-ae5f-eaeb17ee77f9" valueTypeId="a6098380-dccd-4398-898e-f5dfd51b471c"/>
+      <rowType typeId="ad4e94bd-d4cf-494b-9e86-7b0786a4ab4b" valueTypeId="14b0ac35-53ce-4fb1-8122-952100c40888"/>
+    </producedTypes>
+    <name>Ошибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="fd20e138-844d-4ef8-9890-45f66074b761">
+      <name>Модель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="054b682e-489f-473b-b517-efac06fb5d6f">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="87a00c0c-902b-4b7d-a515-08ef6a4a89b6">
+      <name>Ошибка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ошибка</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>1000</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="2c53efbe-a522-44b9-a229-ad99b6febfa3">
+    <producedTypes>
+      <objectType typeId="c4692106-0691-44c1-abaf-aba5374787ac" valueTypeId="f6787e39-0c8b-42c3-ac3f-706bff88f4f5"/>
+      <rowType typeId="3a970da7-0e86-4f90-a868-417142f5eef1" valueTypeId="5776b96f-1ccb-4100-bada-93db9dacd32e"/>
+    </producedTypes>
+    <name>СписокНоменклатуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список номенклатуры</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="3fee5aba-555a-47d9-8b93-1d69c39ac635">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="6987dcc8-bfbe-44a4-9008-963d06c8b0d2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="cde3291b-240c-4a1e-87cb-47a593cb852f">
+    <name>ОшибкиКарточек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибки карточек</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="06470fff-7c25-418e-a117-719ea067fca9">
+    <name>СтатусыКарточекВЧЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы карточек в ЧЗ</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="312303af-feab-46af-adb9-a4680f6d413e">
+    <name>ОшибокНеОбнаружено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибок не обнаружено</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

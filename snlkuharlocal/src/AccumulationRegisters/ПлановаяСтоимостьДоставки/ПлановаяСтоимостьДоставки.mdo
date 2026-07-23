@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b82da110-b8c4-440f-b45e-d679b781e36f">
+  <producedTypes>
+    <selectionType typeId="06793207-b31a-4f1d-95a6-f535206cc952" valueTypeId="8f43b57b-9e72-401c-a2b5-aef084ace1f4"/>
+    <listType typeId="d9e6ad1f-62ba-4afa-ade0-fd0cd89e8262" valueTypeId="108ae8ca-e0f1-40c3-a0f9-d757522b644d"/>
+    <managerType typeId="5950a1f3-5feb-4c1b-94b4-a118e636a4c4" valueTypeId="3112c4ce-32f7-493a-a5e2-325c9f8d406b"/>
+    <recordSetType typeId="ceb30edc-182e-405f-9e83-32d7e877ef67" valueTypeId="23674efd-a4d0-4dbc-a5d1-f55f02ee39cb"/>
+    <recordKeyType typeId="a3650792-943a-4937-b8d4-10949466aa06" valueTypeId="524c7e60-07a1-439a-8ecf-47ea72c90d85"/>
+    <recordType typeId="860f8b21-c03f-4d5d-92f7-879806d545d0" valueTypeId="3cc115ec-61da-461e-a31f-565563413f8e"/>
+  </producedTypes>
+  <name>ПлановаяСтоимостьДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Плановая стоимость доставки</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e386359c-3dc4-4a53-8c86-104bf206dd60">
+    <name>РаспределеннаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Распределенная по объему сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="39d8a0f8-7d75-416d-bfc2-3fd90ff7ba16">
+    <name>ОбъемНаладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объем наладной</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="6c1c64ff-d8fe-4a9a-b0e0-26ba253019e7">
+    <name>СуммаНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма накладной</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="770e0281-c513-4dd2-a45b-cd540f239cf4">
+    <name>КоличествоНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество накладной</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="42065be6-b607-49fa-97f1-7b585f2eaa69">
+    <name>КоличествоКоробок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество коробок накладной</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="807f0197-5047-476a-aba1-4c9f195985e3">
+    <name>ДатаОтгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отгрузки накладной</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="8f3fb85d-78db-4243-8cda-abae72c3d1b3">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="7ea454d1-6dd8-46de-bffc-de83cc20c972">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаВТранспортныйОтдел</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="c7453f53-6c4e-4be4-9afd-5dbd6c82ea1a">
+    <name>ПериодРасходов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период расходов</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="a36e6278-c559-4b36-af3f-0864787a506c">
+    <name>ВидУслуги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид услуги</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыУслуг</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="76e55f55-e7df-46d2-b622-2d32c1025c5e">
+    <name>ПунктДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПунктыДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b64fd175-e5fc-4767-86cf-bee2da492e2c">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

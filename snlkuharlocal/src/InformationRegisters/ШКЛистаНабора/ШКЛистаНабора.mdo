@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="937c83b9-6aa6-42f6-900e-9b53fe4af6a5">
+  <producedTypes>
+    <selectionType typeId="17a5a48f-eaf0-46f2-aea8-3727f2000676" valueTypeId="913f6c19-341a-4b2a-8cd7-87bd0f648fdb"/>
+    <listType typeId="f4860681-d65e-4062-822b-ac384ebed3a9" valueTypeId="cfb28d3f-3b61-4340-9d33-e61d28305409"/>
+    <managerType typeId="6006e1a0-c29d-4f9a-99b4-b8d494e69a75" valueTypeId="d1bd01c1-3f55-4d79-a36c-48cd4bb16179"/>
+    <recordSetType typeId="c71d1326-6427-4db9-8724-31edf4459884" valueTypeId="65d191c5-6332-4eb0-b7ea-553695073786"/>
+    <recordKeyType typeId="319e122a-8c41-47d1-acd7-decb5b2d44d9" valueTypeId="98c79a54-8f26-4ba5-95ca-793db81dc16f"/>
+    <recordType typeId="786b7ff2-8745-4e1f-b3d7-fcc1293cd676" valueTypeId="840270c6-0fb0-415b-abfe-f45ced2113b3"/>
+    <recordManagerType typeId="1e45255d-f451-4aa2-b7d1-5cc1f6034551" valueTypeId="39cb32a2-1128-4c7a-88e7-058d826b3f49"/>
+  </producedTypes>
+  <name>ШКЛистаНабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>ШКЛиста набора</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0bf84606-7418-49c6-a2fe-da5c70fc5b2f">
+    <name>НомерШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер ШК</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="7f7b834b-e952-4779-a2c5-9416b85217fa">
+    <name>ЛистНабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Лист набора</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЛистНабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="de7efaa0-c089-4c94-9d62-5d6462b3cf14">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="37bd23e4-1fb5-492b-a10e-4a7b3c20d1db">
+    <name>Год</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

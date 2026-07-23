@@ -1,0 +1,113 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="Factory" elementFormQualified="true" attributeFormQualified="false">
+	<valueType name="ТипИдентификаторСтроки" base="xs:string" variety="Atomic" maxLength="36"/>
+	<valueType name="ТипКоличество" base="xs:decimal" variety="Atomic" totalDigits="15"/>
+	<valueType name="ТипНомерСтроки" base="xs:int" variety="Atomic" totalDigits="10"/>
+	<objectType name="АгрегацияЧЗ">
+		<property name="КодАгрегации" type="xs:string" nillable="true"/>
+		<property name="ПараметрыАгрегации" type="xs:string"/>
+		<property xmlns:d3p1="Factory" name="УИДНоменклатура" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДХарактеристика" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="СписокШтрихкодыЧЗ" type="d3p1:СписокШтрихкодыЧЗ"/>
+	</objectType>
+	<objectType name="Бренды">
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПолноеНаименование" type="xs:string"/>
+	</objectType>
+	<objectType name="ВидНоменклатуры">
+		<property xmlns:d3p1="Factory" name="Родитель" type="d3p1:ВидНоменклатуры" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.ЗаказКлиента">
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="Номер" type="xs:string"/>
+		<property name="Дата" type="xs:date"/>
+		<property xmlns:d3p1="Factory" name="Товары" type="d3p1:Документ.ЗаказКлиента.Товары"/>
+	</objectType>
+	<objectType name="Документ.ЗаказКлиента.Товары">
+		<property xmlns:d3p1="Factory" name="Строка" type="d3p1:Документ.ЗаказКлиента.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаказКлиента.Товары.Строка">
+		<property xmlns:d3p1="Factory" name="НомерСтроки" type="d3p1:ТипНомерСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДНоменклатуры" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДХарактеристики" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="Количество" type="d3p1:ТипКоличество"/>
+		<property name="Артикул" type="xs:string"/>
+		<property name="ТипТовара" type="xs:string"/>
+		<property name="Цвет" type="xs:string"/>
+		<property name="Изготовлен" type="xs:string"/>
+		<property name="Размер" type="xs:string"/>
+		<property name="РеквизитыРазмера" type="xs:string"/>
+		<property name="Состав" type="xs:string"/>
+		<property name="Описание" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.Отгрузка">
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДЗаказа" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="Номер" type="xs:string"/>
+		<property name="Дата" type="xs:date"/>
+		<property xmlns:d3p1="Factory" name="Товары" type="d3p1:Документ.Отгрузка.Товары"/>
+		<property xmlns:d3p1="Factory" name="СписокШтрихкодыЧЗ" type="d3p1:СписокШтрихкодыЧЗ"/>
+	</objectType>
+	<objectType name="Документ.Отгрузка.Товары">
+		<property xmlns:d3p1="Factory" name="Строка" type="d3p1:Документ.Отгрузка.Товары.Строка" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.Отгрузка.Товары.Строка">
+		<property xmlns:d3p1="Factory" name="НомерСтроки" type="d3p1:ТипНомерСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДНоменклатуры" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="УИДХарактеристики" type="d3p1:ТипИдентификаторСтроки"/>
+		<property xmlns:d3p1="Factory" name="Количество" type="d3p1:ТипКоличество"/>
+	</objectType>
+	<objectType name="МП">
+		<property xmlns:d3p1="Factory" name="СписокНоменклатура" type="d3p1:СписокНоменклатура" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="Factory" name="Заказ" type="d3p1:Документ.ЗаказКлиента" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="Factory" name="СписокАгрегацияЧЗ" type="d3p1:СписокАгрегацияЧЗ" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="Factory" name="Отгрузка" type="d3p1:Документ.Отгрузка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Номенклатура">
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Коробка" type="xs:string"/>
+		<property name="Блочок" type="xs:string"/>
+		<property xmlns:d3p1="Factory" name="Бренд" type="d3p1:Бренды" nillable="true"/>
+		<property name="ТНВЭД" type="xs:string"/>
+		<property xmlns:d3p1="Factory" name="ВидНоменклатуры" type="d3p1:ВидНоменклатуры"/>
+		<property xmlns:d3p1="Factory" name="СписокХарактеристика" type="d3p1:СписокХарактеристика"/>
+	</objectType>
+	<objectType name="СписокАгрегацияЧЗ">
+		<property xmlns:d3p1="Factory" name="АгрегацияЧЗ" type="d3p1:АгрегацияЧЗ" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокНоменклатура">
+		<property xmlns:d3p1="Factory" name="Номенклатура" type="d3p1:Номенклатура" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокХарактеристика">
+		<property xmlns:d3p1="Factory" name="Характеристика" type="d3p1:Характеристика" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="СписокШтрихкоды">
+		<property xmlns:d3p1="Factory" name="Штрихкод" type="d3p1:Штрихкод" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="СписокШтрихкодыЧЗ">
+		<property xmlns:d3p1="Factory" name="ШтрихкодЧЗ" type="d3p1:ШтрихкодЧЗ" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Характеристика">
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Цвет" type="xs:string"/>
+		<property name="Размер" type="xs:string"/>
+		<property xmlns:d3p1="Factory" name="СписокШтрихкоды" type="d3p1:СписокШтрихкоды"/>
+	</objectType>
+	<objectType name="Штрихкод">
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="ШК" type="xs:string"/>
+		<property name="ТипШК" type="xs:string"/>
+	</objectType>
+	<objectType name="ШтрихкодЧЗ">
+		<property xmlns:d3p1="Factory" name="УИДНоменклатура" type="d3p1:ТипИдентификаторСтроки" lowerBound="0"/>
+		<property xmlns:d3p1="Factory" name="УИДХарактеристика" type="d3p1:ТипИдентификаторСтроки" lowerBound="0"/>
+		<property xmlns:d3p1="Factory" name="УИД" type="d3p1:ТипИдентификаторСтроки"/>
+		<property name="ШК" type="xs:string" lowerBound="0"/>
+		<property name="ЗначениеШК" type="xs:string" lowerBound="0"/>
+		<property name="Упаковка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПараметрыМарки" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+</package>

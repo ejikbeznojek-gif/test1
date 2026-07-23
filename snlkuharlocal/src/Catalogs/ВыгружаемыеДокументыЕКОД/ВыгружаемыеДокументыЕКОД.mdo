@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b9dec038-249b-46a7-a285-61aa47da863a">
+  <producedTypes>
+    <objectType typeId="daa6957e-e86a-454e-9c64-22083af3d1d6" valueTypeId="deb80af9-f1aa-41f3-9261-b7cff6ba643b"/>
+    <refType typeId="faf02918-f0af-4377-96b6-3549d6dbed52" valueTypeId="3bfe38f5-54e8-4fd3-b3aa-2d24684e719c"/>
+    <selectionType typeId="f2e0dd59-8c6d-4046-a6d9-982f1d662329" valueTypeId="d0d1753f-b042-48e7-98ba-0ccadcbda137"/>
+    <listType typeId="68c0aad8-913f-4226-8b41-7c25ff78a4d9" valueTypeId="b8f646bd-118c-4b86-ae03-26b5cb1ffe70"/>
+    <managerType typeId="a63b1803-457f-49ea-b1d1-c97ccf2dc99f" valueTypeId="3739f202-d82b-4724-aa4e-cd5ab20c433d"/>
+  </producedTypes>
+  <name>ВыгружаемыеДокументыЕКОД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выгружаемые документы ЕКОД</value>
+  </synonym>
+  <inputByString>Catalog.ВыгружаемыеДокументыЕКОД.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВыгружаемыеДокументыЕКОД.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Контрагенты</owners>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВыгружаемыеДокументыЕКОД.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ВыгружаемыеДокументыЕКОД.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="afdbcfa2-67d8-4089-bf51-dd523889d187">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ДокументЕКОД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cdd99595-4597-4fc4-a338-7253a34e5ddc">
+    <name>Провайдер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Провайдер</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="5cc738ac-3c0c-4c4e-aac7-3c5d1d846aab">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="01842d1a-f1de-4431-9f74-a5ab5182ba76">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

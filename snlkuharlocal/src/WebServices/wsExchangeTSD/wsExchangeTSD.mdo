@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5f0253b2-0882-4e55-bb85-376184c1ed39">
+  <name>wsExchangeTSD</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен с ТСД</value>
+  </synonym>
+  <namespace>http://collant.ru/wsExchangeTSD</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data-composition-system/details</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/enterprise/current-config</value>
+  </xdtoPackages>
+  <descriptorFileName>wsExchangeTSD.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="36e6f101-f8e7-43d5-9a0c-c1672ddc8b3a">
+    <name>НачатьОбмен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начать обмен</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>НачатьОбмен</procedureName>
+    <parameters uuid="a0ec29a0-fa82-481c-bdef-5c83dfb90bf1">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="25fe1a11-1a0b-4fa0-8d2a-a745c1061c5e">
+      <name>НомерОтправленного</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер отправленного</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="7909d206-4134-4d18-8c23-2fb27ed3e239">
+      <name>НомерПринятого</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер принятого</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="d3684b3a-ae9d-488e-98be-4f55ad323fcd">
+    <name>ПолучитьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьДанные</procedureName>
+    <parameters uuid="1e2ee051-5502-4f80-b9b5-6e1a74d94475">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="eb6091e3-21f0-4c55-b13d-d9571deb3440">
+      <name>ШтрихКод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих код</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="9d425b10-d522-467c-afbb-228d9305cbda">
+      <name>НомерОтправленного</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер отправленного</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="995be5bb-4566-43bb-b55f-36a88cb96c6a">
+      <name>НомерПринятого</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер принятого</value>
+      </synonym>
+      <xdtoValueType>
+        <name>decimal</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="e37e8328-9be7-4a45-889f-46640636ec01">
+      <name>ВидКоманды</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид команды</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+    <parameters uuid="c19d3b43-dbd9-4046-b17b-ac530ab62937">
+      <name>ТаблицаПараметров</name>
+      <synonym>
+        <key>ru</key>
+        <value>Таблица параметров</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="8e1eaa76-f667-42b4-a5d2-565f7aff87ce">
+    <name>ЗаписатьДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записать данные</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗаписатьДанные</procedureName>
+    <parameters uuid="ab807475-51cb-4439-827a-22592ed1b0e6">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="09afa7b2-71d6-412d-b82f-ae84bfa84698">
+      <name>ДанныеМобильногоПриложения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные мобильного приложения</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="d37384a8-fa26-47b5-90b0-6e4d394e31d9">
+      <name>ТаблицаПараметров</name>
+      <synonym>
+        <key>ru</key>
+        <value>Таблица параметров</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="569f8a5c-95d9-4c53-9b76-bdebaa2d758e">
+    <name>ЗаписатьЛоги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Записать логи</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗаписатьЛоги</procedureName>
+    <parameters uuid="65ac9ee1-4487-4858-b150-d1ec8835dd4e">
+      <name>ТекстЛога</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текст лога</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="0f897d28-f61e-48f7-8309-c1d35a8233a9">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="c2bfd522-50a0-47ae-b85c-c77673b23f3d">
+    <name>ПолучитьДанныеМарки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные марки</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьДанныеМарки</procedureName>
+    <parameters uuid="767ecabc-459b-4daf-9220-ddc6106a6661">
+      <name>markName</name>
+      <synonym>
+        <key>ru</key>
+        <value>Mark name</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="cff7e36d-01f4-4369-9d2d-08ee56f4554b">
+    <name>ПолучитьСвободныеКодыЧЗДляКомплектующих</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить свободные коды ЧЗДля комплектующих</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьСвободныеКодыЧЗДляКомплектующих</procedureName>
+    <parameters uuid="a3d33614-8ce8-4df2-8d54-5cfff930de61">
+      <name>ДанныеНоменклатуры</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные номенклатуры</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="fab1b461-e6d5-43a4-a8b3-79470c3857f5">
+    <name>ДобавлениеСпайкиВЛСКИЗаписьСвязкиСНомеромЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Добавление спайки ВЛСКИЗапись связки с номером заказа</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ДобавлениеСпайкиВЛСКИЗаписьСвязкиСНомеромЗаказа</procedureName>
+    <parameters uuid="8ab3ab5b-6a75-4b88-a864-9a029fa10de9">
+      <name>ДанныеСпайки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные спайки</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="fcdd44b3-c773-4dfd-b012-128b051a1947">
+    <name>ПолучитьДанныеКомплектующихСпайки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить данные комплектующих спайки</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьДанныеКомплектующихСпайки</procedureName>
+    <parameters uuid="9e5923af-46c5-4eb5-b183-9395f8010e81">
+      <name>ДанныеДляПолученияКомплектующих</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные для получения комплектующих</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="3e1b4357-46e4-44d1-a5aa-14ece527977c">
+    <name>ДобавлениеСпайкиВВыбранныйЛСК_СУдалениемСтрокСПустымКодомКомплектующего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Добавление спайки в выбранный ЛСК с удалением строк с пустым кодом комплектующего</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ДобавлениеСпайкиВВыбранныйЛСК_СУдалениемСтрокСПустымКодомКомплектующего</procedureName>
+    <parameters uuid="c5d0a859-789b-45f3-a60a-c5cd060628b7">
+      <name>ДанныеСпайки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные спайки</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="d7dbe983-f0a8-4d4e-9e89-2d5999f3f59d">
+    <name>УдалениеВЛСКСтрокСПустымиКодамиКомплектующих</name>
+    <synonym>
+      <key>ru</key>
+      <value>Удаление ВЛСКСтрок с пустыми кодами комплектующих</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>УдалениеВЛСКСтрокСПустымиКодамиКомплектующих</procedureName>
+    <parameters uuid="2b56117f-3bcb-4ed6-8198-98f88e10eb5a">
+      <name>ДанныеЛСК</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ЛСК</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="fc377dc0-a447-41fa-84f7-aa51399f1d44">
+    <name>ЗаписьКодовЧЗВЛСК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запись кодов ЧЗ в ЛСК</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗаписьКодовЧЗВЛСК</procedureName>
+    <parameters uuid="6a21193f-d336-4465-8448-bea17673be64">
+      <name>ДанныеДляПередачи</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные для передачи</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="aaf913be-5c00-4613-85d6-77d706e39262">
+      <name>ДанныеКодыСпаекИНомераЗаказов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные коды спаек и номера заказов</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="8c2b2fc3-920d-419f-8a55-fc6973757ed9">
+    <name>ЗавершениеСборкиСпаекПоЛСК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завершение сборки спаек по ЛСК</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗавершениеСборкиСпаекПоЛСК</procedureName>
+    <parameters uuid="6df75abd-6b9c-4b75-930e-b026b9cb981a">
+      <name>ДанныеЛСК</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ЛСК</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="363b1164-8f42-401b-80e7-c37b86babbed">
+      <name>ДанныеНоменклатурыДляБронированияКодов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные номенклатуры для бронирования кодов</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="c5e4a875-322d-43cb-801f-bc6ff6a92513">
+      <name>ДанныеТекущаяБригада</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные текущая бригада</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="d5da69da-5b24-4b03-bda8-32c8a3780957">
+    <name>ПолучениеДанныхНоменклатурыПоВложеннымШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получение данных номенклатуры по вложенным ШК</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучениеДанныхНоменклатурыПоВложеннымШК</procedureName>
+    <parameters uuid="1a94199b-b037-4b0c-9f83-aba7a967a46b">
+      <name>КодАгрегации_Наименование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код агрегации наименование</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="140ab845-48cb-4959-9429-d2fa4cceb6ea">
+    <name>ТекстZPLИзPDFПоНомеруЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ZPLИз PDFПо номеру заказа</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ТекстZPLИзPDFПоНомеруЗаказа</procedureName>
+    <parameters uuid="089172e4-b63e-437d-8d78-61cab92a6375">
+      <name>НомерЗаказа</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер заказа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9e41272d-1d5e-485d-bf41-d69091f11526">
+    <name>CheckDataTSD</name>
+    <synonym>
+      <key>ru</key>
+      <value>Check data TSD</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ВыполнитьПроверкиTSD</procedureName>
+    <parameters uuid="d70e9391-e3ea-43fe-8856-db56bf756288">
+      <name>Data</name>
+      <synonym>
+        <key>ru</key>
+        <value>Data</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="883df33c-893e-4764-adbc-75b52060032a">
+      <name>Info</name>
+      <synonym>
+        <key>ru</key>
+        <value>Info</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="ff0e5f55-40c4-4f17-898b-a6e4c3ccec46">
+    <name>ПроверитьКодыЧЗ_ДляЛН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить коды ч з для ЛН</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПроверитьКодыЧЗ_ДляЛН</procedureName>
+    <parameters uuid="2e451bb0-b966-4908-ac6f-3938d3d5023f">
+      <name>ДанныеШКУпаковки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ШКУпаковки</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="76d1c1e7-ffd7-4d03-abc8-89736ac9298e">
+      <name>ДанныеШКНабора</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ШКНабора</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="7ec1c89a-0f4e-4472-ae66-eef84b5ac2f6">
+      <name>ДанныеДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="82b9e5d9-1a13-46ad-97aa-2f236093ce3d">
+    <name>ВыгрузитьЛН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгрузить ЛН</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ВыгрузитьЛН</procedureName>
+    <parameters uuid="df4d2186-3bb4-4750-8140-63efe3cb0780">
+      <name>ДанныеЛН</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ЛН</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="3d54a7b9-e14c-4f15-96c6-2da3349d016c">
+    <name>ЗапроситьРеквизитыДляЭтикеткиОнлайн</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запросить реквизиты для этикетки онлайн</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ЗапроситьРеквизитыДляЭтикеткиОнлайн</procedureName>
+    <parameters uuid="8569c36e-b070-4f5e-ba51-f56152a8a59a">
+      <name>ДанныеЛН</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ЛН</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="178a65d1-3497-440f-bb90-4522da702ea1">
+    <name>ОбработкаСканированияКоробаЧЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработка сканирования короба ЧЗ</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ОбработкаСканированияКоробаЧЗ</procedureName>
+    <parameters uuid="d5f915e8-4e3a-4efa-9234-255f95e6aee3">
+      <name>ДанныеКороба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные короба</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="6afc2aff-70f5-4dfd-93a4-cdd3bd4b5916">
+    <name>ДополнитьРеестрСканирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнить реестр сканирования</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ДополнитьРеестрСканирования</procedureName>
+    <parameters uuid="087877f2-c940-4cb7-8308-8a6299234f4e">
+      <name>ДанныеСканирования</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные сканирования</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="da881f60-87a8-40f3-ac87-5be8a8820f7a">
+    <name>ПроверитьВЧЗКодыДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить ВЧЗКоды документа</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПроверитьВЧЗКодыДокумента</procedureName>
+    <parameters uuid="1bc236e9-e6cb-45c1-aa43-d65795495999">
+      <name>ДанныеДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные документа</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="c4a931ab-b747-48eb-bf2e-d28193283591">
+    <name>ПроверитьДатуТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить дату ТСД</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПроверитьДатуТСД</procedureName>
+    <parameters uuid="8a6fe191-6a2b-4f5d-9187-ab201bac4cd7">
+      <name>ТекущаяДатаТСД_Строка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текущая дата ТСД строка</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="ecba4f9c-8f9e-43e7-b57b-972129ab9592">
+    <name>ПроверитьИдКоробки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить ид коробки</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПроверитьИдКоробки</procedureName>
+    <parameters uuid="26f788dc-18ef-48d2-a9b1-7fae5f666f3d">
+      <name>ШК</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШК</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="bb92c782-82ad-443f-9fdc-a7250ea83ea7">
+    <name>ВыгрузитьЛПFBS</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгрузить ЛПFBS</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ВыгрузитьЛПFBS</procedureName>
+    <parameters uuid="53505dc0-3f78-479c-aac7-6dcc4b2d27fa">
+      <name>ДанныеЛП</name>
+      <synonym>
+        <key>ru</key>
+        <value>Данные ЛП</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="490ec7e0-259e-41ca-8396-22f02caccb5f">
+    <name>ПроверитьТипКороба</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверить тип короба</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПроверитьТипКороба</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="2cbd0e37-5a10-4259-8439-d2ba08739ec3">
+      <name>КодТипаКороба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код типа короба</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

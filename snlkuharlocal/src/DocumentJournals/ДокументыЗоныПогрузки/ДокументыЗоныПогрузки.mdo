@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="304668e6-b30b-4ddb-ac64-76ebe7152918">
+  <producedTypes>
+    <selectionType typeId="d2ed53a0-c305-431a-97d0-8a9a3126e565" valueTypeId="7230b65a-0476-4efd-b8d8-8e059737e65f"/>
+    <listType typeId="c61c3865-a71b-4919-84fb-214182113326" valueTypeId="8a0524fb-25cf-47c1-bc70-f88dd9524ec7"/>
+    <managerType typeId="9db46a67-6717-4fc5-8756-016b98ed984c" valueTypeId="7d932281-ef4a-4272-91d1-2e5d32218650"/>
+  </producedTypes>
+  <name>ДокументыЗоныПогрузки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Документы зоны погрузки</value>
+  </synonym>
+  <registeredDocuments>Document.ПеремещениеВЗонуХранения</registeredDocuments>
+  <registeredDocuments>Document.ПоступлениеВЗонуХранения</registeredDocuments>
+  <registeredDocuments>Document.СписаниеСЗХ</registeredDocuments>
+  <columns uuid="5b9649be-bf9f-4557-b1d6-68db2f1e9681">
+    <name>ЗонаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения</value>
+    </synonym>
+    <references>Document.ПеремещениеВЗонуХранения.Attribute.ЗонаХранения</references>
+    <references>Document.ПоступлениеВЗонуХранения.Attribute.ЗонаХранения</references>
+    <references>Document.СписаниеСЗХ.Attribute.ЗонаХранения</references>
+  </columns>
+  <columns uuid="a0f4ca33-9039-4a50-854e-198176ac34a4">
+    <name>ЗонаХраненияПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения получатель</value>
+    </synonym>
+    <references>Document.ПеремещениеВЗонуХранения.Attribute.ЗонаХраненияПолучатель</references>
+  </columns>
+</mdclass:DocumentJournal>

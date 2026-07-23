@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7f355118-e461-4085-a400-d81477a3e1bb">
+  <producedTypes>
+    <selectionType typeId="dede0f35-8fb9-4069-85e9-e7b92cdff834" valueTypeId="d6e42f7e-73d7-4ccb-b7ab-9aaeccab71df"/>
+    <listType typeId="b32986ef-58cb-4311-9d0e-e3813bbf7f32" valueTypeId="f832c960-0862-4e89-bb96-359f53199df6"/>
+    <managerType typeId="8508a925-1d67-471c-a258-33b83e7987eb" valueTypeId="b027877a-2a72-42e6-a2ff-49b95e99c304"/>
+    <recordSetType typeId="2d880139-7907-4747-8b1d-85453c3a2d58" valueTypeId="1ca40fb2-c5ea-4ceb-b7e3-ed5abbb32d68"/>
+    <recordKeyType typeId="efd6df8c-458e-4511-b74d-5353fbc5c0fd" valueTypeId="3c931360-6681-4cfa-a276-574ea3167baf"/>
+    <recordType typeId="14ae24de-e77a-4da9-8217-2e7238bce838" valueTypeId="48142270-390b-463f-8fb4-11ca9cc1a111"/>
+    <recordManagerType typeId="96cdc6fd-4d72-4eb9-99c2-9103fbff7c2a" valueTypeId="ab281f2c-5051-46ae-829e-0e45921bcf1c"/>
+  </producedTypes>
+  <name>НомераКоробокПоЛистам</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номера коробок по листам</value>
+  </synonym>
+  <comment>по ЛП и Лн</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5238dd4b-2488-491d-8019-59961f674b76">
+    <name>Лист</name>
+    <synonym>
+      <key>ru</key>
+      <value>Лист</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ЛистНабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="6167d71d-a2bc-4e70-a250-895de71e914b">
+    <name>НомерСтрокиЛН</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер строки ЛН</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="89e9f8d3-0bbf-4147-b5b9-3eeecb225740">
+    <name>ДатаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата записи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="9399b1ca-17d1-44fa-a393-1b84eaa7b376">
+    <name>ДокОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5afa98b9-38a4-4023-a1a9-1601d240cb6c">
+    <name>НомерКоробки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер коробки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>6</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0df87f66-552b-4b9f-975a-b9c075ccd5a4">
+    <name>ТипЛиста</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип листа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

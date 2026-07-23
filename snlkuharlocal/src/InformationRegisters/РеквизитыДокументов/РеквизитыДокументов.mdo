@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2c945c11-4a34-4c3c-a252-6358919376a7">
+  <producedTypes>
+    <selectionType typeId="f86c0829-61c4-4525-88a7-14ef83810137" valueTypeId="f244dba3-6cfa-4f1f-a840-f573e0523387"/>
+    <listType typeId="9a89af04-340b-438c-b1d4-9b583b748486" valueTypeId="1734324e-2be5-4655-9c09-fae6136a1225"/>
+    <managerType typeId="69fb260d-a50d-42fb-9ab8-35e4ec84451c" valueTypeId="da19032a-2207-49b9-b079-bbe20441deea"/>
+    <recordSetType typeId="100ae833-fc9c-43fd-baab-656e7575b565" valueTypeId="7d658982-7647-43b2-8974-af3151bbae4c"/>
+    <recordKeyType typeId="a46b9522-6790-488a-94a5-144b65bc14d5" valueTypeId="869e55e0-03c5-47e6-a288-925690e6ffe5"/>
+    <recordType typeId="29afefc6-17aa-4224-9150-80c0474981dc" valueTypeId="07e1c3ed-69ea-4425-9a9f-ed2556ebc5db"/>
+    <recordManagerType typeId="2083b17b-a661-4325-86c1-f3ded03a610c" valueTypeId="25705835-68bc-4e3e-b23e-a6111e2f85d4"/>
+  </producedTypes>
+  <name>РеквизитыДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реквизиты документов</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="fe358833-1c0a-47da-b159-6ed5e0dd0711">
+    <name>ЗначениеРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение реквизита</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Матрица</types>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>DocumentRef.Перемещение</types>
+      <types>EnumRef</types>
+      <types>CatalogRef</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>4</scale>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a0b4e908-7107-4657-9ccc-f628164903d7">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Матрица</types>
+      <types>DocumentRef.Заказ</types>
+      <types>DocumentRef.ЗаявкаВТранспортныйОтдел</types>
+      <types>DocumentRef.ЗаданиеНабора</types>
+      <types>DocumentRef.СчетФактура</types>
+      <types>DocumentRef.ЗаказКлиентаFBS</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="dde4ebdf-0813-43ab-aa5e-cb705bbb28f1">
+    <name>ИмяРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

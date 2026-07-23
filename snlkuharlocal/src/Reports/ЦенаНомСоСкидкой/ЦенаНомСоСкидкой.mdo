@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="612e68b6-58ec-4c7d-a44f-010e249a5749">
+  <producedTypes>
+    <objectType typeId="42d578b6-7c37-4412-a3e2-545bf1a8be6d" valueTypeId="0a30143f-bf9d-4554-ad11-6210b7d691b5"/>
+    <managerType typeId="b0e9c9fa-65c6-455e-88eb-aca2b33cc16a" valueTypeId="9881c232-b048-4501-8e7c-52fea0a3865d"/>
+  </producedTypes>
+  <name>ЦенаНомСоСкидкой</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки и цены номенклатуры ТЦ</value>
+  </synonym>
+  <defaultForm>Report.ЦенаНомСоСкидкой.Form.ФормаОтчета</defaultForm>
+  <attributes uuid="c774c7b9-9394-447b-a07a-d996e800cd2e">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8598f8a5-6dae-48be-a8ef-b4576451775e">
+    <name>ТипЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2416f153-490a-4267-aaf9-918ce80ebe00">
+    <name>ТипЦенРаспродажа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип цен распродажа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЦен</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="71e7145c-beb0-47ac-9425-2a589411f61c">
+    <name>ТипСкидок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип скидок</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыСкидок</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8d577fa2-b4c7-4c43-a4e1-427ad818c715">
+    <name>ТекСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c15aa9e7-fd0f-48d7-810e-07b1bdd5d205">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="671b8c6b-27df-4d77-90b2-0a0ac8e239fb">
+    <producedTypes>
+      <objectType typeId="19c576f1-3bb3-416b-8c29-f2314f8126be" valueTypeId="2f7c53fd-f696-4ee6-80eb-0b44d10b4cce"/>
+      <rowType typeId="a0f448be-ef1a-4d4a-87c9-433abad4d0f8" valueTypeId="24cf3cef-0674-43fe-91c4-26a15d59ee9c"/>
+    </producedTypes>
+    <name>Номенклатура2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура2</value>
+    </synonym>
+    <attributes uuid="99862e4e-6e18-4b7f-8952-540d0532fe06">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="737cd5af-ea3b-43f0-882c-ed1808e8ae99">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="3a430f24-ad1c-4168-99b1-2481780dfa64">
+    <name>Скидки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скидки</value>
+    </synonym>
+  </templates>
+  <templates uuid="bed4375b-1567-44bf-b75c-7e89fc126a43">
+    <name>Скидки1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скидки1</value>
+    </synonym>
+  </templates>
+</mdclass:Report>

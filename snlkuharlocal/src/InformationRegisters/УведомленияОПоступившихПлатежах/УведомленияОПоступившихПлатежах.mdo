@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5c8a391f-5346-42f7-97dc-505980e4bc6a">
+  <producedTypes>
+    <selectionType typeId="43f2d7a3-e206-4b38-8055-0c6301077ef0" valueTypeId="536bd546-7327-45ed-9205-309c87995f4d"/>
+    <listType typeId="d235b206-2029-4a24-8e48-45a990b02562" valueTypeId="16a93b11-1fc7-4f64-ac89-68ecdcd4f08c"/>
+    <managerType typeId="c7766c61-9be7-44f2-a5e6-5d15af16e4f9" valueTypeId="df702b58-4a17-44ac-8a95-f4d862a7d86e"/>
+    <recordSetType typeId="ccf6b069-133d-4ee4-8d6e-a6b111e0e93d" valueTypeId="da584f37-aa1d-4c25-a1c3-538ef0dfacbe"/>
+    <recordKeyType typeId="1ae56453-6fbf-48af-a516-df1e0d1d5ace" valueTypeId="37e814bc-1fbd-4d7f-9bff-a210a3fe7c66"/>
+    <recordType typeId="1c83b330-72a8-41c8-8db9-8191ff29b5e5" valueTypeId="038bd0d7-406f-467d-87e6-28cbad855065"/>
+    <recordManagerType typeId="a59cbff2-9063-4c0d-b492-1022e88d2fa9" valueTypeId="fc13c6a1-19d9-4a7e-80bf-8d02d17853cf"/>
+  </producedTypes>
+  <name>УведомленияОПоступившихПлатежах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уведомления о поступивших платежах</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.УведомленияОПоступившихПлатежах.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="4fd6b4c7-9dc5-4d73-8b1f-38b57897d2cf">
+    <name>ДатаФормирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата формирования</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="66cfc840-d010-4511-a7aa-e199b6123105">
+    <name>Получатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ea99fea5-f392-4786-ab0a-59a7f495ba5c">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="bb83c635-815a-468a-8a18-e7373a65882c">
+    <name>ДокОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПоступлениеНаРасчетныйСчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="c255fa2a-eae2-4eb5-8672-80fc919dc7a1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9465bc0b-32a1-4cdd-8167-e150ace7a0d0">
+    <name>РеестрОплат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реестр оплат</value>
+    </synonym>
+  </templates>
+</mdclass:InformationRegister>

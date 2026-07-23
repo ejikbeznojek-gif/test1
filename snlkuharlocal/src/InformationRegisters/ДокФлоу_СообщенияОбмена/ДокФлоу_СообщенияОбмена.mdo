@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="04ea739d-2a6e-4e60-b315-dda181a764bb">
+  <producedTypes>
+    <selectionType typeId="8bc32d07-2a2b-4a1a-8ecd-b8dc67c97d6e" valueTypeId="221d06da-86ac-4b7f-91e1-3f0187746a1a"/>
+    <listType typeId="dbeff9c4-b00f-461b-ba12-69aa28960b70" valueTypeId="34d03e88-8630-43be-8925-7b83b659dddf"/>
+    <managerType typeId="9c828cee-5eb3-412b-ab61-8ceaba7ff305" valueTypeId="30c7dda3-9ee6-4dec-94c2-66ed6e8d889b"/>
+    <recordSetType typeId="d6b0a540-d3ac-4fb0-bafc-1c453e3bd0ce" valueTypeId="1429212b-7db5-4e39-8f48-c51bf1caa898"/>
+    <recordKeyType typeId="f6325c58-4b7c-4a41-946c-494ccbac3d1f" valueTypeId="74cd3468-b9fa-4e49-a7d4-6635b8fb2ea7"/>
+    <recordType typeId="4d5a6eed-9d7a-4687-9706-112ce4c14b48" valueTypeId="14907c0e-25a4-4858-9340-7201a61ec833"/>
+    <recordManagerType typeId="959413c9-b10d-46b3-98c2-e9e6e66a2a44" valueTypeId="e94d7c45-0e13-48a7-8f8e-fcccfec6c2ef"/>
+  </producedTypes>
+  <name>ДокФлоу_СообщенияОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>Док флоу сообщения обмена</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ДокФлоу_СообщенияОбмена.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0467f6b9-f529-400c-86a4-ca6db8bed9b5">
+    <name>СтатусСообщения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус сообщения</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыСообщенийИзRabbit</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="e9a6904d-d688-4a48-b0ec-0cbe5599c459">
+    <name>ИдентификаторДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5995ba61-5b97-4f38-af6c-c26b137b27e2">
+    <name>ДанныеЗаписаныВ1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные записаны в1 С</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="76aeb090-a418-4c2f-b9c6-d975467ac1dc">
+    <name>ОтправленоПодтверждениеОЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено подтверждение о записи</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="85a0c526-edf5-4c5d-82f5-788026a3721c">
+    <name>ВходящийТекст</name>
+    <synonym>
+      <key>ru</key>
+      <value>Входящий текст</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="d567d2b8-caf8-4314-a211-31a712541f1f">
+    <name>ТекстСообщений</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст сообщений</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="862a590d-69aa-4084-a57f-0db6cbd5cf0f">
+    <name>ЕстьОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Есть ошибки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="79232781-9738-4cf9-b5a1-49821c73d89c">
+    <name>ДатаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата записи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="63138af2-46df-4e70-b510-d3d22f998f36">
+    <name>ЗначениеВ1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение в 1С</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаОплату</types>
+      <types>CatalogRef.БанковскиеСчета</types>
+      <types>CatalogRef.Договоры</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a992a5ca-6ed9-4583-b667-0acdcfefff23">
+    <name>ИмяОбъекта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя объекта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="ca7a9dac-0830-4fee-8a51-45dda4db1ee0">
+    <name>ИдентификаторЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор записи</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="f34206c7-a3f4-44e7-8e5c-ff14c74f15ec">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

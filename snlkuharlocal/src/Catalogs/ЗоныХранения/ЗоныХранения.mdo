@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="25be35ed-cf04-4f1b-92e4-1894aa2b5bf1">
+  <producedTypes>
+    <objectType typeId="b49f72cb-0d42-4fa7-8329-a6d9b8f0ebbd" valueTypeId="3f47ca21-26c9-4cd9-89d1-d7f721df6ee7"/>
+    <refType typeId="a7078238-7129-4b83-945b-523523035808" valueTypeId="974a7a9c-a55c-44e1-8dce-46538674bf56"/>
+    <selectionType typeId="78ce5ee0-e08f-4849-b51a-ba85502ede57" valueTypeId="a98af9c1-4361-429f-b4f9-b982b12b596d"/>
+    <listType typeId="dcc9d139-ee57-4e64-87d2-f2fa9f0236ca" valueTypeId="015d4349-7cc7-45dd-b6bd-3c7d34aa1ac5"/>
+    <managerType typeId="51a4016b-8944-4468-af08-6c1ab031ae94" valueTypeId="753bf6c3-4f90-4d8c-979a-39e47772608a"/>
+  </producedTypes>
+  <name>ЗоныХранения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Зоны хранения</value>
+  </synonym>
+  <inputByString>Catalog.ЗоныХранения.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ЗоныХранения.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ЗоныХранения.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ЗоныХранения.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="d4d1f20a-a0e0-41a9-ac77-2455262908d8">
+    <name>ШтрихКод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>13</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7293d13f-0060-4321-875a-12b60741dce1">
+    <name>КодФизическогоУзла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код физического узла</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>3</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <use>ForFolderAndItem</use>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5542eeed-9948-445f-8971-30251552e80f">
+    <name>СекторХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сектор хранения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СектораХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="a61ab8b1-b14c-47be-8c02-2bbc2299cde0">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a53f0a90-1dc3-4770-bc73-c79c4720a0a0">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cab6d9bc-b7a0-46ad-87c7-285b5fcd481f">
+    <name>Печать</name>
+    <synonym>
+      <key>ru</key>
+      <value>Печать</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="445aee10-5a22-4d0a-9f24-317b3ebc3920">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+  <templates uuid="2002772a-fc49-4cc3-aac2-f57a834fddbc">
+    <name>ВоротаЛево</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ворота лево</value>
+    </synonym>
+  </templates>
+  <templates uuid="e9602fec-cba4-4415-860c-c60a62f20b7c">
+    <name>ВоротаПраво</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ворота право</value>
+    </synonym>
+  </templates>
+  <templates uuid="ae4a0789-924c-4114-b93c-4692adccbcbd">
+    <name>ЗонаПроверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона проверки</value>
+    </synonym>
+  </templates>
+  <templates uuid="1aaa50c5-fec6-4052-920f-19445eb79346">
+    <name>ВерхниеЯрусы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Верхние ярусы</value>
+    </synonym>
+  </templates>
+</mdclass:Catalog>

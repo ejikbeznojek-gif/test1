@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="90f3d16d-c020-43e8-a688-440d28d740c5">
+  <name>ПриУдаленииПроведенияДокументовДляОбменаССайтом</name>
+  <synonym>
+    <key>ru</key>
+    <value>При удалении проведения документов для обмена с сайтом</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.Чек</types>
+    <types>DocumentObject.РасходнаяНакладная</types>
+    <types>DocumentObject.ПриходнаяНакладная</types>
+    <types>DocumentObject.СписаниеТМЦ</types>
+  </source>
+  <event>UndoPosting</event>
+  <handler>CommonModule.ПроцедурыОбменаССайтом.ПриУдаленииПроведенияДокументовДляОбменаССайтомОбработкаУдаленияПроведения</handler>
+</mdclass:EventSubscription>

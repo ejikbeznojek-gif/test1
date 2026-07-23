@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9421837f-4b36-4734-809f-ddc85a3ed550">
+  <producedTypes>
+    <objectType typeId="4bb50c61-4ee2-4e23-9789-12866813e9c5" valueTypeId="c74dcb62-3ab8-46e1-939a-06f7302f54b6"/>
+    <refType typeId="fa3fbadc-5455-47cb-ab26-c26e52708b30" valueTypeId="cc9e1582-a51c-472b-a81f-3c89f9ba3d47"/>
+    <selectionType typeId="45c267b3-7545-4fda-bbc1-4b8138dae4dd" valueTypeId="f646942d-4f94-49c6-a9db-123cd0b2d329"/>
+    <listType typeId="5ffe5311-8458-4ffc-8a50-f22051b159be" valueTypeId="66cfae78-5c8c-46fd-88f2-ad8ebacfc196"/>
+    <managerType typeId="a89d9256-4e0d-4357-be70-89730568bdf3" valueTypeId="dcb1619e-0abc-479f-ba70-0cad8a7ed07d"/>
+  </producedTypes>
+  <name>СтоимостиДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Стоимости доставки</value>
+  </synonym>
+  <inputByString>Catalog.СтоимостиДоставки.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СтоимостиДоставки.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СтоимостиДоставки.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultChoiceForm>Catalog.СтоимостиДоставки.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="a16720b5-fec4-471a-acb8-6293c77ce9c0">
+    <name>ТипПорогаСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип порога стоимости</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыПороговСтоимости</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="336368a3-88a3-42d2-b931-2623d84845d4">
+    <producedTypes>
+      <objectType typeId="6fca0bc2-52b1-4646-b75a-33a9ed06e50a" valueTypeId="0d5b2633-e4ec-45a1-a405-195e9c524677"/>
+      <rowType typeId="81c4ce3a-620a-4dcf-9eda-463cb7cbc608" valueTypeId="6b0bba50-7c52-444f-987e-5f0f7a43dff2"/>
+    </producedTypes>
+    <name>ПорогиСтоимости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пороги стоимости</value>
+    </synonym>
+    <attributes uuid="3f29d4a5-fcae-4917-8292-4157cafcc0ff">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>3</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="02ce0a25-c758-4747-8a19-579c3db69b27">
+      <name>Стоимость</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стоимость</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>12</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="a9a499f0-7b85-416a-a6e4-670847d472ad">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c4cc1d6c-bbd3-415e-8b50-a3bb4f53b580">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

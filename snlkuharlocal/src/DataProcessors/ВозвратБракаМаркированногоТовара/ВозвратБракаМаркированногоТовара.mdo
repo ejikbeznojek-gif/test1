@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b87a26b-6d17-4491-9681-bc4ca978ee11">
+  <producedTypes>
+    <objectType typeId="5d6637ea-80b3-49fb-9c1b-cc5f228d5030" valueTypeId="d81b556b-69b5-4fa8-8a05-1de1454a7df8"/>
+    <managerType typeId="53db57f6-7b10-4161-9312-5f7cfe210196" valueTypeId="4b073140-851d-4a9e-92c0-343cf8ad88ff"/>
+  </producedTypes>
+  <name>ВозвратБракаМаркированногоТовара</name>
+  <synonym>
+    <key>ru</key>
+    <value>Возврат брака маркированного товара</value>
+  </synonym>
+  <defaultForm>DataProcessor.ВозвратБракаМаркированногоТовара.Form.Форма</defaultForm>
+  <attributes uuid="95b25929-c169-4d10-84cb-3c1d6d164489">
+    <name>ПричинаРекламации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина рекламации</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПричиныРекламаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c2ea89ed-ecf3-4c65-a8a5-397a1c73970f">
+    <name>ТипРекламации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип рекламации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыРекламаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a147be29-e577-44db-bab5-f71efb3a5964">
+    <name>ВозвратныйДокумент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возвратный документ</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e2f7b587-1cad-43ee-a034-d59e06638a8f">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="16d8aee1-1a48-4fef-8354-421cb94aef53">
+    <producedTypes>
+      <objectType typeId="7dcb3654-b1bd-4176-a7cc-b3137ff4a031" valueTypeId="f617a141-9743-471d-aad4-70cd0a90c0f4"/>
+      <rowType typeId="4310b587-e9bf-4ea5-acdf-f6f51182d46e" valueTypeId="7af6a06e-8d12-4f53-8815-468581e2d21d"/>
+    </producedTypes>
+    <name>ВозвратБрака</name>
+    <synonym>
+      <key>ru</key>
+      <value>Возврат брака</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="21de7830-e7fd-48f9-bcaf-667bec65fa2c">
+      <name>КодМаркировки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код маркировки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="2e676f8a-a29b-46ae-8ef5-c4d1a1ff9961">
+      <name>ШКУпаковки</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШКУпаковки</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="cb428fa4-5bd3-432b-80fc-18f296427b75">
+      <name>ХКМПриход</name>
+      <synonym>
+        <key>ru</key>
+        <value>ХКМ приход</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="66432b8c-cddd-432a-a2cb-90117bf71edd">
+      <name>Приход</name>
+      <synonym>
+        <key>ru</key>
+        <value>Приход</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3697ee02-dcba-4027-b405-fa1a3454adff">
+      <name>ВозвратныйДок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Возвратный док.</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РекламационнаяНакладная</types>
+        <types>DocumentRef.РасходнаяНакладная</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5bcf204c-cab9-4815-b63b-c4ccd99460b0">
+      <name>ПричинаРекламации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Причина рекламации</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПричиныРекламаций</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ed5e3ff8-b1a8-4162-a681-0732aabcf6d9">
+      <name>НачСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Нач статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СтатусыКодовМаркировкиФакт</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7470fe84-f980-426f-bf90-be5cc5a18dde">
+      <name>ТекСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тек. статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СтатусыКодовМаркировкиФакт</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="56ac5d79-93a7-4d7c-ab72-1a2548b30446">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="24bc2431-cc19-44b6-b995-378ee2309461">
+      <name>ХКМТек</name>
+      <synonym>
+        <key>ru</key>
+        <value>ХКМ тек.</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b77b02da-ec13-49de-a8ac-41cbf084cf9d">
+      <name>ТекДок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тек. док.</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a8a881ea-308e-42d5-a127-d08b026743b9">
+      <name>МожноВ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Можно возвр.</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="a4593888-9c7b-43a0-9ffc-71e01d8ac28d">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

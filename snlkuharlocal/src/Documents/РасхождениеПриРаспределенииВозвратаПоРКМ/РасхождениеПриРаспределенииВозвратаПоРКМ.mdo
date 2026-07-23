@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9d443571-cb6c-4d18-8883-158f8d8e18a4">
+  <producedTypes>
+    <objectType typeId="a6e3637c-4629-4e3e-ad68-1bb147fbcbf3" valueTypeId="9799ece8-75d8-4e4d-a2e2-d11b2a4123a0"/>
+    <refType typeId="238ef4e1-c19e-4aa3-a6c8-d687270384a5" valueTypeId="4e7b41de-f8de-4066-a276-fc444ece9a47"/>
+    <selectionType typeId="a0c4431d-c8e7-474b-b6b6-09a080bf8ba8" valueTypeId="4c3de0ba-d403-46c9-87c7-893175b9c21d"/>
+    <listType typeId="60cdfe97-a4ad-4c8d-9b39-1988b2684e81" valueTypeId="2be31a69-9e7d-41c6-8b4f-2feaf814f27f"/>
+    <managerType typeId="13133421-e944-4c88-9687-8c3ad9fd1178" valueTypeId="fd892ae6-b570-410a-a148-853bb1b1daaa"/>
+  </producedTypes>
+  <name>РасхождениеПриРаспределенииВозвратаПоРКМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расхождение при распределении возврата по РКМ</value>
+  </synonym>
+  <inputByString>Document.РасхождениеПриРаспределенииВозвратаПоРКМ.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <basedOn>Document.ПриходнаяНакладная</basedOn>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.РасхождениеПриРаспределенииВозвратаПоРКМ.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.РасхождениеПриРаспределенииВозвратаПоРКМ.Form.ФормаСписка</defaultListForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="a4115795-39ae-41e1-baf0-9e603c4e7634">
+    <name>ДокОснование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="0e9688ce-5a1e-4ad1-ad9e-33cd011ea7f1">
+    <name>КоличествоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="434d53a6-17ab-4986-91e0-d0466d2b1a60">
+    <name>СуммаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8acc45db-b0b1-48b4-bfc4-89890a6eb3c8">
+    <name>Отработана</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отработана</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="993e0cdc-4805-436c-a3f1-de107903408d">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="46d6519d-166b-4a45-9b82-f4ff0b3fca42">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ffbb6fd0-52a7-4f39-ae5b-8ff32995b921">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="0faeebf7-9628-43aa-bc90-64a5292ba03d">
+    <producedTypes>
+      <objectType typeId="762bdc2b-b069-424b-8379-756d2f99276a" valueTypeId="e5cbcd19-62dc-461d-bb28-7c088d32d58d"/>
+      <rowType typeId="1eb0c4ba-5c7f-4d04-8f78-1f4b81ee8b0d" valueTypeId="bccd8ca8-9ca9-4907-a3ac-6fd4cf03bb2f"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <attributes uuid="4caffca8-cd34-4f33-aaa4-cb34ac35bf03">
+      <name>Рекламация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рекламация</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РекламационнаяНакладная</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="90f66f28-8374-495a-99f4-dd12da1f84b8">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a81f1364-bf4b-4e00-95f5-116a60038ddb">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="400d0848-35f2-4272-b955-17585eb14f20">
+      <name>Цена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="40f12d61-3823-45a0-975c-f49f58fe7044">
+      <name>Всего</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9c835b48-08cb-4a0f-ab3c-2b91d14617d3">
+      <name>ЦенаРКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена РКМ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c76c8474-e2f8-4d99-bc02-b0c5c99964f8">
+      <name>ВсегоРКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего РКМ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d311a4f2-e05f-47a0-905b-bbb24352b653">
+      <name>НоваяРКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Новая РКМ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РекламационнаяНакладная</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cf98d1e8-dadc-4f51-8536-15707d2ec346">
+      <name>ЦенаНоваяРКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Цена новая РКМ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8adad66c-e71f-44b5-b719-0ea5a78cc301">
+      <name>ВсегоНоваяРКМ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Всего новая РКМ</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>15</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="4a4193b7-b109-4ccb-b826-0f63741c2b86">
+    <producedTypes>
+      <objectType typeId="d511aaae-778f-4dd3-ab04-788493a68ec5" valueTypeId="40001d8f-7ed3-4c2d-a170-446dc005b6a7"/>
+      <rowType typeId="9e9a05d0-348a-43d5-b3dc-a16f9384bd53" valueTypeId="d8850e94-007b-43cd-84c5-94c4b12475cc"/>
+    </producedTypes>
+    <name>Рекламации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рекламации</value>
+    </synonym>
+    <attributes uuid="c906f86a-e50b-4931-a941-7d33055a1a32">
+      <name>Рекламация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Рекламация</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РекламационнаяНакладная</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

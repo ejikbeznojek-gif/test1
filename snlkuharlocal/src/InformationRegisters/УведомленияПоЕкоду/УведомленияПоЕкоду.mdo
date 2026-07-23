@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ef5edd62-1eea-491f-8da3-79e12166fb66">
+  <producedTypes>
+    <selectionType typeId="d50acc10-55d2-400f-a271-a3f1922fea58" valueTypeId="ff9f8c60-4340-48cb-b08f-15d5abe6e9a2"/>
+    <listType typeId="2d00a010-8266-4166-b7ec-a3a75a200352" valueTypeId="c587dc33-6fd1-4cfd-8b58-70d6d4fdcb16"/>
+    <managerType typeId="839588a7-6b19-4420-af8d-40265fbd0d8d" valueTypeId="e8c4097f-9aca-45c6-8d6c-1a3b7d7a2e77"/>
+    <recordSetType typeId="85f40427-4a0a-4239-b031-b8e8302b1028" valueTypeId="46e383f2-82d1-46a5-8f40-fc3ef5fbfaa3"/>
+    <recordKeyType typeId="61c8543d-0b82-4850-9fa4-95eddc89f687" valueTypeId="7cc4537b-df2e-4f22-ad87-29d7d722002d"/>
+    <recordType typeId="0f958c6c-bba3-4377-96a9-e0c538f1f2c0" valueTypeId="329eaa68-dca7-499f-b0b9-b3b4c398d35a"/>
+    <recordManagerType typeId="65b99416-d628-4493-ae7b-80b9c499d51c" valueTypeId="95e8e945-9140-437d-8c11-27d9e11475b6"/>
+  </producedTypes>
+  <name>УведомленияПоЕкоду</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уведомления по екоду</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="ddac8771-af3b-4484-9c78-1aaee4fd0b27">
+    <name>ПунктДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПунктыДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="75712e8c-1a71-47be-aa25-730edd046685">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="de71993d-808c-477c-b616-9ed828e99d46">
+    <name>ТипУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип уведомления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2b2bf0b0-8acc-48dc-86ad-4216578be197">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1f1c5674-6d8b-4d32-9316-845451313c96">
+  <producedTypes>
+    <selectionType typeId="6ffb5b7e-26e3-4e97-a98c-0241b935132c" valueTypeId="ee5a4210-a2ff-4232-8613-e7edb6225482"/>
+    <listType typeId="5b15390d-da15-470f-9ded-b0643aebafe7" valueTypeId="a077de44-dc8b-4a51-a6f5-d1f1b3de892c"/>
+    <managerType typeId="7b625b66-1d4d-4304-8a6e-c802d13c6493" valueTypeId="b5c8840d-c7c1-4e44-8057-168245214b5c"/>
+    <recordSetType typeId="d3a92d6b-ece3-49c3-b76f-c77bd7a4671c" valueTypeId="0f01dd3c-a5e7-4152-b677-b6a1cbedabac"/>
+    <recordKeyType typeId="75d534c2-49a9-4b5d-8800-22a024259d6a" valueTypeId="889aa159-5b7b-4ec9-ad26-5c6b19b8b2e6"/>
+    <recordType typeId="416d1ebb-19e8-409b-be90-85d6f2d3860f" valueTypeId="30e4f132-718f-4166-983e-b361e0a5a610"/>
+    <recordManagerType typeId="a6f7d136-43dd-4652-88b3-7296920800c5" valueTypeId="93dfd1a5-de09-412e-af10-8a090f37a58d"/>
+  </producedTypes>
+  <name>Распределение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Распределение</value>
+  </synonym>
+  <informationRegisterPeriodicity>Month</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="a32a3324-0bdd-4186-9c2d-172afd53c41c">
+    <name>Процент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Процент</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f0b0b700-6344-4843-a8e1-3214a1d6beff">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4722fd82-ab03-45d7-8dfa-6072121423c3">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cf63e44e-46aa-42bf-84e2-a54650a59f1b">
+  <producedTypes>
+    <selectionType typeId="24b32312-b667-4bc8-b265-efd85e20d28a" valueTypeId="435b4036-2f53-4f32-b398-856976227cfd"/>
+    <listType typeId="09f3441d-8e96-4aa0-b81c-d48f7b053364" valueTypeId="6294554f-d50a-4bc0-abda-5936fed30064"/>
+    <managerType typeId="4ad0ae6f-0327-4ffc-aaba-e8006fb0f483" valueTypeId="ff6de37e-faa7-498d-ace0-e22a548aa553"/>
+    <recordSetType typeId="c56a47f4-2ed5-42ab-b1f3-b1cb9cf34eb6" valueTypeId="f8b465f1-e7b8-41f8-93c1-47d548b01381"/>
+    <recordKeyType typeId="d61a00fc-4dde-45f1-b9bf-5ef61bc3b5e8" valueTypeId="a506bc35-c485-4ff2-ae54-b04b16021345"/>
+    <recordType typeId="6b50f6f0-39b5-4d75-ae4c-66b9800b3f9c" valueTypeId="545c9291-66b2-4c9c-a265-0eca0af53fa1"/>
+  </producedTypes>
+  <name>РасхожденияПоАкту</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расхождения по акту</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3e31d414-2d2b-4cb8-993e-7dc86103a656">
+    <name>Отправлено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлено</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="bb27b53c-04f4-4e1b-8407-02a87c6f8caf">
+    <name>Принято</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принято</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2df63305-9a2d-4b54-a542-3151c1d3d52f">
+    <name>РНК</name>
+    <synonym>
+      <key>ru</key>
+      <value>РНК</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d73b3eee-1ffa-403f-b279-2b613497dd97">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5cc9cd8d-a455-4bdc-a2c9-f3e10220bd27">
+  <producedTypes>
+    <objectType typeId="012c65cc-e11e-489a-a46e-797cdd1ab074" valueTypeId="bfdc62f3-77b7-4bbc-b43a-d9d5ad9bd423"/>
+    <managerType typeId="321ae750-1069-42b9-89d3-3cd63619ff9d" valueTypeId="ac7b43cb-2cc4-44ac-914f-b623bc32bedf"/>
+  </producedTypes>
+  <name>ЗаполнениеДопРеквизитовСправочника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Заполнение доп реквизитов справочника</value>
+  </synonym>
+  <defaultForm>DataProcessor.ЗаполнениеДопРеквизитовСправочника.Form.Форма</defaultForm>
+  <auxiliaryForm>DataProcessor.ЗаполнениеДопРеквизитовСправочника.Form.Форма</auxiliaryForm>
+  <tabularSections uuid="eba0ef57-36d5-46ba-94a7-90dc6ef75d80">
+    <producedTypes>
+      <objectType typeId="fd666fff-4396-425d-aab2-dbbe42696265" valueTypeId="38109700-bfbf-442b-9f60-43af98d37c0b"/>
+      <rowType typeId="ffe8e1ef-802f-46ec-8caa-20c5ecd1a17a" valueTypeId="a009aaae-c1ed-47e6-bad9-be5a013618eb"/>
+    </producedTypes>
+    <name>РеквизитыСправочников</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реквизиты справочников</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="90e72eef-97e3-4b10-b7f6-29875b8a64e5">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="c2024c11-c49f-4660-80b4-c1450d977df3">
+      <name>Справочник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Справочник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0ba633c0-30ab-422a-80f7-40363c0821c1">
+      <name>ИмяРеквизита</name>
+      <synonym>
+        <key>ru</key>
+        <value>Имя реквизита</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="ee77db35-5f15-45fe-9eec-c13b7d2ca875">
+      <name>ЗначениеРеквизита</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение реквизита</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <types>DocumentRef</types>
+        <types>CatalogRef</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>300</length>
+        </stringQualifiers>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="77f76c61-95b6-43c1-bdc2-443e91ce3155">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

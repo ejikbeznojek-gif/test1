@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ece084c6-cbcf-4676-a366-abdfaaf5ade5">
+  <producedTypes>
+    <objectType typeId="56cd1980-6449-4f79-9d35-acb9753a5a87" valueTypeId="7213bded-6cb0-4305-9243-9ce2ae71def6"/>
+    <managerType typeId="21c2378c-1378-4200-85bf-2766bb526ba8" valueTypeId="b9b50fec-545a-4c93-be04-c584197a39ed"/>
+  </producedTypes>
+  <name>ЗакрытиеБанковскогоДняАвансы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закрытие банковского дня (авансы)</value>
+  </synonym>
+  <defaultForm>DataProcessor.ЗакрытиеБанковскогоДняАвансы.Form.Форма</defaultForm>
+  <attributes uuid="e17bdaa0-e8e1-4089-b66a-f4c55d22d89b">
+    <name>Дата1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1f37a537-b972-4d15-9c76-2f8ba1d28131">
+    <name>Дата2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="42078b25-12f2-4e78-b455-e862d1c2c6ff">
+    <name>ВыбДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выб док</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="df1f32ca-caf2-48ca-ada2-618b1f8b7528">
+    <name>фВыполнятьВФоне</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнять в фоне</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4aa5a06b-8cb8-4485-bafb-f54d14df729c">
+    <name>ВыбКонтрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выб контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="45ea2d29-9776-4785-b92b-154c5121c0c8">
+    <name>ВыбДоговор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выб договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="707d03ff-63c8-48e6-8a6d-0bd5574caa1f">
+    <name>ВыбУсловияОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выб условия оплаты</value>
+    </synonym>
+    <type>
+      <types>EnumRef.УсловияОплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d53d133f-84ac-4933-bc9d-7e9c4535924f">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fbe70adb-62b3-4690-bbf9-7e6b6cfe70fc">
+    <name>ДокГП</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док ГП</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="b89e8bb0-8d63-4b6b-8adf-bb2c6e520836">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="e9d5a21d-0f60-4005-879e-039c29ea639b">
+    <name>Проверка_ПРС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проверка ПРС</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="05d9f78c-e58b-4dc6-9951-531df5f9bbc6">
+    <name>РазвернутоеСальдо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Развернутое сальдо</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="ffc10dc0-567b-4848-bcec-0d8a3aa194f7">
+    <name>СоответствиеРегистров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Соответствие регистров</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

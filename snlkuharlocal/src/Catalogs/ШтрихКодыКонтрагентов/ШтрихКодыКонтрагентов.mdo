@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f4facf54-f053-4e23-989b-21a49d24116b">
+  <producedTypes>
+    <objectType typeId="4b1ebdbb-4ce3-4251-b94b-920146355cc1" valueTypeId="6ee39ee9-53c4-4d07-9954-886ae625a61d"/>
+    <refType typeId="41560039-4bd5-42f3-8755-77c17890360e" valueTypeId="753b82b5-f669-45a8-86df-718bd1962cc9"/>
+    <selectionType typeId="18d27ebc-48f5-485c-81ba-17ad8b6f1d56" valueTypeId="eb9ef7b0-6b3f-4aaa-9391-69acfc605f65"/>
+    <listType typeId="c15e90bb-a371-4819-8253-15f365c00535" valueTypeId="5acb1849-7de5-4a38-8e32-686edf3d9dfe"/>
+    <managerType typeId="5b018c48-5794-437d-9106-a437e2de7510" valueTypeId="0b83a618-a675-42b0-a0c0-7ec37acd85db"/>
+  </producedTypes>
+  <name>ШтрихКодыКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Штрих коды контрагентов</value>
+  </synonym>
+  <inputByString>Catalog.ШтрихКодыКонтрагентов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ШтрихКодыКонтрагентов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>10</codeLength>
+  <descriptionLength>13</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ШтрихКодыКонтрагентов.Form.ФормаЭлемента</defaultObjectForm>
+  <tabularSections uuid="6350488c-150b-4fa8-ab15-99b9f495ee17">
+    <producedTypes>
+      <objectType typeId="fe974e96-9a7b-4566-9738-a47712da0e7e" valueTypeId="750b35e4-56b0-4bb6-97f0-d4a8b3fe8cad"/>
+      <rowType typeId="66b2b1c4-be53-4c27-8f04-67cce9b94387" valueTypeId="be54438f-e433-40d7-a89a-d8f3230938ce"/>
+    </producedTypes>
+    <name>ШтрихКоды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих коды</value>
+    </synonym>
+    <attributes uuid="c28fbd9b-cb96-4c66-af06-bfb611865f2b">
+      <name>Модель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="10372c81-c6a9-4249-8cd2-7cbe8859d0a7">
+      <name>ШтрихКод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих код</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>13</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="c1c4f66c-57ed-4a2e-bd80-69fc3001b340">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

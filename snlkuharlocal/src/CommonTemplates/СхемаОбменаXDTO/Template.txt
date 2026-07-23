@@ -1,0 +1,428 @@
+<xs:schema xmlns:ns1="http://v8.1c.ru/8.1/data/core" xmlns:ns2="http://v8.1c.ru/8.1/data/enterprise" xmlns:ns3="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:tns="http://collant.ru/ExchangeTSD1" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://collant.ru/ExchangeTSD1" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<xs:import namespace="http://v8.1c.ru/8.1/data/enterprise"/>
+	<xs:import namespace="http://v8.1c.ru/8.1/data/enterprise/current-config"/>
+	<xs:complexType name="ДокументОбъект.ЗаданиеНабора">
+		<xs:sequence>
+			<xs:element name="ГруппыТоваров" type="xs:string"/>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>
+			<xs:element name="ПроходнаяНакладная" type="xs:boolean"/>	
+			<xs:element name="ПоследовательныйНабор" type="xs:boolean"/>	
+			<xs:element name="НаборМиксами" type="xs:boolean"/>	
+			<xs:element name="ТребуетсяМаркировка" type="xs:boolean"/>			
+			<xs:element name="ЧастичноСобран" type="xs:boolean"/>			
+			<xs:element name="НеконтролироватьСканированиеЧЗ" type="xs:boolean"/>												
+			<xs:element name="Склад" type="ns3:CatalogRef.Склады"/>
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЗаданиеНабора"/>
+			<xs:element name="Товары" type="tns:ДокументСтрокаТЧ.ЗаданиеНабора.Товары" nillable="true" minOccurs="0" maxOccurs="99999"/>
+		
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ДокументСтрокаТЧ.ЗаданиеНабора.Товары">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Коэффициент" type="xs:decimal"/>
+			<xs:element name="Единица" type="ns3:CatalogRef.Единицы"/>
+			<xs:element name="ТребуетсяМаркировка" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="ДокументОбъект.ПолныеДанныеЗаданияНабора">
+		<xs:sequence>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>				
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ПолныеДанныеЗаданияНабора"/>
+			<xs:element name="ОтгрузкаКомплектов" type="xs:boolean"/>
+			<xs:element name="ДокОснование" type="ns3:DocumentRef.ЗаданиеНабора"/>		
+			<xs:element name="Контрагент" type="ns3:CatalogRef.Контрагенты"/>
+			<xs:element name="Товары" type="tns:ДокументСтрокаТЧ.ПолныеДанныеЗаданияНабора.Товары" nillable="true" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="Комплектующие" type="tns:ДокументСтрокаТЧ.ПолныеДанныеЗаданияНабора.Комплектующие" nillable="true" minOccurs="0" maxOccurs="99999"/>
+		
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ДокументСтрокаТЧ.ПолныеДанныеЗаданияНабора.Товары">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="НомерЗаказаFBS" type="xs:string"/>
+			<xs:element name="ШтрихКодFBS" type="xs:string"/>
+			<xs:element name="ШтрихКод" type="xs:string"/>		
+			<xs:element name="ПрефиксЗаказа" type="xs:string"/>	
+			<xs:element name="СуффиксЗаказа" type="xs:string"/>							
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ПолныеДанныеЗаданияНабора.Комплектующие">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Продукция" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="КоличествоПродукции" type="xs:decimal"/>
+			
+			<xs:element name="НомерЗаказаFBS" type="xs:string"/>
+			<xs:element name="ШтрихКодFBS" type="xs:string"/>
+			<xs:element name="ЭтоТовар" type="xs:boolean"/>	
+			
+			<xs:element name="ПрефиксЗаказа" type="xs:string"/>	
+			<xs:element name="СуффиксЗаказа" type="xs:string"/>						
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="ДокументОбъект.ЗаданиеНаСборкуКомплектовЧЗ">
+		<xs:sequence>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>				
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ"/>    		
+			<xs:element name="ШтрихкодыУпаковок" type="tns:ДокументСтрокаТЧ.ЗаданиеНаСборкуКомплектовЧЗ.ШтрихкодыУпаковок" minOccurs="0" maxOccurs="99999"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЗаданиеНаСборкуКомплектовЧЗ.ШтрихкодыУпаковок">
+		<xs:sequence>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументОбъект.ЛистМаркировки">
+		<xs:sequence>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>				
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЛистМаркировки"/>
+			<xs:element name="ШтрихкодыУпаковок" type="tns:ДокументСтрокаТЧ.ЛистМаркировки.ШтрихкодыУпаковок" minOccurs="0" maxOccurs="99999"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистМаркировки.ШтрихкодыУпаковок">
+		<xs:sequence>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументОбъект.ЛистСборкиКомплектовЧЗ">
+		<xs:sequence>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>				
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЛистСборкиКомплектовЧЗ"/>
+			<xs:element name="ШтрихкодыУпаковок" type="tns:ДокументСтрокаТЧ.ЛистСборкиКомплектовЧЗ.ШтрихкодыУпаковок" minOccurs="0" maxOccurs="99999"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистСборкиКомплектовЧЗ.ШтрихкодыУпаковок">
+		<xs:sequence>
+			<xs:element name="ШтрихкодКомплекта" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументОбъект.ЛистНабора">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЛистНабора"/>
+			<xs:element name="DeletionMark" type="xs:boolean"/>
+			<xs:element name="Date" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>				
+			<xs:element name="НачалоСканирования" type="xs:dateTime"/>
+			<xs:element name="ОкончаниеСканирования" type="xs:dateTime"/>			
+			<xs:element name="Posted" type="xs:boolean"/>
+			<xs:element name="СозданНаТСД" type="xs:boolean"/>	
+			<xs:element name="ОтключитьКонтрольСканирования" type="xs:boolean"/>					
+			<xs:element name="НеполныйКороб" type="xs:boolean"/>							
+			<xs:element name="ДокОснование" type="ns3:DocumentRef.ЗаданиеНабора"/>
+			<xs:element name="Наборщик" type="ns3:CatalogRef.ФизическиеЛица"/>
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>
+			<xs:element name="ТипКороба" type="ns3:CatalogRef.ТипыКоробов" use="optional"/>
+			<xs:element name="Товары" type="tns:ДокументСтрокаТЧ.ЛистНабора.Товары" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ЗаданияНабора" type="tns:ДокументСтрокаТЧ.ЛистНабора.ЗаданияНабора" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ШтрихкодыУпаковок" type="tns:ДокументСтрокаТЧ.ЛистНабора.ШтрихкодыУпаковок" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ОшибкиСотрудников" type="tns:ДокументСтрокаТЧ.ЛистНабора.ОшибкиСотрудников" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ШтрихкодыКоробокДляАгрегации" type="tns:ДокументСтрокаТЧ.ЛистНабора.ШтрихкодыКоробокДляАгрегации" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ИспользованиеБеспроводногоПринтера" type="xs:boolean"/>		
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистНабора.Товары">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Единица" type="ns3:CatalogRef.Единицы"/>
+			<xs:element name="Коэффициент" type="xs:decimal"/>
+			<xs:element name="Объем" type="xs:decimal"/>
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>
+			<xs:element name="ШК" type="xs:string"/>
+			<xs:element name="ШКМатрицы" type="xs:string"/>
+			<xs:element name="ШККонтрагентаДополнительный" type="xs:string"/>		
+			<xs:element name="ШтВКоробе" type="xs:decimal"/>
+			<xs:element name="ТипЗаполнения" type="xs:decimal"/>
+			<xs:element name="ПорядковыйНомерКоробки" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистНабора.ШтрихкодыУпаковок">
+		<xs:sequence>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="НомерЗаказа" type="xs:string"/>
+			<xs:element name="ШтрихкодНабора" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистНабора.ОшибкиСотрудников">
+		<xs:sequence>
+			<xs:element name="ВидОшибки" type="ns3:EnumRef.ВидыОшибокСотрудников"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистНабора.ЗаданияНабора">
+		<xs:sequence>
+			<xs:element name="ЗаданиеНабора" type="ns3:DocumentRef.ЗаданиеНабора"/>
+		</xs:sequence>
+	</xs:complexType>         
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистНабора.ШтрихкодыКоробокДляАгрегации">
+		<xs:sequence>
+			<xs:element name="ИсходныйКодКоробки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="НовыйКодКоробки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		</xs:sequence>
+	</xs:complexType>         
+	
+		
+	<xs:complexType name="ДокументОбъект.ЗаданиеНаАгрегацию">
+		<xs:sequence>
+			<xs:element name="Дата" type="xs:dateTime"/>
+			<xs:element name="Номер" type="xs:string"/>		
+			<xs:element name="Posted" type="xs:boolean"/>	
+			<xs:element name="DeletionMark" type="xs:boolean"/>							
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЗаданиеНаАгрегацию"/>      
+			<xs:element name="КонтрагентСтрокой" type="xs:string"/>
+			<xs:element name="ОрганизацияСтрокой" type="xs:string"/>							
+			<xs:element name="ТипКороба" type="ns3:CatalogRef.ТипыКоробов" use="optional"/>
+			<xs:element name="НомерНакладной" type="xs:string"/>			
+			<xs:element name="НомерЗаказа" type="xs:string"/>			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументОбъект.ЛистПереукладки">
+		<xs:sequence>
+			<xs:element name="DeletionMark" type="xs:boolean"/>
+			<xs:element name="Date" type="xs:dateTime"/>  
+			<xs:element name="Номер" type="xs:string"/>			
+			<xs:element name="Ссылка" type="ns3:DocumentRef.ЛистПереукладки"/>		
+			<xs:element name="ДатаНачалаСканирования" type="xs:dateTime"/>
+			<xs:element name="ДатаОкончанияСканирования" type="xs:dateTime"/>			
+			<xs:element name="Posted" type="xs:boolean"/>
+			<xs:element name="ОтправленНаТСД" type="xs:boolean"/>	
+			<xs:element name="ЗагруженИзТСД" type="xs:boolean"/>														
+			<xs:element name="ЗаданиеНаАгрегацию" type="ns3:DocumentRef.ЗаданиеНаАгрегацию"/>			
+			<xs:element name="СканировщикФизЛицо" type="ns3:CatalogRef.ФизическиеЛица"/>       
+			<xs:element name="КодАгрегации" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>	
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>           
+			<xs:element name="НомерКоробки" type="xs:decimal"/>		
+			<xs:element name="ТипКороба" type="ns3:CatalogRef.ТипыКоробов" use="optional"/>
+			<xs:element name="Товары" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.Товары" minOccurs="0" maxOccurs="99999"/>
+			<xs:element name="ШтрихкодыУпаковок" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.ШтрихкодыУпаковок" minOccurs="0" maxOccurs="99999"/>	
+			<xs:element name="СодержимоеБлочка" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.СодержимоеБлочка" minOccurs="0" maxOccurs="99999"/>	
+			<xs:element name="БлочкиВсего" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.БлочкиВсего" minOccurs="0" maxOccurs="99999"/>	
+			<xs:element name="ШтрихкодыУпаковокБлочков" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.ШтрихкодыУпаковокБлочков" minOccurs="0" maxOccurs="99999"/>	
+			<xs:element name="ОшибкиСотрудников" type="tns:ДокументСтрокаТЧ.ЛистПереукладки.ОшибкиСотрудников" minOccurs="0" maxOccurs="99999"/>
+		</xs:sequence>
+	</xs:complexType>           
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.Товары">
+		<xs:sequence>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>      
+			<xs:element name="Отсканировано" type="xs:decimal"/>
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>
+			<xs:element name="ШК" type="xs:string"/>	
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.ШтрихкодыУпаковок">
+		<xs:sequence>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="ШтрихкодБлочка" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>			
+			<xs:element name="Количество" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.СодержимоеБлочка">
+		<xs:sequence>
+			<xs:element name="id_Блочка" type="xs:decimal"/>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Отсканировано" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.БлочкиВсего">
+		<xs:sequence>
+			<xs:element name="id_Блочка" type="xs:decimal"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Отсканировано" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.ШтрихкодыУпаковокБлочков">
+		<xs:sequence>
+			<xs:element name="ШтрихкодУпаковки" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="Отсканировано" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="ДокументСтрокаТЧ.ЛистПереукладки.ОшибкиСотрудников">
+		<xs:sequence>
+			<xs:element name="ВидОшибки" type="ns3:EnumRef.ВидыОшибокСотрудников"/>
+			<xs:element name="Количество" type="xs:decimal"/>
+			<xs:element name="Номенклатура" type="ns3:CatalogRef.Номенклатура"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Единицы">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Единицы"/>
+			<xs:element name="Владелец" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="СправочникОбъект.ШтрихкодыУпаковокТоваров">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+			<xs:element name="Владелец" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>			
+			<xs:element name="ЗначениеШтрихкода" type="xs:string"/>		
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>
+	
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Контрагенты">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Контрагенты"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Контрагенты"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Цвета">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Цвета"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Цвета"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Размеры">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Размеры"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Размеры"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Пользователи">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Пользователи"/>			
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Пользователи"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ФизЛицо" type="ns3:CatalogRef.ФизическиеЛица" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СправочникОбъект.ФизическиеЛица">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.ФизическиеЛица"/>			
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.ФизическиеЛица"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="ШтрихКод" type="xs:string" nillable="true" minOccurs="0" use="optional"/>					
+			<xs:element name="Наименование" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.ТипыКоробов">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.ТипыКоробов"/>	
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>								
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.ТипыКоробов"/>
+			<xs:element name="ШтрихКод" type="xs:string" nillable="true" minOccurs="0" use="optional"/>					
+			<xs:element name="Наименование" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="СправочникОбъект.Номенклатура">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Номенклатура"/>			
+			<xs:element name="КодПроизводителя" type="xs:string" nillable="true" minOccurs="0" use="optional"/>
+			<xs:element name="ШтукВКоробке" type="xs:decimal" nillable="true" minOccurs="0" use="optional"/>
+			<xs:element name="ШтукВКоробочке" type="xs:decimal" nillable="true" minOccurs="0" use="optional"/>				
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="Цвет" type="ns3:CatalogRef.Цвета" nillable="true" minOccurs="0" use="optional"/>
+			<xs:element name="Размер" type="ns3:CatalogRef.Размеры" nillable="true" minOccurs="0" use="optional"/>
+			<xs:element name="ОтгрузкаТолькоЧерезЧЗ" type="xs:boolean" minOccurs="0" use="optional"/>
+			<xs:element name="ВидНоменклатуры" type="ns3:EnumRef.ВидыНоменклаутры"/>
+			<xs:element name="ВесБруттоШтуки" type="xs:decimal" nillable="true" minOccurs="0" use="optional"/>				
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СправочникОбъект.Склады">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.Склады"/>
+			<xs:element name="ЭтоГруппа" type="xs:boolean"/>			
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Родитель" type="ns3:CatalogRef.Склады"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ЭтоСкладМаркированногоТовара" type="xs:boolean" minOccurs="0" use="optional"/>			
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СправочникОбъект.ШтрихКоды">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.ШтрихКоды"/>
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Владелец" type="ns3:CatalogRef.Номенклатура"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="ТипШК" type="ns3:EnumRef.ТипыШтрихКодов"/>
+			<xs:element name="ВидШК" type="ns3:EnumRef.ВидыШК"/>
+			<xs:element name="ШтВКоробе" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="СправочникОбъект.ПринтерыЭтикеток">
+		<xs:sequence>
+			<xs:element name="Ссылка" type="ns3:CatalogRef.ПринтерыЭтикеток"/>
+			<xs:element name="ПометкаУдаления" type="xs:boolean"/>
+			<xs:element name="Код" type="xs:string"/>
+			<xs:element name="Наименование" type="xs:string"/>
+			<xs:element name="АдресПринтераБлютус" type="xs:string"/>
+			<xs:element name="АдресWiFi" type="xs:string"/>
+			<xs:element name="МаксимальныйРазмерБумагиДляПечати" type="ns3:EnumRef.ВидыРазмеровБумаги"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d19bf58d-7227-4674-bb62-3dba9835e940">
+  <producedTypes>
+    <objectType typeId="ad432145-cda8-4775-a56f-18a7b6b1cc64" valueTypeId="d8240a62-ec58-446d-aa3b-7cb65d421f48"/>
+    <managerType typeId="5c262ec1-8d0d-43b8-b3b8-bb3b53d10b1b" valueTypeId="96317649-ae0f-4efe-abbc-1570a2037530"/>
+  </producedTypes>
+  <name>РаботаСТСДчерезRDP</name>
+  <synonym>
+    <key>ru</key>
+    <value>Работа СТСДчерез RDP</value>
+  </synonym>
+  <defaultForm>DataProcessor.РаботаСТСДчерезRDP.Form.ЗонаХранения</defaultForm>
+  <attributes uuid="9742b7bd-62c7-45e8-b38f-f233a49f820e">
+    <name>ЗонаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗоныХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5556ed01-3b9f-409c-b246-b93d491e5c4e">
+    <name>ЗонаХраненияПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗоныХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="473f0124-c7e5-4894-a1d1-bbcf7d1ed7c2">
+    <name>ТипДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="92af42e2-4d71-4c76-945d-191d3ea37cba">
+    <name>РежимПаллетирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Режим паллетирования</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9e5c735c-0811-4659-873c-1435b3a3f4b8">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f2666866-674e-4fa0-842d-02953be56cfa">
+    <name>ВидРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид работы</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыВыполняемыхРабот</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="91183d6a-923b-4217-9ad0-2d1418cdef9b">
+    <name>СписокНакладных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список накладных</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c4de0ab9-a184-4089-b865-423048559998">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="5e61371c-1dff-4577-99c6-29f4f5022491">
+    <name>Основная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e821d505-1099-4815-9609-b90aa1eab66c">
+    <name>ЗонаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4036849d-6953-4c69-a911-ef92e68e35fd">
+    <name>ЗонаХраненияПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения получатель</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1336884d-f429-461b-aa17-e2707e97826a">
+    <name>Сообщение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="2b2718ac-ee10-4040-b175-1748928329fd">
+    <name>ФормаПоискаЛЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма поиска ЛЗ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3d422ff3-d304-41aa-aad2-0ce1d0ffcf89">
+    <name>ФормаПоискаПаллеты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма поиска паллеты</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a5ec0610-14fc-43f5-9ea6-9a14c6a606b5">
+    <name>УстановкаСотрудника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Установка сотрудника</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="517c468c-2d92-4daa-829f-9f15315f3b50">
+    <name>ВложениеДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вложение документов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="629032c1-65b4-4ad3-b3f6-8c78d13360cb">
+    <name>ВыборРежимаПаллетирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор режима паллетирования</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="faded501-0662-4adc-ae30-062f849febf1">
+    <name>Вопрос</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вопрос</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="d760f776-6a63-4231-913e-4f2ae43910ae">
+    <name>ОтветственноеХранение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственное хранение</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7ca0b377-9340-49b8-b732-a76e62b84d22">
+    <name>ФормаУказанияГабаритногоОбъема</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма указания габаритного объема</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="00cde9f6-3e8c-4733-ac42-df7b345d2b3a">
+    <name>ФормаВводаШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ввода ШК</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c88671c5-a570-4695-bb60-4bf99f8d5658">
+    <name>ФормаУказанияКоличествоКоробокВПаллете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма указания количество коробок в паллете</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="519363ad-547a-4c4d-a6b3-55ce8f3c74a8">
+    <name>КоллективныеРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коллективные работы</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ec28d4c4-9e85-460e-b273-593616df473f">
+    <name>ФормПоискаКоллективнойРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форм поиска коллективной работы</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e05181eb-452b-492b-b80e-2cbef43d2fe4">
+    <name>ВыборЗоныХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор зоны хранения</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7bf631be-4e4c-40f2-8783-bfcb25577f64">
+    <name>ВыборСотрудника</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор сотрудника</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4664d2ff-991a-40a6-a95c-74830d395e2e">
+    <name>СозданиеПРМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создание ПРМ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="eaa34768-9e9b-4948-aefb-1a4b85efb237">
+    <name>ВыборТипаПРМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор типа ПРМ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="3df737c4-5d87-4496-8e60-10d0b131e690">
+    <name>ВыборВидаРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор вида работ</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="40386126-b1ab-41f3-90b5-21f204e19ebf">
+    <name>СканированиеСпискаНакладных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сканирование списка накладных</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="0156599a-341f-4bf7-ad14-88135a0a10d3">
+    <name>ФормаУказанияКоличестваСлоевНаПаллете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма указания количества слоев на паллете</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f6cf5e08-88d8-416d-8267-03a2cf5daf4d">
+    <name>ФормаПоискаКоробок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма поиска коробок</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

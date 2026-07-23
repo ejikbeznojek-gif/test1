@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExchangePlan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e5990747-f3a1-4018-882a-df692385dbef" thisNode="b0a733b0-f3c6-4674-beaf-281038dbfc2d">
+  <producedTypes>
+    <objectType typeId="65459b3f-2b53-49b3-9242-865e5c5f2521" valueTypeId="3b2978da-a7ad-492a-9798-cbfa7b0dbe89"/>
+    <refType typeId="718f9e78-af44-45ee-b342-890fb0411aa1" valueTypeId="f854956a-6360-4544-a69c-8257db59f237"/>
+    <selectionType typeId="3beee0f7-8930-485c-bd85-f565a4261ad5" valueTypeId="b94501ed-5049-431d-9d00-ac88f71230f7"/>
+    <listType typeId="144a0431-27c8-4f44-aaa8-a2d055fafc51" valueTypeId="7d89f548-c680-4600-af5d-a918b12d0a16"/>
+    <managerType typeId="1878a0b0-d37c-4650-ab80-2bd415f9c70c" valueTypeId="a8f203b3-9006-4901-a9a3-1aba3b2c4aef"/>
+  </producedTypes>
+  <name>ВнешниеКлиенты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Внешние клиенты</value>
+  </synonym>
+  <inputByString>ExchangePlan.ВнешниеКлиенты.StandardAttribute.Description</inputByString>
+  <inputByString>ExchangePlan.ВнешниеКлиенты.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <codeLength>5</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <content>
+    <mdObject>Catalog.Размеры</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <content>
+    <mdObject>Catalog.Номенклатура</mdObject>
+  </content>
+  <content>
+    <mdObject>Catalog.ШтрихКоды</mdObject>
+  </content>
+  <content>
+    <mdObject>Document.ПрайсЛист</mdObject>
+  </content>
+  <content>
+    <mdObject>Catalog.Цвета</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <content>
+    <mdObject>Document.РасходнаяНакладная</mdObject>
+  </content>
+  <content>
+    <mdObject>Catalog.КлассификаторСтранМира</mdObject>
+    <autoRecord>Allow</autoRecord>
+  </content>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>ExchangePlan.ВнешниеКлиенты.Form.ФормаУзла</defaultObjectForm>
+  <attributes uuid="c3811add-ef4c-43dd-91cb-5e1ae33e8cfd">
+    <name>КаталогFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8ec43d25-9341-453a-849a-6d48c184b990">
+    <name>НеПроизводитьЗагрузку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Не производить загрузку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="1e5cb012-d800-42c0-a3c1-32a8a9d55a3f">
+    <producedTypes>
+      <objectType typeId="eb1d94ab-f0f0-47dc-9bcd-06c0d6d0f6e7" valueTypeId="54adeeec-81da-4b05-8155-b6e6e0133724"/>
+      <rowType typeId="46a2e741-2b64-4181-813b-63c3720fa381" valueTypeId="28ec6f79-791b-43b9-bc6d-376978357090"/>
+    </producedTypes>
+    <name>ВыгружаемаяНоменклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выгружаемая номенклатура</value>
+    </synonym>
+    <attributes uuid="e1c8f807-ee7d-45e6-9eeb-d9d948e2cabb">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <indexing>Index</indexing>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="4140c356-e85e-4595-b753-c2d3a806f27a">
+    <producedTypes>
+      <objectType typeId="cc6779c6-fbe0-4784-866e-f1731433a510" valueTypeId="847a265c-dc28-451e-bb38-5fe752aafa11"/>
+      <rowType typeId="ce80a09a-d18a-4221-829c-c36968c3bdcc" valueTypeId="e56b2b97-a20d-4705-9290-fe1e817f0907"/>
+    </producedTypes>
+    <name>ТипыЦен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Типы цен</value>
+    </synonym>
+    <attributes uuid="1c734cea-aefa-4328-894b-e6b08372f67c">
+      <name>ТипЦен</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип цен</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТипыЦен</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="2c8a0f2d-9c8e-4d65-9c5b-6fb71f9ce135">
+    <name>ФормаУзла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма узла</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="c10f9546-6e8c-40d3-b5b3-e5b2d2b5f06f">
+    <name>Правила</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила</value>
+    </synonym>
+    <templateType>HTMLDocument</templateType>
+  </templates>
+</mdclass:ExchangePlan>

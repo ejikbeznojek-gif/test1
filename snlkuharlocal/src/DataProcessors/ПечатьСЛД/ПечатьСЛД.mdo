@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8da9d056-a917-4110-b43c-3e886db4712f">
+  <producedTypes>
+    <objectType typeId="de2205f7-be48-474a-a716-b5194540bc64" valueTypeId="8269c767-b49f-4f6e-9828-276b014e9bbd"/>
+    <managerType typeId="5973b4d8-80da-4ce1-97f4-e719711c9d49" valueTypeId="3e05240a-9bbb-43c4-87fb-43726510e0d0"/>
+  </producedTypes>
+  <name>ПечатьСЛД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать СЛД</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьСЛД.Form.Форма</defaultForm>
+  <attributes uuid="d295497d-a5b1-4e63-b742-5a80e584a2a7">
+    <name>ТекДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.РасходнаяНакладная</types>
+      <types>DocumentObject.ЛистНабора</types>
+      <types>DocumentObject.ПриходнаяНакладная</types>
+      <types>DocumentObject.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9eae3905-37c3-4769-b720-f9ecdeaf3add">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bd3db7fb-56dc-41f0-9a17-1067483e9916">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="9627a279-efc9-4551-a897-807d5c1071a5">
+    <producedTypes>
+      <objectType typeId="1fb30095-cb6b-4b01-8d13-0f623083bcd5" valueTypeId="20188f46-01ee-4768-b021-1c22cd867d33"/>
+      <rowType typeId="a37116c9-fe73-44b8-81e3-558fd989352f" valueTypeId="626f170f-980b-4ae5-b413-5ed7c8563549"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <attributes uuid="cefde69e-f165-4168-83c0-e9df54d5c8d0">
+      <name>Пометка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пометка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="11771092-87b2-4308-8298-0657fda580c8">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="f6b6b0ab-f092-4d6a-9e14-5c34f93bcb24">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="cc7176a0-472b-4a75-a0a1-5ec1e288dab3">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

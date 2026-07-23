@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="38a03db8-79bf-4093-a38e-860399c66cb3">
+  <producedTypes>
+    <objectType typeId="cca1f044-e22f-4832-92e1-10ec8d60263f" valueTypeId="934517ff-75f1-46bc-89c3-e85f64e9c17a"/>
+    <managerType typeId="08f7de69-9c4f-4833-b085-1e2e1c5ae083" valueTypeId="b59b3f94-beb1-4527-903a-75dba7fe53b8"/>
+  </producedTypes>
+  <name>АРМ_ЗакрытиеМинусов</name>
+  <synonym>
+    <key>ru</key>
+    <value>АРМ закрытие минусов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.АРМ_ЗакрытиеМинусов.Form.Форма</defaultForm>
+  <attributes uuid="29e4d0e7-8cb5-4c96-b03a-5c34026c8bd9">
+    <name>ФизическийСклад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физический склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="0f83d5d8-4ed3-47b9-a463-170b53d2f76c">
+    <producedTypes>
+      <objectType typeId="3c7466b7-9251-40a1-98f4-1b3903f4fa32" valueTypeId="58d419c7-6c53-4f7d-8a48-ab6de3910e99"/>
+      <rowType typeId="fe30f636-a541-47a9-b493-d01cc40f77a7" valueTypeId="e6d960e2-94ba-41b7-8568-0f157625ed35"/>
+    </producedTypes>
+    <name>ДокументыСПроблемнойДатойВременем</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы с проблемной датой временем</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="087b3ff4-63a8-4c81-865a-33fb60bdcc1c">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходнаяНакладная</types>
+        <types>DocumentRef.Перемещение</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="78603cdc-641b-4cbb-94f4-2114f80dd792">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6b76382a-150e-4d91-9676-886cb06524fe">
+      <name>СостояниеДокумента</name>
+      <synonym>
+        <key>ru</key>
+        <value>Состояние документа</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СостоянияНакладной</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="b94a5630-d2e5-4ef1-94d3-6ea61a5d8a0a">
+    <producedTypes>
+      <objectType typeId="11df5958-3945-475c-a157-26936e7664d5" valueTypeId="265a3cb1-22f0-4e22-8fb0-e2c1c7e06ede"/>
+      <rowType typeId="2cf8c362-9217-4ee5-ba3d-e8cee6a15d0b" valueTypeId="1b7dcd52-a4a2-45e9-96ec-4b3af62af3f9"/>
+    </producedTypes>
+    <name>ВиртуальныеПРМкУдалению</name>
+    <synonym>
+      <key>ru</key>
+      <value>Виртуальные ПРМк удалению</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="ed3cd8c9-8c49-4db3-8580-07eae04dee6d">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6f996380-8bd9-4a66-86eb-49888c2cba6a">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Перемещение</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dc37694b-0878-4a2f-bff6-67533051d6f0">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f5e5a6f4-ab7e-422d-ac59-2d38e78b6521">
+      <name>СкладПолучатель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад получатель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9443c697-9c25-40bb-aec3-f37532b43b64">
+      <name>Комментарий</name>
+      <synonym>
+        <key>ru</key>
+        <value>Комментарий</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="a2f228aa-5bd6-452c-af44-dc3ee28d23d1">
+    <producedTypes>
+      <objectType typeId="b849084d-69f5-4808-9ce3-8da22137eddd" valueTypeId="67c702b5-7b65-4ff5-9c8b-fbfec71821a7"/>
+      <rowType typeId="b84c3fa5-13e7-4ad5-a455-9bd1edfb0079" valueTypeId="0c4f5008-bb79-4c64-89aa-fc5ab9d15df7"/>
+    </producedTypes>
+    <name>ПеремещениеДляОбнуленияВиртуальныхСкладов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перемещение для обнуления виртуальных складов</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="241b921d-5d20-4074-a44e-e978372a2fbc">
+      <name>ВиртуальныйСклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Виртуальный склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="1f88d052-0bc2-4a31-8f40-87a20f59934e">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Перемещение</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="577f2e0b-00fe-4191-87dd-765b9445eacf">
+    <producedTypes>
+      <objectType typeId="8f565051-e445-4f53-a3b5-8d80f64fcaf4" valueTypeId="28c73c54-0c89-4165-870b-a2781f0a38a4"/>
+      <rowType typeId="2c4e59f4-e1ab-4cc4-b60b-65dbe9dbcc4d" valueTypeId="1b5c578d-721c-4c88-a841-c8fb18ec7442"/>
+    </producedTypes>
+    <name>ПеремещенияНаВиртуальныеСклады</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перемещения на виртуальные склады</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="8facbf77-6c19-486d-a50d-56fb333a94f0">
+      <name>ВиртуальныйСклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Виртуальный склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="8a3212be-d626-4477-a532-edf6d68b7e90">
+      <name>День</name>
+      <synonym>
+        <key>ru</key>
+        <value>День</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a7881fe9-0601-42b2-9503-1c63381511bc">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Перемещение</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="bd86bec4-0c09-450c-be93-c67502f5409e">
+    <producedTypes>
+      <objectType typeId="f113d9f1-ec28-4509-8d7a-2c7c1f621c31" valueTypeId="4bdd5146-b0e4-417d-83ef-8b0cbd70b7c7"/>
+      <rowType typeId="21622bff-7e3f-4553-b511-514c5de76e62" valueTypeId="36c6c212-055f-4073-82bf-3818960458f1"/>
+    </producedTypes>
+    <name>ПеремещенияСВиртуальныхСкладов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Перемещения с виртуальных складов</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="c9b869de-7a91-42c7-b1ec-bf52ddb4f349">
+      <name>ВиртуальныйСклад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Виртуальный склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="0d6e1c4f-98c1-43e2-8799-bf0d664ffb4c">
+      <name>День</name>
+      <synonym>
+        <key>ru</key>
+        <value>День</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="18255864-bc19-4eb2-bc6b-31a7525502c1">
+      <name>Документ</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Перемещение</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="2d6839b5-a675-4f98-a25c-dc730e8f5768">
+    <producedTypes>
+      <objectType typeId="598fadeb-dc5d-43dc-91e8-52de331a9542" valueTypeId="58871bb5-db97-42a5-907e-9630027ebc72"/>
+      <rowType typeId="e48d8cd4-195d-4a34-8a15-d813531b64bd" valueTypeId="0024fed0-420e-40c9-bc33-b414e63f5cc2"/>
+    </producedTypes>
+    <name>ОбработанныеДни</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработанные дни</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="ad962871-2e59-4be2-a86a-1810e08b7e73">
+      <name>День</name>
+      <synonym>
+        <key>ru</key>
+        <value>День</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="727a7d6f-e930-41e5-961a-128da7e38238">
+      <name>МинусаЗакрыты</name>
+      <synonym>
+        <key>ru</key>
+        <value>Минуса закрыты</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6c700af8-4285-445f-8dee-755be23a2152">
+      <name>ИзлишкиЗабраны</name>
+      <synonym>
+        <key>ru</key>
+        <value>Излишки забраны</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9a5b6449-c087-4c76-b413-91e587f21bb1">
+      <name>ДеньОбработан</name>
+      <synonym>
+        <key>ru</key>
+        <value>День обработан</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="7fea3afe-27a8-4ea3-945a-ee61057cc98d">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

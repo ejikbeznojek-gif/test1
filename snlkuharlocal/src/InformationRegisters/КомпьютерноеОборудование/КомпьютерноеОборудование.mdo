@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61c2d25f-cab5-4f3d-a93a-df0c28f8beeb">
+  <producedTypes>
+    <selectionType typeId="e3b3d372-3ddc-4698-a9de-b73ddfbbf10a" valueTypeId="fee556e2-5acf-4ce3-b22b-a5ebe1cef2dc"/>
+    <listType typeId="e993a8b1-d177-4b00-bc9c-01b449ea4391" valueTypeId="8a49fab1-d838-4f0f-9307-f2c3dc5b4a81"/>
+    <managerType typeId="8fea48b4-79c8-4b05-a54c-ac84c198df09" valueTypeId="1997e425-7c36-4b56-91d3-7af84e7afada"/>
+    <recordSetType typeId="d5347a42-2a81-41b3-a57e-e8910b6b5dce" valueTypeId="d3fb0444-4414-49ea-b2f9-b5043a25ff2c"/>
+    <recordKeyType typeId="edcd6fb6-6631-4037-b1c1-ad667d936c63" valueTypeId="70fdbac0-3e66-4233-af9b-d2cb22329a74"/>
+    <recordType typeId="29d0e121-b09f-4b81-9254-0cb892118987" valueTypeId="92f72573-cee2-4c18-a3a9-7defb13b6397"/>
+    <recordManagerType typeId="99c18ca7-d07b-457d-a25c-7e8aaf82563e" valueTypeId="9a7a94d5-60be-47a7-a398-fec16d4ff349"/>
+  </producedTypes>
+  <name>КомпьютерноеОборудование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Компьютерное оборудование</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="7dcc2c22-8243-4156-9f79-12a12fc5cb51">
+    <name>НачальнаяЦена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начальная цена</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="91242420-d8f2-45c5-bcd0-cd8333c60660">
+    <name>ДатаВводаВЭксплуатацию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата ввода в эксплуатацию</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="42bf34e0-656c-46db-90c6-77b8360b0da0">
+    <name>СрокГарантии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок гарантии</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c0545015-4637-492c-b875-bbd92696d67b">
+    <name>ИнвентарныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Инвентарный номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fad7166b-0ea9-4939-af44-b6846472c481">
+    <name>СерийныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серийный номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9599d61b-c1ab-4430-8583-2009cbcb7b87">
+    <name>Категория</name>
+    <synonym>
+      <key>ru</key>
+      <value>Категория</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Категории</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

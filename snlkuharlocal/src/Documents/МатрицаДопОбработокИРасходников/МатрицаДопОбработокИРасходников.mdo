@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec90862a-08cc-4240-8140-333ca9e6e080">
+  <producedTypes>
+    <objectType typeId="b0fa4b05-9395-4ca4-aa7c-589b88f7b2c3" valueTypeId="fd0731e2-41f5-45ab-b106-53ee7a88e426"/>
+    <refType typeId="2efcb272-9924-40f3-8b71-950c96f572c7" valueTypeId="722cafbb-ad8b-4837-822c-16ad7b975d69"/>
+    <selectionType typeId="a891ab16-ec7e-458a-8cf9-27674ab30a00" valueTypeId="e7e6391f-eaee-4ccf-9070-4ecd3c1a671b"/>
+    <listType typeId="981d3b0e-318e-4d6e-9bf0-e593537c5d53" valueTypeId="5d03d268-5068-4a1d-a43f-41387beb6579"/>
+    <managerType typeId="2d32821b-9451-4eae-8ba8-f4fe95f02432" valueTypeId="c27f4279-9e10-44d6-a53d-8c55da22abe8"/>
+  </producedTypes>
+  <name>МатрицаДопОбработокИРасходников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Матрица доп обработок и расходников</value>
+  </synonym>
+  <inputByString>Document.МатрицаДопОбработокИРасходников.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.МатрицаДопОбработокИРасходников.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="c493f3e3-efe4-4543-b661-71e9df15bbbe">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="51fd9421-6395-4dae-a133-51460d30c9e4">
+    <name>ДопОбработка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп обработка</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыДопОбработки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="563eae73-cab2-4d08-860b-8c0075f85f2a">
+    <name>ВремяНаДООднойШтуки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время на ДО одной штуки</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7396a8e3-485d-4341-b19b-6a1901c6eaf7">
+    <name>ИспользоватьНаШтуку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать на штуку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="10b28e23-9290-4bea-b155-471b6217fde4">
+    <name>ИспользоватьНаБлочок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать на блочок</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3e07599f-59da-4c82-9704-3b37f9dd4926">
+    <name>ИспользоватьНаКоробку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать на коробку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7e8306f7-8aff-4c73-8ba2-769530d32b05">
+    <name>ИспользоватьНаПаллет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать на паллет</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7ff53524-d9e1-41fd-bf8b-abb158a71293">
+    <name>ИспользоватьНаНакладную</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать на накладную</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="349ca809-7d56-40d7-8b41-7e2ce67690ad">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="7e8daddb-8ae1-44f1-91fe-275ec01deeac">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="e1090d36-a758-496f-8ed1-ec994ded2247">
+    <producedTypes>
+      <objectType typeId="eebe82fb-91db-43b3-8d54-f84d24cceb6b" valueTypeId="e229fe96-366d-4777-ae5a-00aca5ba3fca"/>
+      <rowType typeId="2502a3c3-c91c-4e37-8dc2-938c323695d6" valueTypeId="e0519a14-94fd-4307-9e8b-4903b197c574"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <attributes uuid="89842859-eff3-4f0c-9d37-b9096726bf29">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="108d3ddf-6cb7-4c99-8975-959b7f9db367">
+      <name>РасходныйМатериал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расходный материал</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d6f6a822-cdcf-4e44-a652-6fc69e1fe843">
+      <name>КоличествоРасходныхМатериалов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество расходных материалов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f1da4286-3099-49f2-bae9-52a8b9418504">
+      <name>ИспользоватьНаШтуку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на штуку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ec52098d-ad12-411c-bf71-7c5a63dcba64">
+      <name>ИспользоватьНаБлочок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на блочок</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cc010b42-600b-4691-81ff-90b18ec1d682">
+      <name>ИспользоватьНаКоробку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на коробку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="62b52db1-8ba7-4a93-8cbb-fc2846c354a5">
+      <name>ИспользоватьНаПаллет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на паллет</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="dc73b523-fe52-4528-a55d-0a66b02b0bcd">
+      <name>ИспользоватьНаНакладную</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на накладную</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="2f684bed-bf5c-4125-a60b-aaa3b3df07cf">
+    <producedTypes>
+      <objectType typeId="5188573d-de9d-4c8f-8ad1-9347d5bbebe3" valueTypeId="dc03b10d-54d4-4def-8a50-750997d13935"/>
+      <rowType typeId="be2fdea8-e97f-411a-8f9c-a5cffc7c59d0" valueTypeId="abfd205e-d2b5-453f-bb8b-784cc450cc47"/>
+    </producedTypes>
+    <name>Услуги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуги</value>
+    </synonym>
+    <attributes uuid="d45f3355-0f61-46c3-98fc-611cb66a8f57">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0389289c-e87e-4cd5-ab8d-a65e73c5a493">
+      <name>ВремяНаДООднойШтуки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Время на ДО одной штуки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4bc68238-1478-42ba-9054-71ce1c2e6d32">
+      <name>ИспользоватьНаШтуку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на штуку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e5f1fa36-8a57-484b-a619-f7ade1047159">
+      <name>ИспользоватьНаБлочок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на блочок</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0982ed48-fa65-414d-954c-a05b11ff28d2">
+      <name>ИспользоватьНаКоробку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на коробку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="20443494-3174-4aee-9c43-b45e138d0802">
+      <name>ИспользоватьНаПаллет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на паллет</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="890351bb-aca6-4907-8488-7285da4bb5fd">
+      <name>ИспользоватьНаНакладную</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на накладную</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="d3c1dfd3-db1c-46ea-a833-7cfcae7608a5">
+    <producedTypes>
+      <objectType typeId="8db5f703-0560-4dd5-81fc-edd946472b2a" valueTypeId="574aba14-83dc-4290-9603-7e9e58590dc9"/>
+      <rowType typeId="0b4dfdfe-0957-42f3-9906-ddf6e08a8edb" valueTypeId="ddffcc9c-9ad5-44c9-aefa-db5452b48ac1"/>
+    </producedTypes>
+    <name>ОбщиеРасходники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общие расходники</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="318b15a4-9ebe-450d-97ae-b3906406e51d">
+      <name>РасходныйМатериал</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расходный материал</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8f705972-9da2-43f4-b36a-5d9a145f6257">
+      <name>КоличествоРасходныхМатериалов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество расходных материалов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>4</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1949a498-dd27-4c75-8946-07083dd29470">
+      <name>ИспользоватьНаШтуку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на штуку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a2c9197c-bf3c-4506-ba9f-1ed9c2e4cbe5">
+      <name>ИспользоватьНаБлочок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на блочок</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b4294cf3-b427-4d15-81db-475a6046ce5b">
+      <name>ИспользоватьНаКоробку</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на коробку</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="de18b95e-0739-45c2-b977-4bb1a2f98dbb">
+      <name>ИспользоватьНаПаллет</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на паллет</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="621fe49d-0ca3-4f2b-a852-bfaf9d458063">
+      <name>ИспользоватьНаНакладную</name>
+      <synonym>
+        <key>ru</key>
+        <value>Использовать на накладную</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

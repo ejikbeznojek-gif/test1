@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="221b0259-0918-48ff-9b6d-2cd531b82116">
+  <producedTypes>
+    <selectionType typeId="a04eeff5-09c7-40d5-9aa0-77500c0bbe3d" valueTypeId="a5b1accb-dcbe-4134-a3d1-3502ceaae672"/>
+    <listType typeId="2877f260-6941-4d48-8309-bdb527caf03f" valueTypeId="550d8c7c-990a-4590-8522-6ccabe5d4d42"/>
+    <managerType typeId="95a35d5b-5e3d-4372-b183-f327e1a927a6" valueTypeId="5fa31300-cb51-45ae-87fa-c079702d7987"/>
+  </producedTypes>
+  <name>Закупки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Закупки</value>
+  </synonym>
+  <defaultForm>DocumentJournal.Закупки.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.ЗаказПоставщику</registeredDocuments>
+  <registeredDocuments>Document.ЗаявкаНаПроизводство</registeredDocuments>
+  <registeredDocuments>Document.КонтрактСПроизводителем</registeredDocuments>
+  <columns uuid="7228dcd3-4769-4e5e-983e-4c0068d52b76">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.Контрагент</references>
+    <references>Document.ЗаказПоставщику.Attribute.Контрагент</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.Контрагент</references>
+  </columns>
+  <columns uuid="4b4536a6-6041-4085-b9b4-fdfbb9bd7199">
+    <name>НомерПоставщика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер поставщика</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.НомерПоставщика</references>
+    <references>Document.ЗаказПоставщику.Attribute.НомерПоставщика</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.НомерПоставщика</references>
+  </columns>
+  <columns uuid="c5964fcb-43b9-4f12-8771-212e1022815d">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.СуммаДокумента</references>
+    <references>Document.ЗаказПоставщику.Attribute.СуммаДокумента</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.СуммаДокумента</references>
+  </columns>
+  <columns uuid="04e189bb-c4b5-4c1c-b831-00cc03113324">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.Валюта</references>
+    <references>Document.ЗаказПоставщику.Attribute.Валюта</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.Валюта</references>
+  </columns>
+  <columns uuid="dcdecd27-ef7a-42a6-9a03-65bbd5c80551">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.КоличествоДокумента</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.КоличествоДокумента</references>
+    <references>Document.ЗаказПоставщику.Attribute.КоличествоДокумента</references>
+  </columns>
+  <columns uuid="87a00fec-ddfe-4fdc-b6c6-57097afc45e6">
+    <name>Объем</name>
+    <synonym>
+      <key>ru</key>
+      <value>V м3.</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.ОбъемДокумента</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.ОбъемДокумента</references>
+    <references>Document.ЗаказПоставщику.Attribute.ОбъемДокумента</references>
+  </columns>
+  <columns uuid="3e3292d9-cedd-4171-81e5-d47ee0ac4cca">
+    <name>СостояниеЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.СостояниеЗаказа</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.СостояниеЗаказа</references>
+    <references>Document.ЗаказПоставщику.Attribute.СостояниеЗаказа</references>
+  </columns>
+  <columns uuid="926866da-bca7-4090-8497-c355997e1d49">
+    <name>ГруппыТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группы товаров</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.ГруппыТоваров</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.ГруппыТоваров</references>
+    <references>Document.ЗаказПоставщику.Attribute.ГруппыТоваров</references>
+  </columns>
+  <columns uuid="543fc2d5-3d15-492f-b926-7191784a4ae9">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.Комментарий</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.Комментарий</references>
+    <references>Document.ЗаказПоставщику.Attribute.Комментарий</references>
+  </columns>
+  <columns uuid="6e104303-3cfb-4333-9748-e9eab449662e">
+    <name>Контракт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контракт</value>
+    </synonym>
+    <references>Document.КонтрактСПроизводителем.Attribute.Контракт</references>
+    <references>Document.ЗаказПоставщику.Attribute.Контракт</references>
+  </columns>
+  <columns uuid="2c7807ee-52c6-4fe0-8426-132d2e1b119b">
+    <name>СостояниеОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние оплаты</value>
+    </synonym>
+    <references>Document.КонтрактСПроизводителем.Attribute.СостояниеОплаты</references>
+  </columns>
+  <columns uuid="760e76b2-ee34-4bee-9223-39047daa5ac0">
+    <name>ДатаПервойОтгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата первой отгрузки</value>
+    </synonym>
+    <references>Document.КонтрактСПроизводителем.Attribute.ДатаПервойОтгрузки</references>
+  </columns>
+  <columns uuid="5108a6b1-2e34-4346-80ab-2cb4016246c4">
+    <name>ETA</name>
+    <synonym>
+      <key>ru</key>
+      <value>ETA</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.ДатаПоступления</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.ДатаПоступления</references>
+    <references>Document.ЗаказПоставщику.Attribute.ДатаПоступления</references>
+  </columns>
+  <columns uuid="491b1e39-c4dc-4e50-848b-bdf476191329">
+    <name>Фабрика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фабрика</value>
+    </synonym>
+    <references>Document.КонтрактСПроизводителем.Attribute.Фабрика</references>
+  </columns>
+  <columns uuid="2a3fcdf4-ada9-40d1-85bd-3a38bea60f7c">
+    <name>ДатаПредоставленияСтикеров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата предоставления стикеров</value>
+    </synonym>
+    <references>Document.ЗаказПоставщику.Attribute.ДатаПредоставленияСтикеров</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.ДатаПредоставленияСтикеров</references>
+  </columns>
+  <columns uuid="27622466-2172-4465-a5e9-f7feb72d0cdf">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <references>Document.ЗаявкаНаПроизводство.Attribute.Организация</references>
+    <references>Document.ЗаказПоставщику.Attribute.Организация</references>
+    <references>Document.КонтрактСПроизводителем.Attribute.Организация</references>
+  </columns>
+  <columns uuid="9eab1fdd-7c18-404e-98f9-8e8e0eaf2c7b">
+    <name>СтатусМаркировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус маркировки</value>
+    </synonym>
+    <references>Document.КонтрактСПроизводителем.Attribute.СтатусМаркировки</references>
+  </columns>
+  <forms uuid="3e7b04f5-059e-46d3-ac53-cd9421fd93af">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

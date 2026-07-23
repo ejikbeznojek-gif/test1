@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="61713998-ae31-447b-977c-0392912ec5ac">
+  <producedTypes>
+    <objectType typeId="f7912598-72e5-4441-ab94-f0033f797dbf" valueTypeId="3ab285c6-6eb3-4c4d-93a8-696c3573ef13"/>
+    <managerType typeId="c717214c-11f1-4b9a-8b3e-324c5a99422d" valueTypeId="c3175876-24cf-488c-a3d1-78ec09742c60"/>
+  </producedTypes>
+  <name>ПечатьЭтикетокЧЗ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать этикеток ЧЗ</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьЭтикетокЧЗ.Form.Форма</defaultForm>
+  <attributes uuid="56009b8a-e690-4e2a-aa8a-8c25b2d6805c">
+    <name>ДокСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.КонтрактСПроизводителем</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="eb3fffb0-1200-4051-8e5c-04a52ed36b52">
+    <name>ШтрихКодУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код упаковки</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="deb1d1e4-b480-42be-82cd-bcc44cbd61df">
+    <name>ЗаменятьГС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заменять ГС</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="a37d9ced-2a31-4363-976b-af668253d23e">
+    <producedTypes>
+      <objectType typeId="943f2a15-1414-4f0f-ac00-35691ec38172" valueTypeId="58f8cc52-b8c9-47ad-bc8f-c0951a331271"/>
+      <rowType typeId="7a9e9946-ab97-4993-96cb-d475abab8ea5" valueTypeId="de56e910-8901-44c3-9964-3892f9592f44"/>
+    </producedTypes>
+    <name>СписокКМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список КМ</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="fef345b2-68d4-46d6-805d-36abe6d2909a">
+      <name>ШтрихКодУпаковки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрих код упаковки</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ad6e3e9a-aa67-474d-bc19-bff7052c1949">
+      <name>Модель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="81613d9b-d9b3-4273-83e3-564db2cab4fd">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="8a081551-e7b5-4424-990a-553dccffb096">
+      <name>Номенклатура_Код</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура код</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="25ded421-2ee7-4ae8-9bdb-b59735b0f849">
+      <name>Модель_Код</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модель код</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="e1ab55fa-df17-4f76-92ad-f6daa548ff2d">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="5e08cc89-d8ef-49f5-bebc-80b4214b402c">
+    <name>ФормаВводаКодов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма ввода кодов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="683ba377-f1a8-47a2-a38b-6d282bc00547">
+    <name>Этикетка_30_35</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 30 35</value>
+    </synonym>
+  </templates>
+  <templates uuid="98cae007-1c9d-4fcb-8bf7-7ab35a19695f">
+    <name>Этикетка_45_30</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 45 30</value>
+    </synonym>
+  </templates>
+  <templates uuid="387399b7-42a1-4168-87c4-f728c9366c17">
+    <name>Этикетка_40_22</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 40 22</value>
+    </synonym>
+  </templates>
+  <templates uuid="7fb7ef09-637b-4899-8bae-047e997993d1">
+    <name>Этикетка_22_40</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 22 40</value>
+    </synonym>
+  </templates>
+  <templates uuid="dfd6a0e2-5c5c-41ca-b2ab-65f8300bc54e">
+    <name>Этикетка_79_36</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 79 36</value>
+    </synonym>
+  </templates>
+  <templates uuid="df943017-5676-4b79-96ff-10a3181c90fd">
+    <name>Этикетка_40_30</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 40 30</value>
+    </synonym>
+  </templates>
+  <templates uuid="63cebd9d-3fe0-41c7-90d7-6d1d2307d4c8">
+    <name>Этикетка_25_50</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 25 50</value>
+    </synonym>
+  </templates>
+  <templates uuid="90a8eee6-a71e-41c5-829d-c4f85f462b4a">
+    <name>Этикетка_30_35_Остатки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 30 35 остатки</value>
+    </synonym>
+  </templates>
+  <templates uuid="2dd9875e-2ea7-4d9f-8dad-1bea361f42e1">
+    <name>Этикетка_25_50_Остатки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 25*50 Остатки</value>
+    </synonym>
+  </templates>
+  <templates uuid="3d863dc4-7e4a-4d58-a042-20f114689187">
+    <name>СписокКодовМаркировка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список кодов маркировка</value>
+    </synonym>
+  </templates>
+  <templates uuid="ab8b4a09-b21e-46ce-84ff-6c9cdd978799">
+    <name>Этикетка_25_25_Остатки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 25 на 25 Остатки</value>
+    </synonym>
+  </templates>
+  <templates uuid="1a7abe4a-2498-4782-bedc-b3732e13e629">
+    <name>Этикетка_25_25</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 25 на 25</value>
+    </synonym>
+  </templates>
+  <templates uuid="cbf669c8-4ebf-49d9-b82f-8c20ecf30abc">
+    <name>Этикетка_40_58_Остатки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка_40 на 58 остатки</value>
+    </synonym>
+  </templates>
+  <templates uuid="07635d4c-7b3b-4cc9-866a-516f4a85b9d1">
+    <name>Этикетка_100_50</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 100*50 SSCC</value>
+    </synonym>
+  </templates>
+  <templates uuid="908cf4d9-e489-4fac-bc37-9605d842951a">
+    <name>Этикетка_30_20</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 30 20</value>
+    </synonym>
+  </templates>
+  <templates uuid="6fb6370c-501f-44ba-8e31-66cf0e0435dc">
+    <name>Этикетка_А4_Паллетная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка А4 Паллетная</value>
+    </synonym>
+  </templates>
+  <templates uuid="7bcffa7c-9d17-4b53-b441-26ec31c2f1fe">
+    <name>Этикетка_75_120</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 75*120 АгрегКод</value>
+    </synonym>
+  </templates>
+  <templates uuid="03839e04-b14c-4d28-9e55-905039079374">
+    <name>Этикетка_20_30</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка 20 30</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

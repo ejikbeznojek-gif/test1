@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb3778db-17d3-4cfd-81af-9509d78940ae">
+  <producedTypes>
+    <objectType typeId="76b53a08-3019-42a5-815b-e5129233356f" valueTypeId="a9e30065-604a-4b25-9df3-e48d43108901"/>
+    <managerType typeId="70def4ba-e4a6-4a3f-b11d-64303d27e5f1" valueTypeId="aebe6d34-17d5-44e7-aa22-df17b07f206f"/>
+  </producedTypes>
+  <name>ПакетнаяПечать</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пакетная печать</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПакетнаяПечать.Form.Форма</defaultForm>
+  <attributes uuid="58d23a04-8292-49a3-b937-4881585a0426">
+    <name>ТекДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5fa06510-5100-45a5-83f2-8956e2931918">
+    <name>НаборФорм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Набор форм</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НаборыПечатныхФорм</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e377f9ca-d627-485f-91f6-62d559fb9c08">
+    <name>СразуНаПринтер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сразу на принтер</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0b1282f7-eb9c-4a64-ba50-4aed97847284">
+    <name>ЗакрытьПослеПечати</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрыть после печати</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c5afa86c-6c25-4133-bbfc-214b6c3d2382">
+    <name>ИмяПринтера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя принтера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6b582c6d-4dda-4331-aa62-fbc18211aea5">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2484263e-6211-40ce-8956-82a4e2a541f8">
+    <name>Сохранять</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сохранять</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="445ebff6-4b0b-4151-b259-e4f0f85aa7b4">
+    <name>КаталогСохраненияВыходныхФорм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог сохранения выходных форм</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9bef3934-2019-46be-84ca-63366497e6ef">
+    <name>Просмотр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Просмотр</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="70c82ad7-57f9-4ce3-adb4-a89c7fdbc90f">
+    <name>КоличествоДопЭкземпляров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество доп. экземпляров</value>
+    </synonym>
+    <comment>Количество дополнительно печатаемых экземпляров документов</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="bfe67055-f57a-4b4f-bb15-d3b5aaedf351">
+    <name>ФорматСохранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формат сохранения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>3</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="017423c3-2ce9-4aeb-8ef8-98120ca678bb">
+    <name>ОтветственноеЛицоПриПечатиДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственное лицо при печати документов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="88d062bf-683d-4ac1-8271-e388dc48dd7b">
+    <name>ТекДокРКМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док РКМ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="645c74cd-1851-49c0-af83-dde23426836c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

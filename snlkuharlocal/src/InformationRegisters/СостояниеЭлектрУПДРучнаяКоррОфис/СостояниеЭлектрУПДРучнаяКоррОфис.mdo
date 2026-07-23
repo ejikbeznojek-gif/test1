@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="441832a3-1d5e-45da-a586-423c5aa3dedf">
+  <producedTypes>
+    <selectionType typeId="01bd498d-7ca5-4710-a6f7-2e08e48bbb84" valueTypeId="9872febe-2fb9-49f7-96e4-26e7debb9e86"/>
+    <listType typeId="d8e028c7-5358-4b54-923a-8771287cec3b" valueTypeId="430a2e5c-f3f1-4343-b609-23d4030d8690"/>
+    <managerType typeId="4fe2b0f7-1b6f-4724-9931-5aa29f6dc1c3" valueTypeId="093d31a0-e44d-4c95-acd0-71cafca4b8af"/>
+    <recordSetType typeId="93325dae-35ff-4c2a-ac63-c0a1098ff35f" valueTypeId="c56ab9bc-3123-42e5-a147-ebe049a7bcea"/>
+    <recordKeyType typeId="0fc016f0-8776-4d11-8448-91bdf5a6b3c7" valueTypeId="6ec55cf7-5b1a-438a-88b7-42f15372ecf4"/>
+    <recordType typeId="2dd46142-8616-4b72-8eed-877ba4f91b9d" valueTypeId="69c5c5dd-42f5-4d85-8be9-f6f54c1ecf2b"/>
+    <recordManagerType typeId="a8173f01-bb26-40be-ac82-7f947e1e7f20" valueTypeId="3e90d91c-8f45-413f-a685-79aed20f036e"/>
+  </producedTypes>
+  <name>СостояниеЭлектрУПДРучнаяКоррОфис</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние электр УПД ручная корр офисом</value>
+  </synonym>
+  <comment>Офис корректирует</comment>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="417019e3-689a-42bc-a3b9-e68742ae24db">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="27a610c3-04df-47a8-9835-a6d149266539">
+    <name>ID_Квитанции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Id квитанции</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0a43c868-96ce-4716-97ac-c56179365477">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="83402e06-d53d-4aba-b5da-1eb0eab0e234">
+    <name>ID_Документа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Id документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4ec83a03-8441-4066-8e75-d6d5a75feb51">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7a421715-38cf-43fc-b83a-cd8d594fed42">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетФактура</types>
+      <types>DocumentRef.КорректировкаЦенВНакладной</types>
+      <types>DocumentRef.КорректировочныйСчетФактура</types>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="43801cb7-586b-492f-902b-a7eb044e3471">
+    <name>СостояниеУПД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние УПД</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеУПД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

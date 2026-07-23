@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="69624e93-6752-48c7-8d39-a4cb6be60e30">
+  <name>СкладскиеДокументПриПроведении</name>
+  <synonym>
+    <key>ru</key>
+    <value>Складские документ при проведении</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.РасходнаяНакладная</types>
+    <types>DocumentObject.Комплектация</types>
+    <types>DocumentObject.ПриходнаяНакладная</types>
+    <types>DocumentObject.Перемещение</types>
+  </source>
+  <event>Posting</event>
+  <handler>CommonModule.ОбработчикиСобытий.СкладскиеДокументыПередЗаписьюПередЗаписью</handler>
+</mdclass:EventSubscription>

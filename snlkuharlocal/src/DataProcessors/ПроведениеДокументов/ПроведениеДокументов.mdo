@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8dafa88c-9802-47f9-9a7f-f3ae66738e2a">
+  <producedTypes>
+    <objectType typeId="1239d3e1-364b-45e9-a89b-60f254cabb87" valueTypeId="969c0d8b-5aec-4a43-88a4-9e0325033d60"/>
+    <managerType typeId="e94bac8d-5f14-4f86-9300-c8541ea4b360" valueTypeId="02681070-2004-4ecb-a711-f53e168e5aa8"/>
+  </producedTypes>
+  <name>ПроведениеДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проведение документов</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПроведениеДокументов.Form.Форма</defaultForm>
+  <attributes uuid="90b667ec-e403-4a58-9d1c-e253f5bf36ac">
+    <name>фПакетныйРежим</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пакетный режим</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fbf28c8b-55e4-4569-8c81-d34775506189">
+    <name>ДокументГраницы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ границы</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9e403820-f3a6-4bea-ade1-a350feb3d885">
+    <name>Дата1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1028bf2d-fa3c-4e24-8556-adb3eecf47d7">
+    <name>Дата2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8a87306f-a180-4b25-89d4-3761b0422c58">
+    <name>Индикатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Индикатор</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="774f1179-1967-4b76-be7e-0ac225d5850f">
+    <producedTypes>
+      <objectType typeId="e857fdb0-d9dd-4a08-a130-3004ed8c798a" valueTypeId="8d23c795-5b5c-43b9-9e0b-a84fabc8749e"/>
+      <rowType typeId="94f34a83-3721-4808-8dad-14101e58786e" valueTypeId="9aeabdbf-26e9-4ba7-8376-9d555e6c9b93"/>
+    </producedTypes>
+    <name>ГП</name>
+    <synonym>
+      <key>ru</key>
+      <value>ГП</value>
+    </synonym>
+    <attributes uuid="b9e2f9f9-3c30-4d0b-a9c3-afa18fbb82ba">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="b16ad64b-c9d0-4e5e-abc5-172b6d8e4a0f">
+      <name>ДатаГраницы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата границы</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="7f4c2119-be0b-40ef-8df8-3e683899f84c">
+      <name>ДокументГраницы</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ границы</value>
+      </synonym>
+      <type>
+        <types>AnyRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="091e7b0e-11ca-4e35-b3f0-600b87ca2dc9">
+      <name>ПервыйДокументЗаГП</name>
+      <synonym>
+        <key>ru</key>
+        <value>Первый документ за ГП</value>
+      </synonym>
+      <type>
+        <types>AnyRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e0f91a9c-db63-42af-a107-a146f794c880">
+      <name>ДатаНачалаПроведения</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала проведения</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="be837981-f671-4e86-a72b-fb6974c339c4">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

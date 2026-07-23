@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eaa55f64-14c2-44f0-b1d2-9cc5dea9c5eb">
+  <producedTypes>
+    <selectionType typeId="1dc8a726-5a92-4c7d-a51b-43feb87c4286" valueTypeId="328516ed-0e73-4607-8e0f-25f94f79b65c"/>
+    <listType typeId="894d8544-f2e0-4491-b00e-64b0803b9e63" valueTypeId="999fa0aa-d0e9-432c-8340-b3d8360ff1d6"/>
+    <managerType typeId="0028b180-3305-4c14-9d26-06f23979f645" valueTypeId="b515650f-f35d-4228-822a-c1a629dd0225"/>
+    <recordSetType typeId="6b0c9d15-4f2e-43e9-b94d-53ab673ca088" valueTypeId="8567bb66-514f-47c5-bbca-bcc3e386e77a"/>
+    <recordKeyType typeId="d65c6e8b-d400-4d04-a0d2-dbd10701a975" valueTypeId="3d8ae4d4-840a-4cf3-bbbd-27a5d3b5421e"/>
+    <recordType typeId="3918fb37-80af-415d-a29e-d35b82906ab0" valueTypeId="db611ed0-653b-46c2-a933-e6fc27858091"/>
+  </producedTypes>
+  <name>ОстаткиТМЦзабаланс</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки ТМЦ за балансом</value>
+  </synonym>
+  <comment>упаковка и т.д.</comment>
+  <defaultListForm>AccumulationRegister.ОстаткиТМЦзабаланс.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="472c8493-3601-4dc6-8f9d-aa786a135fe1">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9a6012ad-541d-4c24-b293-02db58279ebd">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="6e2ddd99-894e-486e-b3db-b90fe59812e1">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="2d9df355-2ead-4c1a-8de7-864e6893d146">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="d5b4534f-e27d-498a-b8ee-1df810650e5e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

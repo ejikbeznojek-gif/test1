@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d2680277-5498-410e-8091-b778bdb6500b">
+  <producedTypes>
+    <objectType typeId="8832b2df-d41a-43ce-9ea7-4383e9ceb1ac" valueTypeId="6d8d9640-db00-4e71-bf0e-cd763cfde1cf"/>
+    <managerType typeId="3c0a85fe-30ae-4721-ae31-dbae39041f7c" valueTypeId="70b51d54-8a30-42f5-b8b0-312a21f5c2e3"/>
+  </producedTypes>
+  <name>УстановкаСостоянийСтрокЛистовНабора</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установка состояний строк листов набора</value>
+  </synonym>
+  <defaultForm>DataProcessor.УстановкаСостоянийСтрокЛистовНабора.Form.Форма</defaultForm>
+  <attributes uuid="e60f618d-af34-41e9-a0f0-e7a25e4341cd">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Комплектация</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f7a79cf4-ecde-4e2b-95cf-25a411748491">
+    <name>ПланНабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>План набора</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПланНабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="748c1c7a-8396-4028-9e88-65650395495d">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumList.СостоянияНакладной</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="cd5fc417-414a-4bba-a26f-230df9fe0fc2">
+    <name>НовоеСостояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Новое состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияНакладной</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="af96a2a1-cace-47b9-a1b8-e2d05ea2e7f5">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ff1fd63b-f824-4175-94b9-46f3b4f5e7ce">
+    <name>СписокСтрокПланаНабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список строк плана набора</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="acc28daa-b4e6-46fe-ae16-322dd8430279">
+    <name>ЛистНабора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Лист набора</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЛистНабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="778106da-33bb-4439-a944-0a41f7137d2e">
+    <name>НомерЧасти</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер части</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e398f9c7-540e-4813-99dc-fdc0d81c70b3">
+    <name>СписокЗаданий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список заданий</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="64263ab0-0043-40f8-b2bf-2e4f438065a0">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

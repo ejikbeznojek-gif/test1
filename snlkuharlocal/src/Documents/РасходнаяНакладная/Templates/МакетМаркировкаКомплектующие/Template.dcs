@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Комплектующие</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Номенклатура</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоШК</dataPath>
+			<field>КоличествоШК</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ШК</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоТоваров</dataPath>
+			<field>КоличествоТоваров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество товаров</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РНК_Товары.Номенклатура КАК Номенклатура,
+	СУММА(ЕСТЬNULL(РНК_Товары.Количество, 0)) КАК Количество
+ПОМЕСТИТЬ РНК_Товары
+ИЗ
+	Документ.РасходнаяНакладная.Товары КАК РНК_Товары
+ГДЕ
+	РНК_Товары.Ссылка = &amp;Ссылка
+	И РНК_Товары.ТребуетсяМаркировка
+
+СГРУППИРОВАТЬ ПО
+	РНК_Товары.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Комплектующие.Продукция КАК Номенклатура,
+	Комплектующие.Номенклатура КАК Комплектующее,
+	СУММА(ЕСТЬNULL(Комплектующие.Количество, 0)) КАК Количество
+ПОМЕСТИТЬ вр_Комплектующие
+ИЗ
+	Документ.РасходнаяНакладная.Комплектующие КАК Комплектующие
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РНК_Товары КАК РНК_Товары
+		ПО Комплектующие.Продукция = РНК_Товары.Номенклатура
+ГДЕ
+	Комплектующие.Ссылка = &amp;Ссылка
+
+СГРУППИРОВАТЬ ПО
+	Комплектующие.Продукция,
+	Комплектующие.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ШтрихкодыУпаковок.ШтрихкодУпаковки.Владелец КАК Номенклатура,
+	ШтрихкодыУпаковок.ШтрихкодУпаковки КАК ШтрихкодУпаковки
+ПОМЕСТИТЬ вр_ШтрихкодыУпаковок
+ИЗ
+	Документ.МаркировкаТоваровИСМП.ШтрихкодыУпаковок КАК ШтрихкодыУпаковок
+ГДЕ
+	ШтрихкодыУпаковок.ШтрихкодУпаковки.ТипШК = ЗНАЧЕНИЕ(Перечисление.ТипыШтрихКодов.Штука)
+	И ШтрихкодыУпаковок.Ссылка.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийМаркировки.Агрегация)
+	И ШтрихкодыУпаковок.Ссылка.Проведен
+	И ШтрихкодыУпаковок.Ссылка.ДокументОснование = &amp;Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МаркировкаТоваровИСМПШтрихкодыКоробок.ШтрихкодКоробки.Владелец КАК Номенклатура,
+	ШтрихкодыУпаковокТоваровВложенныеШтрихкоды.Штрихкод КАК ШтрихкодУпаковки
+ПОМЕСТИТЬ вр_ШтрихКодыКоробок
+ИЗ
+	Документ.МаркировкаТоваровИСМП.ШтрихкодыКоробок КАК МаркировкаТоваровИСМПШтрихкодыКоробок
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.МаркировкаТоваровИСМП КАК МаркировкаТоваровИСМП
+		ПО МаркировкаТоваровИСМПШтрихкодыКоробок.Ссылка = МаркировкаТоваровИСМП.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.МаркировкаТоваровИСМП.ШтрихкодыУпаковок КАК МаркировкаТоваровИСМПШтрихкодыУпаковок
+		ПО (МаркировкаТоваровИСМПШтрихкодыУпаковок.Ссылка = МаркировкаТоваровИСМП.Ссылка)
+			И (МаркировкаТоваровИСМПШтрихкодыУпаковок.ШтрихкодКоробки = МаркировкаТоваровИСМПШтрихкодыКоробок.ШтрихкодКоробки)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ШтрихкодыУпаковокТоваров.ВложенныеШтрихкоды КАК ШтрихкодыУпаковокТоваровВложенныеШтрихкоды
+		ПО МаркировкаТоваровИСМПШтрихкодыКоробок.ШтрихкодКоробки = ШтрихкодыУпаковокТоваровВложенныеШтрихкоды.Ссылка
+ГДЕ
+	МаркировкаТоваровИСМП.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийМаркировки.Агрегация)
+	И МаркировкаТоваровИСМП.ТипШК В (ЗНАЧЕНИЕ(Перечисление.ТипыШтрихКодов.Коробка), ЗНАЧЕНИЕ(Перечисление.ТипыШтрихКодов.Блочок))
+	И МаркировкаТоваровИСМПШтрихкодыУпаковок.Ссылка ЕСТЬ NULL
+	И МаркировкаТоваровИСМПШтрихкодыКоробок.Ссылка.ДокументОснование = &amp;Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вр_ШтрихкодыУпаковок.Номенклатура КАК Номенклатура,
+	вр_ШтрихкодыУпаковок.ШтрихкодУпаковки КАК ШтрихкодУпаковки
+ПОМЕСТИТЬ вр_ШтрихкодыУК
+ИЗ
+	вр_ШтрихкодыУпаковок КАК вр_ШтрихкодыУпаковок
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	вр_ШтрихКодыКоробок.Номенклатура,
+	вр_ШтрихКодыКоробок.ШтрихкодУпаковки
+ИЗ
+	вр_ШтрихКодыКоробок КАК вр_ШтрихКодыКоробок
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вр_ШтрихкодыУК.Номенклатура КАК Номенклатура,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ вр_ШтрихкодыУК.ШтрихкодУпаковки) КАК КоличествоШК
+ПОМЕСТИТЬ вр_ШтрихкодыКомплектов
+ИЗ
+	вр_ШтрихкодыУК КАК вр_ШтрихкодыУК
+
+СГРУППИРОВАТЬ ПО
+	вр_ШтрихкодыУК.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вр_Комплектующие.Номенклатура КАК Номенклатура,
+	СУММА(ЕСТЬNULL(вр_Комплектующие.Количество, 0)) КАК КоличествоТоваров,
+	СУММА(ЕСТЬNULL(вр_ШтрихкодыКомплектов.КоличествоШК, 0)) КАК КоличествоШК
+ПОМЕСТИТЬ вр_Штрихкоды
+ИЗ
+	вр_Комплектующие КАК вр_Комплектующие
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ вр_ШтрихкодыКомплектов КАК вр_ШтрихкодыКомплектов
+		ПО вр_Комплектующие.Комплектующее = вр_ШтрихкодыКомплектов.Номенклатура
+
+СГРУППИРОВАТЬ ПО
+	вр_Комплектующие.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РНК_Товары.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(РНК_Товары.Количество, 0) КАК КоличествоТоваров,
+	ЕСТЬNULL(вр_Штрихкоды.КоличествоШК, 0) КАК КоличествоШК
+ИЗ
+	РНК_Товары КАК РНК_Товары
+		ЛЕВОЕ СОЕДИНЕНИЕ вр_Штрихкоды КАК вр_Штрихкоды
+		ПО РНК_Товары.Номенклатура = вр_Штрихкоды.Номенклатура</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоТоваров</dataPath>
+		<expression>Сумма(КоличествоТоваров)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоШК</dataPath>
+		<expression>Сумма(КоличествоШК)</expression>
+	</totalField>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.РасходнаяНакладная</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоТоваров</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоШК</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Ссылка</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КоличествоТоваров</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КоличествоШК</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КоличествоТоваров</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">КоличествоШК</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:КрасныйЦвет</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

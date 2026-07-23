@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ec399b77-3649-4dbe-b959-a56812238ce1">
+  <producedTypes>
+    <objectType typeId="c047613c-c63a-4da0-b57b-7a5ccef0ce8f" valueTypeId="5c60c32d-e260-4e0b-a440-f5a79a49f442"/>
+    <refType typeId="a7ffedaf-a698-4f9c-aae3-3783b9bb65e0" valueTypeId="30b665c0-4fbd-4551-9da8-0060fdee7fae"/>
+    <selectionType typeId="caa905ce-8337-4546-a7ae-bfa37446e86b" valueTypeId="08c9e857-7efb-44d9-bff5-0b93bc20c4c1"/>
+    <listType typeId="4632f6dc-1150-4f7f-8d0b-7c5a9afccc6b" valueTypeId="34a2106e-2d47-4368-b7ee-0a02d0aedbd6"/>
+    <managerType typeId="d1744205-bcf2-499e-b488-548cfefde41a" valueTypeId="8530108a-3020-4402-b252-b6ebba6347f9"/>
+  </producedTypes>
+  <name>КодыПоставщиков</name>
+  <synonym>
+    <key>ru</key>
+    <value>Коды поставщиков</value>
+  </synonym>
+  <comment>Коды организаций у покупателей </comment>
+  <inputByString>Catalog.КодыПоставщиков.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.КодыПоставщиков.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Контрагенты</owners>
+  <subordinationUse>ToFoldersAndItems</subordinationUse>
+  <codeLength>10</codeLength>
+  <descriptionLength>30</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.КодыПоставщиков.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="9b3f6b87-7161-416a-95e4-c25d8c0b48af">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d52423c1-f370-4c83-8504-30baa3789886">
+    <name>Примечание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Примечание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e24da9d6-c71b-4804-8707-7039072fa06e">
+    <name>Скидка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Скидка</value>
+    </synonym>
+    <comment>Скидка на накладную</comment>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="46dc6ee5-9ade-4e50-a483-48eb3c0f793e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1baef34a-4ba4-4a2c-94e0-891a1cda655b">
+  <producedTypes>
+    <objectType typeId="b35cdbfd-9353-4d33-aaf2-4d767cafcefa" valueTypeId="b3527a4f-6692-4530-9089-06dc8ae3eb65"/>
+    <refType typeId="7f8580af-0779-4781-8bf4-2de807ede6de" valueTypeId="ed5c7bd3-c12a-488b-8ee7-c376a15dbc95"/>
+    <selectionType typeId="8e9bc5ca-2981-421e-be74-fcf02cd11965" valueTypeId="ab26efd9-b9f6-4b7e-a026-2915ef4fe483"/>
+    <listType typeId="c0ace027-01b9-44eb-b69c-2e64dcc101ee" valueTypeId="09e47795-c2d6-476c-9d0b-97954b33d15d"/>
+    <managerType typeId="2ddf4f8f-b990-4031-aa19-8be65c93cafb" valueTypeId="52f0a6d4-e993-47c4-a227-914c65887cc9"/>
+  </producedTypes>
+  <name>ИзмененияКоличестваРасходныхМатериалов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Изменения количества расходных материалов</value>
+  </synonym>
+  <inputByString>Document.ИзмененияКоличестваРасходныхМатериалов.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ОстаткиРасходныхМатериалов</registerRecords>
+  <attributes uuid="d9d49dc1-dbe5-432a-9ffa-bd650f4b3108">
+    <name>ЭтоСписание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это списание</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cbd5ce44-4f0b-4737-8b95-275ed0bbc078">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="eabbe316-e8e6-4737-b070-b5bebd1ecf35">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="08c58584-440d-49bf-a6c7-5b51ccdad231">
+    <producedTypes>
+      <objectType typeId="ec299e32-5554-4e5e-91e9-2a3403b7aafe" valueTypeId="abe19ad7-9e8c-4f42-8254-69d2f5c7a346"/>
+      <rowType typeId="f1aa936a-2769-4a63-af03-47615055c6aa" valueTypeId="187857c5-e48e-4556-946e-73c3b8151662"/>
+    </producedTypes>
+    <name>Материалы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Материалы</value>
+    </synonym>
+    <attributes uuid="d1beea3c-bdaa-4e60-9175-7054ec30b3ba">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ac5eae0c-83dd-4bba-88d4-a98d89700330">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="0f7b494e-e674-4cb7-ad6f-0bca6b9adca4">
+      <name>Сумма</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

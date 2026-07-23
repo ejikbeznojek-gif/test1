@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f1603fdd-a2ac-44a7-a21b-e7e591d2c7bb">
+  <producedTypes>
+    <selectionType typeId="63e53f15-02cb-4037-8148-39ba2bbffd10" valueTypeId="d5d61050-44d6-4d95-8ffb-b8afac14ba06"/>
+    <listType typeId="40ab8889-5b98-4cc7-a0da-88f655470036" valueTypeId="98d321f4-d0ca-4661-91b3-4b66219a55de"/>
+    <managerType typeId="5b4dfc99-e4ff-4489-8030-07900a644726" valueTypeId="4eb06641-f4cf-4568-9ac7-ea1737820cdd"/>
+    <recordSetType typeId="c79c6670-e618-4548-a547-97a6f8e68484" valueTypeId="425cf0df-49b5-4a5e-ae49-59df92a0531c"/>
+    <recordKeyType typeId="9d5fdf23-caa1-4c70-a0ae-83891ad43b9a" valueTypeId="6055fb76-d03c-4c25-989e-0f6bd609ae31"/>
+    <recordType typeId="d118d691-f6f8-4bb8-bbb9-bfbdd0104f81" valueTypeId="eb46c19b-b6f0-4c56-8502-3d14844e0ecc"/>
+    <recordManagerType typeId="92d9649f-7670-462a-b91f-c189f2985a48" valueTypeId="ea9520a7-79bf-4fd1-abef-8f50ff6d43d7"/>
+  </producedTypes>
+  <name>АктивностьСтатусовНоменклатурыНаСайте</name>
+  <synonym>
+    <key>ru</key>
+    <value>Активность статусов номенклатуры на сайте</value>
+  </synonym>
+  <comment>Список товаров, имеющих на сайте значение = Активно</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="26eb7a4d-6584-4b64-9861-04b3c42aa05a">
+    <name>ДатаУстановкиАктивности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата установки активности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="02371b1d-b85f-4cd0-a0ac-9a6956d23b4e">
+    <name>Сайт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сайт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИнетМагазины</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d3542276-c761-4d55-a868-c57c0b4f5d9f">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceFoldersAndItems>FoldersAndItems</choiceFoldersAndItems>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ff24579e-4850-4a7a-abbe-ae35dd430484">
+    <name>СвойствоАктивности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Свойство активности</value>
+    </synonym>
+    <comment>(новинка, распродажа и т.д.)</comment>
+    <type>
+      <types>ChartOfCharacteristicTypesRef.СвойстваОбъектов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

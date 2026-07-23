@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ea05e7b-866c-4db0-b705-3c63c61f96c4">
+  <producedTypes>
+    <selectionType typeId="a12e2e07-71c3-452c-976b-d086bd348ee2" valueTypeId="f8d53b87-90f9-41d7-843c-6ddf937dbec8"/>
+    <listType typeId="bd50f348-f84c-49b4-a7e6-45c9f2d8cc12" valueTypeId="05bfc72b-47d9-4e59-acb7-42e8fe0681f9"/>
+    <managerType typeId="178b1523-5a85-4da0-9a38-f8ca3b81c8b0" valueTypeId="c5ea5b0f-b2bd-43f7-9346-528506f442b7"/>
+    <recordSetType typeId="bf8b12a3-8c18-4c9c-9f73-6f309765436f" valueTypeId="b235441f-03b7-4243-a311-481b27357f9d"/>
+    <recordKeyType typeId="89ee642e-c3d1-41f8-baa1-2c5b68536c13" valueTypeId="0fa292fa-d092-44ba-a289-090310f92d83"/>
+    <recordType typeId="63bf8e1b-8e39-4883-a67c-54f49be61920" valueTypeId="7076d17b-c435-4e53-92b6-ab050948c912"/>
+    <recordManagerType typeId="9793ddcf-2a07-4cc8-83bf-7695ea88d1b2" valueTypeId="53aef03d-825e-4bb6-a02c-10636579f4ba"/>
+  </producedTypes>
+  <name>ИспользованныеКодыАгрегаций</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использованные КА</value>
+  </synonym>
+  <comment>Использованные коды агрегаций</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ИспользованныеКодыАгрегаций.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="cec53224-24dc-41c7-b612-95503c95868b">
+    <name>ШтрихКодУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код упаковки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="d4d7c08b-bc2c-4087-a53b-5dd45bac1760">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="e3fcae77-e3ae-4ee9-9685-494faf3d68bc">
+    <name>Перейти_ИспользованныеКодыАгрегаций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использованные КА</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

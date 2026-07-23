@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d0910f8-4d80-4559-9f7b-832acef5af79">
+  <producedTypes>
+    <selectionType typeId="70cb67ba-6ab4-48a6-99a8-e2a03a61d542" valueTypeId="75fa44c1-a960-49a9-a6ef-b375e55732d9"/>
+    <listType typeId="daccff41-0dda-41ec-9417-1096d811adab" valueTypeId="874e553e-f207-4d89-af7d-07999621a9fb"/>
+    <managerType typeId="a1694f9e-cea1-4d93-b37a-eeed22016d8c" valueTypeId="8e23b9f1-ea4c-47d4-abd6-4f4a17ed80fb"/>
+    <recordSetType typeId="a2e812ca-2129-4dda-b87a-011b76ac1240" valueTypeId="85b14e36-fea4-4899-a2f0-b1dbd18b5799"/>
+    <recordKeyType typeId="59481fad-58cf-485c-8f51-e408e3db4421" valueTypeId="e73404bd-174d-44c7-ad40-957dd968df35"/>
+    <recordType typeId="9bc8364e-bed3-49ef-a574-e4bd8fb71ffd" valueTypeId="aa42ce0e-dd9c-49ba-855b-382bfa7b73ad"/>
+    <recordManagerType typeId="d2555c8c-d6ff-4de0-9408-19f1e60481ff" valueTypeId="4f360cfc-5edf-4556-bd7e-4a29ab79858e"/>
+  </producedTypes>
+  <name>СтатусыНоменклатуры_ЧЗ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы ном. в ЧЗ</value>
+  </synonym>
+  <comment>Статусы карточек номенклатуры в ЧЗ</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СтатусыНоменклатуры_ЧЗ.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bdb7410a-390c-4f94-9c1c-3fa610c6c8da">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыКарточкиНоменклатурыВЧЗ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="dd9039ac-8690-4980-8c9f-cbc7aadc3bc2">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="3d7f4840-b9ab-4b0f-a223-6e7b9e9d5466">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="16e3d5dc-e666-4f4d-83d6-5f424f988795">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="c538d6da-a13d-4ba0-88d3-cc20395a200b">
+    <name>Перейти_СтатусыНоменклатуры_ЧЗ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы ном. ЧЗ</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>CatalogRef.Номенклатура</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

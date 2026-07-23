@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="189676f8-7209-403a-998d-1e7e09c97c4b">
+  <name>wsWWW</name>
+  <synonym>
+    <key>ru</key>
+    <value>wsWWW</value>
+  </synonym>
+  <comment>Наше Адресное Хранение</comment>
+  <namespace>http://collant.ru/wsWWW</namespace>
+  <xdtoPackages xsi:type="core:StringValue">
+    <value>http://v8.1c.ru/8.1/data/core</value>
+  </xdtoPackages>
+  <descriptorFileName>waWWW.1cws</descriptorFileName>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>60</sessionMaxAge>
+  <operations uuid="97a680f0-9616-4b50-a7b7-2449135ff0f1">
+    <name>InfoSHK</name>
+    <synonym>
+      <key>ru</key>
+      <value>Info SHK</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияОНоменклатура</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="5261cf69-1555-47b7-965c-5fe416a81603">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="7dd9fbe8-765e-4e5b-af24-2883b353dff2">
+    <name>InfoFOTO</name>
+    <synonym>
+      <key>ru</key>
+      <value>Info FOTO</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияОФото</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="037ef361-7388-4b96-8f27-e6dcc538b49b">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="2aa4fe70-6c7d-4ad2-9900-178a7f200f4e">
+    <name>InfoOstatok</name>
+    <synonym>
+      <key>ru</key>
+      <value>Info ostatok</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ОстаткиТовараНаСкладах</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="3bf9da37-de32-4774-886c-a6cffb87b656">
+      <name>КодCклада</name>
+      <synonym>
+        <key>ru</key>
+        <value>КодCклада</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="9538b03b-f59c-4dba-b4a8-fab660fdc58a">
+    <name>InfoALLSK</name>
+    <synonym>
+      <key>ru</key>
+      <value>информация по всем Штрихкодам номенклатуры</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияПоВсемШтрихкодамНоменклатуры</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="993239c2-1256-4110-ae01-0e1ef63f0834">
+      <name>КодCклада</name>
+      <synonym>
+        <key>ru</key>
+        <value>КодCклада</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="902293e9-0269-44aa-b2ea-ffa27d22d757">
+    <name>InfoUpDown</name>
+    <synonym>
+      <key>ru</key>
+      <value>информация по остаткам верх и низ</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ОстаткиТовараВерхНиз</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="5ce08f40-0299-47ac-99bc-8ff313670ec1">
+      <name>МассивТовара</name>
+      <synonym>
+        <key>ru</key>
+        <value>МассивТовара</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="abaf7afd-3430-47a1-b173-8f5cdaa130d7">
+    <name>InfoDOC</name>
+    <synonym>
+      <key>ru</key>
+      <value>информация по документу</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ДанныеПоДокументу</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="ad36a5fa-2471-41ca-9ebf-2b856eba2576">
+      <name>ГУИДДОК</name>
+      <synonym>
+        <key>ru</key>
+        <value>ГУИДДОК</value>
+      </synonym>
+      <comment>ГУИД документа</comment>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="83fb130d-71f8-4e04-b92c-6a4d3a048583">
+    <name>exportDOC</name>
+    <synonym>
+      <key>ru</key>
+      <value>ВыгрузкаДокументовВАдрес</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ВыгрузкаНужныхДокументов</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="cb5bef1d-e198-4005-a26e-1be0fc571f0f">
+      <name>ГУИДДОК</name>
+      <synonym>
+        <key>ru</key>
+        <value>ГУИДДОК</value>
+      </synonym>
+      <comment>ГУИД документа</comment>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+      <transferDirection>InOut</transferDirection>
+    </parameters>
+  </operations>
+  <operations uuid="41932a35-41ea-4276-831e-cdc61958e87d">
+    <name>InfoALLKod</name>
+    <synonym>
+      <key>ru</key>
+      <value>информация по номенклатуре по кодам</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияПоКодамНоменклатуры</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="97e3a180-3a7e-43f4-9394-19abd5a3fd13">
+      <name>КодCклада</name>
+      <synonym>
+        <key>ru</key>
+        <value>КодCклада</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="f2be6dc4-af3f-4f87-8798-4d9b21482304">
+    <name>InfoAgregat</name>
+    <synonym>
+      <key>ru</key>
+      <value>InfoAgregat</value>
+    </synonym>
+    <comment>Распознаем код агрегации (начальный этап</comment>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>РазбираемАгрегацию</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="c07cb0ee-f453-4465-8f1a-6f578d13aff1">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="f5aa77a7-3732-4e8e-8bc8-51626b479bde">
+    <name>InfoZNB</name>
+    <synonym>
+      <key>ru</key>
+      <value>InfoZNB</value>
+    </synonym>
+    <comment>Информация по документу ЗНБ</comment>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияПоЗНБ</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="e9e1124e-229c-4769-9128-23352a118046">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="e92c1fd2-4cf5-4232-990d-2f6e61014e13">
+    <name>InfoGTIN</name>
+    <synonym>
+      <key>ru</key>
+      <value>InfoGTIN</value>
+    </synonym>
+    <comment>Информация по GTIN номенклатуры</comment>
+    <xdtoReturningValueType>
+      <name>ValueStorage</name>
+      <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ИнформацияПоGTINНоменклатуры</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="9ae93bb6-9734-4638-ae5b-8579d7bd9e11">
+      <name>Штрихкод</name>
+      <synonym>
+        <key>ru</key>
+        <value>Штрихкод</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+</mdclass:WebService>

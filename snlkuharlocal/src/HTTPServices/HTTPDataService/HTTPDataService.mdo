@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9261c859-405e-407e-855c-49eefcf2076f">
+  <name>HTTPDataService</name>
+  <synonym>
+    <key>ru</key>
+    <value>HTTPData service</value>
+  </synonym>
+  <rootURL>DataService</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="4f072fff-80c5-41fd-abf6-f306305602d9">
+    <name>SColours</name>
+    <synonym>
+      <key>ru</key>
+      <value>S colours</value>
+    </synonym>
+    <template>/colours</template>
+    <methods uuid="bc5a7cf4-ca1d-4dd7-a5fe-2b48fed6f38e">
+      <name>SrchColours</name>
+      <synonym>
+        <key>ru</key>
+        <value>Srch colours</value>
+      </synonym>
+      <handler>SearchColours</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="529297dd-282a-444d-b763-5061518cbe49">
+    <name>LoadCorr</name>
+    <synonym>
+      <key>ru</key>
+      <value>Load corr</value>
+    </synonym>
+    <template>/LoadCorr</template>
+    <methods uuid="11194f10-8db4-4707-a170-b05a7ab46b44">
+      <name>LoadCorrBC</name>
+      <synonym>
+        <key>ru</key>
+        <value>Load corr BC</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>LoadCorrBC</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="278077d8-2ecc-4d62-be1b-b78d54e99f2c">
+    <name>ShareDataEndpointV1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Share data endpoint v1</value>
+    </synonym>
+    <comment>#Область API_V1
+</comment>
+    <template>/api/v1/*</template>
+    <methods uuid="263363aa-8fcc-4e7e-963f-ecbc30b1150b">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ShareDataEndpointV1GET</handler>
+    </methods>
+    <methods uuid="c319a9e8-c596-461d-a61e-a0ff60ed45b7">
+      <name>Other</name>
+      <synonym>
+        <key>ru</key>
+        <value>Other</value>
+      </synonym>
+      <httpMethod>Any</httpMethod>
+      <handler>ShareDataEndpointV1Other</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

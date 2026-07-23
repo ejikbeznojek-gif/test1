@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d9ed8a2b-9d12-4948-bea9-b785d1af5d86">
+  <producedTypes>
+    <objectType typeId="e96999d9-59e0-4e2a-b3d6-5f369a51aaad" valueTypeId="1595bf15-a348-408c-9d67-f3ea5b3a8772"/>
+    <managerType typeId="118bf43c-5911-4c4e-9b1e-bd026629c09f" valueTypeId="a343596e-9c4a-4f3d-b9cc-3c0ee2293493"/>
+  </producedTypes>
+  <name>МП_ММ_ЯндексМаркет</name>
+  <synonym>
+    <key>ru</key>
+    <value>(МП) Яндекс маркет</value>
+  </synonym>
+  <attributes uuid="1346f379-ea37-49c6-a404-3ec41145398f">
+    <name>МаркетПлейс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маркет плейс</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИнетМагазины</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="67f09444-7ba7-498c-85ea-645e45b8b404">
+    <producedTypes>
+      <objectType typeId="6d2f7aee-8e00-4da0-a155-56a03e8f0d1c" valueTypeId="09799fcd-53a2-472e-832e-f53f0501a94d"/>
+      <rowType typeId="8ae341df-64db-4477-88c1-5ded8e9b8b4e" valueTypeId="54b7e22f-6859-4a37-8cb5-6fcd21667fc5"/>
+    </producedTypes>
+    <name>СписокЗаказов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список заказов</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="a60deb46-3ac4-4205-b0f1-d47e1e3c10c1">
+      <name>created_at</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата создания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="76aaf80f-acd5-4f9d-b554-43ae5cd4e4a4">
+      <name>order_id</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер заказа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="1a3083b9-d8f4-4f1d-b401-c2a55551662d">
+      <name>status</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус заказа</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>36</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="734c618f-562b-4aaa-b703-aa3a9767781c">
+      <name>cutoff_time</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата отсечки</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+</mdclass:DataProcessor>

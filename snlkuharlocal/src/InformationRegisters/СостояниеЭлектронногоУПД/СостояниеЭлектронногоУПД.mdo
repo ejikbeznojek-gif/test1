@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83c392b6-6d5d-4428-9bd4-3341331d8361">
+  <producedTypes>
+    <selectionType typeId="927f1d7a-b739-4a8b-92c5-7347dee292cf" valueTypeId="f05a98c0-f0d7-4ba9-9e30-93de93ab6e50"/>
+    <listType typeId="ccc7442a-4e1e-4382-bd03-30f8c0bc044a" valueTypeId="7782701f-57d8-470e-87db-2009ea1c6b96"/>
+    <managerType typeId="234fa20c-3b87-4a62-9113-f2550cfc639e" valueTypeId="9cb82d58-d567-4596-b2b2-a04f15b9cb45"/>
+    <recordSetType typeId="0cd1066f-271d-4dba-8c4f-5384b90a0e02" valueTypeId="4bb9e7e4-92b6-4899-96da-105e8a148700"/>
+    <recordKeyType typeId="54867618-1f7d-4ed2-81d2-f76f733af6e8" valueTypeId="16a8cb2a-eabf-4f90-b236-86ca4f0660fc"/>
+    <recordType typeId="b47b1cd4-6e10-4e89-ba7c-974bf145dfa9" valueTypeId="29f4915e-2497-4d9e-92bf-3830c1f77e21"/>
+    <recordManagerType typeId="3c035ac6-fc89-4ef6-8c18-38beb294fbef" valueTypeId="f1211cdf-fd14-4755-b2f0-acffb8efc31d"/>
+  </producedTypes>
+  <name>СостояниеЭлектронногоУПД</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние электронного УПД</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0679ae44-5338-484c-9019-49c74f7f187c">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0caab992-17c7-4992-b0ad-01b3559ea882">
+    <name>ID_Квитанции</name>
+    <synonym>
+      <key>ru</key>
+      <value>Id квитанции</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="82e373cb-622e-493f-add0-383f93f86352">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="78cb077f-a278-480d-9143-0fc9f84624be">
+    <name>ID_Документа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Id документа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a9d2e714-d134-49b1-81de-1aff3aa1d890">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d288fad7-f48b-43e2-9d20-337a906354ca">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетФактура</types>
+      <types>DocumentRef.УПД</types>
+      <types>DocumentRef.КорректировкаЦенВНакладной</types>
+      <types>DocumentRef.СчетФактураНаАванс</types>
+      <types>DocumentRef.КорректировочныйСчетФактура</types>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Претензия</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="593e793a-7e7c-4217-9a02-85c4eca71275">
+    <name>СостояниеУПД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние УПД</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеУПД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

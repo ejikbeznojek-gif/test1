@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ba7d4543-163d-4c23-a9b3-2d2b3213c911">
+  <producedTypes>
+    <objectType typeId="fcbfcc44-c224-4fb6-a7f4-b0c78c437003" valueTypeId="01030593-fcc2-4eee-a0fc-ecafbf7da259"/>
+    <refType typeId="ac877e12-f442-4bbb-9c47-3e0a7dc3be95" valueTypeId="bcfe7861-e1b9-458b-85e5-0fed1a52d21c"/>
+    <selectionType typeId="22ad9802-1c4d-4cd8-a7c0-642c118a91a6" valueTypeId="f550411c-2edd-4ab7-a3c1-4d2f66292304"/>
+    <listType typeId="eb6cda79-801f-4be0-8469-961f9e4c7219" valueTypeId="0284a876-c1a1-4301-9da9-d61cd2841944"/>
+    <managerType typeId="e8aa4398-ab01-4691-9cfb-d344c7e47f4b" valueTypeId="da9fadbe-40bf-451d-b4dd-84fefa11d1b9"/>
+  </producedTypes>
+  <name>КоробаКонтрагентов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Короба контрагентов</value>
+  </synonym>
+  <inputByString>Catalog.КоробаКонтрагентов.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.КоробаКонтрагентов.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>90</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.КоробаКонтрагентов.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="5d02dd66-5c4e-402d-8328-0eec7b8265e2">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d872cc9f-70a3-47e6-b600-a6e16145b044">
+    <name>ТипКороба</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип короба</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыКоробов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fb785578-668a-430e-b374-e7ffbbb41272">
+    <name>КоличествоДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество документа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="68d2c521-4e53-46b7-9393-d77cf00f2787">
+    <producedTypes>
+      <objectType typeId="4e68ea6e-2c07-4fff-b3ae-9fd1fc0d9901" valueTypeId="7862216f-7f3b-484f-a89b-f4671b6d6925"/>
+      <rowType typeId="910cb8aa-e4cf-4475-839d-718d82d9d906" valueTypeId="ef421151-ef24-4eef-8585-880f4e322aaf"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <attributes uuid="232ff04f-47c8-432d-8526-e11b9df83927">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="33bd1119-8bc0-4229-b0dc-6778807f9b0a">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="f926c84d-6cdf-4287-8a1e-d57a55e2dd31">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

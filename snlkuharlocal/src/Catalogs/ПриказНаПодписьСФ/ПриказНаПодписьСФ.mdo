@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2d55d612-da4f-4acb-996a-e16e4fb79291">
+  <producedTypes>
+    <objectType typeId="b4dfc660-0393-4e96-9592-e7b35cea24b4" valueTypeId="54107ba4-a0f1-477e-bc8c-28665e1feaba"/>
+    <refType typeId="e761ea28-3c8f-43ad-abfe-6be58db828ac" valueTypeId="9e9cbf51-a18a-4ed4-98a6-2a5a869ef1e5"/>
+    <selectionType typeId="409e1080-47d0-4bbd-bcb1-b68ff6794c2c" valueTypeId="beecd081-5718-4313-a6e8-8c12ff521bc7"/>
+    <listType typeId="c7e6f0cb-c6a2-44f2-b6c3-47784224bfb4" valueTypeId="01ac0c11-b8e2-432f-8a7e-8e4764c0adf6"/>
+    <managerType typeId="f3b5e7fb-8361-4698-a623-114906bd6b27" valueTypeId="664e41aa-658d-471d-8f4e-4121c7dd2caf"/>
+  </producedTypes>
+  <name>ПриказНаПодписьСФ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приказ на подпись СФ</value>
+  </synonym>
+  <inputByString>Catalog.ПриказНаПодписьСФ.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПриказНаПодписьСФ.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="c0e0af69-5750-4eaa-b00c-dcd1cb50f5a2">
+      <name>Основной</name>
+      <description>Основной</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="cce39d87-6793-47d3-a1e9-a7d08e4531c1">
+    <name>НомерПриказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер приказа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5b52e38e-35d4-4a27-923e-0055002015b7">
+    <name>ДатаПриказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата приказа</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1f878837-c0e4-4cb9-bdd9-35f35389984b">
+    <name>ЭтоСписокДоверенностей</name>
+    <synonym>
+      <key>ru</key>
+      <value>Это список доверенностей</value>
+    </synonym>
+    <comment>&quot;да&quot; - список, &quot;нет&quot; - приказ на подпись </comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="73a72791-f47b-4a3c-af3b-07d1b0bb4bf3">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="f77920ee-9289-4d3a-8789-5a5d09a30bf9">
+    <producedTypes>
+      <objectType typeId="d5fa505a-381e-4fef-9f34-8f57231ff4ac" valueTypeId="643bfcad-64ec-4ed8-99c1-b8d5bdbce1e5"/>
+      <rowType typeId="4eb8792b-9c4c-401a-bc83-a20085e55c95" valueTypeId="4be90d5b-2f8a-40f0-82c8-a60200c52f57"/>
+    </producedTypes>
+    <name>Сотрудники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудники</value>
+    </synonym>
+    <attributes uuid="0eae53b8-a8ca-4170-abb6-3f03b5fa0cfe">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="59be74c7-3e57-45e2-a301-7e2900a14721">
+      <name>НомерДоверенности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер доверенности</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="40c811c4-024b-4c79-99c7-39d907de288d">
+      <name>ДатаДоверенности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата доверенности</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="2938a41b-5371-4539-9e69-dc2cc5a860fa">
+      <name>ДатаОкончанияДействияДоверенности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания действия доверенности</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

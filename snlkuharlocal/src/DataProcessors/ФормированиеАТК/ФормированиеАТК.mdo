@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b530f8f-06eb-483b-939b-d8f777a7cce6">
+  <producedTypes>
+    <objectType typeId="3294f504-765a-4109-94b1-0e9d342e796d" valueTypeId="37bfc61f-5cbb-4b9f-aefe-200a5a177ed5"/>
+    <managerType typeId="cc988b97-b556-4bc6-91c2-71c51ca08a4c" valueTypeId="5a0debfb-709f-4177-a97c-a7684db77356"/>
+  </producedTypes>
+  <name>ФормированиеАТК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формирование АТК</value>
+  </synonym>
+  <defaultForm>DataProcessor.ФормированиеАТК.Form.Форма</defaultForm>
+  <attributes uuid="6d8d48ca-ed01-4d0e-9823-2af09260585a">
+    <name>Машина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Машина</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Машина</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="80c9ccf5-b1c4-41a1-9710-d2759f501354">
+    <name>ЗаказПоставщику</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ поставщику</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="73d45964-fcaf-48b4-b982-c8874e287f09">
+    <name>ИмяФайлаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла отчета</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="81550811-20e7-4f02-b930-566d17c0bf15">
+    <producedTypes>
+      <objectType typeId="ca80d097-b39f-4805-9dba-c9a569aaf54c" valueTypeId="ee8c751e-53fe-42f6-81e3-087ba26f130c"/>
+      <rowType typeId="a6fd5d2a-0cf2-403a-81ec-f75fe05b8dbf" valueTypeId="efac0328-4e2c-443d-813c-bfe0bd38da42"/>
+    </producedTypes>
+    <name>НомераАТК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номера АТК</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="8053e848-db73-46bc-b226-c19e62137784">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="68258c76-7c7e-499f-8ba6-d7a484bc1c8f">
+      <name>ПорядковыйНомерАТК</name>
+      <synonym>
+        <key>ru</key>
+        <value>Порядковый номер АТК</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="e6ad009d-51bd-42b3-b7b6-945ab57fb1fe">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="16eb601e-8cd2-4a81-82e0-8a4f27d2f931">
+    <name>Машина</name>
+    <synonym>
+      <key>ru</key>
+      <value>Машина</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

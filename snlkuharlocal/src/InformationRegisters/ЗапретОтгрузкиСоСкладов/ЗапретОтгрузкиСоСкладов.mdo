@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1373729e-8872-4c9b-bee9-e2cf848ba8d2">
+  <producedTypes>
+    <selectionType typeId="57222449-38e4-421f-832c-bbb7f26ee148" valueTypeId="02421141-8a42-44c9-8732-e7ba1f25e974"/>
+    <listType typeId="40ed0e83-2b32-420c-83d3-1614aa74731f" valueTypeId="20530497-6a82-454d-afab-7f79ad699751"/>
+    <managerType typeId="2ef947c8-973c-4671-945c-538fcb13a138" valueTypeId="d3aec336-b7e4-427b-a35a-0ccda3ba5800"/>
+    <recordSetType typeId="890cb9e3-cb65-4d91-bea3-803f02c64959" valueTypeId="4b6b01a9-8967-4e10-923b-de0c12774f00"/>
+    <recordKeyType typeId="39359de5-e4be-421f-bb12-f33f1e50e659" valueTypeId="7679d260-1176-4d21-89f2-8018794a1312"/>
+    <recordType typeId="b92d9861-0b3a-4283-bb04-5e03735bbb80" valueTypeId="afe5bf90-7425-4b10-bf3a-b1280d90e144"/>
+    <recordManagerType typeId="df5a412f-14dc-41c3-bf55-45ef877c304c" valueTypeId="f8fd7964-cf5d-4ccd-ba44-3cd04cca7c69"/>
+  </producedTypes>
+  <name>ЗапретОтгрузкиСоСкладов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Запрет отгрузки со складов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ЗапретОтгрузкиСоСкладов.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.ЗапретОтгрузкиСоСкладов.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <explanation>
+    <key>ru</key>
+    <value>для запрета отгрузки товара в разрезе маркетплейса и склада
+Заполняется внешней обработкой
+если запись есть - то выгружаться не будет</value>
+  </explanation>
+  <dimensions uuid="8ecfd643-b21d-47a3-acc2-62588e31ce7b">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0829f3d8-e0ad-4bc9-b399-6e75f26e4c02">
+    <name>МаркетПлейс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Маркет плейс</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ИнетМагазины</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7c22e380-30f7-4d6c-812c-d52cc0c8945a">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="60c00836-0c46-4a08-a0da-042473c0ec60">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c0d946b1-2686-4820-88c3-70f0220bf994">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

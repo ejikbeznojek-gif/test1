@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fdd84f80-f3b3-4a5b-8652-5e157c9afc58">
+  <producedTypes>
+    <selectionType typeId="8e270512-0011-402a-848e-22982b7e6603" valueTypeId="1bba4e39-7687-43b6-b96b-8655f749e38c"/>
+    <listType typeId="b688e5e1-b507-4acf-8b55-bbe211a8db14" valueTypeId="8a27ad35-c2b3-43f3-9438-c3fbebcc3aef"/>
+    <managerType typeId="f4b8059f-3639-4706-b853-ef35646079ef" valueTypeId="0efbe292-9978-4049-8058-592f9a4739b4"/>
+    <recordSetType typeId="885546f1-7ba4-4cd3-81e2-8bd0f8016af6" valueTypeId="d6b75376-a300-4c76-a322-b4098c0fbff1"/>
+    <recordKeyType typeId="235be404-6903-448f-add8-68097d08fdce" valueTypeId="2e9eb6c8-4a37-4de6-b308-6fab0241f098"/>
+    <recordType typeId="82932c5b-306f-441e-aff1-538764e0fdc0" valueTypeId="690b9b7d-11e9-4801-a235-b10c82dbd357"/>
+  </producedTypes>
+  <name>ЗатратыМерчендайзинга</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты мерчендайзинга</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="2a103eaf-9c64-4f35-9f58-7362472352c3">
+    <name>КолSKU</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кол-во SKU</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="8613d1b7-9ca4-406f-a1a9-23b75c25900f">
+    <name>ВремяНаВизит</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время на визит</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="8a0d266e-8780-46c7-a9c8-4a3c28d65784">
+    <name>КолПосещенийМесяц</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кол посещений месяц</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="bc7233c6-d6d6-4572-9af7-419959bb7870">
+    <name>КолРаботоЧасов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кол работо-часов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="7f9fd6e0-0ef9-4599-8a99-1657b8a0df83">
+    <name>ГодовойБюджет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Годовой бюджет</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="1fac80cc-e1d7-4345-bea0-c72ae4a8f03e">
+    <name>СтавкаЧаса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка часа</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="1c52df74-6dcf-4db6-9e0e-b8514683f5c7">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="6e76e268-fdcc-490d-b3ea-3533a5534b7d">
+    <name>Контаргент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контаргент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="fcfcfc0a-b46d-4333-9a38-1cc857d3d9f3">
+    <name>ПунктДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПунктыДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

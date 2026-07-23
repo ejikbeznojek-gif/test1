@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5b36a9ee-f418-484e-abb5-47c08bc1c237">
+  <producedTypes>
+    <selectionType typeId="3748023e-3b4e-43dc-96a8-a281f386a6e6" valueTypeId="8fa9ec38-444c-4f9e-b721-bd81a5dd515a"/>
+    <listType typeId="fa54a7ba-1625-4c57-ae31-f26c5598b475" valueTypeId="19a07fa6-9abe-4284-b17f-2715520167fe"/>
+    <managerType typeId="ca72cc83-947a-4f01-ab21-e8889784ee92" valueTypeId="84bdcd94-f80c-481d-95f6-f758bf7259cc"/>
+    <recordSetType typeId="8e27d611-0a91-4b10-9ac9-313943ca3ab2" valueTypeId="d365a392-4c44-462c-bf71-d7ad304704d2"/>
+    <recordKeyType typeId="b332814d-095f-490a-ba58-9339823db045" valueTypeId="a546fd37-ac49-4e41-890c-ed8b44a9fc3e"/>
+    <recordType typeId="ebd7f736-6604-45dc-ba41-d081029e9d0f" valueTypeId="fa383a95-197c-4599-9aa3-bbfe9dbeeccc"/>
+  </producedTypes>
+  <name>СертификатныеОстатки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сертификатные остатки</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.СертификатныеОстатки.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bac28053-0c1d-48b9-9466-e0d4929b3ace">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="cd2f2c14-2444-4f20-baf2-d35cdc64a7c1">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="54cc49e2-0dc3-4e35-8c12-77524be8d707">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийОстатки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="3c1f56ca-84ad-476b-8f73-3e46cc1b9588">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="11252e91-a9f2-4426-bdba-e46b42800646">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e525a937-c70b-4fa1-b478-69f88972644a">
+    <name>Сертификат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сертификат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодарочныеСертификаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="ebda0d1d-9d8d-43bb-b640-2067eb73d4b1">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

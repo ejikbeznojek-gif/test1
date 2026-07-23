@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f6985178-af47-4c8f-acff-6d88b1519c66">
+  <producedTypes>
+    <selectionType typeId="dec3a796-d244-40be-bdd2-bf7dbb9b6069" valueTypeId="e553bd34-eb22-479d-b40e-a7408377d998"/>
+    <listType typeId="e81736ff-0b9b-4ea9-be32-485e778993d7" valueTypeId="1427bd37-ed0f-47ad-86af-6bd384de12ce"/>
+    <managerType typeId="793c5e3a-b5a6-458e-9eae-ec4143a9b8be" valueTypeId="c52bc42a-f8eb-486c-b088-01547aadae8d"/>
+    <recordSetType typeId="277eb330-c463-416f-bff0-d10c8eb766ab" valueTypeId="f628d192-1bff-4d3d-ba25-435e8559f03c"/>
+    <recordKeyType typeId="c9753a8e-88c8-4d06-b7fb-028a4882df96" valueTypeId="9fe9f19f-8a9c-4ded-9ad9-6031fd744db8"/>
+    <recordType typeId="0390f12d-52e9-4519-9f5f-807d530ea9f1" valueTypeId="68a2031a-1c62-41c6-a3d8-e67c2163ac03"/>
+  </producedTypes>
+  <name>ТарныеОстатки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тарные остатки</value>
+  </synonym>
+  <defaultListForm>AccumulationRegister.ТарныеОстатки.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b0edcb27-be53-46b1-8ee5-feb18beb538b">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c658dc62-04b2-444c-aba9-e54ae8c97d19">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="624dda74-5b71-4086-9dfe-965583ed668f">
+    <name>КодОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КодыОперацийОстатки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="9bf8807a-b66b-4402-97b3-50cee5608919">
+    <name>ПунктДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пункт доставки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПунктыДоставки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="6d6a7428-c3ff-4d82-a21f-1d297d7d39b9">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a0eaaa46-ebf2-42f4-aeb4-31c15fdbea7c">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <forms uuid="1a5b91b3-3d07-4066-bdea-2dd8e7c6357d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="32986228-705a-4b3f-b800-a55d7fc82812">
+  <producedTypes>
+    <objectType typeId="d16c0fc1-527d-4e94-8121-ef5f556c6478" valueTypeId="bb4154d2-62ae-4db6-8921-23fa85e59c56"/>
+    <refType typeId="5a898677-3c5f-485d-a043-7bf433209a6f" valueTypeId="8b84d232-d230-4f2f-b1bc-dde9b76529bb"/>
+    <selectionType typeId="1dca400d-11f3-4ae9-92f2-08a44116ac52" valueTypeId="6e857b88-a86d-441e-bcc9-0147f2f40d30"/>
+    <listType typeId="0de77e02-f1b1-4702-86c7-b4e9f35c821e" valueTypeId="06e65eba-d3d6-48d0-bbbb-6ffa3ab911ae"/>
+    <managerType typeId="bcc5a890-6f71-4f41-b49b-c117a8e5a837" valueTypeId="334bccc6-f96c-446a-bc2a-ff23653e82eb"/>
+  </producedTypes>
+  <name>ТипыУпаковки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Типы упаковки</value>
+  </synonym>
+  <inputByString>Catalog.ТипыУпаковки.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТипыУпаковки.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <subordinationUse>ToFolders</subordinationUse>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ТипыУпаковки.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ТипыУпаковки.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="1e00e8b1-e947-432b-9e77-5e5f68cd163c">
+    <name>ОсновнаяХарактеристика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная характеристика</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="faf489d8-94b2-4750-ae6b-235df84656d1">
+    <producedTypes>
+      <objectType typeId="4d1c2b56-34c9-4591-8cd7-76e2c610b06f" valueTypeId="d84c8896-2f76-4ec0-9214-aa01a7b30cb0"/>
+      <rowType typeId="519c516a-8382-43c0-a69c-7878a574bbdf" valueTypeId="8ce45471-f5c8-42dd-9300-848cccf0b6c9"/>
+    </producedTypes>
+    <name>Значки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значки</value>
+    </synonym>
+    <attributes uuid="c3b1e78c-808c-48cb-8fb5-3855ba019b60">
+      <name>Значок</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значок</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ЗначкиДляУпаковки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4a793218-d9b2-4345-8289-10ee004292d5">
+      <name>Картинка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Картинка</value>
+      </synonym>
+      <type>
+        <types>ValueStorage</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="9d3757fb-35b1-42a3-bd8c-a9ab906b9fc5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6792a71e-3dbc-46ad-8820-cc36c29ea0f8">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

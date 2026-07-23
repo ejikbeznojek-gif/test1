@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="88ba6b2b-1824-4729-a13b-f198f8f0348b">
+  <producedTypes>
+    <selectionType typeId="5cf90d2d-0f4f-4e18-a996-8ae1a7b38550" valueTypeId="3bbf16df-9f29-4b36-84b6-8971d731bb02"/>
+    <listType typeId="9d86b373-fb11-4d59-aa64-1cb25bb9190f" valueTypeId="47564f70-be24-4a71-bfb8-3d602cd400b1"/>
+    <managerType typeId="ad5d14b7-71a2-4072-98cb-01328811b608" valueTypeId="bfd734b0-b908-4e4a-b393-24a1cf3f33b5"/>
+    <recordSetType typeId="2f7a74db-f11f-47a8-89cb-9c17204d523d" valueTypeId="f5c41969-b3f4-406f-a35b-3552213f347b"/>
+    <recordKeyType typeId="27abecfe-362f-40ab-af11-0efaa0ca88a1" valueTypeId="a056a053-093b-41bc-b4de-29522d9df341"/>
+    <recordType typeId="61647e06-80a9-4964-ae83-2e060043a081" valueTypeId="ae515c8c-c3bf-4e44-b129-60a28a876da3"/>
+    <recordManagerType typeId="56d47480-8c3d-466d-89f4-4403c64f9dc8" valueTypeId="81d1279d-51d4-4d4a-8254-e5a2e74da907"/>
+  </producedTypes>
+  <name>СверкиИтоговБН</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сверки итогов БН</value>
+  </synonym>
+  <defaultListForm>InformationRegister.СверкиИтоговБН.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="80b48f4b-c616-4e61-bb1f-d9c0aa836b1a">
+    <name>ТекстСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст сверки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="a462f453-13cc-401c-8580-f424b51bc289">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d1d527fd-1457-4798-a56b-6d793f65f87e">
+    <name>Касса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Кассы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6e7cc296-1fb6-4744-9b40-907858502b1e">
+    <name>Тип</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e807f508-9fb9-465b-811d-05bdfb6a700c">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

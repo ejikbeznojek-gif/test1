@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1aee2a82-0a92-4771-b399-eb2f3920fefb">
+  <producedTypes>
+    <objectType typeId="6089d162-35e0-4310-be53-e77fe01ef17f" valueTypeId="420e8f96-963f-4275-bc4b-222946d4a10d"/>
+    <refType typeId="c5dea318-4889-496c-aa55-94272939b67d" valueTypeId="93cb6070-c839-4367-9def-c730445e0a36"/>
+    <selectionType typeId="76e65dc0-700d-45b3-99d9-fe1b3cae6643" valueTypeId="db4d4c58-e9c9-4361-a213-fb688bbd15e9"/>
+    <listType typeId="445ef165-7af3-40a0-bbdc-4688c5a32f82" valueTypeId="52568bc5-32e8-403f-847d-bdbd8e9df1ef"/>
+    <managerType typeId="13253f50-ecb6-4872-9a88-3b364f658bcc" valueTypeId="eb1587a0-95a4-43ec-ad4c-e3dd967b2c56"/>
+  </producedTypes>
+  <name>ПеремещениеВЗонуХранения</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перемещение в Зону Хранения</value>
+  </synonym>
+  <inputByString>Document.ПеремещениеВЗонуХранения.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberPeriodicity>Year</numberPeriodicity>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПеремещениеВЗонуХранения.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <registerRecords>AccumulationRegister.ОстаткиЗХ</registerRecords>
+  <attributes uuid="d859db1e-a878-4b52-813d-303631ce9674">
+    <name>ЗонаХранения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗоныХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="742c0fa7-9f12-404a-bb6d-159f2dd78f37">
+    <name>ЗонаХраненияПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зона хранения получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЗоныХранения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="9196a930-935c-4454-84c9-039f6413b362">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e9e23c2e-1a13-4093-884f-5f365472e5fc">
+    <name>ФормаДляТСД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма для ТСД</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="0255f3ae-38bd-4bad-9dd4-fc4e01031dbe">
+    <producedTypes>
+      <objectType typeId="79fc6d77-fafb-4785-bdbb-0d10b708c119" valueTypeId="d098f9e7-8f27-447c-bb96-4a4a1d8d366d"/>
+      <rowType typeId="fe00bc86-6dad-41a9-96a6-4140f284381b" valueTypeId="d80bf578-959d-494e-9acc-6451ee43812a"/>
+    </producedTypes>
+    <name>Короба</name>
+    <synonym>
+      <key>ru</key>
+      <value>Короба</value>
+    </synonym>
+    <attributes uuid="8d7eb35e-8bcc-44e1-b8dd-9cfbe69d0159">
+      <name>ШККоробки</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШККоробки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="02ba1de3-3e6e-4416-8fa3-653f0056a5a1">
+      <name>НомерЛистаНабора</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер листа набора</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>17</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="47bdb1e7-b043-41a9-bf43-6166de25bc6c">
+      <name>НомерНакладной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер накладной</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="06bd91b4-1ba3-4518-8c5c-74384ca8fbbf">
+      <name>ШКЛистаНабора</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШКЛиста набора</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1e78b890-2398-4f2f-9a69-a15527ad4051">
+      <name>ШКПаллеты</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШКПаллеты</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="66cd136a-af87-49f4-8327-1aba7f8a5d42">
+      <name>НомерКоробки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер коробки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="70df16ae-835e-46fc-b867-f4fb11b9c402">
+      <name>Накладная</name>
+      <synonym>
+        <key>ru</key>
+        <value>Накладная</value>
+      </synonym>
+      <type>
+        <types>DocumentRef</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="8a75623d-553c-4c49-9b73-88b657918017">
+      <name>КоробовВНакладной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коробов в накладной</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ed0f762e-459b-4e37-abf6-35e6bd0e5b25">
+      <name>КоробокВНакладной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Коробок в накладной</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

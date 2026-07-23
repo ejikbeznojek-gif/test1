@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b1a77e26-e5f1-42b3-b9fd-719f2cc35088">
+  <name>РНК_ПодтвержденныйЗаказ</name>
+  <synonym>
+    <key>ru</key>
+    <value>РНК подтвержденный заказ</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.РасходнаяНакладная</types>
+    <types>DocumentObject.Перемещение</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбработчикиСобытий.РНК_ПодтвержденныйЗаказПриЗаписи</handler>
+</mdclass:EventSubscription>

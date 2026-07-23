@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e27be686-c7a6-48d9-a6d3-f46c3038e4a7">
+  <producedTypes>
+    <selectionType typeId="2a78b4e5-508d-45d0-b08f-dcb150e74290" valueTypeId="98498585-9a39-4e82-87fd-64945cb29d7c"/>
+    <listType typeId="db4877be-c458-4cc5-b847-b2511c440906" valueTypeId="23135bac-bae5-40ec-9925-bc91c7de8df3"/>
+    <managerType typeId="615f79ae-923e-4ab3-aab4-c38244b74460" valueTypeId="2f80270c-c3c0-4d17-b693-26c87df10909"/>
+    <recordSetType typeId="d0850fa1-ff92-4931-9f1b-196b82db0363" valueTypeId="a0546b80-e49d-465c-b9ff-a63f0c387f98"/>
+    <recordKeyType typeId="d47cc686-73ac-40da-b578-a85eb83adeff" valueTypeId="b8de3c7c-c388-44ee-8cd1-a849e9b62d7b"/>
+    <recordType typeId="d53561a3-26bb-4841-aeef-ca134eb08b58" valueTypeId="a1e841f8-bc01-4a20-9f75-c3423a604e7b"/>
+    <recordManagerType typeId="0f5c65c3-9b3b-4ce7-9da4-0f005c3613c1" valueTypeId="8fce1308-ee90-41b0-a7c0-42c82ed10980"/>
+  </producedTypes>
+  <name>СтатусыКМ_Факт_Штуки_Актуальные</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы КМ (Факт шт.) Актуальные</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.СтатусыКМ_Факт_Штуки_Актуальные.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3d524ec3-11c1-4aee-b89b-d0397fe4075b">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыКодовМаркировкиФакт</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="74b57af8-4968-4519-a00a-ee55d0639adf">
+    <name>Местонахождение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Местонахождение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+      <types>DocumentRef.ЗаказПоставщику</types>
+      <types>CatalogRef.Подразделения</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="aae7669a-792d-4746-8bc7-422c52696c27">
+    <name>ВПути</name>
+    <synonym>
+      <key>ru</key>
+      <value>В пути</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="252ac13a-2b0c-44ae-868e-aa9339be4ca7">
+    <name>ДокУстановкиСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док установки статуса</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      <types>DocumentRef.ЛистМаркировки</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ</types>
+      <types>DocumentRef.ЛистНабора</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="158e0ab8-cfd1-4f67-b532-41337e1bb295">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9171efe0-204a-4495-9584-d96016ef6636">
+    <name>ШтрихКодУпаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код упаковки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d6bd050a-7851-4f3f-a119-18cf1bb5778c">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="5cc7bd29-94df-4c86-9c61-ad481f84807f">
+    <name>СпособВводаВОборот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ ввода в оборот</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СпособыВводаВОборотСУЗ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1923b603-bf55-4353-89f9-450f4bd24378">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="a17ea9ec-3276-4665-a036-83c10f2c596a">
+    <name>Перейти_СтатусыКМ_Факт_Штуки_Актуальные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы КМ (Факт шт.) Актуальные</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.ХранилищеКодовМаркировки</types>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+      <types>DocumentRef.ЛистМаркировки</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.МаркировкаТоваровИСМП</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:InformationRegister>

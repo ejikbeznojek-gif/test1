@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dbd5874f-cc77-443a-8265-9f1716c7c257">
+  <producedTypes>
+    <objectType typeId="e365310a-2979-40ba-9177-e67a1267e3d5" valueTypeId="fa453ff7-4070-4bec-b72f-82e8f06f4931"/>
+    <refType typeId="e418d314-ec77-4875-896c-504afe42d8da" valueTypeId="14a8187e-67d7-46b8-8b60-c8ca87d876e2"/>
+    <selectionType typeId="cc536b27-fb40-48b1-b790-69afff2b8fb4" valueTypeId="b6b8270b-bf41-4e45-ba61-4ca7c105ab09"/>
+    <listType typeId="d34c5f0c-5e6d-46a3-bb98-d63d0617f063" valueTypeId="ec1c7868-2b6c-4723-bf70-8fe2b66cfd8a"/>
+    <managerType typeId="424361e6-fa9e-4bc2-8e0c-6a3b5cd21031" valueTypeId="db073fbd-dd2c-486e-82c2-4d3b70e07364"/>
+  </producedTypes>
+  <name>АнкетаДляРассылкиЭлектронногоЧека</name>
+  <synonym>
+    <key>ru</key>
+    <value>Анкета для рассылки электронного чека</value>
+  </synonym>
+  <inputByString>Catalog.АнкетаДляРассылкиЭлектронногоЧека.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.АнкетаДляРассылкиЭлектронногоЧека.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.АнкетаДляРассылкиЭлектронногоЧека.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="71a7c294-2f15-4fec-8bf8-c1080c42c5e0">
+    <name>ТипРассылкиЭлектронногоЧека</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип рассылки электронного чека</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРассылкиЭлектронногоЧека</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e87d4450-c1ab-4832-81e0-9935b8df8811">
+    <name>Телефон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Телефон</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>13</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d3fda730-eee6-4b9b-9c5e-a8ff740093e8">
+    <name>ЭлектроннаяПочта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронная почта</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>600</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f30cbc90-65e2-47db-83da-5627a32e6b53">
+    <name>СогласиеНаРассылку</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласие на рассылку</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d9fc722e-e867-46ef-811a-b6e77457f173">
+    <name>ТЦВыдачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТЦВыдачи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="33cff146-5c00-48d9-b2b2-8e8f27d39b68">
+    <name>ДатаВыдачи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата выдачи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d555f424-7cf0-4ff7-893b-1c72cb8890ae">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

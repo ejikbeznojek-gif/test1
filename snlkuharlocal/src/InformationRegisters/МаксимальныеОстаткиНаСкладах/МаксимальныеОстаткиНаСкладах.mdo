@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="08aa91b4-ea3d-45ef-9478-07334cb79b94">
+  <producedTypes>
+    <selectionType typeId="e129c4f0-7e38-48c9-a6bb-8a8a874fff2d" valueTypeId="a30623de-5508-4f5a-9181-bec12508676c"/>
+    <listType typeId="f08fb10b-4733-452b-87c7-c9df2c590d41" valueTypeId="43873223-7f8a-4b53-9278-1802792ef485"/>
+    <managerType typeId="a8742fd5-92c7-48d9-b6d1-5d5c1e81bba2" valueTypeId="9bd62ef4-f5b3-4a74-8321-5799efb20fd1"/>
+    <recordSetType typeId="bad48db7-0a24-4bd6-9d2e-7a7e8d93c69e" valueTypeId="7cf035c7-f6dc-4690-88db-2c3837eb327d"/>
+    <recordKeyType typeId="4fb11f53-81a4-44c6-8595-9b867fa3e603" valueTypeId="b18143dc-369e-4ab4-a8ef-b7e7e8114a92"/>
+    <recordType typeId="defaa231-7607-4e27-b3a8-66751d3d82e1" valueTypeId="780a67aa-d25a-4d3e-a008-bececf5196d7"/>
+    <recordManagerType typeId="dda68a39-313e-46ec-9b2a-4fc720c66847" valueTypeId="4bbd477d-aac9-46a2-a896-74f7a1f2f2c6"/>
+  </producedTypes>
+  <name>МаксимальныеОстаткиНаСкладах</name>
+  <synonym>
+    <key>ru</key>
+    <value>Максимальные остатки на складах</value>
+  </synonym>
+  <defaultListForm>InformationRegister.МаксимальныеОстаткиНаСкладах.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="be2834b2-019a-4867-8105-6e950f54136e">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="4513e73b-0661-426b-aef6-6e5ec0c194e8">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="742cb7ca-b9db-4ba3-a599-a9754a46fb8d">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="23b72f1d-3a1e-442c-8271-dfb0974164a6">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

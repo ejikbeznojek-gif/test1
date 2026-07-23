@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ef311587-62cb-43b3-97b7-52467c7a43d6">
+  <producedTypes>
+    <objectType typeId="d8f86ddb-1661-44b8-a27d-7eece72f2a84" valueTypeId="34e5a95c-72ef-435a-ba71-10c6e4985233"/>
+    <managerType typeId="aeef4ac9-0813-456a-bea8-5ad30964926b" valueTypeId="8c6da37b-2791-43a2-8950-e48a2a633466"/>
+  </producedTypes>
+  <name>ПечатьКоробовКонтрагента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать коробов контрагента</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПечатьКоробовКонтрагента.Form.Форма</defaultForm>
+  <attributes uuid="0574df08-6423-416a-8fc8-dab216d2af59">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="31f15088-3bf6-4f3e-9b2b-f9ae6be9633e">
+    <name>ДопПараметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп параметры</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9534990f-ddd2-4d0f-aa1a-c4ec4245f9a8">
+    <name>СоздаватьЗНА</name>
+    <synonym>
+      <key>ru</key>
+      <value>Создавать ЗНА</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c776616e-aa9b-4403-8ffa-9cb1f4a3c822">
+    <name>ДокСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="b2c3cf28-d952-4e7c-bfa3-28dc2f80fb8d">
+    <producedTypes>
+      <objectType typeId="f8e33108-ece4-42fe-b5ae-e41d5699b47c" valueTypeId="6104b2d6-1164-4cf4-a18b-80d95923f7c3"/>
+      <rowType typeId="2abf4e3e-aa18-4bce-85ec-8af5c012ed26" valueTypeId="b8709029-4b05-4d85-8f40-f00d5d7948d1"/>
+    </producedTypes>
+    <name>Товары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товары</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b884e59e-a948-468b-a622-92701dc1bbec">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="db2734bf-6d28-4070-b5e4-992a9fe04e95">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="222e9501-0433-45b6-a9d8-44dbdffdd563">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="53c0c32a-d45a-45ab-9b97-40c73f53244e">
+      <name>ТипКороба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип короба</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТипыКоробов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d433cc1e-2388-485d-be67-fd5c7ba9101b">
+      <name>КоличествоВНакладной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество в накладной</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bdb9181b-d625-4113-8c5c-694b219dfd7a">
+      <name>КоличествоВЛП</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество ВЛП</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ded07ea3-09ec-4d9b-815b-94effba1b679">
+      <name>id_Короба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Id короба</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="6b8be71f-1ae9-4c26-85c8-f56491c48fde">
+      <name>КоличествоКоробов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество коробов</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="7a40a0af-2563-40a8-85d5-958c91d85a85">
+    <producedTypes>
+      <objectType typeId="77080f7f-8401-4688-a43e-82fe073c2cab" valueTypeId="c7f2aff4-0d34-4639-a473-155222e61f76"/>
+      <rowType typeId="e2f3b9ee-6e26-42d9-a801-33692f0291e4" valueTypeId="c1cfd094-d077-4a18-a38b-7f5b934442ea"/>
+    </producedTypes>
+    <name>СодержимоеБлочка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Содержимое блочка</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="25f7b0df-8d63-43c7-8f96-0c17fd353ab4">
+      <name>Отметка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отметка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="68d37f1a-d4d4-45b4-aab1-6e2ead27afe8">
+      <name>id_Блочка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Id блочка</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9e9022f7-3124-4c8e-a425-aa1e29adf7fd">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="e51559a7-321e-42af-afb4-75636f8d21db">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a2fef32c-5f5f-4320-8dd9-21a844481a60">
+      <name>id_Короба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Id короба</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ab3e8a13-16f8-47cf-b0d6-851de9d8fec1">
+      <name>КоличествоВНакладной</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество в накладной</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="017369fd-e4a4-46d3-8e8c-de7f849f4622">
+      <name>КоличествоВЛП</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество ВЛП</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="6d48e66b-821c-4539-ad8d-fe91004f0056">
+    <producedTypes>
+      <objectType typeId="99c15f73-4ec9-4cf0-a3ec-c0504c4d9ae5" valueTypeId="ffa15023-1987-48a0-bbb0-8aff714b301e"/>
+      <rowType typeId="1ccbcfc9-4ddc-4000-be2f-0498f4e92ed1" valueTypeId="3daca8fa-5ff5-4cae-ba43-e0bf3c0d16e8"/>
+    </producedTypes>
+    <name>Коробки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коробки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b934946d-7957-448a-8d1e-0f24d23d5ef2">
+      <name>id_Короба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Id короба</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bf28a8bf-95f8-48c6-a7c8-3957ad37942a">
+      <name>ТипКороба</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип короба</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТипыКоробов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5b9ebee4-c1f4-47c5-a52b-47ebd70ecd2e">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="3723baea-dfcd-4dc7-b450-e3dcf697248d">
+      <name>КоличествоБлочков</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество блочков</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="29ded0b2-5fa2-41c9-9203-a970b85c9e66">
+      <name>ВидыБлочков</name>
+      <synonym>
+        <key>ru</key>
+        <value>Виды блочков</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="aad81d1c-42da-4cc7-bd4a-bddec270cbdd">
+      <name>Сборный</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сборный</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="2ddfeeba-6c3a-42dc-b442-0fb8a835b188">
+    <producedTypes>
+      <objectType typeId="5448bdb8-42ef-4336-b7a4-d8aaccdac1a1" valueTypeId="f7b1f776-bf4a-4a53-bfad-55135a9201c1"/>
+      <rowType typeId="700fcad0-648b-4682-8adb-bdb8eb4f9a36" valueTypeId="7e245c19-0e19-4f42-b80c-6948b4a10503"/>
+    </producedTypes>
+    <name>ВсегоБлочков</name>
+    <synonym>
+      <key>ru</key>
+      <value>Всего блочков</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="7c353e78-0ed8-4312-afd4-08b824686578">
+      <name>id_Блочка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Id блочка</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ff14f4f0-1510-4fef-bf7b-8a257114f3ff">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="31a3a015-8623-42cd-91b1-dd0ce7639cc8">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="00b7ae26-f580-4164-9f9f-239645bf28c0">
+    <name>ФормаОсновная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма основная</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="755b7db6-8436-4470-ab88-5879a1f21e8f">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

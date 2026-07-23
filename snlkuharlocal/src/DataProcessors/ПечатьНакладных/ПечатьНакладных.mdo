@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a49d8e58-238b-4c05-ba6f-49dcd63b095f">
+  <producedTypes>
+    <objectType typeId="cbfc195f-7512-4ae8-a001-f9150cbadc72" valueTypeId="ae90b079-d86e-4068-ab38-69300a2d48bf"/>
+    <managerType typeId="aa584a91-5e74-4562-ae06-5ca90fa2e107" valueTypeId="ab847d3b-e1f2-490b-b392-6e4b77db31df"/>
+  </producedTypes>
+  <name>ПечатьНакладных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать накладных</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьНакладных.Form.Форма</defaultForm>
+  <attributes uuid="6ece6d59-c01e-4d68-b883-cadfd222c4e6">
+    <name>ДокОбъект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док объект</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.РасходнаяНакладная</types>
+      <types>DocumentObject.ЛистНабора</types>
+      <types>DocumentObject.Претензия</types>
+      <types>DocumentObject.ПриходнаяНакладная</types>
+      <types>DocumentObject.Перемещение</types>
+      <types>DocumentObject.КоррекцияРНК</types>
+      <types>DocumentObject.Паллета</types>
+      <types>DocumentObject.ЭмиссияПодарочныхСертификатов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4f29bece-3e9f-4699-9bb4-4487e39eee1a">
+    <name>ДопПараметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп параметры</value>
+    </synonym>
+    <type/>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="9d488691-9556-48aa-82b4-96919660ee87">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9aae6aa8-7dcb-4897-ae8c-ecb021e1175a">
+    <name>ФормаСНулевымиКоличествами</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма с нулевыми количествами</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="de806192-4119-4847-90a3-912577d96b9b">
+    <name>Претензия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Претензия</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1b37740e-5246-4b79-a66a-a0d8c4542e78">
+    <name>Коррекция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a204ee68-03fa-4875-8331-1203996b38a1">
+    <name>КоррекцияДляСогласования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция для согласования</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7137f8df-4e2f-4432-9b54-b3f8752bb1c0">
+    <name>ШК64</name>
+    <synonym>
+      <key>ru</key>
+      <value>ШК 64</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7df1ec10-9b9c-4b76-a887-bc9e8473442e">
+    <name>ФормаЛогистаТандер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма логиста тандер</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="17ddfd1e-51a1-47fb-b726-62289f9fd349">
+    <name>КоррекцияДляГруппы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция для группы</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="56375626-381a-4ae9-8a54-cdb3f74eadb6">
+    <name>ПретензияПоКоличествуДляПНК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Претензия по количеству для ПНК</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="33b2ce6b-2ed6-459b-9ccf-fec783fe3fd8">
+    <name>СписокСертификатов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список сертификатов</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7f8f367f-b37e-44bc-a37b-6ae7129f3bab">
+    <name>РасхожденияТорг2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расхождения торг2</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0332097a-1911-47ef-bdee-bf77b4c19c7c">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+  </templates>
+  <templates uuid="57f33720-e827-4a2d-b7ec-e18fc8770a1d">
+    <name>Претензия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Претензия</value>
+    </synonym>
+  </templates>
+  <templates uuid="c59ee5c2-d986-4a53-ac31-e74debe69c9a">
+    <name>ТОРГ_2</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТОРГ 2</value>
+    </synonym>
+  </templates>
+  <templates uuid="7e3da43b-509e-4ee5-ba32-d204c7a1920a">
+    <name>Коррекция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция</value>
+    </synonym>
+  </templates>
+  <templates uuid="66ba02ea-1689-4a3c-9a66-ae679f7b306d">
+    <name>КоррекцияДляСогласования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция для согласования</value>
+    </synonym>
+  </templates>
+  <templates uuid="6b9c2d43-2874-4630-ae9d-0db61c2b200a">
+    <name>ШК64</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ш к64</value>
+    </synonym>
+  </templates>
+  <templates uuid="e3e8764f-3db9-4c6f-bdb8-619889f9bdb9">
+    <name>ФормаЛогистаТандер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма логиста тандер</value>
+    </synonym>
+  </templates>
+  <templates uuid="fb98cf63-b270-4b92-97e6-e18375e6588d">
+    <name>КоррекцияДляГруппы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Коррекция для группы</value>
+    </synonym>
+  </templates>
+  <templates uuid="5e3f9918-78e1-443c-889c-2e72de22660f">
+    <name>СписокСертификатов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список сертификатов</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

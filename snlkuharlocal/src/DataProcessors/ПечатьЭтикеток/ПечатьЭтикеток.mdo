@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8d8d245a-add9-437c-869c-37ecfe8f85c3">
+  <producedTypes>
+    <objectType typeId="0861df7e-1bfb-4964-9f0b-63aa25ef9ba1" valueTypeId="ceeb2b88-a4c1-4bf7-a66e-2f70fe40d8af"/>
+    <managerType typeId="1c6fda72-55f6-4448-96ac-d1d89a905994" valueTypeId="74902620-c268-45f1-b1a2-7f9a4124d860"/>
+  </producedTypes>
+  <name>ПечатьЭтикеток</name>
+  <synonym>
+    <key>ru</key>
+    <value>Печать этикеток</value>
+  </synonym>
+  <defaultForm>DataProcessor.ПечатьЭтикеток.Form.Форма</defaultForm>
+  <attributes uuid="5502d0c2-7ff3-422d-8a67-1665a67489c8">
+    <name>ТекДок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тек док</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.РасходнаяНакладная</types>
+      <types>DocumentObject.ЛистНабора</types>
+      <types>DocumentObject.ПриходнаяНакладная</types>
+      <types>DocumentObject.Перемещение</types>
+      <types>DocumentObject.ЛистПереукладки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c599b377-47e9-42a7-9be3-ebef67587d0f">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="53db1d26-80d0-44f6-937e-5837c1e6909e">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="c7238237-0e50-43bc-ae71-ecdb798066c0">
+    <producedTypes>
+      <objectType typeId="35c695b7-bf68-4d14-b5fd-1484736fe8b8" valueTypeId="33988188-9ed5-4463-87fa-6d6e531cf554"/>
+      <rowType typeId="cd1c5760-3de9-47a0-ad2c-c3a6cb5cb695" valueTypeId="8ddb3cc6-fbab-4ff5-b8f8-e6034e165d7e"/>
+    </producedTypes>
+    <name>Этикетки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетки</value>
+    </synonym>
+    <attributes uuid="76d5f972-7175-4882-a8cf-ee7fd9fa1b7b">
+      <name>Пометка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Пометка</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4311be20-27fb-4e90-ba29-a65818098da5">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="51c5da92-7cbd-41fe-8f33-e11da571de5d">
+      <name>Количество</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ac0c6833-6e19-4e8a-a51f-a49a8996ca4a">
+      <name>БрэндМодель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Брэнд модель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="68baf16d-a1f1-4f79-8956-f1a406b25c1d">
+      <name>ШКМатрицы</name>
+      <synonym>
+        <key>ru</key>
+        <value>ШКМатрицы</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>13</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="80d85d44-f3de-4181-84e3-9aa8933a4093">
+      <name>ТипУпаковки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип упаковки</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ТипыУпаковки</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="4080bd78-6beb-4dc6-88ea-61e23c9bfdb5">
+      <name>НоменклатураДляЦвета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура для цвета</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="5944eed8-1fb8-47a3-922f-998221ad3839">
+    <name>Матрица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Матрица</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bdc7f472-ce8b-45bb-8771-6511ee11705f">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="a5fd8dc5-2376-46f7-a92c-6c910a127e14">
+    <name>ФормаДоИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма до изменения</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="0f318aac-2744-4f4f-917a-14022b7a3684">
+    <name>Матрица</name>
+    <synonym>
+      <key>ru</key>
+      <value>Матрица</value>
+    </synonym>
+  </templates>
+  <templates uuid="339f31ba-de44-4ddb-8287-ceb8c68a78e4">
+    <name>Этикетка1_2х0_85</name>
+    <synonym>
+      <key>ru</key>
+      <value>1.2х0.85</value>
+    </synonym>
+  </templates>
+  <templates uuid="06ab9e2d-fb3b-4c9f-92cb-e4456171b10c">
+    <name>Этикетка1_2х0_85ПустойШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>1.2х0.85 ПустойШК</value>
+    </synonym>
+  </templates>
+  <templates uuid="9ba1282b-bdc1-4388-8c89-d9918fc1c1ee">
+    <name>Этикетка1_2х0_85_ЕАС</name>
+    <synonym>
+      <key>ru</key>
+      <value>1.2х0.85ЕАС</value>
+    </synonym>
+  </templates>
+  <templates uuid="f936ebf3-f7f4-4703-be12-08f5d7ef889c">
+    <name>ЭтикеткаИнформацияБелье</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация Белье</value>
+    </synonym>
+  </templates>
+  <templates uuid="cf476a2d-265d-4330-bd95-e2bbcb89ad20">
+    <name>ЭтикеткаАкцияВыгоднаяПокупка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акция выгодная покупка</value>
+    </synonym>
+  </templates>
+  <templates uuid="2d4b62c4-c731-4c40-85ed-bdfb3141c0b8">
+    <name>ЭтикеткаАкцияЛучшаяЦена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Акция лучшая цена</value>
+    </synonym>
+  </templates>
+  <templates uuid="4b1194ee-1b3e-425c-8869-4492fc8d1a3a">
+    <name>ЭтикеткаЦенникБелье</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ценник Белье</value>
+    </synonym>
+  </templates>
+  <templates uuid="344b98f1-0fca-4cb6-b067-d77271395510">
+    <name>ЭтикеткаЦенникКолготки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ценник Колготки</value>
+    </synonym>
+  </templates>
+  <templates uuid="2f69fbcb-b47c-4639-8564-b43e1db3ef8e">
+    <name>ЭтикеткаЦенникАксессуары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ценник Аксессуары</value>
+    </synonym>
+  </templates>
+  <templates uuid="17470527-7bc6-4966-8c6d-e2b58c32addd">
+    <name>ЭтикеткаШК14</name>
+    <synonym>
+      <key>ru</key>
+      <value>ШК14</value>
+    </synonym>
+  </templates>
+  <templates uuid="1c3c5a50-a7fb-4b22-90bc-85f2e7371643">
+    <name>ЭтикеткаФабричный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка фабричный</value>
+    </synonym>
+  </templates>
+  <templates uuid="b19b2842-9645-4261-b24a-faefd72d7610">
+    <name>ЭтикеткаИнформацияБельеУпаковка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация Белье Упаковка</value>
+    </synonym>
+  </templates>
+  <templates uuid="ee575bb5-7bbd-4ea2-a1ad-45a5e7c74883">
+    <name>Этикетка58х17мм</name>
+    <synonym>
+      <key>ru</key>
+      <value>58х17 мм_Миними</value>
+    </synonym>
+  </templates>
+  <templates uuid="431ebd03-3512-42e4-998e-9d33fa3b716b">
+    <name>Этикетка75х18мм</name>
+    <synonym>
+      <key>ru</key>
+      <value>75 х18 мм</value>
+    </synonym>
+  </templates>
+  <templates uuid="17249d6c-95ce-474d-bac7-4a09723463b0">
+    <name>ЭтикеткаИнформация</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформация</value>
+    </synonym>
+  </templates>
+  <templates uuid="1acb4116-d23a-499f-9833-544b06ac0606">
+    <name>ЭтикеткаИнформацияБельеУпаковкаИзКомплектующих</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация Белье Упаковка из комплектующих</value>
+    </synonym>
+  </templates>
+  <templates uuid="2624be0e-806a-433f-ac1e-838bbd87fd96">
+    <name>ЭтикеткаИнформацияБельеСокращенная</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформация Белье Сокращенная</value>
+    </synonym>
+  </templates>
+  <templates uuid="77707f93-05d6-4fb4-91a6-e0a30c294a58">
+    <name>ЭтикеткаИнформацияБельеMinimi</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформация Белье Minimi</value>
+    </synonym>
+  </templates>
+  <templates uuid="71a74aaa-2b84-42d6-80bf-230e9c906812">
+    <name>ЭтикеткаИнформацияБельеNew</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформация Белье new</value>
+    </synonym>
+  </templates>
+  <templates uuid="ba187ee0-2c71-4b85-831f-3e7bf4e2ee11">
+    <name>ЭтикеткаИнформацияЗначки</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформацияЗначки</value>
+    </synonym>
+  </templates>
+  <templates uuid="159dcc40-1c98-49d4-8432-614338917b2f">
+    <name>ЭтикеткаРазмерыТрикотажЖенский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка размеры трикотаж женский</value>
+    </synonym>
+  </templates>
+  <templates uuid="27087aa1-76f9-458d-ba81-9a6970db9243">
+    <name>ЭтикеткаРазмерыТрикотажМужской</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка размеры трикотаж мужской</value>
+    </synonym>
+  </templates>
+  <templates uuid="c648c899-65be-422f-9bf5-0e53f239f3e2">
+    <name>ЭтикеткаРазмерыКупальники</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка размеры купальники</value>
+    </synonym>
+  </templates>
+  <templates uuid="8a989796-4045-40ab-aba2-09b9c5044180">
+    <name>ЭтикеткаРазмерыКупальныеКостюмы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка размеры купальные костюмы</value>
+    </synonym>
+  </templates>
+  <templates uuid="ae298fe1-c6ca-4401-af20-938c993d1d37">
+    <name>ЭтикеткаИнформацияБельеУпаковкаЗначки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация Белье Упаковка Значки</value>
+    </synonym>
+  </templates>
+  <templates uuid="1a51ea0d-3820-4195-844d-0dfbc1fa95e6">
+    <name>ЭтикеткаИнформацияБельеЗначки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация Белье Значки</value>
+    </synonym>
+  </templates>
+  <templates uuid="c2f786eb-4658-4f61-a331-f2fd551f8e5f">
+    <name>ЭтикеткаИнформация75х18мм</name>
+    <synonym>
+      <key>ru</key>
+      <value>Информация 75 х18 мм</value>
+    </synonym>
+  </templates>
+  <templates uuid="1001dda8-91b1-41ff-bffa-e3fc0bfda809">
+    <name>Этикетка1_2x_0_85_Размеры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка1_2x_0_85_Размеры</value>
+    </synonym>
+  </templates>
+  <templates uuid="faadb0a0-21f8-487f-9cf8-d2d1a24c340d">
+    <name>Этикетка75х18ммНовый</name>
+    <synonym>
+      <key>ru</key>
+      <value>75 х18 мм Новый</value>
+    </synonym>
+  </templates>
+  <templates uuid="03b28e9e-23e6-4053-92b0-636a1e34b89f">
+    <name>Эталон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эталон</value>
+    </synonym>
+  </templates>
+  <templates uuid="dda20c27-c2a9-4c0b-ae7d-9a11fff6d122">
+    <name>ЭтикеткаКомплект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплект</value>
+    </synonym>
+  </templates>
+  <templates uuid="2bce0528-19a5-408a-bb93-cbd534969e3b">
+    <name>ЭтикеткаИнформацияУпаковкаБельеКитай</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭтикеткаИнформацияУпаковкаБельеКитай</value>
+    </synonym>
+  </templates>
+  <templates uuid="745e3dad-ff79-4b5f-bdce-f2d92bec90ec">
+    <name>Этикетка75х18ммБезEAC</name>
+    <synonym>
+      <key>ru</key>
+      <value>75 х18 мм без EAC</value>
+    </synonym>
+  </templates>
+  <templates uuid="c96471f7-b7bb-4be7-a5dc-c0e2a68c1ad3">
+    <name>ЭтикеткаКомплектСмещениеВлево</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комплект слева</value>
+    </synonym>
+  </templates>
+  <templates uuid="8191d22c-636f-4f09-80ef-f7332647434b">
+    <name>ЭтикеткаИнформацияПакетыБельеКитай</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка информация пакеты белье Китай</value>
+    </synonym>
+  </templates>
+  <templates uuid="82132b0f-a24f-45f6-8a24-2995f89fc6fb">
+    <name>Этикетка58х17ммБехEAC</name>
+    <synonym>
+      <key>ru</key>
+      <value>58х17 мм без EAC</value>
+    </synonym>
+  </templates>
+  <templates uuid="161b8525-31eb-424e-a619-b2f99902a2c3">
+    <name>ЭтикеткаMinimi</name>
+    <synonym>
+      <key>ru</key>
+      <value>Minimi</value>
+    </synonym>
+  </templates>
+  <templates uuid="a000c4f3-79c7-4dce-897a-f672c2c15b3e">
+    <name>ЭтикеткаИнформацияКупКББельеКитай</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка Информация КупКБ Белье Китай</value>
+    </synonym>
+  </templates>
+  <templates uuid="980b5557-bddd-4df3-8d39-0b706cd30c56">
+    <name>ЭтикеткаШК_40_15</name>
+    <synonym>
+      <key>ru</key>
+      <value>ШК_40_15</value>
+    </synonym>
+  </templates>
+  <templates uuid="e5d10dc1-19b9-4e45-a5a2-ec2ae004dcf6">
+    <name>Этикетка_ДМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка ДетскийМир</value>
+    </synonym>
+  </templates>
+  <templates uuid="3d01a2d3-b6b5-4c01-b4e8-2e0bea10de2b">
+    <name>Этикетка87х50</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка87х50</value>
+    </synonym>
+  </templates>
+  <templates uuid="1c37c366-ced7-484a-9be1-221c3a534af6">
+    <name>Этикетка35х20Казахстан</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этикетка35х20 (Казахстан)</value>
+    </synonym>
+  </templates>
+  <templates uuid="bcb65d00-1235-4ec9-86e4-8ed50bc07934">
+    <name>ЭтикеткаИнформацияКазахстан39х25</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИнформацияКазахстан39х25</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

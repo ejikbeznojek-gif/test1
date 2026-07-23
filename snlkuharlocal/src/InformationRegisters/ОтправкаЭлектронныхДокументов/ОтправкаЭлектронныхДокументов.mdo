@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="db646091-ad22-44ae-a8b7-e4cddcc26215">
+  <producedTypes>
+    <selectionType typeId="3c7bce17-8747-4198-99f4-1c99515afdc8" valueTypeId="c820a39e-7f73-481a-9514-bb7d98f09780"/>
+    <listType typeId="c96e6dd6-34cd-4b54-9794-43265b0f8b1b" valueTypeId="c3100b3b-9f38-48b7-9c05-56436c018ebe"/>
+    <managerType typeId="a89a719a-c6b3-463d-9af9-f68c7f1ff57b" valueTypeId="74186f3e-a916-4c1a-9297-458d56e09a99"/>
+    <recordSetType typeId="cd048dd7-242b-4fc9-b0c0-f7d98cebfeda" valueTypeId="b97e5cc0-1fa7-4dcc-8e63-4893d861ded4"/>
+    <recordKeyType typeId="c7aa3ef4-ecce-45a5-af4c-0dfaeaca11a1" valueTypeId="04a6c100-14e3-42c7-a6ae-73cc94d54119"/>
+    <recordType typeId="aaa16672-8d2d-4d8d-b6e4-975e9a3f7da3" valueTypeId="878511e1-991e-4e74-8bdd-f0d4456af807"/>
+    <recordManagerType typeId="7e75777c-f315-43ed-bc48-79cb8c541ec2" valueTypeId="671de757-7936-484a-bf43-01e508885a9d"/>
+  </producedTypes>
+  <name>ОтправкаЭлектронныхДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка электронных документов</value>
+  </synonym>
+  <comment>Для Екода Эдисферы и др</comment>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e690d34d-0b90-4a38-91c6-0f307607c244">
+    <name>ДокументОтправлен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ отправлен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="39c5867d-b239-4d51-a0a6-538e898a59fa">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <dimensions uuid="d9928dc2-67f5-410c-8bab-b4830b4ef60d">
+    <name>ВидДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид документа</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ДокументЕКОД</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="665be1a7-3fe4-4923-a3b2-15275ef92b1b">
+    <name>НомерЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер заказа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d726ba91-e181-4cda-8e04-8715c43a7f11">
+    <name>ДатаЗаказа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата заказа</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c94ba81a-d06a-4c93-9db5-06ff749e991d">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

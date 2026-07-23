@@ -1,0 +1,2227 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.pf-soft.ru/ee-data" elementFormQualified="true" attributeFormQualified="false">
+	<import namespace="http://v8.1c.ru/edi/edi_stnd/EnterpriseData/1.6"/>
+	<import namespace="http://www.1c.ru/SSL/Exchange/Message"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise/current-config"/>
+	<import namespace="http://v8.1c.ru/8.1/data/enterprise"/>
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="ДокОснование" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ОтчетКассовойСмены {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.Перемещение {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ПриходныйКассовыйОрдер {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ПриходнаяНакладная {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.РасходнаяНакладная {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.РасходныйКассовыйОрдер {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.Чек {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.МаркировкаОстатковТЦ {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ЗаявкаНаВозвратОтПокупателя {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ЗаказИМ {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ВыкупИМ {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ВозвратИМ {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.Возврат1ИМ"/>
+	<valueType name="Документ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.АктОРасхождениях.Ссылка" base="d2p1:DocumentRef.АктПриемки"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.БлокировкаАкции.Ссылка" base="d2p1:DocumentRef.БлокировкаАкции"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ВводОстатковТМЦ.Ссылка" base="d2p1:DocumentRef.ВводОстатковТМЦ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаказПокупателя.Ссылка" base="d2p1:DocumentRef.Заказ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаявкаНаВозвратОтПокупателя.Ссылка" base="d2p1:DocumentRef.ЗаявкаНаВозвратОтПокупателя"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаявкаНаПостСторонАссорт.Ссылка" base="d2p1:DocumentRef.ЗаявкаНаПостСторонАссорт"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаявкаНаСкидки.Ссылка" base="d2p1:DocumentRef.ЗаявкаНаСкидки"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаявкаНаУстановкуЦен.Ссылка" base="d2p1:DocumentRef.ЗаявкаНаУстановкуЦен"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ИнвентаризацияТМЦ.Ссылка" base="d2p1:DocumentRef.Инвентаризация"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ОприходованиеТМЦ.Ссылка" base="d2p1:DocumentRef.ОприходованиеТМЦ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ОтчетКассовойСмены.Ссылка" base="d2p1:DocumentRef.ОтчетКассовойСмены"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.Перемещение.Ссылка" base="d2p1:DocumentRef.Перемещение"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ПеремещениеДенежныхСредств.Ссылка" base="d2p1:DocumentRef.ПереводСредств"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ПрайсЛист.Ссылка" base="d2p1:DocumentRef.ПрайсЛист"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ПриходнаяНакладная.Ссылка" base="d2p1:DocumentRef.ПриходнаяНакладная"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ПриходныйКассовыйОрдер.Ссылка" base="d2p1:DocumentRef.ПриходныйКассовыйОрдер"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.РасходнаяНакладная.Ссылка" base="d2p1:DocumentRef.РасходнаяНакладная"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.РасходныйКассовыйОрдер.Ссылка" base="d2p1:DocumentRef.РасходныйКассовыйОрдер"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.РекламационнаяНакладная.Ссылка" base="d2p1:DocumentRef.РекламационнаяНакладная"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.СверкаДанных.Ссылка" base="d2p1:DocumentRef.СверкаДанных"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.УстановкаСкидок.Ссылка" base="d2p1:DocumentRef.УстановкаСкидок"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise" name="Документ.ЦеныПоставщика.Ссылка" base="d2p1:AnyRef" variety="Atomic"/>
+	<valueType name="Код" base="xs:string" variety="Atomic"/>
+	<valueType name="КодыОперацийОстатки" base="xs:string" variety="Atomic">
+		<enumeration>Закупка</enumeration>
+		<enumeration>ВозвратОтПокупателя</enumeration>
+		<enumeration>Реализация</enumeration>
+	</valueType>
+	<valueType name="НомерЧекаККМ" base="xs:integer" variety="Atomic"/>
+	<valueType name="ОтправителиПолучатели" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.Подразделения {http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.Контрагенты {http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.Склады {http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.СтатьиЗатрат"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.ВидыЗаявокНаСкидки" base="d2p1:EnumRef.ВидыЗаявокНаСкидки" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.ВидыЗаявокНаУстановкуЦен" base="d2p1:EnumRef.ВидыЗаявокНаУстановкуЦен" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.ВидыНоменклаутры" base="d2p1:EnumRef.ВидыНоменклаутры"/>
+	<valueType name="Перечисление.ВидыОперацийИсправленияПоступленияРеализации" base="xs:string" variety="Atomic">
+		<enumeration>СогласованноеИзменение</enumeration>
+		<enumeration>ИсправлениеОшибки</enumeration>
+		<enumeration>ИсправлениеСобственнойОшибки</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ВидыОперацийПКО" base="xs:string" variety="Atomic">
+		<enumeration>ОплатаПокупателя</enumeration>
+		<enumeration>Инвентаризация</enumeration>
+		<enumeration>НедовложениеВИнкассацию</enumeration>
+		<enumeration>ПриходДенежныхСредствПрочее</enumeration>
+		<enumeration>ВозвратАвансовыйОтчет</enumeration>
+		<enumeration>ВозвратОтПодотчетногоЛица</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ВидыОперацийПС" base="xs:string" variety="Atomic">
+		<enumeration>ПереводДенегВСейф</enumeration>
+		<enumeration>ПереводВЦО</enumeration>
+		<enumeration>ПрочийПеревод</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ВидыОперацийРКО" base="xs:string" variety="Atomic">
+		<enumeration>АвансовыйОтчет</enumeration>
+		<enumeration>ВозвратОстаткаПодарочногоСертификата</enumeration>
+		<enumeration>ВозвратПодарочногоСертификата</enumeration>
+		<enumeration>ВыплатаЗаработнойПлаты</enumeration>
+		<enumeration>ИнкассацияДенежныхСредств</enumeration>
+		<enumeration>ОплатаПоставщику</enumeration>
+		<enumeration>ОплатаУслуг</enumeration>
+		<enumeration>ПрочийРасход</enumeration>
+		<enumeration>РасходДенежныхСредствПрочее</enumeration>
+	</valueType>
+	<valueType name="Перечисление.КодыОперацийОстатки" base="xs:string" variety="Atomic">
+		<enumeration>ВводОстатков</enumeration>
+		<enumeration>Закупка</enumeration>
+		<enumeration>Реализация</enumeration>
+		<enumeration>Рекламация</enumeration>
+		<enumeration>ВозвратОтПокупателя</enumeration>
+		<enumeration>Перемещение</enumeration>
+		<enumeration>Пересортица</enumeration>
+		<enumeration>Списание</enumeration>
+		<enumeration>Оприходование</enumeration>
+		<enumeration>Прочее</enumeration>
+		<enumeration>ЗакупкаР</enumeration>
+		<enumeration>Инвентаризация</enumeration>
+		<enumeration>Бонус</enumeration>
+		<enumeration>Взаимозачет</enumeration>
+		<enumeration>Комплектация</enumeration>
+		<enumeration>ПогашениеСертификата</enumeration>
+		<enumeration>Переоценка</enumeration>
+		<enumeration>ВозвратПоставщику</enumeration>
+		<enumeration>Комиссия</enumeration>
+		<enumeration>АгентскийДоговор</enumeration>
+	</valueType>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СкладскиеОперации" base="d2p1:EnumRef.СкладскиеОперации">
+		<enumeration>Приемка</enumeration>
+		<enumeration>Отгрузка</enumeration>
+		<enumeration>ОтгрузкаПриемка</enumeration>
+	</valueType>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СостоянияЗаявкиНаВозвратОтПокупателя" base="d2p1:EnumRef.СостоянияЗаявкиНаВозвратОтПокупателя"/>
+	<valueType name="Перечисление.СостоянияНакладной" base="xs:string" variety="Atomic">
+		<enumeration>ВРаботе</enumeration>
+		<enumeration>КОтгрузке</enumeration>
+		<enumeration>ВНаборе</enumeration>
+		<enumeration>Сканирование</enumeration>
+		<enumeration>ГотоваКОтгрузке</enumeration>
+		<enumeration>Отгружена</enumeration>
+		<enumeration>КПриемке</enumeration>
+		<enumeration>ГотоваКПриемке</enumeration>
+		<enumeration>Принята</enumeration>
+		<enumeration>Доставлена</enumeration>
+		<enumeration>КОтправкеНаСклад</enumeration>
+		<enumeration>ПолученоСкладом</enumeration>
+	</valueType>
+	<valueType name="Перечисление.СостоянияСогласования" base="xs:string" variety="Atomic">
+		<enumeration>ВРаботе</enumeration>
+		<enumeration>НаСогласовании</enumeration>
+		<enumeration>Согласовано</enumeration>
+		<enumeration>НеСогласовано</enumeration>
+	</valueType>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СпособыВводаВОборотСУЗ" base="d2p1:EnumRef.СпособыВводаВОборотСУЗ" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СтавкиНДС" base="d2p1:EnumRef.СтавкиНДС"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СтатусыЗаявокНаСкидки" base="d2p1:EnumRef.СтатусыЗаявокНаСкидки" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СтатусыЗаявокНаУстановкуЦен" base="d2p1:EnumRef.СтатусыЗаявокНаУстановкуЦен" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СтатусыКодовМаркировкиИСМП" base="d2p1:EnumRef.СтатусыКодовМаркировкиИСМП" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.СтатусыОбмена" base="d2p1:EnumRef.СтатусыОбмена"/>
+	<valueType name="Перечисление.СтатусыПодарочныхСертификатов" base="xs:string" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.ТипыКодовМаркировки" base="d2p1:EnumRef.ТипыКодовМаркировки" variety="Atomic"/>
+	<valueType name="Перечисление.ТипыКонтактнойИнформации" base="xs:string" variety="Atomic">
+		<enumeration>Адрес</enumeration>
+		<enumeration>Телефон</enumeration>
+		<enumeration>АдресЭлектроннойПочты</enumeration>
+		<enumeration>Skype</enumeration>
+		<enumeration>ВебСтраница</enumeration>
+		<enumeration>Факс</enumeration>
+		<enumeration>Другое</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ТипыОплатЧекаККМ" base="xs:string" variety="Atomic">
+		<enumeration>Наличные</enumeration>
+		<enumeration>ПлатежнаяКарта</enumeration>
+		<enumeration>БанковскийКредит</enumeration>
+		<enumeration>ПодарочныйСертификат</enumeration>
+		<enumeration>Бонусы</enumeration>
+		<enumeration>ЗачетАванса</enumeration>
+		<enumeration>ВРассрочку</enumeration>
+		<enumeration>ПлатежнаяСистема</enumeration>
+		<enumeration>БанковскийПлатеж</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ТипыПодключаемогоОборудования" base="xs:string" variety="Atomic">
+		<enumeration>СканерШтрихкода</enumeration>
+		<enumeration>СчитывательМагнитныхКарт</enumeration>
+		<enumeration>ККТ</enumeration>
+		<enumeration>ФискальныйРегистратор</enumeration>
+		<enumeration>ПринтерЧеков</enumeration>
+		<enumeration>ДисплейПокупателя</enumeration>
+		<enumeration>ТерминалСбораДанных</enumeration>
+		<enumeration>ЭлектронныеВесы</enumeration>
+		<enumeration>ВесыСПечатьюЭтикеток</enumeration>
+		<enumeration>ККМОфлайн</enumeration>
+		<enumeration>ПринтерЭтикеток</enumeration>
+		<enumeration>СчитывательRFID</enumeration>
+	</valueType>
+	<valueType name="Перечисление.ТипыСертификатов" base="xs:string" variety="Atomic">
+		<enumeration>СертификатСоответствия</enumeration>
+		<enumeration>ГигиеническийСертификат</enumeration>
+		<enumeration>РегистрационноеУдостоверение</enumeration>
+		<enumeration>ДекларацияСоответствия</enumeration>
+		<enumeration>СвидетельствоГосРегистрации</enumeration>
+		<enumeration>НеСертифицируется</enumeration>
+	</valueType>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Перечисление.ЮрФизЛицо" base="d2p1:EnumRef.ЮрФизЛицо" variety="Atomic"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ПланВидовХарактеристик.СвойстваОбъектов.Ссылка" base="d2p1:ChartOfCharacteristicTypesRef.СвойстваОбъектов"/>
+	<valueType name="СостоянияНакладной" base="xs:string" variety="Atomic">
+		<enumeration>ВРаботе</enumeration>
+		<enumeration>КОтгрузке</enumeration>
+		<enumeration>ВНаборе</enumeration>
+		<enumeration>Сканирование</enumeration>
+		<enumeration>ГотоваКОтгрузке</enumeration>
+		<enumeration>Отгружена</enumeration>
+		<enumeration>Принята</enumeration>
+		<enumeration>ГотоваКПриемке</enumeration>
+		<enumeration>Доставлена</enumeration>
+	</valueType>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Акции.Ссылка" base="d2p1:CatalogRef.Акции"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Бренды.Ссылка" itemType="d2p1:CatalogRef.ФР_Бренды"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Валюты.Ссылка" base="d2p1:CatalogRef.Валюты"/>
+	<valueType name="Справочник.ВидыКонтактнойИнформации.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ВидыНоменклатуры.Ссылка" base="d2p1:CatalogRef.ФР_ВидыНоменклатуры"/>
+	<valueType name="Справочник.ВидыОплатЧекаККМ.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ВидыПараметровРазмеровНоменклатуры.Ссылка" base="d2p1:CatalogRef.ВидыПараметровРазмеровНоменклатуры"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ВидыПараметровЦветовНоменклатуры.Ссылка" base="d2p1:CatalogRef.ВидыПараметровЦветовНоменклатуры"/>
+	<valueType name="Справочник.ВнешниеОтчеты_Инт.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Декларация.Ссылка" base="d2p1:CatalogRef.Декларация"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Договоры.Ссылка" base="d2p1:CatalogRef.Договоры"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ДопПараметрРазмера.Ссылка" base="d2p1:CatalogRef.ДопПараметрРазмера"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ДопПараметрЦвета.Ссылка" base="d2p1:CatalogRef.ДопПараметрЦвета"/>
+	<valueType name="Справочник.ДрайверыОборудования.Ссылка"/>
+	<valueType name="Справочник.ЗначенияСвойствОбъектов.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Кассы.Ссылка" base="d2p1:CatalogRef.Кассы"/>
+	<valueType name="Справочник.Коллекции.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Контрагенты.Ссылка" base="d2p1:CatalogRef.Контрагенты"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.МатериалыСостава.Ссылка" base="d2p1:CatalogRef.МатериалыСостав"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Номенклатура.Ссылка" base="d2p1:CatalogRef.Номенклатура"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.НоменклатурныеГруппы.Ссылка" base="d2p1:CatalogRef.ФР_НоменклатурныеГруппы"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.НомераГТД.Ссылка" base="d2p1:CatalogRef.ГТД"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Организации.Ссылка" base="d2p1:CatalogRef.Организации"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ПакетыДанных.Ссылка" itemType="d2p1:CatalogRef.ФР_ПакетыДанных"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ПодарочныеСертификаты.Ссылка" base="d2p1:CatalogRef.ПодарочныеСертификаты"/>
+	<valueType name="Справочник.ПодключаемоеОборудование.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Подразделения.Ссылка" base="d2p1:CatalogRef.Подразделения"/>
+	<valueType name="Справочник.ПоловозрастныеПризнаки.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Пользователи.Ссылка" base="d2p1:CatalogRef.Пользователи"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ПричиныРекламаций.Ссылка" base="d2p1:CatalogRef.ПричиныРекламаций"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Размеры.Ссылка" base="d2p1:CatalogRef.Размеры"/>
+	<valueType name="Справочник.Размеры_Нов.Ссылка"/>
+	<valueType name="Справочник.СертификатыНоменклатуры.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Склады.Ссылка" base="d2p1:CatalogRef.Склады"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.СтатистикаОбменов.Ссылка" base="d2p1:CatalogRef.ФР_СтатистикаОбменов"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.СтатьиЗатрат.Ссылка" base="d2p1:CatalogRef.СтатьиЗатрат"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.СтраныМира.Ссылка" base="d2p1:CatalogRef.КлассификаторСтранМира"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ТипыСкидок.Ссылка" base="d2p1:CatalogRef.ТипыСкидок"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ТипыЦен.Ссылка" base="d2p1:CatalogRef.ТипыЦен"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ФизическиеЛица.Ссылка" base="d2p1:CatalogRef.ФизическиеЛица"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ХарактеристикиНоменклатуры.Ссылка" base="d2p1:CatalogRef.ФР_ХарактеристикиНоменклатуры"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.Цвета.Ссылка" base="d2p1:CatalogRef.Цвета"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ШтрихкодыУпаковокТоваров.Ссылка" base="d2p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Справочник.ЭквайринговыеТерминалы.Ссылка" base="d2p1:CatalogRef.ЭквайринговыеТерминалы"/>
+	<valueType name="Справочник.Языки.Ссылка"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.МаркировкаОстатковТЦ.Ссылка" base="d2p1:DocumentRef.МаркировкаОстатковТЦ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ЗаказИМ.Ссылка" base="d2p1:DocumentRef.ЗаказИМ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ВозвратИМ.Ссылка" base="d2p1:DocumentRef.ВозвратИМ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ВыкупИМ.Ссылка" base="d2p1:DocumentRef.ВыкупИМ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.Возврат1ИМ.Ссылка" base="d2p1:DocumentRef.Возврат1ИМ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ВозвратОплатыИМ.Ссылка" base="d2p1:DocumentRef.ВозвратОплатыИМ"/>
+	<valueType xmlns:d2p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Документ.ОплатаИМ.Ссылка" base="d2p1:DocumentRef.ОплатаИМ"/>
+	<objectType name="Документ.АктОРасхождениях" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДокОснование" type="xs:anyType" lowerBound="0"/>
+		<property name="Количество_Расхождения" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="Обработан" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПричинаРекламации" type="d3p1:Справочник.ПричиныРекламаций.Ссылка" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.АктОРасхождениях.Ссылка" lowerBound="0"/>
+		<property name="Статус" type="xs:string" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента_Расхождения" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаКомпенсации" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаНДС_Расхождения" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.АктОРасхождениях.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.АктОРасхождениях.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.АктОРасхождениях.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.АктОРасхождениях.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ВсегоПоДокументу" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ЕстьВИсходномДокументе" type="xs:boolean" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоПоДокументу" type="xs:anyType" lowerBound="0"/>
+		<property name="СогласованоПоставщиком" type="xs:anyType" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="НДСпоДокументу" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПричинаРекламации" type="d3p1:Справочник.ПричиныРекламаций.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="СуммаБезНДСПоДокументу" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.БлокировкаАкции" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Акция" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаОкончания" type="xs:dateTime" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.БлокировкаАкции.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ВводОстатковТМЦ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ВводОстатковТМЦ.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ВводОстатковТМЦ.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ВводОстатковТМЦ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ВводОстатковТМЦ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВводОстатковТМЦ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПокупателя" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПоступленияПлан" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерТЦ" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерЦО" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="Состояние" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаказПокупателя.Ссылка" lowerBound="0"/>
+		<property name="СтатусОбмена" type="xs:anyType" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаказПокупателя.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПокупателя.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказПокупателя.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПокупателя.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0" nillable="true"/>
+		<property name="Заявка" type="xs:decimal" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПоставщику" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПоступленияПлан" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерТЦ" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерЦО" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="Состояние" type="xs:anyType" lowerBound="0"/>
+		<property name="СостояниеСогласования_Поставщик" type="xs:string" lowerBound="0"/>
+		<property name="СостояниеСогласования_Покупатель" type="xs:string" lowerBound="0"/>
+		<property name="СостояниеСогласования_Покупатель_ЦО" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ПриходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property name="СтатусОбмена" type="xs:anyType" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаказПоставщику.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПоставщику.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказПоставщику.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаказПоставщику.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0" nillable="true"/>
+		<property name="Заявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:decimal" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратОтПокупателя" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПоступленияПлан" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерПокупателя" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерПоставщика" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="СостояниеСогласования_Поставщик" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="СостояниеСогласования_Покупатель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратОтПокупателя.СтатусОбмена" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатусОбмена_Поставщик" type="d3p1:Перечисление.СтатусыОбмена"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатусОбмена_Покупатель_ЦО" type="d3p1:Перечисление.СтатусыОбмена"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатусОбмена_Покупатель_ТЦ" type="d3p1:Перечисление.СтатусыОбмена"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратОтПокупателя.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратОтПокупателя.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокументОтгрузки" type="d3p1:Документ.РасходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0" nillable="true"/>
+		<property name="Заявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратПоставщику" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаПоступленияПлан" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерПокупателя" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МенеджерПоставщика" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Ссылка" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="СостояниеСогласования_Поставщик" type="xs:string" lowerBound="0"/>
+		<property name="СостояниеСогласования_Покупатель" type="xs:string" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаявкаНаВозвратПоставщику.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратПоставщику.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаВозвратПоставщику.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаВозвратПоставщику.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0" nillable="true"/>
+		<property name="Заявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПриходнаяНакладная" type="d3p1:Документ.РасходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Ссылка"/>
+		<property name="Состояние" type="xs:string" nillable="true"/>
+		<property name="РасширениеИсходногоФайла" type="xs:string"/>
+		<property name="ИсходныйФайлСтрока" type="xs:string"/>
+		<property name="ДатаПоставки" type="xs:date"/>
+		<property name="ИмяИсходногоФайла" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ИменаКолонок" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ИменаКолонок"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ЗначенияКолонок" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ЗначенияКолонок"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Товары"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Брэнды" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Брэнды"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидыНоменклатуры" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ВидыНоменклатуры"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Цвета" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Цвета"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Размеры" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Размеры"/>
+		<property name="НомСтрКол" type="xs:decimal"/>
+		<property name="НомКолКодПроизв" type="xs:decimal"/>
+		<property name="НомКолШК" type="xs:decimal"/>
+		<property name="НомКолТНВЭД" type="xs:decimal"/>
+		<property name="НомКолБр" type="xs:decimal"/>
+		<property name="НомКолВН" type="xs:decimal"/>
+		<property name="НомКолЦв" type="xs:decimal"/>
+		<property name="НомКолРз" type="xs:decimal"/>
+		<property name="НомКолНДС" type="xs:decimal"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПНК" type="d3p1:Документ.Перемещение.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Прайс" type="d3p1:Документ.ПрайсЛист.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПрайсРаспродажа" type="d3p1:Документ.ПрайсЛист.Ссылка"/>
+		<property name="ЗагруженВЦО" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Коллекции" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Коллекции"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Брэнды" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Брэнды.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Брэнды.Строка" ordered="false" sequenced="true">
+		<property name="Наименование" type="xs:string"/>
+		<property name="УИД" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Брэнд" type="d3p1:Справочник.Бренды.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ВидыНоменклатуры" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ВидыНоменклатуры.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ВидыНоменклатуры.Строка" ordered="false" sequenced="true">
+		<property name="Наименование" type="xs:string"/>
+		<property name="УИД" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидНоменклатуры" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ЗначенияКолонок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ЗначенияКолонок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ЗначенияКолонок.Строка" ordered="false" sequenced="true">
+		<property name="НомерКолонки" type="xs:long"/>
+		<property name="СтрокаЗначение" type="xs:string"/>
+		<property name="НомерСтрокиТаб" type="xs:long"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ИменаКолонок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.ИменаКолонок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.ИменаКолонок.Строка" ordered="false" sequenced="true">
+		<property name="НомерКолонки" type="xs:long"/>
+		<property name="ИмяКолонки" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Коллекции" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Коллекции.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Коллекции.Строка" ordered="false" sequenced="true">
+		<property name="Наименование" type="xs:string"/>
+		<property name="УИД" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Коллекция" type="d3p1:Справочник.Коллекции.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Размеры" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Размеры.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Размеры.Строка" ordered="false" sequenced="true">
+		<property name="Наименование" type="xs:string"/>
+		<property name="УИД" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Размер" type="d3p1:Справочник.Размеры.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+		<property name="Коэффициент" type="xs:anyType"/>
+		<property name="ЦенаПоСебестоимости" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:string"/>
+		<property name="Производитель" type="xs:string"/>
+		<property name="НомерГТД" type="xs:string"/>
+		<property name="Импортер" type="xs:string"/>
+		<property name="ДанныеСертификата" type="xs:string"/>
+		<property name="ТНВЭД" type="xs:string"/>
+		<property name="СтранаПроисхождения" type="xs:string"/>
+		<property name="ТоварНайден" type="xs:boolean"/>
+		<property name="НеСоотТНВЭД" type="xs:boolean" nillable="true"/>
+		<property name="СтрНоменклатура" type="xs:string"/>
+		<property name="СтрХарНом" type="xs:string"/>
+		<property name="СтрНаим" type="xs:string"/>
+		<property name="СтрКод" type="xs:string"/>
+		<property name="СтрШК" type="xs:string"/>
+		<property name="СтрЦвет" type="xs:string"/>
+		<property name="СтрРазмер" type="xs:string"/>
+		<property name="СтрБренд" type="xs:string"/>
+		<property name="ТоварСоздан" type="xs:boolean"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Цвета" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаПостСторонАссорт.Цвета.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаПостСторонАссорт.Цвета.Строка" ordered="false" sequenced="true">
+		<property name="Наименование" type="xs:string"/>
+		<property name="УИД" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Цвет" type="d3p1:Справочник.Цвета.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаСкидки" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидЗаявки" type="d3p1:Перечисление.ВидыЗаявокНаСкидки" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДействителенПо" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:Документ.ПрайсЛист.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="Обработана" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Скидки" type="d3p1:Документ.ЗаявкаНаСкидки.ЦеныНоменклатуры" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаСкидки.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Статус" type="d3p1:Перечисление.СтатусыЗаявокНаСкидки" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипСкидок" type="d3p1:Справочник.ТипыСкидок.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаСкидки.ЦеныНоменклатуры" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаСкидки.ЦеныНоменклатуры.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаСкидки.ЦеныНоменклатуры.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаУстановкуЦен" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидЗаявки" type="d3p1:Перечисление.ВидыЗаявокНаУстановкуЦен" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДействителенПо" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДокОснование" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ПрайсЛист {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.Перемещение"/>
+		</property>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="Обработана" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаявкаНаУстановкуЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Статус" type="d3p1:Перечисление.СтатусыЗаявокНаУстановкуЦен" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ЦеныНоменклатуры" type="d3p1:Документ.ЗаявкаНаУстановкуЦен.ЦеныНоменклатуры" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаУстановкуЦен.ЦеныНоменклатуры" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаявкаНаУстановкуЦен.ЦеныНоменклатуры.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаявкаНаУстановкуЦен.ЦеныНоменклатуры.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ИнвентаризацияТМЦ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификаты" type="d3p1:Документ.ОприходованиеТМЦ.Сертификаты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ИнвентаризацияТМЦ.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяЗатрат" type="d3p1:Справочник.СтатьиЗатрат.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ИнвентаризацияТМЦ.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ИнвентаризацияТМЦ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ИнвентаризацияТМЦ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ИнвентаризацияТМЦ.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоОпр" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоРасч" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоФакт" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаОприходования" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.КорректировкаПоступления" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="АктОРасхождениях" type="d3p1:DocumentRef.ЗаявкаНаРекламацию" lowerBound="0" nillable="true"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ВидВходящегоДокумента" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидОперации" type="d3p1:Перечисление.ВидыОперацийИсправленияПоступленияРеализации" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаВходящегоДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:Документ.РасходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ЗаявкаНаВозврат" type="d3p1:Документ.ЗаявкаНаВозвратОтПокупателя.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоРасхождений" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="НомерВходящегоДокумента" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.РекламационнаяНакладная.Ссылка" lowerBound="0"/>
+		<property name="СуммаВключаетНДС" type="xs:boolean" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаРасхождений" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.КорректировкаПоступления.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.КорректировкаПоступления.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.КорректировкаПоступления.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.КорректировкаПоступления.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="ВсегоДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0"/>
+		<property name="Заявка" type="xs:anyType" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property name="НДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаБезНДСДоИзменения" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаДоИзменения" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ОприходованиеТМЦ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КодОперации" type="d3p1:Перечисление.КодыОперацийОстатки" lowerBound="0" nillable="true"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификаты" type="d3p1:Документ.ОприходованиеТМЦ.Сертификаты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ОприходованиеТМЦ.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяЗатрат" type="d3p1:Справочник.СтатьиЗатрат.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ОприходованиеТМЦ.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ОприходованиеТМЦ.Сертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОприходованиеТМЦ.Сертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОприходованиеТМЦ.Сертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ОприходованиеТМЦ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОприходованиеТМЦ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОприходованиеТМЦ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаОприходования" type="xs:anyType" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ОтчетКассовойСмены.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Касса" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ЕстьВозвраты" type="xs:boolean" lowerBound="0"/>
+		<property name="КассоваяСмена" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация8" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация9" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="СуммаОплатыСертификатами" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер_Z_Отчета" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоЧеков" type="xs:decimal" lowerBound="0"/>
+		<property name="КоличествоЧековВозврата" type="xs:decimal" lowerBound="0"/>
+		<property name="ТекстСлипЧека" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ОтчетКассовойСмены.Товары" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Возвраты" type="d3p1:Документ.ОтчетКассовойСмены.Возвраты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныеСертификаты" type="d3p1:Документ.ОтчетКассовойСмены.ПодарочныеСертификаты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Оплата" type="d3p1:Документ.ОтчетКассовойСмены.Оплата" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВозвратОплаты" type="d3p1:Документ.ОтчетКассовойСмены.ВозвратОплаты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПродажаПодарочныхСертификатов" type="d3p1:Документ.ОтчетКассовойСмены.ПродажаПодарочныхСертификатов" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВозвратПодарочныхСертификатов" type="d3p1:Документ.ОтчетКассовойСмены.ВозвратПодарочныхСертификатов" lowerBound="0"/>
+		<property name="СуммаСдачиПодарочногоСертификата" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ВозвратОплаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.ВозвратОплаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ВозвратОплаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидОплаты" type="d3p1:Справочник.ВидыОплатЧекаККМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДоговорКонтрагента" type="d3p1:Справочник.Договоры.Ссылка"/>
+		<property name="СуммаОплаты" type="xs:decimal"/>
+		<property name="ПроцентКомиссии" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ВозвратПодарочныхСертификатов" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.ВозвратПодарочныхСертификатов.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ВозвратПодарочныхСертификатов.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Возвраты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.Возвраты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Возвраты.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="АвторЧека" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Акция" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="ВсегоБезСкидки" type="xs:decimal" lowerBound="0"/>
+		<property name="Единица" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КомментарийЧека" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НомерЧека" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НомерЧекаККМ" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Скидка" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0" nillable="true"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="ЦенаБезСкидки" type="xs:anyType" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Оплата" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.Оплата.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Оплата.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидОплаты" type="d3p1:Справочник.ВидыОплатЧекаККМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДоговорКонтрагента" type="d3p1:Справочник.Договоры.Ссылка"/>
+		<property name="СуммаОплаты" type="xs:decimal"/>
+		<property name="ПроцентКомиссии" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ПодарочныеСертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.ПодарочныеСертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ПодарочныеСертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="АвторЧека" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="НомерЧекаККМ" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка" lowerBound="0"/>
+		<property name="СуммаЧека" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаОплатыСертификатами" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ПродажаПодарочныхСертификатов" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.ПродажаПодарочныхСертификатов.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.ПродажаПодарочныхСертификатов.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ОтчетКассовойСмены.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ОтчетКассовойСмены.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="АвторЧека" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Акция" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="ВсегоОФД" type="xs:decimal" lowerBound="0"/>
+		<property name="ВсегоБезСкидки" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="КомментарийЧека" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="НомерЧека" type="xs:string" lowerBound="0"/>
+		<property name="НомерЧекаККМ" type="xs:decimal" lowerBound="0"/>
+		<property name="Скидка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаБезСкидки" type="xs:anyType" lowerBound="0"/>
+		<property name="СуммаСкидкиПоКупону" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаСкидкиЗаВидОплаты" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.Перемещение" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаОтгрузки" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="ДатаПриемки" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КодОперации" type="d3p1:Перечисление.КодыОперацийОстатки" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодразделениеПолучатель" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификаты" type="d3p1:Документ.Перемещение.Сертификаты" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СкладПолучатель" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property name="СостояниеНакладной" type="xs:string" lowerBound="0"/>
+		<property name="СостояниеНакладнойУПолучателя" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.Перемещение.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаВключаетНДС" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.Перемещение.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.Перемещение.Сертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.Перемещение.Сертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.Перемещение.Сертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.Перемещение.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.Перемещение.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.Перемещение.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ"/>
+		<property name="Заявка" type="xs:anyType" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:anyType" lowerBound="0"/>
+		<property name="Себестоимость" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаПоСебестоимости" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ПеремещениеДенежныхСредств" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка"/>
+		<property name="ВидОперации" type="xs:string"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Комментарий" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Источник_Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Источник_Касса" type="d3p1:Справочник.Кассы.Ссылка"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Получатель_Касса" type="d3p1:Справочник.Кассы.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Получатель_Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ПеремещениеДенежныхСредств.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяДДС" type="d3p1:Справочник.СтатьиЗатрат.Ссылка"/>
+		<property name="СуммаДокумента" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ПрайсЛист" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="ДействителенПо" type="xs:dateTime"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="Курс" type="xs:decimal"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ПрайсЛист.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка"/>
+		<property name="УровеньДоступа" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ПриходнаяНакладная" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="БанковскийСчетКонтрагента" type="xs:anyType" lowerBound="0"/>
+		<property name="БанковскийСчетОрганизации" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ВидВходящегоДокумента" type="xs:anyType" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаВходящегоДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДанныеВзаиморасчетов" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="ДополнительныеРеквизиты" type="xs:anyType" lowerBound="0"/>
+		<property name="Заказ" type="xs:anyType" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КодОперации" type="d3p1:Перечисление.КодыОперацийОстатки" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="НомерВходящегоДокумента" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификаты" type="d3p1:Документ.ПриходнаяНакладная.Сертификаты" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладнойУПоставщика" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ПриходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property name="СчетПоставщика" type="xs:anyType" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаВключаетНДС" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ПриходнаяНакладная.Товары" lowerBound="0"/>
+		<property name="Услуги" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ПриходнаяНакладная.Сертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ПриходнаяНакладная.Сертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ПриходнаяНакладная.Сертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ПриходнаяНакладная.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ПриходнаяНакладная.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ПриходнаяНакладная.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0"/>
+		<property name="Заявка" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="НомерГТД" type="d3p1:Справочник.НомераГТД.Ссылка" lowerBound="0"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтранаПроисхождения" type="d3p1:Справочник.СтраныМира.Ссылка" lowerBound="0"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаБезСкидки" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаВозврата" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ПриходныйКассовыйОрдер" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидОперации" type="d3p1:Перечисление.ВидыОперацийПКО" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="ДокОснование" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ПриходнаяНакладная {http://v8.1c.ru/8.1/data/enterprise/current-config}DocumentRef.ОтчетКассовойСмены"/>
+		</property>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Затраты" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Касса" type="d3p1:Справочник.Кассы.Ссылка" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Контрагент" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.Контрагенты {http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.ФизическиеЛица"/>
+		</property>
+		<property name="КонтрагентТип" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПериодРасходов" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="ПоДокументу" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Приложение" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПринятоОт" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ПриходныйКассовыйОрдер.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяДДС" type="d3p1:Справочник.СтатьиЗатрат.Ссылка" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.РасходнаяНакладная" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ВидВходящегоДокумента" type="xs:anyType" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаВходящегоДокумента" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаОтгрузки" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property name="ДатаОформления" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="ДополнительныеРеквизиты" type="xs:anyType" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КодОперации" type="d3p1:Перечисление.КодыОперацийОстатки" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Менеджер" type="d3p1:Справочник.ФизическиеЛица.Ссылка" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property name="НомерВходящегоДокумента" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныеСертификаты" type="d3p1:Документ.РасходнаяНакладная.ПодарочныеСертификаты" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.РасходнаяНакладная.Ссылка" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаВключаетНДС" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.РасходнаяНакладная.Товары" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.РасходнаяНакладная.ПодарочныеСертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.РасходнаяНакладная.ПодарочныеСертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.РасходнаяНакладная.ПодарочныеСертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.РасходнаяНакладная.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.РасходнаяНакладная.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.РасходнаяНакладная.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ" lowerBound="0"/>
+		<property name="Заявка" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Коэффициент" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="НомерГТД" type="d3p1:Справочник.НомераГТД.Ссылка" lowerBound="0"/>
+		<property name="ПодтвержденнаяЗаявка" type="xs:decimal"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтранаПроисхождения" type="d3p1:Справочник.СтраныМира.Ссылка" lowerBound="0"/>
+		<property name="СуммаБезНДС" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Цена" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаБезСкидки" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦенаВозврата" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.РасходныйКассовыйОрдер" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ВидОперации" type="xs:string" lowerBound="0"/>
+		<property name="Выдано" type="xs:string" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Договор" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:ДокОснование" lowerBound="0" nillable="true"/>
+		<property name="ДопПроводки" type="xs:boolean" lowerBound="0"/>
+		<property name="Затраты" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Касса" type="d3p1:Справочник.Кассы.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Курс" type="xs:decimal" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="Основание" type="xs:string" lowerBound="0"/>
+		<property name="ПериодРасходов" type="xs:dateTime" lowerBound="0"/>
+		<property name="ПоДокументу" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property name="Приложение" type="xs:string" lowerBound="0"/>
+		<property name="РасшифровкиЗатрат" type="xs:anyType" lowerBound="0" upperBound="99999"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.РасходныйКассовыйОрдер.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяДДС" type="d3p1:Справочник.СтатьиЗатрат.Ссылка" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.СверкаДанных" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="Данные" type="xs:anyType" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="Дата1" type="xs:dateTime" lowerBound="0"/>
+		<property name="Дата2" type="xs:dateTime" lowerBound="0"/>
+		<property name="ДатаФормирования" type="xs:dateTime" lowerBound="0"/>
+		<property name="ИмяПланаОбмена" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="ЕстьДанныеТек" type="xs:boolean" lowerBound="0"/>
+		<property name="ЕстьДанныеИст" type="xs:boolean" lowerBound="0"/>
+		<property name="ЕстьРасхождения" type="xs:boolean" lowerBound="0"/>
+		<property name="КодУзлаСоздания" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.СверкаДанных.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеИст" type="d3p1:ValueStorage" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеТек" type="d3p1:ValueStorage" lowerBound="0"/>
+		<property name="ТипДанных" type="xs:string" lowerBound="0"/>
+		<property name="ТипМетаданных" type="xs:string" lowerBound="0"/>
+		<property name="ТипОбъекта" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.СверкаДанных.Данные" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.СверкаДанных.Данные.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.СверкаДанных.Данные.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеПБ" type="d3p1:ValueStorage"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеЦБ" type="d3p1:ValueStorage"/>
+		<property name="ТипДанных" type="xs:string"/>
+		<property name="ТипОбъекта" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.СписаниеТМЦ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СостояниеНакладной" type="d3p1:Перечисление.СостоянияНакладной" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ОприходованиеТМЦ.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтатьяЗатрат" type="d3p1:Справочник.СтатьиЗатрат.Ссылка" lowerBound="0"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.СписаниеТМЦ.Товары" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Сертификаты" type="d3p1:Документ.СписаниеТМЦ.Сертификаты" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.СписаниеТМЦ.Сертификаты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.СписаниеТМЦ.Сертификаты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.СписаниеТМЦ.Сертификаты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификат" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.СписаниеТМЦ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.СписаниеТМЦ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.СписаниеТМЦ.Товары.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal"/>
+		<property name="Цена" type="xs:anyType"/>
+		<property name="Сумма" type="xs:decimal" lowerBound="0"/>
+		<property name="НДС" type="xs:decimal" lowerBound="0"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.УстановкаСкидок" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.УстановкаСкидок.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="Номер" type="xs:integer" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипСкидок" type="d3p1:Справочник.ТипыСкидок.Ссылка" lowerBound="0"/>
+		<property name="ДействителенПо" type="xs:dateTime" lowerBound="0"/>
+		<property name="Товары" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.УстановкаСкидок.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.УстановкаСкидок.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.УстановкаСкидок.Товары.Строка" ordered="false" sequenced="true">
+		<property name="Номенклатура" type="xs:anyType"/>
+		<property name="Скидка" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ХранилищеКодовМаркировки" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:ДокОснование" lowerBound="0" nillable="true"/>
+		<property name="ДокОснованиеТип" type="xs:string" lowerBound="0"/>
+		<property name="КодУзлаСоздания" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КоличествоДокумента" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="Номер" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Проведен" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ПланФакт" type="d3p1:EnumRef.ПланФакт" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Ссылка" type="d3p1:DocumentRef.ХранилищеКодовМаркировки" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ХранилищеКодовМаркировки.Товары" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковок" type="d3p1:Документ.ХранилищеКодовМаркировки.ШтрихкодыУпаковок" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отправитель" type="d3p1:ОтправителиПолучатели" lowerBound="0"/>
+		<property name="ОтправительТип" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Получатель" type="d3p1:ОтправителиПолучатели" lowerBound="0"/>
+		<property name="ПолучательТип" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ХранилищеКодовМаркировки.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ХранилищеКодовМаркировки.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ХранилищеКодовМаркировки.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Количество" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ХранилищеКодовМаркировки.ШтрихкодыУпаковок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ХранилищеКодовМаркировки.ШтрихкодыУпаковок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ХранилищеКодовМаркировки.ШтрихкодыУпаковок.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Операция" type="d3p1:EnumRef.СкладскиеОперации" nillable="true"/>
+	</objectType>
+	<objectType name="Документ.ЦеныПоставщика" open="true" ordered="false" sequenced="true">
+		<property name="Дата" type="xs:dateTime" lowerBound="0"/>
+		<property name="Номер" type="xs:integer" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Поставщик" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЦеныПоставщика.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦенИтоговый" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦенРаспродажа" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property name="Цены" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЦеныПоставщика.Цены" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЦеныПоставщика.Цены.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЦеныПоставщика.Цены.Строка" open="true" ordered="false" sequenced="true">
+		<property name="Наценка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Скидка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="ПланВидовХарактеристик.СвойстваОбъектов.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:ПланВидовХарактеристик.СвойстваОбъектов.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:ПланВидовХарактеристик.СвойстваОбъектов.Ссылка"/>
+		<property name="Код" type="xs:anyType"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="ПланОбмена.ОбменСТЦ" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="ЭтотУзел" type="xs:boolean"/>
+	</objectType>
+	<objectType name="ПланОбмена.Основной" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="ЭтотУзел" type="xs:boolean"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЗначенияСвойствОбъектов.Запись" ordered="false" sequenced="true">
+		<property name="Объект">
+			<typeDef xsi:type="ValueType" variety="Union">
+				<typeDef xmlns:d5p1="http://www.pf-soft.ru/ee-data" base="d5p1:Справочник.Номенклатура.Ссылка" variety="Atomic"/>
+				<typeDef xmlns:d5p1="http://www.pf-soft.ru/ee-data" base="d5p1:Справочник.Размеры.Ссылка" variety="Atomic"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Свойство" type="d3p1:ПланВидовХарактеристик.СвойстваОбъектов.Ссылка"/>
+		<property name="Значение" type="xs:anyType"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЗначенияСвойствОбъектов.НаборЗаписей" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.ЗначенияСвойствОбъектов.НаборЗаписей.Отбор" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:РегистрСведений.ЗначенияСвойствОбъектов.Запись" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЗначенияСвойствОбъектов.НаборЗаписей.Отбор" ordered="false" sequenced="true">
+		<property name="Объект">
+			<typeDef xsi:type="ValueType" variety="Union">
+				<typeDef xmlns:d5p1="http://www.pf-soft.ru/ee-data" base="d5p1:Справочник.Номенклатура.Ссылка" variety="Atomic"/>
+				<typeDef xmlns:d5p1="http://www.pf-soft.ru/ee-data" base="d5p1:Справочник.Размеры.Ссылка" variety="Atomic"/>
+			</typeDef>
+		</property>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Свойство" type="d3p1:ПланВидовХарактеристик.СвойстваОбъектов.Ссылка"/>
+	</objectType>
+	<objectType name="РегистрСведений.История.Запись" ordered="false" sequenced="true">
+		<property name="Объект" type="xs:anyType"/>
+		<property name="Реквизит" type="xs:anyType"/>
+		<property name="Документ" type="xs:anyType"/>
+		<property name="Значение" type="xs:anyType"/>
+	</objectType>
+	<objectType name="РегистрСведений.История.НаборЗаписей" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.История.Отбор"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:РегистрСведений.История.Запись"/>
+	</objectType>
+	<objectType name="РегистрСведений.История.Отбор" ordered="false" sequenced="true">
+		<property name="Объект" type="xs:anyType"/>
+		<property name="Реквизит" type="xs:anyType"/>
+		<property name="Документ" type="xs:anyType"/>
+	</objectType>
+	<objectType name="РегистрСведений.КоличествоПосетителей.Запись" ordered="false" sequenced="true">
+		<property name="Дата" type="xs:date"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+	</objectType>
+	<objectType name="РегистрСведений.КоличествоПосетителей.НаборЗаписей" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.КоличествоПосетителей.Отбор" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:РегистрСведений.КоличествоПосетителей.Запись" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="РегистрСведений.КоличествоПосетителей.Отбор" ordered="false" sequenced="true">
+		<property name="Дата" type="xs:date"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиКонтрагентов.Запись" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Скидка" type="xs:decimal" lowerBound="0"/>
+		<property name="Наценка" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиКонтрагентов.НаборЗаписей" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.СкидкиКонтрагентов.НаборЗаписей.Отбор" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:РегистрСведений.СкидкиКонтрагентов.Запись" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиКонтрагентов.НаборЗаписей.Отбор" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиНоменклатуры.Запись" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипСкидок" type="d3p1:Справочник.ТипыСкидок.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокументУстановкаСкидок" type="d3p1:Документ.УстановкаСкидок.Ссылка" lowerBound="0"/>
+		<property name="Скидка" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиНоменклатуры.НаборЗаписей" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.СкидкиНоменклатуры.НаборЗаписей.Отбор" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:РегистрСведений.СкидкиНоменклатуры.Запись" lowerBound="0" upperBound="-1"/>
+		<property name="Период" type="xs:dateTime" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="РегистрСведений.СкидкиНоменклатуры.НаборЗаписей.Отбор" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипСкидок" type="d3p1:Справочник.ТипыСкидок.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокументУстановкаСкидок" type="d3p1:Документ.УстановкаСкидок.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЦеныНоменклатуры.Запись" ordered="false" sequenced="true">
+		<property name="Период" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПрайсЛист" type="d3p1:Документ.ПрайсЛист.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка"/>
+		<property name="Цена" type="xs:decimal"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЦеныНоменклатуры.НаборЗаписей" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Отбор" type="d3p1:РегистрСведений.ЦеныНоменклатуры.НаборЗаписей.Отбор" lowerBound="0"/>
+		<property name="Строка" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="РегистрСведений.ЦеныНоменклатуры.НаборЗаписей.Отбор" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПрайсЛист" type="d3p1:Документ.ПрайсЛист.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипЦен" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.Акции.Группа" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Акции.КоличествоСертификатов"/>
+	<objectType name="Справочник.Акции.Номенклатура" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Справочник.Акции.Номенклатура.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.Акции.Номенклатура.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.Акции.УчаствующиеПодразделения" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Справочник.Акции.УчаствующиеПодразделения.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.Акции.УчаствующиеПодразделения.Строка" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.Акции.ЦеныПродажиБлочками" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Справочник.Акции.ЦеныПродажиБлочками.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.Акции.ЦеныПродажиБлочками.Строка" ordered="false" sequenced="true">
+		<property name="КоличествоВещей" type="xs:decimal" lowerBound="0"/>
+		<property name="Цена" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Акции.Элемент" ordered="false" sequenced="true">
+		<property name="ВыдаватьСертификаты" type="xs:boolean" lowerBound="0"/>
+		<property name="ДатаНачала" type="xs:date" lowerBound="0"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="КаскаднаяСкидка" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КоличествоСертификатов" type="d3p1:Справочник.Акции.КоличествоСертификатов" lowerBound="0"/>
+		<property name="КоличествоДляСтильнойАрифметики" type="xs:decimal" lowerBound="0"/>
+		<property name="МаксимальныйПроцентОтоваривания" type="xs:decimal" lowerBound="0"/>
+		<property name="МинимальнаяСуммаПокупки" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Акции.Номенклатура" lowerBound="0"/>
+		<property name="ОбщаяСкидка" type="xs:decimal" lowerBound="0"/>
+		<property name="Описание" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодарочныйСертификатПоУмолчанию" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="УчаствующиеПодразделения" type="d3p1:Справочник.Акции.УчаствующиеПодразделения" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ЦеныПродажиБлочками" type="d3p1:Справочник.Акции.ЦеныПродажиБлочками" lowerBound="0"/>
+		<property name="ШтрихКод" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Бренды.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Бренды.КС"/>
+	</objectType>
+	<objectType name="Справочник.Бренды.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Бренды.Ссылка"/>
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник.Бренды.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Бренды.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Валюты.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0"/>
+		<property name="ПараметрыПрописиНаРусском" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыКонтактнойИнформации.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ВидыКонтактнойИнформации.Элемент.КС" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Тип" type="d3p1:Перечисление.ТипыКонтактнойИнформации" lowerBound="0"/>
+		<property name="РеквизитДопУпорядочивания" type="xs:anyType" lowerBound="0"/>
+		<property name="Подсказка" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыКонтактнойИнформации.Элемент.КС" ordered="false" sequenced="true">
+		<property name="Ссылка" type="xs:anyType"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ВидыНоменклатуры.Группа" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыНоменклатуры.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="КодВидаНоменклатуры" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="НоменклатурнаяГруппа" type="d3p1:Справочник.НоменклатурныеГруппы.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипНоменклатуры" type="d3p1:Перечисление.ВидыНоменклаутры" lowerBound="0"/>
+		<property name="УказыватьПолНаЭтикетке" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыОплатЧекаККМ.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ВидыОплатЧекаККМ.Элемент.КС" lowerBound="0"/>
+		<property name="ТипОплаты" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="БанкКредитор" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="ПроцентБанковскойКомиссии" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыОплатЧекаККМ.Элемент.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВидыОплатЧекаККМ.Ссылка"/>
+		<property name="Код" type="xs:anyType"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ВидыПараметровРазмеровНоменклатуры.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВидыПараметровРазмеровНоменклатуры.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВидыПараметровЦветовНоменклатуры.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВидыПараметровЦветовНоменклатуры.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ВнешниеОтчеты_Инт.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ВнешниеОтчеты_Инт.Ссылка"/>
+		<property name="Код" type="xs:anyType"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ВнешниеОтчеты_Инт.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ВнешниеОтчеты_Инт.КС" lowerBound="0"/>
+		<property name="ВидДокумента" type="xs:anyType" lowerBound="0"/>
+		<property name="ИмяТЧ" type="xs:anyType" lowerBound="0"/>
+		<property name="ВидОбработки" type="xs:anyType" lowerBound="0"/>
+		<property name="ИмяФормы" type="xs:anyType" lowerBound="0"/>
+		<property name="ТипОбъекта" type="xs:anyType" lowerBound="0"/>
+		<property name="УровеньДоступа" type="xs:decimal" lowerBound="0"/>
+		<property name="СхемаКомпоновки" type="xs:base64Binary" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидОтчета" type="d3p1:Справочник.ВнешниеОтчеты_Инт.Ссылка" lowerBound="0"/>
+		<property name="ИмяНастройки" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Декларация.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Декларация.Ссылка" nillable="true"/>
+		<property name="Код" type="xs:string" nillable="true"/>
+		<property name="Наименование" type="xs:string" nillable="true"/>
+		<property name="Изготовитель" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.Декларация.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Декларация.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Декларация.Ссылка" nillable="true"/>
+		<property name="Код" type="xs:string" nillable="true"/>
+		<property name="Наименование" type="xs:string" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтранаПроисхождения" type="d3p1:Справочник.СтраныМира.Ссылка" nillable="true"/>
+		<property name="Изготовитель" type="xs:string" nillable="true"/>
+		<property name="ДатаНачала" type="xs:date" nillable="true"/>
+		<property name="ДатаОкончания" type="xs:date" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ВидДокумента" type="d3p1:EnumRef.ВидыДекларации" nillable="true"/>
+		<property name="Орган" type="xs:string" nillable="true"/>
+		<property name="Филиал" type="xs:string" nillable="true"/>
+		<property name="Фабрика" type="xs:string" nillable="true"/>
+		<property name="Организация" type="xs:string" nillable="true"/>
+		<property name="Сертификат" type="xs:string" nillable="true"/>
+		<property name="Организация_ИНН" nillable="true"/>
+		<property name="Организация_КПП" nillable="true"/>
+		<property name="Организация_ЮридическийАдрес" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.ДоговорыЕЕ.Группа" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ДоговорыЕЕ.Элемент" ordered="false" sequenced="true">
+		<property name="Агентский" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВалютаКредита" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="Владелец" lowerBound="0">
+			<typeDef xsi:type="ValueType" variety="Union" memberTypes="{http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.Контрагенты {http://v8.1c.ru/8.1/data/enterprise/current-config}CatalogRef.ФизическиеЛица"/>
+		</property>
+		<property name="ВладелецТип" type="xs:string" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Договоры.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ДопПараметрРазмера.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидПараметра" type="d3p1:Справочник.ВидыПараметровРазмеровНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ДопПараметрРазмера.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ДопПараметрЦвета.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидПараметра" type="d3p1:Справочник.ВидыПараметровЦветовНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ДопПараметрЦвета.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ДрайверыОборудования.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ДрайверыОборудования.Ссылка"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ДрайверыОборудования.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ДрайверыОборудования.КС"/>
+		<property name="ТипОборудования" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ЗначенияСвойствОбъектов.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ЗначенияСвойствОбъектов.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ЗначенияСвойствОбъектов.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="КлючевыеСвойства" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.Кассы.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Владелец" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ПодключенТерминал" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Кассы.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ЭквайринговыйТерминал" type="d3p1:Справочник.ЭквайринговыеТерминалы.Ссылка" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.КлассификаторТНВЭД.Группа" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Родитель" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="Ссылка" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.КлассификаторТНВЭД.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="ДатаНачалаОбязательнойРаботыСМаркировкой" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="ДатаНачалаРаботыСМаркировкой" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Родитель" type="d3p1:CatalogRef.ТНВЭД" lowerBound="0" nillable="true"/>
+		<property name="Ссылка" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Коллекции.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Владелец" type="d3p1:Справочник.Бренды.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:decimal" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Линия" type="d3p1:CatalogRef.ЛинииНоменклатуры" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Коллекции.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Контрагенты.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="КПП" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="ЮрФизЛицо" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ЛинииНоменклатуры.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Владелец" type="d3p1:Справочник.Бренды.Ссылка"/>
+		<property name="Код" type="xs:decimal"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="Ссылка" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.МатериалыСостава.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.МатериалыСостава.КС"/>
+	</objectType>
+	<objectType name="Справочник.МатериалыСостава.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.МатериалыСостава.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:anyType" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Группа" type="d3p1:Справочник.МатериалыСостава.КС" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.МатериалыСостава.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.МатериалыСостава.КС" lowerBound="0"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0"/>
+		<property name="Наименование_Английский" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Номенклатура.СоставНоменклатуры" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Справочник.Номенклатура.СоставНоменклатуры.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.Номенклатура.СоставНоменклатуры.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="МатериалСостав" type="d3p1:Справочник.МатериалыСостава.Ссылка"/>
+		<property name="Процент" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Справочник.Номенклатура.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Артикул" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Бренд" type="d3p1:Справочник.Бренды.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ВидНоменклатуры" type="d3p1:Справочник.ВидыНоменклатуры.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="КодТНВЭД" type="d3p1:CatalogRef.ТНВЭД" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Коллекция" type="d3p1:Справочник.Коллекции.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеДляЭтикетки" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Пол" type="d3p1:Справочник.ПоловозрастныеПризнаки.Ссылка" lowerBound="0"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="СнятСПроизводства" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СоставНоменклатуры" type="d3p1:Справочник.Номенклатура.СоставНоменклатуры" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СтавкаНДС" type="d3p1:Перечисление.СтавкиНДС" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.НоменклатурныеГруппы.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.НоменклатурныеГруппы.Ссылка"/>
+		<property name="Код" type="xs:decimal"/>
+		<property name="Наименование" type="xs:string"/>
+	</objectType>
+	<objectType name="Справочник.Организации.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="ИНН" type="xs:string" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="КПП" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеПолное" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="ЮрФизЛицо" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ПакетыДанных.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="ДанныеПакета" type="d3p1:ValueStorage" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПакетыДанных.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.ПодарочныеСертификаты.СписокТЦПриемки" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Справочник.ПодарочныеСертификаты.СписокТЦПриемки.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.ПодарочныеСертификаты.СписокТЦПриемки.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТЦ" type="d3p1:Справочник.Подразделения.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.ПодарочныеСертификаты.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Акция" type="d3p1:Справочник.Акции.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Владелец" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property name="ДатаВыдачи" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="ДатаПогашения" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="ВидСертификата" type="xs:anyType" lowerBound="0" nillable="true"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string" lowerBound="0"/>
+		<property name="МаксимальныйПроцентОтоваривания" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="МинимальнаяСуммаЧекаПогашения" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НачалоДействия" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="НомерЧекаВыдачи" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НомерЧекаПогашения" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Номинал" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="ОкончаниеДействия" type="xs:date" lowerBound="0" nillable="true"/>
+		<property name="ОплатаНеБолее30Процентов" type="xs:boolean" lowerBound="0" nillable="true"/>
+		<property name="Подарок" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодразделениеВыдачи" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодразделениеПредъявления" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодразделениеЗатрат" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПодразделениеПолучатель" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="СрокДействия" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="СписокТЦПриемки" type="d3p1:Справочник.ПодарочныеСертификаты.СписокТЦПриемки" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПодарочныеСертификаты.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Статус" type="d3p1:Перечисление.СтатусыПодарочныхСертификатов" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Эмитент" type="d3p1:Справочник.Организации.Ссылка" lowerBound="0"/>
+		<property name="ОдинКупонНаЧек" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ПодключаемоеОборудование.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПодключаемоеОборудование.Ссылка"/>
+		<property name="Наименование" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.ПодключаемоеОборудование.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ПодключаемоеОборудование.КС" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДрайверОборудования" type="d3p1:Справочник.ДрайверыОборудования.Ссылка" lowerBound="0"/>
+		<property name="ИдентификаторУстройства" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Подразделения.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Подразделения.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.ПоловозрастныеПризнаки.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПоловозрастныеПризнаки.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ПоловозрастныеПризнаки.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.ПоловозрастныеПризнаки.КС"/>
+	</objectType>
+	<objectType name="Справочник.ПричиныРекламаций.Группа" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПричиныРекламаций.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.ПричиныРекламаций.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.ПричиныРекламаций.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.ПричиныРекламаций.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ПричиныРекламаций.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.Размеры.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Размеры.КС"/>
+	</objectType>
+	<objectType name="Справочник.Размеры.КС" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Размеры.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:int" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Группа" type="d3p1:Справочник.Размеры.КС" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Размеры.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Размеры.КС"/>
+	</objectType>
+	<objectType name="Справочник.Размеры_Нов.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Размеры_Нов.КС"/>
+	</objectType>
+	<objectType name="Справочник.Размеры_Нов.КС" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Размеры_Нов.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:int" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Размеры.Группа" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Размеры_Нов.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Размеры_Нов.КС"/>
+	</objectType>
+	<objectType name="Справочник.СертификатыНоменклатуры.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.СертификатыНоменклатуры.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.СертификатыНоменклатуры.Товары" ordered="false" sequenced="true">
+		<property name="Строка" type="xs:anyType" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Справочник.СертификатыНоменклатуры.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка"/>
+	</objectType>
+	<objectType name="Справочник.СертификатыНоменклатуры.Элемент" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.СертификатыНоменклатуры.КС" lowerBound="0"/>
+		<property name="ДатаВыдачи" type="xs:date" lowerBound="0"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ТипСертификата" type="d3p1:Перечисление.ТипыСертификатов" lowerBound="0"/>
+		<property name="ВыдавшийОрган" type="xs:anyType" lowerBound="0"/>
+		<property name="ЦентрВыдачиСертификатов" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Декларант" type="d3p1:Справочник.Контрагенты.Ссылка" lowerBound="0"/>
+		<property name="ВидНоменклатуры" type="xs:anyType" lowerBound="0"/>
+		<property name="ГруппыТоваров" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.СтатистикаОбменов.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.СтатистикаОбменов.Ссылка" lowerBound="0"/>
+		<property name="ИД_Пакета" type="xs:string" lowerBound="0"/>
+		<property name="Получатель" type="xs:string" lowerBound="0"/>
+		<property name="ДатаПриемки" type="xs:date" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.СтатьиРасходов.Группа" ordered="false" sequenced="true">
+		<property name="КлючевыеСвойства" type="xs:anyType"/>
+	</objectType>
+	<objectType name="Справочник.СтатьиРасходов.Группа.КС" ordered="false" sequenced="true">
+		<property name="Ссылка" type="xs:anyType" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.СтраныМира.Элемент" open="true" ordered="false" sequenced="true">
+		<property name="Код" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="КодАльфа2" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="КодАльфа3" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="МеждународноеНаименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="РусскоеНаименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.СтраныМира.Ссылка" lowerBound="0"/>
+		<property name="УчастникЕАЭС" type="xs:boolean" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.ТипыСкидок.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ТипыСкидок.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Примечание" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.ТипыЦен.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Базовый" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Валюта" type="d3p1:Справочник.Валюты.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+		<property name="Примечание" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ТипыЦен.Ссылка" lowerBound="0"/>
+		<property name="Розничный" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ФизическиеЛица.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ФизическиеЛица.Ссылка"/>
+		<property name="Код" type="xs:string"/>
+		<property name="Наименование" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка"/>
+		<property name="Фамилия" type="xs:string" lowerBound="0"/>
+		<property name="Имя" type="xs:string" lowerBound="0"/>
+		<property name="Отчество" type="xs:string" lowerBound="0"/>
+		<property name="ШтрихКод" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.ХарактеристикиНоменклатуры.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Владелец" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДопПараметрРазмера" type="d3p1:Справочник.ДопПараметрРазмера.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:string" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ПервичнаяГруппа" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Размер" type="d3p1:Справочник.Размеры.Ссылка" lowerBound="0"/>
+		<property name="СнятСПроизводства" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.ХарактеристикиНоменклатуры.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Цвет" type="d3p1:Справочник.Цвета.Ссылка" lowerBound="0"/>
+		<property name="ГТИН" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Цвета.Группа" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Цвета.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:decimal" lowerBound="0" nillable="true"/>
+		<property name="Наименование" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Цвета.Ссылка" lowerBound="0" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Цвета.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Цвета.Ссылка"/>
+		<property name="Код" type="xs:decimal" nillable="true"/>
+		<property name="Наименование" type="xs:string" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Родитель" type="d3p1:Справочник.Цвета.Ссылка" nillable="true"/>
+		<property name="РусскоеНаименование" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Справочник.ШтрихкодыУпаковокТоваров.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Ссылка" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Владелец" type="d3p1:CatalogRef.Номенклатура" lowerBound="0"/>
+		<property name="Наименование" type="xs:string" lowerBound="0"/>
+		<property name="ЗначениеШтрихкода" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ТипКода" type="d3p1:EnumRef.ТипыКодовМаркировки" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ТипУпаковки" type="d3p1:EnumRef.ТипыУпаковок" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ТипШК" type="d3p1:EnumRef.ТипыШтрихКодов" lowerBound="0"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="СпособВводаВОборот" type="d3p1:EnumRef.СпособыВводаВОборотСУЗ" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Языки.КС" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Справочник.Языки.Ссылка" lowerBound="0"/>
+		<property name="Код" type="xs:anyType" lowerBound="0"/>
+		<property name="Наименование" type="xs:anyType" lowerBound="0"/>
+	</objectType>
+	<objectType name="Справочник.Языки.Элемент" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КлючевыеСвойства" type="d3p1:Справочник.Языки.КС"/>
+	</objectType>
+	<objectType name="Документ.МаркировкаОстатковТЦ" open="true" ordered="false">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" lowerBound="0"/>
+		<property name="Отработан" type="xs:boolean"/>
+		<property name="НеСканироватьЧЗ" type="xs:boolean"/>
+		<property name="ПоследняяМарка" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.МаркировкаОстатковТЦ.Ссылка"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.МаркировкаОстатковТЦ.Товары"/>
+	</objectType>
+	<objectType name="Документ.МаркировкаОстатковТЦ.Товары" open="true" ordered="false">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.МаркировкаОстатковТЦ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.МаркировкаОстатковТЦ.Товары.Строка" open="true" ordered="false">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="ШтрихКод" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property name="ОтсканированЧЗ" type="xs:boolean"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ЗаказИМ.Ссылка"/>
+		<property name="Статус" type="xs:string" nillable="true"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+		<property name="АдресДоставки" type="xs:string"/>
+		<property name="ДатаОбработки" type="xs:dateTime"/>
+		<property name="УсловияОплаты" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ЗаказИМ.Товары"/>
+		<property name="Оплачено" type="xs:boolean"/>
+		<property name="ДатаОтгрузки" type="xs:dateTime"/>
+		<property name="ДатаАвизации" type="xs:dateTime"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Контрагент" type="d3p1:Справочник.Контрагенты.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="КонтрагентДоставки" type="d3p1:Справочник.Контрагенты.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Склад" type="d3p1:Справочник.Склады.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковок" type="d3p1:Документ.ЗаказИМ.ШтрихкодыУпаковок"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковокВозврат" type="d3p1:Документ.ЗаказИМ.ШтрихкодыУпаковокВозврат"/>
+		<property name="СуммаЗаказаОбщая" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаВозврата" type="xs:decimal" lowerBound="0"/>
+		<property name="СуммаВыкупа" type="xs:decimal" lowerBound="0"/>
+		<property name="КомиссияОплачена" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Возвраты" type="d3p1:Документ.ЗаказИМ.Возвраты"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Выкуп" type="d3p1:Документ.ВыкупИМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Возврат" type="d3p1:Документ.ВозвратИМ.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказИМ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="ЦенаБезСкидки" type="xs:decimal" nillable="true"/>
+		<property name="СтавкаНДС" type="xs:string" nillable="true"/>
+		<property name="Единица" type="xs:string"/>
+		<property name="ВсегоЗаказ" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="НДС" type="xs:decimal"/>
+		<property name="ПодтвержденныйЗаказ" type="xs:decimal" nillable="true"/>
+		<property name="КоличествоВозврат" type="xs:decimal" nillable="true"/>
+		<property name="Заказ" type="xs:decimal" nillable="true"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.ШтрихкодыУпаковок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказИМ.ШтрихкодыУпаковок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.ШтрихкодыУпаковок.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.ШтрихкодыУпаковокВозврат.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.ШтрихкодыУпаковокВозврат" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказИМ.ШтрихкодыУпаковокВозврат.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВыкупИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ВыкупИМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:Документ.ЗаказИМ.Ссылка" nillable="true"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ВыкупИМ.Товары"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковок" type="d3p1:Документ.ВыкупИМ.ШтрихкодыУпаковок"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ВыкупИМ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ВыкупИМ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВыкупИМ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="ЦенаБезСкидки" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="НДС" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ВыкупИМ.ШтрихкодыУпаковок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ВыкупИМ.ШтрихкодыУпаковок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВыкупИМ.ШтрихкодыУпаковок.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ВозвратИМ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ВозвратИМ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВозвратИМ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="ЦенаБезСкидки" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="НДС" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.ВозвратИМ.ШтрихкодыУпаковок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ВозвратИМ.ШтрихкодыУпаковок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.ВозвратИМ.ШтрихкодыУпаковок.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.Возврат1ИМ.Товары" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.Возврат1ИМ.Товары.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.Возврат1ИМ.Товары.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" nillable="true"/>
+		<property name="Цена" type="xs:decimal"/>
+		<property name="Количество" type="xs:decimal" nillable="true"/>
+		<property name="Коэффициент" type="xs:decimal"/>
+		<property name="ЦенаБезСкидки" type="xs:decimal"/>
+		<property name="СтавкаНДС" type="xs:string"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="Единица" type="d3p1:CatalogRef.ОКЕИ"/>
+		<property name="Всего" type="xs:decimal" lowerBound="0"/>
+		<property name="Сумма" type="xs:decimal"/>
+		<property name="НДС" type="xs:decimal"/>
+	</objectType>
+	<objectType name="Документ.Возврат1ИМ.ШтрихкодыУпаковок" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.Возврат1ИМ.ШтрихкодыУпаковок.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Документ.Возврат1ИМ.ШтрихкодыУпаковок.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/enterprise/current-config" name="ШтрихкодУпаковки" type="d3p1:CatalogRef.ШтрихкодыУпаковокТоваров"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Номенклатура" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ХарактеристикаНоменклатуры" type="d3p1:Справочник.Номенклатура.Ссылка" lowerBound="0"/>
+	</objectType>
+	<objectType name="Документ.ВозвратИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ВозвратИМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:Документ.ЗаказИМ.Ссылка" nillable="true"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.ВозвратИМ.Товары"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковок" type="d3p1:Документ.ВозвратИМ.ШтрихкодыУпаковок"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.Возврат1ИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.Возврат1ИМ.Ссылка"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ДокОснование" type="d3p1:Документ.ЗаказИМ.Ссылка" nillable="true"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Товары" type="d3p1:Документ.Возврат1ИМ.Товары"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="ШтрихкодыУпаковок" type="d3p1:Документ.Возврат1ИМ.ШтрихкодыУпаковок"/>
+		<property name="СуммаДокумента" type="xs:decimal" lowerBound="0"/>
+		<property name="Комментарий" type="xs:string"/>
+		<property name="ТоварПроверен" type="xs:boolean"/>
+		<property name="НужнаЭкспертиза" type="xs:boolean"/>
+	</objectType>
+	<objectType name="Документ.ОплатаИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ОплатаИМ.Ссылка"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.ВозвратОплатыИМ" open="true" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Автор" type="d3p1:Справочник.Пользователи.Ссылка" nillable="true"/>
+		<property name="Дата" type="xs:dateTime"/>
+		<property name="Номер" type="xs:string"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Организация" type="d3p1:Справочник.Организации.Ссылка" nillable="true"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Подразделение" type="d3p1:Справочник.Подразделения.Ссылка" nillable="true"/>
+		<property name="ПометкаУдаления" type="xs:boolean"/>
+		<property name="НомерИнетЗаказа" type="xs:string"/>
+		<property name="Проведен" type="xs:boolean"/>
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Ссылка" type="d3p1:Документ.ОплатаИМ.Ссылка"/>
+		<property name="НомерЛогистЗаказа" type="xs:string"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.Возвраты.Строка" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Возврат" type="d3p1:Документ.Возврат1ИМ.Ссылка"/>
+	</objectType>
+	<objectType name="Документ.ЗаказИМ.Возвраты" ordered="false" sequenced="true">
+		<property xmlns:d3p1="http://www.pf-soft.ru/ee-data" name="Строка" type="d3p1:Документ.ЗаказИМ.Возвраты.Строка" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

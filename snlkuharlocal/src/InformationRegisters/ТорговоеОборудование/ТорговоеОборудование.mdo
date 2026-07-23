@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c89810a6-c8aa-449e-af5a-45ec84ac6415">
+  <producedTypes>
+    <selectionType typeId="e91e16a7-950d-45c5-8e24-9b192779dae7" valueTypeId="da8bf47c-3ab4-407a-8342-526ae79edaed"/>
+    <listType typeId="8dd76298-9ab8-4147-b1e3-b0c754f4fa83" valueTypeId="2b3b225d-d972-4de3-a577-4702f8eb7d6e"/>
+    <managerType typeId="a60aa9ac-319b-4b03-897e-f2efca6afe06" valueTypeId="8595bf1a-aee5-4996-9a9e-57c15d956fa9"/>
+    <recordSetType typeId="2816eb5d-8216-4659-9531-f28bc1f00fcf" valueTypeId="cd93add7-5a6b-4468-a55e-fcfe013f288c"/>
+    <recordKeyType typeId="4dcf072f-7e98-45ad-bad6-8471e6748df5" valueTypeId="0a048161-4cd9-4540-a939-693ca845f619"/>
+    <recordType typeId="0a1627f2-0468-4c4c-b790-8f7f65725bdc" valueTypeId="42eb8836-daf7-4759-a045-b3539df07a56"/>
+    <recordManagerType typeId="3934e4a5-6590-4fa8-b4a9-e87985a2bba6" valueTypeId="31b1bef7-8103-4804-9982-f628a14916b0"/>
+  </producedTypes>
+  <name>ТорговоеОборудование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Торговое оборудование</value>
+  </synonym>
+  <defaultListForm>InformationRegister.ТорговоеОборудование.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b9166a5d-1d92-45ce-94eb-5d736fb3f54e">
+    <name>Подключено</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подключено</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="320434f5-c868-43b8-9b40-bbcdbd976b53">
+    <name>Параметры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </resources>
+  <dimensions uuid="2b948d33-75c8-48d5-b7fb-1ef2a65283e0">
+    <name>Компьютер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компьютер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:StringValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="321022b9-b3e5-45fd-ba5f-e033e49b8953">
+    <name>МодельТорговогоОборудования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель торгового оборудования</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТорговоеОборудование</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b62919ad-7f7e-40a7-960f-996f82c88792">
+    <name>КассаККМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Касса ККМ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Кассы</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d7394b07-a178-4c39-bb2d-27f20c8b01c7">
+    <name>НомерЛогическогоУстройства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер логического устройства</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="b1978df7-020b-4e34-ab07-c9d6169c72fc">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

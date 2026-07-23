@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3f988a3b-6620-4ebc-beac-80d4ac0481d0">
+  <producedTypes>
+    <selectionType typeId="881682c3-d0cc-49f0-9aa6-83b15b2c6bac" valueTypeId="0872fe63-ae2a-4522-8537-62cbb8cdeb0b"/>
+    <listType typeId="325bbc15-cbe8-47d1-8460-234577461f7f" valueTypeId="257f5533-adc7-49bc-9549-2b36bcee1185"/>
+    <managerType typeId="0cc04743-0ae9-426f-97c6-736d21ba94dd" valueTypeId="0acb3fcc-cdb4-4d1d-8412-99d788e4c52a"/>
+    <recordSetType typeId="555bfa75-faa1-41e1-b4de-b6be1d17f676" valueTypeId="eca73b16-b3e2-4a2c-9d2e-c9a88262f29b"/>
+    <recordKeyType typeId="2fd9704e-b261-466c-ab0a-0369ad1983a5" valueTypeId="ef711f15-1a2c-4f18-9c82-c81f25a403c6"/>
+    <recordType typeId="897ca402-5d4f-4a27-bf40-f1e8fecee8f1" valueTypeId="9f903e2e-7ce4-4fce-9f03-eded58b26b8a"/>
+    <recordManagerType typeId="6394cb73-5ea2-4240-b1c7-f95349f1ce25" valueTypeId="97313811-d47c-4d19-b949-fcc247b9fa29"/>
+  </producedTypes>
+  <name>РеестрСканирования</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реестр сканирования</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.РеестрСканирования.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="1c08e88d-124a-440c-99f3-f644f2230239">
+    <name>ВремяПростоя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время простоя</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Интервал между текущим и предыдущим сканированием</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="7ca3aa70-aa7d-499a-8884-ab1a9225420c">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="62465a08-5613-4ead-a327-35b9e6953aed">
+    <name>ДанныеПоШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные по ШК</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+      <types>CatalogRef.ТипыКоробов</types>
+      <types>DocumentRef.Комплектация</types>
+      <types>DocumentRef.ЗаданиеНабора</types>
+      <types>CatalogRef.ПринтерыЭтикеток</types>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.Инвентаризация</types>
+      <types>CatalogRef.Номенклатура</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ЗаданиеНаАгрегацию</types>
+      <types>DocumentRef.ЛистНабора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="80eea921-2d3b-46d9-910f-4c2bbaa0db4a">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="205c44c1-0ecc-4a85-9fc0-3e730d7ec10e">
+    <name>ДокументСканирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ сканирования</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаданиеНабора</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаСборкуКомплектовЧЗ</types>
+      <types>DocumentRef.ЗаданиеНаАгрегацию</types>
+      <types>DocumentRef.ЛистНабора</types>
+      <types>DocumentRef.Паллета</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.ЛистЗагрузки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="edcbfb1b-05dc-4202-be93-260d8fcd0f4a">
+    <name>ДопИнфо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп инфо</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="0d56c4a0-a531-4a6a-8c2a-050afe46283c">
+    <name>Знак</name>
+    <synonym>
+      <key>ru</key>
+      <value>Знак</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="df5d0dbb-4d7d-4a27-8418-d0b93ec3d86e">
+    <name>КодировкаШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кодировка ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыКодировокШК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6213fd07-fb16-453b-a71c-79a1b5e0b28e">
+    <name>НазначениеШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Назначение ШК</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.НазначенияШК</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9af0223e-c1ee-400f-904b-523abedcf6a8">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Комплектация</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.Инвентаризация</types>
+      <types>DocumentRef.РекламационнаяНакладная</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.КоллективныеРаботы</types>
+      <types>DocumentRef.ОприходованиеТМЦ</types>
+      <types>DocumentRef.СписаниеТМЦ</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="4d711423-f8a2-480f-a160-3f417b7c85d2">
+    <name>РабочееМесто</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочее место</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РабочиеМеста</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e84756ef-81be-49a7-9c63-4ce481566212">
+    <name>СостояниеСканера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние сканера</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияСканераДляПланаНабора</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Предыдущее состояние сканера. Для двойных пиков.</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="61239ad8-6ec8-40f2-a0ac-fa5f1eee3a35">
+    <name>ТекстОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>400</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="6f4fe195-49eb-4462-9cba-959e2aabe0f6">
+    <name>ТипКода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип кода</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="47ffe583-7272-4e22-9ff6-acc33d6c71e5">
+    <name>ТипШК</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ШК</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыШтрихКодов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5e3e068c-90d2-46bb-a001-48c03ad7dde9">
+    <name>ФизЛицо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Физ лицо</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="30fbde83-4303-433d-85fa-c04ffcafb06e">
+    <name>ШтрихКод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрих код</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <attributes uuid="f107663d-42d8-4db7-9c9a-85da059e20e1">
+    <name>ДокументЗадание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ задание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>При сканировании в ЛН писать в этот реквизит &quot;ЗНБ&quot; из ЛН, при сканировании в ЛП писать &quot;ЗНА&quot; из докоснования, при сканировании в ЛСК писать ЗСБ из докоснования
+
+Задания в РС &quot;реестр сканирования&quot; без ТСД
+SNL-194</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a9a6d12c-4dfe-4dcc-95ca-84383b5400a0">
+    <name>ПризнакОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Признак ошибки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>150</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Пустые листы в регистре &quot;реестр сканирования&quot;
+SNL-195</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue"/>
+  </attributes>
+  <dimensions uuid="463dcdb2-2711-484c-9a7c-7ece8d107ec5">
+    <name>ИД_Записи</name>
+    <synonym>
+      <key>ru</key>
+      <value>ИД записи</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="678c0b25-3af2-4434-b6da-da61397b9454">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

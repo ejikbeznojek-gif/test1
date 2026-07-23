@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c7b33057-8494-4d32-88a3-cd03424eef51">
+  <producedTypes>
+    <selectionType typeId="793e578b-622a-4e53-982e-21509f31aa82" valueTypeId="b945a4c9-d89f-459d-ac87-f018b90bd326"/>
+    <listType typeId="c1502b5a-d5ee-43ce-a201-ae2e7021dda5" valueTypeId="62fc1589-c41b-4208-b90a-0db53939e6ca"/>
+    <managerType typeId="6a14c0d3-fb85-4025-97df-0c5d8dd447ee" valueTypeId="f3ef371a-605c-4dcf-a29b-bf96945f7d65"/>
+  </producedTypes>
+  <name>Оборудование</name>
+  <synonym>
+    <key>ru</key>
+    <value>Оборудование</value>
+  </synonym>
+  <defaultForm>DocumentJournal.Оборудование.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.ВозвратОборудования</registeredDocuments>
+  <registeredDocuments>Document.ВыдачаОборудования</registeredDocuments>
+  <columns uuid="f4b15ce0-c4ea-42aa-b8da-3b1d30789d5a">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <references>Document.ВозвратОборудования.Attribute.Сотрудник</references>
+    <references>Document.ВыдачаОборудования.Attribute.Сотрудник</references>
+  </columns>
+  <columns uuid="09c5b707-17af-4537-8297-6c7d415a2010">
+    <name>ДатаВозврата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата возврата</value>
+    </synonym>
+    <references>Document.ВыдачаОборудования.Attribute.ДатаВозврата</references>
+  </columns>
+  <columns uuid="249cceaa-5d3d-47f5-905f-5ac2bc8f683f">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.ВозвратОборудования.Attribute.Комментарий</references>
+    <references>Document.ВыдачаОборудования.Attribute.Комментарий</references>
+  </columns>
+  <columns uuid="78d7a50a-9473-45b4-9da3-a96193f0d1fd">
+    <name>Принял</name>
+    <synonym>
+      <key>ru</key>
+      <value>Принял</value>
+    </synonym>
+    <references>Document.ВозвратОборудования.Attribute.Выдал</references>
+    <references>Document.ВыдачаОборудования.Attribute.Выдал</references>
+  </columns>
+  <columns uuid="a454616c-25a9-4513-84be-d64429344503">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <references>Document.ВозвратОборудования.Attribute.Ответственный</references>
+    <references>Document.ВыдачаОборудования.Attribute.Ответственный</references>
+  </columns>
+  <forms uuid="db1442e6-6902-404e-a7b1-97f8e156e6a5">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

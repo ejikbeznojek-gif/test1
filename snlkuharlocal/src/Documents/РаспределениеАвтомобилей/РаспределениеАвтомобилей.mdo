@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="695891ea-94a1-4c33-afb0-5b5cdeca2715">
+  <producedTypes>
+    <objectType typeId="3afa30d1-ec80-4425-a79b-75d6ac12eb56" valueTypeId="91358bb2-dfac-433a-bd75-8d8c2242d29d"/>
+    <refType typeId="006bb226-abb2-4384-9849-c1a1adcbc568" valueTypeId="31efce24-8f22-4faa-b8dc-873f390a0727"/>
+    <selectionType typeId="6b1b53a7-a74b-425f-aed0-69047f11b4a6" valueTypeId="d245cdd7-a042-42eb-99ed-8a128046be0b"/>
+    <listType typeId="3d332ea6-71c3-4259-85d3-d8aaeee2cb0c" valueTypeId="f1d834ca-06fd-41bc-a077-1c97c98e332c"/>
+    <managerType typeId="0ee6ad21-1bd4-4aa5-9f92-b741ca6967b1" valueTypeId="34d740df-6c87-48ff-836f-955a9fb02442"/>
+  </producedTypes>
+  <name>РаспределениеАвтомобилей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Распределение автомобилей</value>
+  </synonym>
+  <inputByString>Document.РаспределениеАвтомобилей.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.РаспределениеАвтомобилей.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="8497d63a-c3af-45ff-a8c0-295ad57cdbcb">
+    <name>ТипДоставки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип доставки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.КаналСбыта</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="7f61a287-cbe1-474b-a818-3faa6557a411">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="b0c418a7-651d-4c3c-b8d5-8cac88cacfd9">
+    <producedTypes>
+      <objectType typeId="aab59253-ea41-492f-a65a-56338a43de11" valueTypeId="d05a4a83-5e25-4de4-a696-d4b22c4a04a0"/>
+      <rowType typeId="5bd8f688-62ca-49bd-b5b3-78da1cb00e58" valueTypeId="9902717d-7ae9-4743-af75-334c496c0cf3"/>
+    </producedTypes>
+    <name>Автомобили</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автомобили</value>
+    </synonym>
+    <attributes uuid="84aeac67-8528-4663-ba9b-0d315a2d9569">
+      <name>Автомобиль</name>
+      <synonym>
+        <key>ru</key>
+        <value>Автомобиль</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Автомобили</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="74294026-25dc-49f0-bd3a-e6e4f6056025">
+      <name>Водитель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Водитель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ФизическиеЛица</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d5723a57-285c-41fe-8a1b-0e48b3bdad44">
+      <name>КоличествоТочек</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество точек</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>2</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e1385d9f-63b2-4fdb-9e81-337eed43d9f0">
+      <name>Активна</name>
+      <synonym>
+        <key>ru</key>
+        <value>Активна</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="cafdee71-442d-46ef-a7ba-6df7604949f0">
+      <name>МаксимальныйПробегЗаДень</name>
+      <synonym>
+        <key>ru</key>
+        <value>Максимальный пробег за день</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>4</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

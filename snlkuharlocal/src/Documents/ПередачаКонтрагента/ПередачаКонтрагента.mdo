@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c498bf32-ed24-4002-825b-f2ee844090d6">
+  <producedTypes>
+    <objectType typeId="77489ec5-1c05-49be-81ae-b6dc3b14d55b" valueTypeId="40927083-41cf-450a-bc1d-0c96d6cda3b6"/>
+    <refType typeId="223295be-8f0f-4105-9d10-00ce4b347924" valueTypeId="8b0c8ba2-a82a-4709-82d3-1840138439a5"/>
+    <selectionType typeId="093031d1-6baa-4cb3-a919-c5c6e51ed631" valueTypeId="8adf22c8-0d94-4c9b-a45e-d3b1c5cb6407"/>
+    <listType typeId="c2e2646f-dda5-40ae-85c0-b1a0fdf8a896" valueTypeId="759d53a6-0ef1-4fc7-ac0c-ccc3ee8b11ac"/>
+    <managerType typeId="905791e4-1f76-4aad-9ac0-e5925f5df65f" valueTypeId="26907e97-16c2-4ca9-9780-96c535cc3757"/>
+  </producedTypes>
+  <name>ПередачаКонтрагента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Передача контрагента</value>
+  </synonym>
+  <inputByString>Document.ПередачаКонтрагента.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ПередачаКонтрагента.Form.ФормаДокумента</defaultObjectForm>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecordsDeletion>AutoDelete</registerRecordsDeletion>
+  <registerRecordsWritingOnPost>WriteModified</registerRecordsWritingOnPost>
+  <attributes uuid="e3555876-0c14-4559-8c79-abc06de477ea">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="42f7bf75-cd33-491f-8fec-00b2c4376bf9">
+    <name>Ответственный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ответственный</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="efcf271d-3705-4f11-ad31-70ea299bf241">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8c56cc68-e3fd-4fce-a03f-33ed250992f0">
+    <name>КонтрагентИнт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент инт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="effcb285-797c-48f0-beca-9aef3e4587a4">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="5d96d6e5-a3c6-4464-9fab-74ef014cf8de">
+    <producedTypes>
+      <objectType typeId="c7a80f20-020f-4611-94e0-413d016f3041" valueTypeId="c827d9fb-0684-44f1-b777-cd9a622f940e"/>
+      <rowType typeId="90319682-627d-432b-a8e7-4574e9f429df" valueTypeId="1d909892-e093-4c73-9e2b-a1620f2e3b12"/>
+    </producedTypes>
+    <name>УзелДляДобавления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел для добавления</value>
+    </synonym>
+    <attributes uuid="f2298318-e1f8-466b-a136-44929b09d18d">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>3</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="71b6eae1-330a-41f5-8d17-fb8eea00ceb5">
+    <producedTypes>
+      <objectType typeId="a1872e98-e6f9-4c30-91a4-6a3f111645d9" valueTypeId="c18013ba-6e17-4198-aada-6feafde50467"/>
+      <rowType typeId="b7404eab-083d-4b2d-8830-358d4bf994e3" valueTypeId="9a4e543d-cba8-476d-b81f-f88cf3319c2f"/>
+    </producedTypes>
+    <name>УзелДляУдаления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узел для удаления</value>
+    </synonym>
+    <attributes uuid="47fac2bb-c0bd-4d36-9adb-45ad0cb446fa">
+      <name>КодУзла</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код узла</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>3</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="47239b64-4fca-48b6-8131-a2172921aa88">
+    <producedTypes>
+      <objectType typeId="a1b9eb53-4343-41f2-9b67-b1ac1ce94583" valueTypeId="e20e7d08-d1ee-4bb7-af0c-4604242eacee"/>
+      <rowType typeId="a55d7f24-d5be-4d58-b48f-6b2a5d574d42" valueTypeId="e68a4965-a07f-4eab-b2ca-65a5782b0247"/>
+    </producedTypes>
+    <name>Взаиморасчеты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Взаиморасчеты</value>
+    </synonym>
+    <attributes uuid="66a637fe-1dfc-4446-b625-4c4d8d9d9f86">
+      <name>Договор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Договор</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Договоры</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="136afa48-c057-444d-b1bf-236966bbccc2">
+      <name>СуммаУпр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сумма упр.</value>
+      </synonym>
+      <comment>Сумма в валюте упр. учета</comment>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4e2d8f9d-9219-4f76-99ea-c4e048f1af93">
+      <name>КонтрагентИнт</name>
+      <synonym>
+        <key>ru</key>
+        <value>Контрагент инт</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7a13a773-f33e-4cd9-940c-e538577fbed1">
+      <name>ДокументЗакрытогоПериода</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ закрытого периода</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ef218966-efc8-4505-891f-8af4d5c14086">
+      <name>ДатаНачалаЗадолженности</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала задолженности</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="e76028d5-fb9e-4b56-85af-251058c3cb18">
+      <name>ДокументСсылка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ ссылка</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РеформацияБаланса</types>
+        <types>DocumentRef.РасходныйКассовыйОрдер</types>
+        <types>DocumentRef.ВводОстатковВзаиморасчетов</types>
+        <types>DocumentRef.ОтчетКассовойСмены</types>
+        <types>DocumentRef.КорректировкаЗадолженности</types>
+        <types>DocumentRef.Взаимозачет</types>
+        <types>DocumentRef.ПриходныйКассовыйОрдер</types>
+        <types>DocumentRef.ПродажаИМ</types>
+        <types>DocumentRef.АвансовыйОтчет</types>
+        <types>DocumentRef.ПриходнаяНакладная</types>
+        <types>DocumentRef.ЗаказПоставщику</types>
+        <types>DocumentRef.СписаниеТМЦСпути</types>
+        <types>DocumentRef.Инвентаризация</types>
+        <types>DocumentRef.ДвиженияДенежныхСредств</types>
+        <types>DocumentRef.РекламационнаяНакладная</types>
+        <types>DocumentRef.РасходнаяНакладная</types>
+        <types>DocumentRef.Претензия</types>
+        <types>DocumentRef.УслугиСтороннихОрганизаций</types>
+        <types>DocumentRef.СписаниеКурсовыхРазниц</types>
+        <types>DocumentRef.Машина</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

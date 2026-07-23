@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e29520b6-3149-4e7e-876d-3bd5ff8dda5f">
+  <producedTypes>
+    <selectionType typeId="678db6ee-3b26-42c3-af57-d03afbf7ae9b" valueTypeId="dae8a737-6b9b-4e29-81ce-2e893e9f82be"/>
+    <listType typeId="e8400d11-3e77-41f7-b9c2-a23f4c89ae36" valueTypeId="17464350-3630-49a9-bbb6-769515964de7"/>
+    <managerType typeId="571a0760-aae1-46b8-8fd8-09a81d43a99d" valueTypeId="2c45bbdf-c578-4f36-ba41-4aa962da8e0d"/>
+    <recordSetType typeId="5fa29de7-cf66-4da3-b4a5-17c39d7a8ad6" valueTypeId="8852275b-7eaa-43d7-b6b4-8f00d44bc16c"/>
+    <recordKeyType typeId="5121d905-9582-4176-9a13-88134a2d4fb5" valueTypeId="b0a38803-e9fb-47b3-9a5f-1661872e3539"/>
+    <recordType typeId="22a3e012-dcad-458e-8239-2fb52ce59fe8" valueTypeId="3e276ae7-7291-4640-bb60-63e2d011c40f"/>
+    <recordManagerType typeId="8eea285f-0c8c-41ba-ae99-f568482e800c" valueTypeId="ce069dfb-fb89-4302-92ab-24b0302bc5de"/>
+  </producedTypes>
+  <name>СостояниеНакладнойУКлиента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояние накладной у клиента</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="e9aa6c99-c9a7-45a7-8578-86eb935a6d26">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9d69b9f7-e0e7-4efd-bc9d-f393e268dd30">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="76fa061f-b885-46e9-84e9-9c004f0d6e5c">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8598df25-3034-4ba8-a9b0-b3224c0252c2">
+    <name>СостояниеУКлиента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние у клиента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СостояниеНакладнойУКлиента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a1c9e0b-35a4-45d3-b475-7aa827fdae64">
+  <producedTypes>
+    <selectionType typeId="62ddf360-a575-45e7-90e8-fd00f04d9914" valueTypeId="1813e365-30cc-408c-b9d9-d2e57db5f5cc"/>
+    <listType typeId="eddbd5ca-550a-4b43-a371-f337281dd39f" valueTypeId="426a62b2-6f3e-4600-84f9-2c441f0d48f1"/>
+    <managerType typeId="558f7f51-9343-41ab-b997-5648fbaec223" valueTypeId="b9bf8071-dbb2-457e-a6c4-cd7704e3cbdf"/>
+    <recordSetType typeId="9cae5226-5e8d-4619-8bad-6273640bebf6" valueTypeId="5334e05f-549e-40d5-89a4-a22e34bba6dd"/>
+    <recordKeyType typeId="a9200ecc-962f-434a-9753-aa1136dd4c70" valueTypeId="8a4810e1-8614-45fc-92e1-36ba264d8c4e"/>
+    <recordType typeId="203bfafa-32c0-4434-b293-295e1f609403" valueTypeId="1ed494e8-4fcb-40e8-8004-7dc284de0e68"/>
+    <recordManagerType typeId="01e64f37-cb91-47c8-8c51-df50f892c373" valueTypeId="72fe9487-0806-4ddb-b709-e1efb7388139"/>
+  </producedTypes>
+  <name>ДоверенностиНаПодпись</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доверенности на подпись</value>
+  </synonym>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d9b5302f-28ca-48ac-a910-1c5412ba06c7">
+    <name>ДатаОкончанияДействияДоверенности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания действия доверенности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="891e3af8-7ae3-4e1b-9775-d8e84b61fa4b">
+    <name>ДатаДоверенности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата доверенности</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ca5d8d2d-96aa-4743-be86-6aa50b720823">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0964e05a-21d6-4800-bd6d-58c07cdfa1f0">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриказНаПодписьСФ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="146f2b45-157c-4e9e-a049-bab72cb043cc">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="23e1b45d-b8f5-4c84-8151-9c58157529b2">
+    <name>НомерДоверенности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номер доверенности</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

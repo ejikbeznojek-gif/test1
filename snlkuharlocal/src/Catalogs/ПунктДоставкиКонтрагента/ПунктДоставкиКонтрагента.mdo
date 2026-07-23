@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c85191bd-4214-46c1-8734-ffca7420da19">
+  <producedTypes>
+    <objectType typeId="8900805d-f24e-42bd-aa28-728a6cd834c2" valueTypeId="c91f2344-0fa2-4cd4-816f-64b745e06bbb"/>
+    <refType typeId="343e61a9-2d91-4afe-8708-b5845a6d3f71" valueTypeId="c448f7e6-b24a-47a3-8b84-e186453978b1"/>
+    <selectionType typeId="4ec8418e-7b67-4830-9286-eef02b8af511" valueTypeId="a339bf76-dc40-4a5d-9be0-375b93110277"/>
+    <listType typeId="0851478d-192c-4b33-9451-15c79a032f6e" valueTypeId="6fbb4414-d37c-4b12-ae94-96501ad125d5"/>
+    <managerType typeId="bd72957f-60dc-4d2c-9f5c-9143829a6e5a" valueTypeId="c608ac8d-35db-43eb-b8b0-65e98d2ea54e"/>
+  </producedTypes>
+  <name>ПунктДоставкиКонтрагента</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пункт доставки контрагента</value>
+  </synonym>
+  <inputByString>Catalog.ПунктДоставкиКонтрагента.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПунктДоставкиКонтрагента.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="79cfe964-d5b2-435e-9976-e8a27afaf332">
+    <name>Регион</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регион</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РегионКонтрагента</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="d5757489-605d-42c4-9428-712707ce3a91">
+    <producedTypes>
+      <objectType typeId="2f9e337e-1e25-49fa-8303-e70d030791c3" valueTypeId="3e54964a-c1e1-4a4e-9e0f-1f691eb9d245"/>
+      <rowType typeId="7bd78f8e-67c3-4c92-b978-64b3214e76bd" valueTypeId="2ffc92ec-2e3c-4f48-b597-15203d16c172"/>
+    </producedTypes>
+    <name>Стены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Стены</value>
+    </synonym>
+    <attributes uuid="0cd7cbe0-cb67-4ed3-8d3d-6a3fd9619a63">
+      <name>Стена</name>
+      <synonym>
+        <key>ru</key>
+        <value>Стена</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>10</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

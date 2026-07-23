@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="03a2fa1b-ff56-49a3-a413-d66223a7e289">
+  <producedTypes>
+    <objectType typeId="65d99502-19b8-4ef3-b8aa-5b6906a82420" valueTypeId="21e9852e-a8f7-41d1-ab54-934fa7d36b15"/>
+    <refType typeId="aca2d888-3dbb-4ebe-9050-a4b37353690d" valueTypeId="22aa0c09-bf9d-4fa8-8913-de0c28885b53"/>
+    <selectionType typeId="ffc0b050-6a73-4893-b2f8-6fd70cbf9514" valueTypeId="3f80c740-0340-471d-8704-1f0bc4a18a31"/>
+    <listType typeId="cb61ed68-8963-4c8b-8d78-7e0e4c0616c1" valueTypeId="6c85f081-7aca-42e8-a05d-7134bf946140"/>
+    <managerType typeId="83239867-9ccd-48eb-9056-1ea8befff0a4" valueTypeId="a1773ade-56ed-4341-aff9-a2716b52a179"/>
+    <extDimensionTypes typeId="1bc39f6b-316e-4603-9c8c-60e4c3762c1a" valueTypeId="14da5316-18e5-42bd-b330-d2181c0fd2d0"/>
+    <extDimensionTypesRow typeId="b7f8b0d7-c0d1-4af1-8b3c-fa87366bf191" valueTypeId="0584c61b-5f22-4bba-a9c1-f0140e32ceae"/>
+  </producedTypes>
+  <name>Хозрасчетный</name>
+  <synonym>
+    <key>ru</key>
+    <value>Хозрасчетный</value>
+  </synonym>
+  <inputByString>ChartOfAccounts.Хозрасчетный.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfAccounts.Хозрасчетный.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <extDimensionTypes>ChartOfCharacteristicTypes.ВидыСубконтоХозрасчетные</extDimensionTypes>
+  <maxExtDimensionCount>3</maxExtDimensionCount>
+  <codeMask>@@@.@@.@</codeMask>
+  <codeLength>8</codeLength>
+  <descriptionLength>120</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <predefined>
+    <items id="bf3ea2ce-eb6b-4b99-8fba-3757e7ea83da">
+      <name>РасходыНаПродажу</name>
+      <description>Расходы на продажу</description>
+      <code>44</code>
+      <order>44</order>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоХозрасчетные.СтатьиЗатрат</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <childItems id="9eb88cc2-3975-458b-af32-927bf7bd9ce1">
+        <name>ИздержкиОбращения</name>
+        <description>Издержки обращения</description>
+        <code>44.1</code>
+        <order>44. 1</order>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоХозрасчетные.СтатьиЗатрат</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        </extDimensionTypes>
+      </childItems>
+    </items>
+    <items id="65d6bf65-09a2-41ca-b9ab-5f7d339311b1">
+      <name>ПрочиеДоходыРасходы</name>
+      <description>Прочие доходы расходы</description>
+      <code>91</code>
+      <accountType>ActivePassive</accountType>
+      <order>91</order>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоХозрасчетные.ПрочиеДоходыИРасходы</characteristicType>
+        <extDimensionAccountingFlags>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+      </extDimensionTypes>
+      <childItems id="018bf4af-e51c-4c19-a73b-31698858b09a">
+        <name>ПрочиеДоходы</name>
+        <description>Прочие доходы</description>
+        <code>91.1</code>
+        <accountType>Passive</accountType>
+        <order>91.1</order>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконтоХозрасчетные.ПрочиеДоходыИРасходы</characteristicType>
+          <extDimensionAccountingFlags>ChartOfAccounts.Хозрасчетный.ExtDimensionAccountingFlag.Суммовой</extDimensionAccountingFlags>
+        </extDimensionTypes>
+      </childItems>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>ChartOfAccounts.Хозрасчетный.Form.ФормаСчета</defaultObjectForm>
+  <defaultListForm>ChartOfAccounts.Хозрасчетный.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>ChartOfAccounts.Хозрасчетный.Form.ФормаСписка</defaultChoiceForm>
+  <autoOrderByCode>true</autoOrderByCode>
+  <orderLength>8</orderLength>
+  <attributes uuid="de4901c5-70ea-4c8d-8d5e-bdd291ffcd84">
+    <name>ЗапретитьИспользоватьВПроводках</name>
+    <synonym>
+      <key>ru</key>
+      <value>Запретить использовать в проводках</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <accountingFlags uuid="482cb389-776c-41c1-99eb-f52f19c86346">
+    <name>Валютный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </accountingFlags>
+  <accountingFlags uuid="b8a2c82e-f780-41dc-90ba-c11c3607d5b8">
+    <name>Количественный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количественный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </accountingFlags>
+  <extDimensionAccountingFlags uuid="4935d38f-276d-4775-bf6a-a04ee6cbf48f">
+    <name>Суммовой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Суммовой</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <extDimensionAccountingFlags uuid="fd56c4d1-8fce-4cd9-a2ae-761b2dd550e5">
+    <name>Валютный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валютный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <extDimensionAccountingFlags uuid="260c6aa9-559c-41c9-830f-7edf22a6e218">
+    <name>Количественный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количественный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </extDimensionAccountingFlags>
+  <forms uuid="762b594c-fc7e-4771-997c-6e64c191b874">
+    <name>ФормаСчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма счета</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f7c4c5c1-99d1-4ef5-b6b5-6b792d6455cd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ChartOfAccounts>

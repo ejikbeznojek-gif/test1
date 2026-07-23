@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3108388c-3c82-4384-8349-a726979ed557">
+  <producedTypes>
+    <objectType typeId="95b8c90b-0bda-48cc-84e7-e2ff3aac025d" valueTypeId="046a9a39-6d48-4e3e-a548-e8e1f635a49e"/>
+    <refType typeId="547a341f-d8c9-4670-bc4e-247995b6bd9f" valueTypeId="56e54db0-5afe-4e78-bd2d-c90ef8272b2a"/>
+    <selectionType typeId="14940adf-4907-4e73-b22e-f96d10c6b40d" valueTypeId="c17e9381-69fc-4769-b56b-57312688d0f7"/>
+    <listType typeId="09b48b6d-af07-4247-b609-c3505a9c15c7" valueTypeId="3bb6406a-9101-4430-b69a-367412a1d6a3"/>
+    <managerType typeId="d15654e3-6a61-48e6-b2b7-f1d38c62ebf3" valueTypeId="9680de00-a490-46a9-813a-a55399a234ab"/>
+  </producedTypes>
+  <name>ВидыРасходовДляРасчетаРентабельности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды расходов для расчета рентабельности</value>
+  </synonym>
+  <inputByString>Catalog.ВидыРасходовДляРасчетаРентабельности.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыРасходовДляРасчетаРентабельности.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="361bfd17-334a-44da-bbc0-30e956ce0f6a">
+      <name>НакладныеРасходы</name>
+      <description>Накладные расходы</description>
+      <code xsi:type="core:StringValue">
+        <value>000000003</value>
+      </code>
+      <isFolder>true</isFolder>
+    </items>
+    <items id="459f6326-1d0f-4f13-8ffd-96ee5a494409">
+      <name>ПрямыеРасходы</name>
+      <description>Прямые расходы</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+      <isFolder>true</isFolder>
+    </items>
+    <items id="3a2ac281-1b07-4adf-9224-05d87c1bae28">
+      <name>НДС</name>
+      <description>НДС</description>
+      <code xsi:type="core:StringValue">
+        <value>000000004</value>
+      </code>
+    </items>
+    <items id="84bf208e-30ea-49e6-b3b0-11f0754a9296">
+      <name>ПроцентПоЗаймам</name>
+      <description>Процент по кредиту (дебиторка)</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="18444450-0ff4-45df-ae03-62d422d2d5b9">
+    <name>ТипРасхода</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип расхода</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыПараметровРасходовДляРасчетаРентабельности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dfc0520a-380c-4bb5-bcca-51a3b55d3327">
+    <name>СтавкаНДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ставка НДС</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

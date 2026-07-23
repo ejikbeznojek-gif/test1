@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c7b3240-d29a-4856-979a-efb626e43e14">
+  <producedTypes>
+    <selectionType typeId="536a4c1f-b388-4718-ae7d-c26d81bc6a70" valueTypeId="a71e24e1-b3b8-4dd9-b1a3-8afe0a4db301"/>
+    <listType typeId="05d7c377-4b46-45c6-93fa-be069822cc2b" valueTypeId="9157fdb1-2cf8-4cd6-810d-e17e2c298a17"/>
+    <managerType typeId="38cb2ac2-427b-4ec0-85ca-a1cc405d9adb" valueTypeId="e0229d21-fcdf-4e9c-a82d-c451f7f7db5f"/>
+    <recordSetType typeId="fb56d57a-c0fc-45da-b6c7-b299cb932bcd" valueTypeId="60fdecdf-4f4c-415e-9ade-a5097adbaf2c"/>
+    <recordKeyType typeId="e80566a3-058b-4c00-81ba-d8c54ab204a9" valueTypeId="3285c184-8dd4-414c-b00e-ff1119b2225c"/>
+    <recordType typeId="e92b0acf-7ced-46c1-96d1-6b13870d4012" valueTypeId="dd4a8d19-8579-40f2-94e4-d039eb76b954"/>
+    <recordManagerType typeId="068e6e55-0cb9-492e-b3b6-8719f07b35fb" valueTypeId="95da7f33-4f57-42a7-b847-edd79417317f"/>
+  </producedTypes>
+  <name>СкладскойЧекЛист</name>
+  <synonym>
+    <key>ru</key>
+    <value>Складской чек лист</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <attributes uuid="5c64b196-c50f-44d0-894f-94b37c693f52">
+    <name>ДопСведения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доп сведения</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>DocumentRef</types>
+      <types>EnumRef</types>
+      <types>CatalogRef</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="dac1f96b-a416-4d74-95a9-3faf9891b033">
+    <name>Исполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исполнитель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="3f7428b5-b642-4872-8129-a07df1b58cc5">
+    <name>ДатаИзменения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата изменения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="a417f417-7472-4a20-861c-198d74ed821b">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef</types>
+      <types>CatalogRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7e171138-8b77-4e99-9012-1de926ef5ed6">
+    <name>Операция</name>
+    <synonym>
+      <key>ru</key>
+      <value>Операция</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

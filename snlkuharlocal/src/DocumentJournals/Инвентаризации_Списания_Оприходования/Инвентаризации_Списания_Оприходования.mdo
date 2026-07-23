@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DocumentJournal xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e693d9f2-d10f-455c-b7a9-03f9542f7b1d">
+  <producedTypes>
+    <selectionType typeId="4ae4e522-1f63-4850-a0bf-555db22b23e9" valueTypeId="70b2bbde-4e32-4973-befc-66ccad629bcb"/>
+    <listType typeId="b5d7b868-e24d-4dcd-8136-0d63c167b4e6" valueTypeId="8ef2d458-6970-454b-bcce-388087a3ee9d"/>
+    <managerType typeId="9afd9bc4-ed7b-4f34-8d2a-93a72d0e36fd" valueTypeId="43f5644a-cc84-4c91-b998-c18e76ec61f3"/>
+  </producedTypes>
+  <name>Инвентаризации_Списания_Оприходования</name>
+  <synonym>
+    <key>ru</key>
+    <value>Инвентаризации, списания, оприходования</value>
+  </synonym>
+  <defaultForm>DocumentJournal.Инвентаризации_Списания_Оприходования.Form.ФормаСписка</defaultForm>
+  <registeredDocuments>Document.Инвентаризация</registeredDocuments>
+  <registeredDocuments>Document.СписаниеТМЦ</registeredDocuments>
+  <registeredDocuments>Document.Комплектация</registeredDocuments>
+  <registeredDocuments>Document.ОприходованиеТМЦ</registeredDocuments>
+  <registeredDocuments>Document.Переоценка</registeredDocuments>
+  <columns uuid="d893785b-56e2-4104-8136-6d6c1a9dd404">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.Склад</references>
+    <references>Document.СписаниеТМЦ.Attribute.Склад</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.Склад</references>
+    <references>Document.Комплектация.Attribute.Склад</references>
+    <references>Document.Переоценка.Attribute.Склад</references>
+  </columns>
+  <columns uuid="c270d352-f3aa-482c-9cbe-37e5fba8b401">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.Автор</references>
+    <references>Document.СписаниеТМЦ.Attribute.Автор</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.Автор</references>
+    <references>Document.Комплектация.Attribute.Автор</references>
+    <references>Document.Переоценка.Attribute.Автор</references>
+  </columns>
+  <columns uuid="4bac6bbc-ffae-4528-b9ab-3b7531340504">
+    <name>СуммаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма документа</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.СуммаДокумента</references>
+    <references>Document.СписаниеТМЦ.Attribute.СуммаДокумента</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.СуммаДокумента</references>
+    <references>Document.Комплектация.Attribute.СуммаДокумента</references>
+    <references>Document.Переоценка.Attribute.СуммаДокумента</references>
+  </columns>
+  <columns uuid="6d03214f-a927-4782-8e1f-795a5c63550a">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.СтатьяЗатрат</references>
+    <references>Document.СписаниеТМЦ.Attribute.СтатьяЗатрат</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.СтатьяЗатрат</references>
+    <references>Document.Переоценка.Attribute.СтатьяЗатрат</references>
+  </columns>
+  <columns uuid="1f07c029-16a8-4b2b-844b-c0fe3bb5ce75">
+    <name>СостояниеНакладной</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние накладной</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.СостояниеНакладной</references>
+    <references>Document.СписаниеТМЦ.Attribute.СостояниеНакладной</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.СостояниеНакладной</references>
+    <references>Document.Комплектация.Attribute.СостояниеНакладной</references>
+  </columns>
+  <columns uuid="f7f286a1-b7de-4f9e-9e73-abab5d0e99d5">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <references>Document.ОприходованиеТМЦ.Attribute.КоличествоДокумента</references>
+    <references>Document.СписаниеТМЦ.Attribute.КоличествоДокумента</references>
+    <references>Document.Инвентаризация.Attribute.КоличествоДокумента</references>
+    <references>Document.Комплектация.Attribute.КоличествоДокумента</references>
+    <references>Document.Переоценка.Attribute.КоличествоДокумента</references>
+  </columns>
+  <columns uuid="75814f3c-8633-4498-982a-9e2065072460">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <references>Document.ОприходованиеТМЦ.Attribute.Комментарий</references>
+    <references>Document.СписаниеТМЦ.Attribute.Комментарий</references>
+    <references>Document.Инвентаризация.Attribute.Комментарий</references>
+    <references>Document.Комплектация.Attribute.Комментарий</references>
+    <references>Document.Переоценка.Attribute.Комментарий</references>
+  </columns>
+  <columns uuid="0faef3c5-1ecd-4e68-9660-839f58738678">
+    <name>ГруппыТоваров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группы товаров</value>
+    </synonym>
+    <references>Document.ОприходованиеТМЦ.Attribute.ГруппыТоваров</references>
+    <references>Document.СписаниеТМЦ.Attribute.ГруппыТоваров</references>
+    <references>Document.Инвентаризация.Attribute.ГруппыТоваров</references>
+    <references>Document.Комплектация.Attribute.ГруппыТоваров</references>
+    <references>Document.Переоценка.Attribute.ГруппыТоваров</references>
+  </columns>
+  <columns uuid="f0fc68d7-e992-487b-a5a2-ca87de565b37">
+    <name>КоличествоКомплектующих</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кол-во комплектующих</value>
+    </synonym>
+    <references>Document.Комплектация.Attribute.КоличествоКомплектующих</references>
+  </columns>
+  <columns uuid="e8745c57-d4df-452b-a294-c8588f1be0c3">
+    <name>ТребуетсяМаркировка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Требуется маркировка</value>
+    </synonym>
+    <references>Document.Инвентаризация.Attribute.ТребуетсяМаркировка</references>
+    <references>Document.ОприходованиеТМЦ.Attribute.ТребуетсяМаркировка</references>
+    <references>Document.СписаниеТМЦ.Attribute.ТребуетсяМаркировка</references>
+  </columns>
+  <forms uuid="6838592f-a4f6-456f-9148-682e2c65c3ba">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DocumentJournal>

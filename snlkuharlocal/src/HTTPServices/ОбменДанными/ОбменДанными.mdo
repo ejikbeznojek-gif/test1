@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="505aad3b-e79a-408b-a90e-21eaf65b49b7">
+  <name>ОбменДанными</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными</value>
+  </synonym>
+  <rootURL>exchange</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="b55d20e5-2724-4c45-b7ba-d943b1d86704">
+    <name>ВыполнитьЗапрос</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить запрос</value>
+    </synonym>
+    <template>/execute_query/*</template>
+    <methods uuid="e91ddb66-622a-454b-985e-ad2bf5275b90">
+      <name>POST</name>
+      <synonym>
+        <key>ru</key>
+        <value>POST</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ЗапросPOST</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="347a4d26-98b4-416b-a2f7-8833cd850319">
+    <name>ПолучитьСтруктуру</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получить структуру</value>
+    </synonym>
+    <template>/get_struct/{table_name}</template>
+    <methods uuid="39147ab2-9571-40ba-b839-08b2f6191f65">
+      <name>GET</name>
+      <synonym>
+        <key>ru</key>
+        <value>GET</value>
+      </synonym>
+      <handler>ПолучитьСтруктуру_GET</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

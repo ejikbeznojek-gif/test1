@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="58dd4627-02fb-4231-99d1-b049672d3d69">
+  <producedTypes>
+    <selectionType typeId="5481ba5e-b288-414c-b1de-b7dbc8ceb14e" valueTypeId="7c6ee6fe-a276-438b-bcfe-822d59a65997"/>
+    <listType typeId="903e5672-b512-4714-8e87-3115a5550278" valueTypeId="f557cf6a-9f56-4bb5-aff2-6842fcf36a97"/>
+    <managerType typeId="fc973949-83e2-497f-9888-dd08c29868d7" valueTypeId="b9f2e4a4-619a-42ce-b666-7a41383bfd14"/>
+    <recordSetType typeId="8cb9af57-8ead-44c1-b05d-e333468249c5" valueTypeId="9c40e594-5af0-4daa-a077-4f1021909bab"/>
+    <recordKeyType typeId="8f5eb5c6-e4ab-494f-83b9-65dc5d4ea63d" valueTypeId="20a59508-4f48-4f01-b308-8388d3360a83"/>
+    <recordType typeId="61a3341b-3bcf-4cae-a108-bb89e6981c3c" valueTypeId="a22b8e86-d14f-479e-94ae-61ec1a193a03"/>
+    <recordManagerType typeId="21e007b3-8965-4a41-bb66-776e5973c6c5" valueTypeId="e6611efb-f6ab-45dc-8f5b-4d26624baf99"/>
+  </producedTypes>
+  <name>СтатусыЗаказаМарокДляДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы заказа марок для документов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5df46b3d-2569-4b84-8a0e-8be0ce8434e9">
+    <name>СтатусыЗаказаКодовМаркировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы заказа кодов маркировки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыЗаказаКодовМаркировки</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="72c3180a-0130-4ca7-80c9-3d9d046594dd">
+    <name>ДатаЗаказаМарок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата заказа марок</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7688d795-90ca-43a2-863a-01546ef82c1b">
+    <name>ДатаВводаВОборот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата ввода в оборот</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="01a9b709-5ff5-47d7-bd5f-db368d179378">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Комплектация</types>
+      <types>DocumentRef.Инвентаризация</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

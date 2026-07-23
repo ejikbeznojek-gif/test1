@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7d7bd7bf-592d-404c-9ec5-4f1491f6ba3a">
+  <producedTypes>
+    <objectType typeId="71dd280d-6ae1-4f57-8f0d-091bf2bea4d1" valueTypeId="eb6dbc0b-c4dd-4121-a154-3ec3ff8ff27d"/>
+    <managerType typeId="25ff66c7-a396-4ad6-9ed8-39732789ede3" valueTypeId="d7dc2051-e99e-4753-b8ab-74254072f4d7"/>
+  </producedTypes>
+  <name>РасчетОтчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Расчет отчета</value>
+  </synonym>
+  <defaultForm>DataProcessor.РасчетОтчета.Form.Форма</defaultForm>
+  <attributes uuid="e8f3c584-9f20-46ed-8c0f-d6cee7dc136f">
+    <name>ВидОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид отчета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОтчетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="86720c0b-bc8e-4301-ad70-c382c9acef18">
+    <name>Дата1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата1</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9eb70c4d-0a70-4ec8-a326-52f50d48be99">
+    <name>Дата2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата2</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="67d4ac97-e72a-45f8-b160-9fcfd574b23c">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1d3e2f87-00fd-4804-98eb-953802a4af2c">
+    <name>Построитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Построитель</value>
+    </synonym>
+    <type>
+      <types>ReportBuilder</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ad6298b4-d6bd-48c9-bb05-c17a8749441e">
+    <name>ДокОтчет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Док отчет</value>
+    </synonym>
+    <type>
+      <types>DocumentObject.Отчет</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="dbb87dce-6f01-4634-ae69-eeb0228892f2">
+    <name>РазделОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Раздел отчета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.АналитикаОтчетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="67b0a1b4-d6bc-46b6-8c3d-16e3e26abe02">
+    <producedTypes>
+      <objectType typeId="4fc3a1d3-67b2-4b5c-9471-73d989c7f91c" valueTypeId="b1e5c0ef-459d-4a38-850b-0bdb65c1e209"/>
+      <rowType typeId="c8b9287f-695a-4dbc-8e75-0137a1b3afcf" valueTypeId="4dcf9441-b743-4739-b666-34a3075dd69c"/>
+    </producedTypes>
+    <name>ТР</name>
+    <synonym>
+      <key>ru</key>
+      <value>ТР</value>
+    </synonym>
+    <attributes uuid="5a959b64-9009-4816-9e76-891a3cebdf7d">
+      <name>РазделОтчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Раздел отчета</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.АналитикаОтчетов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bb59c848-4629-45da-acd8-9b081807d965">
+      <name>Расшифровка1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расшифровка1</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <types>AnyRef</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="124c2d99-b19b-425e-9be1-bfac53e12aac">
+      <name>Расшифровка2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расшифровка2</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <types>AnyRef</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="27257f2e-bb24-4082-bc01-064758201026">
+      <name>Расшифровка3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Расшифровка3</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <types>AnyRef</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="97baa041-8f57-45e7-af56-aa3092678953">
+      <name>Привязка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Привязка</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="73174468-b752-4650-bbb0-cda3aeb8d525">
+      <name>Показатель</name>
+      <synonym>
+        <key>ru</key>
+        <value>Показатель</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПоказателиОтчетов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ad5084bc-1085-4e75-bab5-86aecf807b4a">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>19</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5e965992-517b-459e-9d09-2eaf88ba833f">
+      <name>Регистр</name>
+      <synonym>
+        <key>ru</key>
+        <value>Регистр</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="ac6bd75a-ec33-4b8a-adc5-a63e3d848b08">
+      <name>Подразделение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Подразделение</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Подразделения</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="f175268d-1965-48b1-9dd9-30173eb61670">
+      <name>ЗнакПривязки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Знак привязки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="7426aa29-2ec1-414c-b905-3ade92a52de6">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="5be889e8-99a5-4edd-bd36-5fc46ab24f43">
+    <name>Заголовки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заголовки</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

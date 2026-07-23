@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="570316ed-06e1-4d95-a773-527c044a1161">
+  <producedTypes>
+    <objectType typeId="21a3fc2b-498f-43ed-9eae-938edd842230" valueTypeId="2ab41807-e36a-4196-bd8b-47c565593c33"/>
+    <managerType typeId="12ccfa3a-4d44-4f2f-a970-8cbc9b3cca51" valueTypeId="dcd0b970-5732-4a27-9b1c-d4875df9384d"/>
+  </producedTypes>
+  <name>ОбменДаннымиТП</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен данными ТП</value>
+  </synonym>
+  <defaultForm>DataProcessor.ОбменДаннымиТП.Form.Форма</defaultForm>
+  <auxiliaryForm>DataProcessor.ОбменДаннымиТП.Form.ВыборФайла</auxiliaryForm>
+  <attributes uuid="9db319f5-7f19-41c1-85a5-6b83ee6e8bbe">
+    <name>СерверFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d009c5d7-08d6-4360-a0de-b3712c3e24eb">
+    <name>КаталогFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="39e39d35-7b07-4228-9aca-4e4463dda46a">
+    <name>ПользовательFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0b1b4573-f7e9-42a1-aeeb-29379523b582">
+    <name>ПарольFTP</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пароль FTP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="c3ec4cee-27ce-441b-8ad5-901a675ec8ec">
+    <name>ВсеТовары</name>
+    <synonym>
+      <key>ru</key>
+      <value>Все товары</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="302dcc8c-f80b-41fe-99f4-0f4d8cdb4a89">
+    <producedTypes>
+      <objectType typeId="e6cfd1c0-3ed9-4437-93bf-8aff0ebf575d" valueTypeId="027bd93a-45fa-4a33-ba3b-56bb849ee1b9"/>
+      <rowType typeId="96ff2967-7015-48e5-b1b8-936e6017accf" valueTypeId="2f0150e8-d075-460b-bffa-6f09b3813fd7"/>
+    </producedTypes>
+    <name>Узлы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Узлы</value>
+    </synonym>
+    <attributes uuid="cb063118-73db-4066-9afd-af966e24031c">
+      <name>Узел</name>
+      <synonym>
+        <key>ru</key>
+        <value>Узел</value>
+      </synonym>
+      <type>
+        <types>ExchangePlanRef.Основной</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="4982fc83-14fe-4396-9a0d-d4a1846b1b72">
+    <producedTypes>
+      <objectType typeId="2d9fd1d8-5941-4f5b-8c75-b4d14ea71468" valueTypeId="26739dc4-7739-4334-a5cc-e8b327f05cf4"/>
+      <rowType typeId="5444ef50-445c-4fe0-8ad5-8cc609b97369" valueTypeId="dfd2190d-4e10-4db7-b91c-37b3ec78a911"/>
+    </producedTypes>
+    <name>Склады</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склады</value>
+    </synonym>
+    <attributes uuid="2bbb5ab0-9e61-43d7-99f6-6a4102d8f683">
+      <name>Склад</name>
+      <synonym>
+        <key>ru</key>
+        <value>Склад</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Склады</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="2432e23f-e5b9-48b1-b597-1e8476fb45c2">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="1d285827-0154-44c1-b3b1-d4ed0a9d7e46">
+    <name>ВыборФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор файла</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="ae04a9e8-381a-4852-ac87-3d0151378462">
+    <name>ПравилаВыгрузки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Правила выгрузки</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:DataProcessor>

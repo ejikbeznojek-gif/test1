@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="60fe73d5-53df-4e41-97be-64f6ca2a03ac">
+  <producedTypes>
+    <selectionType typeId="bde87ca9-b73c-46d5-b31d-78cd7c9d2205" valueTypeId="d7be220e-5fb8-4009-8ed3-583f661bc395"/>
+    <listType typeId="e9f21b06-0ee1-4a44-bc83-803ad4cc0cfb" valueTypeId="3a0a92ed-fd0b-4c10-951f-9e48b5eece2e"/>
+    <managerType typeId="10a80955-5e93-4529-986c-c407b0b84710" valueTypeId="3d929e66-565d-4330-9ce3-e4867b123c1f"/>
+    <recordSetType typeId="50c26a0a-fe3c-4584-8142-e79a16289fa9" valueTypeId="68532977-ae3a-4cde-bbdb-28c0aa909b74"/>
+    <recordKeyType typeId="8e5f0aea-152d-461f-b3e7-a21ff4f5de02" valueTypeId="02535ba2-7f50-42d3-9742-65279da6700f"/>
+    <recordType typeId="a9c3b41e-950d-46d5-b5d6-10fada3c3431" valueTypeId="aa726209-1323-4ed5-ac36-33d8d37eade3"/>
+    <recordManagerType typeId="4e1f8a95-89c0-4b37-b6d3-61afd1467827" valueTypeId="00598305-65c7-4158-8b19-0b3ea7f4817a"/>
+  </producedTypes>
+  <name>НормыРасходаГСМ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Нормы расхода ГСМ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НормыРасходаГСМ.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.НормыРасходаГСМ.Form.ФормаСписка</defaultListForm>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="808ae1d5-5d15-4e11-b40e-6bf5444f38c5">
+    <name>Линейная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расход на (100 км/л.)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>8</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="074537bf-fe48-4d22-929b-57aa93a3fd51">
+    <name>НормаНаОперацию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Норма на операцию</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>8</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="21d693b9-1cf3-45e9-824f-328598e932b4">
+    <name>МодельТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Модель ТС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Автомобили</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="65d68136-d025-400f-a4cb-bedc8d2aa438">
+    <name>ГСМ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ГСМ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9ee856a9-e0da-4f5b-a791-dec255c341e2">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fd245de1-7b2b-4e5a-9369-7ca947333736">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

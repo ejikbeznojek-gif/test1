@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b77d42a6-4014-48d3-9d77-3cc558a40573">
+  <producedTypes>
+    <selectionType typeId="e8edb748-84a9-4a03-baf0-93032b66ca81" valueTypeId="c3db4d54-a418-4a39-9efd-0267aa2c031e"/>
+    <listType typeId="72a6f8c8-9b58-4ce5-8cd1-76035def61b4" valueTypeId="16d9dffc-7c9a-4c42-bbd9-a065963a5e28"/>
+    <managerType typeId="9ca713f3-4691-4ae5-a914-ac5512fee842" valueTypeId="a76e147a-8b31-41e0-8f38-ca6a8131bee6"/>
+    <recordSetType typeId="f361acfe-8027-40ba-b19a-9afc8ef6e440" valueTypeId="bfa49167-8080-4a8b-8e10-f40e736cdd9f"/>
+    <recordKeyType typeId="414ec978-c23b-4258-9c9a-833d7ded4241" valueTypeId="8fbc61a1-842d-4427-bfa6-f9d3e9c62354"/>
+    <recordType typeId="32bc8956-f431-4a9c-90f8-2dd07c2cf64f" valueTypeId="712fc81f-a5cf-48a4-98ca-ceec41c8fffa"/>
+  </producedTypes>
+  <name>Амортизация</name>
+  <synonym>
+    <key>ru</key>
+    <value>Амортизация</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="1850981d-43cc-45fe-a289-c9418a14df28">
+    <name>Амортизация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Амортизация</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>9</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="06188224-7989-4f04-8068-bc91ce6aa015">
+    <name>СтатьяЗатрат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья затрат</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СтатьиЗатрат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="3b42f421-0182-49aa-82c3-62590cc51592">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="35ddeb5b-381d-4338-a152-c0f21b313e7d">
+    <name>ОС</name>
+    <synonym>
+      <key>ru</key>
+      <value>ОС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="d25ebaa9-c39b-49b6-beac-686a4849d3d7">
+    <name>Склад</name>
+    <synonym>
+      <key>ru</key>
+      <value>Склад</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Склады</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="13e01fb7-b461-46d5-a129-3dc1bb7aef91">
+  <producedTypes>
+    <selectionType typeId="1c3e3279-e056-4771-b83c-42d893cc407b" valueTypeId="0272d2f9-8286-4ce4-99cf-94128e1f1fdc"/>
+    <listType typeId="d5bf3f91-7b7d-4545-b5ac-969b493df2ca" valueTypeId="e73b06fd-3bd1-4990-881d-2eb641db481b"/>
+    <managerType typeId="76b8be41-f1d3-4d87-99dd-da6de87908cf" valueTypeId="d40e135d-ab24-4f6d-99e5-794a86858108"/>
+    <recordSetType typeId="714ee242-8c7c-4153-ad96-6ede1186c01a" valueTypeId="1a8d8e01-12f8-4646-8865-26e2736d96a1"/>
+    <recordKeyType typeId="357ba7d9-27a5-478e-a060-f82f4b0a96b2" valueTypeId="4823e897-1274-40b0-b8a9-12d196e8fff3"/>
+    <recordType typeId="72a6cebe-85f4-4400-80dc-a1b71f35da2c" valueTypeId="f8a03303-8812-4363-b011-6dcc444f04d3"/>
+    <recordManagerType typeId="aeaaeca3-6abb-4b67-af2a-1b82e2d75fd0" valueTypeId="85f86982-4e07-4148-a479-e286227a81db"/>
+  </producedTypes>
+  <name>ТаймингиСостояний</name>
+  <synonym>
+    <key>ru</key>
+    <value>Тайминги состояний</value>
+  </synonym>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="665841ab-f7bb-40bd-ac6a-dea8f5461857">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияНакладной</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="feaea4a2-07ad-4332-a9cc-863e8cedc180">
+    <name>ВремяПростоя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время простоя</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="fa13cfe6-0284-4cf4-aaae-62aeea74d210">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="0d71b3ed-a962-4fb3-9255-6841c724299a">
+    <name>РабочееМесто</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рабочее место</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.РабочиеМеста</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="a341d31c-32eb-4a4f-9e1d-8f8439ff6eef">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаданиеНабора</types>
+      <types>DocumentRef.ЛистМаркировкиОстатков</types>
+      <types>DocumentRef.ЛистПереукладки</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+      <types>DocumentRef.ЛистСборкиКомплектовЧЗ</types>
+      <types>DocumentRef.РасходнаяНакладная</types>
+      <types>DocumentRef.ЛистНабора</types>
+      <types>DocumentRef.ЗаданиеНаМаркировку</types>
+      <types>DocumentRef.ЛистЗагрузки</types>
+      <types>DocumentRef.Перемещение</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

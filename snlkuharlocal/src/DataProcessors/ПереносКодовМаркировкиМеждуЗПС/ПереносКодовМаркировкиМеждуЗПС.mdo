@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9c1992ee-0e9c-4fcf-88d4-c001aeed3bac">
+  <producedTypes>
+    <objectType typeId="d38387bc-b6e8-49c5-8f6a-d379dcead815" valueTypeId="8cf18a68-fb55-4c33-b2e8-fa3a19c026f4"/>
+    <managerType typeId="1bd256be-58c8-4c2e-a968-a054fd02d3f5" valueTypeId="24d34da1-1852-4526-a3eb-a3e08415613a"/>
+  </producedTypes>
+  <name>ПереносКодовМаркировкиМеждуЗПС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Перенос КМ между ЗПС</value>
+  </synonym>
+  <comment>Перенос кодов маркировки с одного ЗПС на другой</comment>
+  <defaultForm>DataProcessor.ПереносКодовМаркировкиМеждуЗПС.Form.Форма</defaultForm>
+  <attributes uuid="fc123c80-b275-4a76-b715-27e724e61f92">
+    <name>ЗПС_Ист</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЗПС ист</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6055ffe4-4267-4175-8e8d-7987d4a9927f">
+    <name>ЗПС_Пол</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЗПС пол</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="658abf73-3928-42d6-8f77-d5555f855728">
+    <name>ЗаказНаЭмиссию_Ист</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ на эмиссию ист</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="05c49078-e930-419b-b663-fea5adae0a1a">
+    <name>ЗаказНаЭмиссию_Пол</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ на эмиссию пол</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказНаЭмиссиюКодовМаркировкиСУЗ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="8519a918-75b3-459b-9d67-da147d26b8e3">
+    <producedTypes>
+      <objectType typeId="974f86e6-0a15-4027-bc0c-51e1c8a0bf20" valueTypeId="68f73969-e847-4cd2-87a0-b6646bd06d7e"/>
+      <rowType typeId="a092631f-ac72-4e3a-b031-56ebe057dcef" valueTypeId="053c9f39-2dac-4c64-a7ad-7ea2a364ebb2"/>
+    </producedTypes>
+    <name>КривыеКодыМаркировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Кривые коды маркировки</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="57444c00-8219-422a-ac20-38c49b24b946">
+      <name>КодМаркировки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код маркировки</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="f334529c-f6b9-4b3c-8020-80103ce43843">
+      <name>Ошибка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ошибка</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="06a13a24-9363-4a86-aa02-2b1481bcb10c">
+    <producedTypes>
+      <objectType typeId="d612e68b-c032-435f-bf8f-d43c05766ca3" valueTypeId="61d67314-7689-41df-a9a2-94dab07a49e6"/>
+      <rowType typeId="41303985-59ac-4296-be63-f6d690939570" valueTypeId="8262a166-8d86-4f27-a116-93eaba6a6590"/>
+    </producedTypes>
+    <name>ШтрихкодыУпаковок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Штрихкоды упаковок</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="4c93b8bc-6e5a-45ee-97c3-2e50f39066de">
+      <name>ШтрихкодУпаковки</name>
+      <synonym>
+        <key>ru</key>
+        <value>КМ</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ШтрихкодыУпаковокТоваров</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="241d9a8b-3973-4c29-99a5-b5c66a4f873e">
+      <name>КодАгрегации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Код агрегации</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>18</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:StringValue"/>
+    </attributes>
+    <attributes uuid="5fc3594b-59e3-4af5-b4bd-8c0483715f81">
+      <name>ДокументОснование</name>
+      <synonym>
+        <key>ru</key>
+        <value>Документ основание</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.РасходнаяНакладная</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="dc659c34-b637-473d-ae72-74d72d29485b">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

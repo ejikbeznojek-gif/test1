@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6b79f674-9765-46bc-8f63-4999a377b865">
+  <producedTypes>
+    <objectType typeId="89bfafd7-8348-4f9b-84b5-bb13113907f9" valueTypeId="0c4ba782-0eab-426c-8de8-721229502b0e"/>
+    <refType typeId="0cc44b92-53f7-48c3-82ea-4692466887aa" valueTypeId="d003580d-7ef9-4a32-9fd1-f0f409d262ff"/>
+    <selectionType typeId="1d26c105-dc35-450a-9adf-8a1828be2a26" valueTypeId="cf68cbfe-7035-40db-ba20-4df476e77776"/>
+    <listType typeId="cc6657b8-81d0-4030-a987-596eeba7f3ad" valueTypeId="44ef59a4-2900-48b0-9e66-193931a7335d"/>
+    <managerType typeId="e3f99424-f621-49ea-b79b-8d04245101d1" valueTypeId="3d5c93c8-4c7c-4185-a7b6-669e95fd5a83"/>
+  </producedTypes>
+  <name>РайоныДоставки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Районы доставки</value>
+  </synonym>
+  <inputByString>Catalog.РайоныДоставки.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.РайоныДоставки.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Регионы</owners>
+  <codeLength>10</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Catalog.РайоныДоставки.Form.ФормаСписка</defaultListForm>
+  <attributes uuid="12481ed6-4234-4a3f-87e8-abb7cf13ab18">
+    <name>Сектор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сектор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сектора</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="da7e2832-ce8b-40d9-b68e-8ed9579254f3">
+    <name>РасстояниеДоСклада</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расстояние до склада</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="17c2d8d6-0f5b-4b2b-8871-902c8dd227a9">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

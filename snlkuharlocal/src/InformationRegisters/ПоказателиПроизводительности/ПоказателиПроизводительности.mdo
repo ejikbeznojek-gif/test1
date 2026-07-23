@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="287c3397-af57-4c5f-a9a2-792f29873722">
+  <producedTypes>
+    <selectionType typeId="b32b8c04-2704-41e8-be59-5cbe63fab1ea" valueTypeId="51a251ac-807b-40ec-a1f5-98442eba14e5"/>
+    <listType typeId="b03f6c8c-d951-4aa0-9220-4438eaeffde5" valueTypeId="23eacee6-0a12-4938-a0c1-678538d5860e"/>
+    <managerType typeId="b3bed428-8596-4e61-b1a4-76952b0280db" valueTypeId="0741914f-01ae-4ca3-9016-3b6ccdd08ff7"/>
+    <recordSetType typeId="656d8bd7-c47f-4a00-8dc7-b2557f9b0392" valueTypeId="24cf5468-f910-456f-a91d-6ab90e637bb8"/>
+    <recordKeyType typeId="bb03ee9c-fc32-47a4-9515-390e90117718" valueTypeId="820133e7-f0c0-4d14-8a9e-17e73f04146d"/>
+    <recordType typeId="abcc0243-ac15-41fe-9901-7ea315a3ad4d" valueTypeId="61c523e8-a9eb-4728-b25f-7758146d6fd0"/>
+    <recordManagerType typeId="342145ea-869d-4c12-821a-4964839e2a6a" valueTypeId="ef0bdb0f-835f-4342-a71b-53d38a034e51"/>
+  </producedTypes>
+  <name>ПоказателиПроизводительности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Показатели производительности</value>
+  </synonym>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c21f3915-f75a-4476-be52-f4b498c6381a">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>19</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="2138cf15-01b1-48df-a8c8-2b31c20c4c93">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="91dd8706-62e6-4d1d-9df2-cd63675f794a">
+    <name>ИмяКомпьютера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя компьютера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="c454e64d-5374-42b0-b2c1-a4715742b98f">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Подразделения</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="fd8f6fad-3187-4cac-b716-5f573e7ad46f">
+    <name>Показатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Показатель</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e73d2ef4-43aa-4a02-84b3-efd13be8f53e">
+    <name>ДатаИзмерения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата измерения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

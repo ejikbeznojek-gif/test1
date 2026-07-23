@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="58f2c1f1-cbc3-4f1e-af40-71424f4798ab">
+  <producedTypes>
+    <selectionType typeId="827fcb6a-b387-487c-98fa-b9b4f121deed" valueTypeId="c5e7b858-8cdf-4728-bdf5-d81ca0231f15"/>
+    <listType typeId="83dc1b7d-6e29-40ea-acd6-3b84bd5195dd" valueTypeId="441c0083-d17a-4c1a-8dab-4db2dccf44d0"/>
+    <managerType typeId="6ce1dfe5-829b-4414-905f-8643dd7e6d1b" valueTypeId="d8d3b77d-0026-4da0-86e8-c7fffb0ea8e2"/>
+    <recordSetType typeId="1e824ad6-8c60-4a1c-be5d-777cf00563ea" valueTypeId="68e0ea65-3f10-4db6-bd3e-4a225efb72d8"/>
+    <recordKeyType typeId="2b7914f8-cd9e-4439-8389-3cae5f543384" valueTypeId="a05e7e15-144b-4e63-bce2-12d6c1bde0c4"/>
+    <recordType typeId="3abf3187-87e1-429a-9599-ee32c8004aca" valueTypeId="88370250-fff0-4fd6-bc0e-aec11b698dfa"/>
+    <recordManagerType typeId="25203418-9292-48d7-9f9c-e5e20e2abbe1" valueTypeId="f055f0e1-e2d4-436e-b330-31c300bbb51e"/>
+  </producedTypes>
+  <name>ПериодическиеРеквизитыДокументовИСправочников</name>
+  <synonym>
+    <key>ru</key>
+    <value>Периодические реквизиты документов и справочников</value>
+  </synonym>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="34403af0-11ce-4f1e-88a1-e278b78ddcad">
+    <name>ЗначениеРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение реквизита</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>DocumentRef</types>
+      <types>EnumRef</types>
+      <types>CatalogRef</types>
+      <numberQualifiers>
+        <precision>30</precision>
+        <scale>3</scale>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>1024</length>
+      </stringQualifiers>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="666c0acb-1293-4314-aca2-d760aa841836">
+    <name>ВладелецРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Владелец реквизита</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+      <types>String</types>
+      <types>Date</types>
+      <types>Number</types>
+      <types>DocumentRef</types>
+      <types>EnumRef</types>
+      <types>CatalogRef</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="cdafa542-6884-4aee-a2a8-0a2bc5f3ebf3">
+    <name>ИмяРеквизита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя реквизита</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>30</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>
